@@ -1,0 +1,325 @@
+{
+  "metadata": {
+    "title": "Salmon Wallet — Código abierto. Propiedad abierta.",
+    "description": "La wallet cripto open-source y multi-chain. Tus llaves, tus monedas, tu código. Disponible en iOS, Android y como extensión de navegador.",
+    "ogDescription": "La wallet cripto open-source y multi-chain. Tus llaves, tus monedas, tu código.",
+    "privacy": {
+      "title": "Política de Privacidad — Salmon Wallet",
+      "description": "Política de privacidad de Salmon Wallet — cómo recopilamos, usamos y protegemos sus datos."
+    },
+    "terms": {
+      "title": "Términos y Condiciones — Salmon Wallet",
+      "description": "Términos y condiciones para el uso de los servicios de Salmon Wallet."
+    }
+  },
+  "nav": {
+    "why": "Por qué",
+    "features": "Funciones",
+    "security": "Seguridad",
+    "manifesto": "Manifiesto",
+    "faq": "FAQ",
+    "getSalmon": "Obtener Salmon",
+    "toggleMenu": "Abrir menú"
+  },
+  "hero": {
+    "badge": "Desde 2022",
+    "heading": "Código abierto.\nPropiedad abierta.",
+    "subheading": "Una wallet comunitaria construida para la verdadera descentralización.",
+    "walletPreview": "Vista previa"
+  },
+  "chains": {
+    "heading": "Multi-chain por diseño",
+    "subheading": "Gestioná activos en Solana y Bitcoin — incluyendo devnets y testnets.",
+    "primary": "Principal",
+    "chains": {
+      "solana": {
+        "name": "Solana",
+        "networks": {
+          "mainnet": "Mainnet Beta",
+          "devnet": "Devnet"
+        }
+      },
+      "bitcoin": {
+        "name": "Bitcoin",
+        "networks": {
+          "mainnet": "Mainnet",
+          "testnet": "Testnet"
+        }
+      },
+      "ethereum": {
+        "name": "Ethereum",
+        "networks": {
+          "mainnet": "Mainnet",
+          "sepolia": "Sepolia"
+        }
+      }
+    }
+  },
+  "partners": {
+    "heading": "Potenciado por lo mejor de Web3",
+    "subheading": "Construido sobre proveedores de infraestructura y datos líderes en la industria.",
+    "items": {
+      "jupiter": "Jupiter",
+      "helius": "Helius",
+      "coingecko": "CoinGecko",
+      "quicknode": "QuickNode"
+    }
+  },
+  "why": {
+    "heading": "El código abierto no es negociable",
+    "subheading": "El código cerrado es un impuesto a la confianza. El código abierto es la única forma de eliminar el poder oculto, las puertas traseras y el control asimétrico. Si no puedes verificarlo, no es tuyo.",
+    "items": [
+      {
+        "title": "La descentralización sin transparencia es teatro.",
+        "description": "No se descentraliza el poder diciéndolo — se hace exponiendo las reglas. El código abierto es el contrato social de las criptomonedas. Todo lo demás es narrativa."
+      },
+      {
+        "title": "La seguridad mejora en público",
+        "description": "El silencio debilita los sistemas. La transparencia los fortalece, forzando resiliencia. Los sistemas cerrados fallan en silencio. Los abiertos fallan en voz alta, y mejoran."
+      },
+      {
+        "title": "Si los usuarios no son dueños, no es Web3.",
+        "description": "La propiedad comunitaria no es un punto en la hoja de ruta. Es una decisión arquitectónica. Salmon está construido para ser propiedad, gobernado y evolucionado por sus usuarios — o no debería existir."
+      }
+    ]
+  },
+  "features": {
+    "heading": "Herramientas avanzadas, sin la complejidad",
+    "subheading": "Construido para crecer contigo.",
+    "preview": "Vista previa",
+    "items": [
+      {
+        "title": "Swap & Bridge",
+        "description": "Intercambia y transfiere tokens entre cadenas. Rápido y fluido."
+      },
+      {
+        "title": "Limpia tu wallet",
+        "description": "Oculta el spam. Elimina el ruido."
+      },
+      {
+        "title": "Conecta con dApps",
+        "description": "Explora el ecosistema. Directamente desde tu wallet."
+      },
+      {
+        "title": "Construido para crecer contigo",
+        "description": "Simple para empezar. Potente cuando lo necesitas."
+      }
+    ]
+  },
+  "security": {
+    "heading": "Seguridad por diseño",
+    "subheading": "Construido para proteger sin pedir confianza.",
+    "preview": "Vista previa",
+    "items": [
+      {
+        "title": "Las llaves se quedan contigo",
+        "description": "Tus claves privadas están cifradas en tu dispositivo. Protegidas por tu contraseña. Nunca compartidas. Nunca accesibles para nosotros."
+      },
+      {
+        "title": "Privacidad por defecto",
+        "description": "Sin rastreo. Sin recopilación de datos. Tus saldos, direcciones y actividad permanecen privados."
+      },
+      {
+        "title": "Modelo de seguridad abierto",
+        "description": "Seguridad a través de la transparencia. Código abierto, revisado en público. Auditado continuamente por la comunidad."
+      },
+      {
+        "title": "Cada cambio revisado",
+        "description": "Todas las contribuciones son inspeccionadas. Cada pull request cumple estrictos estándares internos antes de formar parte del protocolo."
+      }
+    ]
+  },
+  "comparison": {
+    "heading": "Cómo se compara Salmon",
+    "subheading": "Mira cómo Salmon se posiciona frente a otras wallets populares.",
+    "feature": "Característica",
+    "wallets": {
+      "salmon": "Salmon",
+      "metamask": "MetaMask",
+      "phantom": "Phantom",
+      "trustwallet": "Trust Wallet"
+    },
+    "features": {
+      "openSource": "Open Source",
+      "communityOwned": "Propiedad comunitaria",
+      "selfCustodial": "Autocustodia",
+      "noDataCollection": "Sin recopilación de datos",
+      "multiChain": "Multi-Chain",
+      "swapBridge": "Swap & Bridge",
+      "browserExtension": "Extensión de navegador",
+      "mobileApp": "App móvil"
+    }
+  },
+  "manifesto": {
+    "heading": "Salmon es infraestructura pública.",
+    "subheading": "Sin permisos. Sin intermediarios. Solo pruebas.",
+    "principles": [
+      {
+        "title": "Salmon es open-source.",
+        "description": "Porque el código cerrado crea poder invisible."
+      },
+      {
+        "title": "Salmon es propiedad de la comunidad.",
+        "description": "Porque los usuarios, no las corporaciones, asumen las consecuencias."
+      },
+      {
+        "title": "Salmon asume adversarios.",
+        "description": "La seguridad se gana con exposición, no con secretismo."
+      },
+      {
+        "title": "Salmon prioriza la longevidad sobre el crecimiento.",
+        "description": "Un protocolo que sobrevive ciclos de hype es más valioso que uno que los persigue."
+      },
+      {
+        "title": "Si Salmon falla, debería fallar en público.",
+        "description": "Si tiene éxito, debería pertenecer a todos los que lo respaldaron."
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Lo que dicen los usuarios",
+    "subheading": "Opiniones reales de la comunidad Salmon.",
+    "items": [
+      {
+        "quote": "Finalmente una wallet en la que realmente puedo confiar. El enfoque open-source y la propiedad comunitaria marcan la diferencia.",
+        "author": "@crypto_dev",
+        "role": "Desarrollador Solana"
+      },
+      {
+        "quote": "El enfoque open-source me da tranquilidad. Puedo verificar cada línea de código que maneja mis activos.",
+        "author": "@defi_builder",
+        "role": "Builder DeFi"
+      },
+      {
+        "quote": "Me cambié de MetaMask y no volví atrás. Soporte multi-chain sin la carga corporativa.",
+        "author": "@web3_user",
+        "role": "Entusiasta Web3"
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Qué es Salmon?",
+        "answer": "Salmon es una wallet cripto autocustodial y open-source, construida como infraestructura pública. Te permite almacenar, gestionar e interactuar con activos digitales entre cadenas — sin renunciar al control."
+      },
+      {
+        "question": "¿Salmon tiene acceso a mis claves privadas?",
+        "answer": "No. Tus claves privadas están cifradas localmente en tu dispositivo y nunca lo abandonan. No podemos acceder a ellas — y no queremos. Si pierdes tu frase de recuperación, nadie puede recuperarla por ti."
+      },
+      {
+        "question": "¿Qué hace diferente a Salmon de otras wallets?",
+        "answer": "Salmon es completamente open-source y de propiedad comunitaria por diseño. No hay un backend cerrado controlando actualizaciones o lógica oculta. Todo puede ser inspeccionado, revisado y verificado."
+      },
+      {
+        "question": "¿Salmon es realmente open-source?",
+        "answer": "Sí. Todo el código core de la wallet está disponible públicamente y es revisado en público. La seguridad mejora a través de la transparencia, no del secretismo. Puedes inspeccionar el repositorio en GitHub."
+      },
+      {
+        "question": "¿Qué cadenas soporta Salmon?",
+        "answer": "Salmon actualmente soporta Solana y Bitcoin."
+      },
+      {
+        "question": "¿Puedo intercambiar o transferir tokens dentro de la wallet?",
+        "answer": "Sí. Salmon te permite intercambiar y transferir tokens directamente desde la interfaz de la wallet, sin renunciar a la custodia de tus activos."
+      },
+      {
+        "question": "¿Salmon recopila datos de los usuarios?",
+        "answer": "No. No rastreamos saldos, direcciones ni información personal identificable. La privacidad es lo predeterminado. Para más detalles, consulta nuestra Política de Privacidad."
+      },
+      {
+        "question": "¿Qué pasa si Salmon deja de operar?",
+        "answer": "Salmon es infraestructura pública open-source. Incluso si el equipo original desaparece, el código permanece accesible. El protocolo puede continuar evolucionando bajo la administración de la comunidad."
+      },
+      {
+        "question": "¿Salmon está auditado?",
+        "answer": "Salmon ha superado una auditoría de Halborn (patrocinada por el equipo de Eclipse) a finales de 2024. También es revisado continuamente por la comunidad e inspeccionado internamente antes de que cualquier cambio de código sea incorporado. La revisión abierta es parte del modelo de seguridad."
+      }
+    ]
+  },
+  "blog": {
+    "heading": "Desde el Blog",
+    "subheading": "Ideas y novedades del equipo Salmon.",
+    "readMore": "Leer en Medium →",
+    "items": [
+      {
+        "title": "La promesa de la descentralización empieza con las wallets",
+        "excerpt": "Las wallets son el ladrillo más elemental de cripto. Contienen identidad, valor y las llaves que hacen posible cada acción on-chain.",
+        "url": "https://medium.com/@salmonwallet/the-promise-of-decentralization-starts-with-wallets-b0e922db6eea"
+      },
+      {
+        "title": "Navegando las redes blockchain",
+        "excerpt": "Entender los roles de Mainnet, Testnet y Devnet es esencial tanto para desarrolladores como para usuarios.",
+        "url": "https://medium.com/@salmonwallet/swimming-through-the-blockchain-networks-90fce36a6c36"
+      },
+      {
+        "title": "Construyendo puentes",
+        "excerpt": "Partnership de Salmon con StealthEX para traer In-Wallet-Bridge. Saltar de una blockchain a otra siempre fue difícil.",
+        "url": "https://medium.com/@salmonwallet/building-bridges-80bd8af16a4d"
+      },
+      {
+        "title": "Presentamos Cuentas Unificadas",
+        "excerpt": "Salmon completó su mayor lanzamiento saltando de Solana a Multi-chain con la funcionalidad de cuentas unificadas.",
+        "url": "https://medium.com/@salmonwallet/introducing-unified-accounts-33d9ff56b4e5"
+      },
+      {
+        "title": "Empezando con Salmon",
+        "excerpt": "Después del caso FTX, nos damos cuenta otra vez de que 'not your keys, not your coins' es real. La custodia importa.",
+        "url": "https://medium.com/@salmonwallet/getting-started-with-salmon-9b98b2aeee36"
+      },
+      {
+        "title": "Entendiendo la autocustodia",
+        "excerpt": "Custodial, Self-Custodial o Non-Custodial, y cómo moverse entre ellas.",
+        "url": "https://medium.com/@salmonwallet/understanding-self-custodial-8208aab4fc4f"
+      },
+      {
+        "title": "No solo una wallet",
+        "excerpt": "Recomendamos configurar 3 wallets diferentes: Diaria, Trading y HODLer por motivos de seguridad.",
+        "url": "https://medium.com/@salmonwallet/not-just-one-wallet-a427ed2e54eb"
+      },
+      {
+        "title": "¡Estamos live!",
+        "excerpt": "Después de un desarrollo extenso, Salmon lanza su versión Web hoy con código open-source disponible.",
+        "url": "https://medium.com/@salmonwallet/its-on-6f44f7da38dd"
+      },
+      {
+        "title": "Salmon recibe grant del Serum Fund",
+        "excerpt": "Salmon recibe un Serum Grant como continuación de la wallet Sollet con espíritu open-source.",
+        "url": "https://medium.com/@salmonwallet/salmon-receives-grant-from-the-serum-fund-9ef99f35b827"
+      },
+      {
+        "title": "Transferencias amigables en Solana",
+        "excerpt": "Salmon Wallet se integra con Solana Name Service para transacciones simplificadas usando dominios .sol.",
+        "url": "https://medium.com/@salmonwallet/user-friendly-transfers-on-solana-62c90f21728f"
+      }
+    ]
+  },
+  "getSalmon": {
+    "heading": "Obtén Salmon ahora",
+    "web": "Web",
+    "webDescription": "Accede directamente desde tu navegador",
+    "extension": "Extensión",
+    "extensionDescription": "Extensión de navegador",
+    "android": "Android",
+    "androidDescription": "Google Play Store",
+    "ios": "iOS",
+    "iosDescription": "App Store",
+    "download": "Descargar",
+    "showQr": "Mostrar QR",
+    "hideQr": "Ocultar QR"
+  },
+  "footer": {
+    "description": "Wallet cripto open-source y multi-chain. Tus llaves, tus monedas, tu código.",
+    "status": "Todos los sistemas operativos",
+    "copyright": "© {year} Salmon Wallet. Todos los derechos reservados.",
+    "xTwitter": "X / Twitter",
+    "github": "GitHub",
+    "medium": "Medium",
+    "discord": "Discord",
+    "telegram": "Telegram",
+    "terms": "Términos y Condiciones",
+    "privacy": "Política de Privacidad",
+    "mediaKit": "Kit de Medios"
+  }
+}
