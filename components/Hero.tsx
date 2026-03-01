@@ -64,7 +64,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100dvh] flex flex-col items-center justify-start overflow-hidden pt-4 sm:pt-12"
+      className="relative min-h-[100dvh] flex flex-col items-center justify-start overflow-hidden pt-16 sm:pt-12"
     >
       {/* ParticlesBackground now rendered globally at page level */}
 
@@ -101,7 +101,7 @@ export default function Hero() {
               }
           }
         >
-          <div className="relative mx-auto w-[180px] sm:w-[260px] aspect-[9/16] rounded-[2.5rem] border border-card-border bg-card-bg shadow-[0_0_80px_rgba(255,92,69,0.08)] overflow-hidden">
+          <div className="relative mx-auto w-[200px] sm:w-[260px] aspect-[9/16] rounded-[2.5rem] border border-card-border bg-card-bg shadow-[0_0_80px_rgba(255,92,69,0.08)] overflow-hidden">
             <Image
               src="/images/hero-app.png"
               alt="Salmon Wallet App"
@@ -144,7 +144,7 @@ export default function Hero() {
           <motion.div
             variants={fadeBlurUp}
             transition={transition}
-            className="mb-8"
+            className="mb-8 lg:hidden"
           >
             <GradientButton href="#get-salmon" variant="primary">
               {tNav('getSalmon')}

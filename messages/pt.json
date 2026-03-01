@@ -326,6 +326,7 @@
     "ios": "iOS",
     "iosDescription": "App Store",
     "download": "Baixar",
+    "open": "Abrir",
     "showQr": "Mostrar QR",
     "hideQr": "Ocultar QR"
   },

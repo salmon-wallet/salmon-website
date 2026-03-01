@@ -117,7 +117,7 @@ export default function GetSalmon() {
               description={t('webDescription')}
               href={LINKS.webWallet}
               hoverTint="#4FC3F7"
-              downloadLabel={t('download')}
+              downloadLabel={t('open')}
               showQrLabel={t('showQr')}
               hideQrLabel={t('hideQr')}
               icon={
