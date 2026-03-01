@@ -11,11 +11,13 @@ import {
 } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import GradientButton from './ui/GradientButton';
 
 // ParticlesBackground moved to page-level (global)
 
 export default function Hero() {
   const t = useTranslations('hero');
+  const tNav = useTranslations('nav');
   const prefersReducedMotion = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -62,7 +64,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden pt-12"
+      className="relative min-h-[100dvh] flex flex-col items-center justify-start overflow-hidden pt-4 sm:pt-12"
     >
       {/* ParticlesBackground now rendered globally at page level */}
 
@@ -77,7 +79,7 @@ export default function Hero() {
       />
 
       <motion.div
-        className="relative z-10 mx-auto max-w-4xl px-6 text-center pt-12 pb-20 flex flex-col items-center"
+        className="relative z-10 mx-auto max-w-4xl px-6 text-center pt-2 sm:pt-12 pb-12 sm:pb-20 flex flex-col items-center"
         variants={stagger}
         initial="initial"
         animate="animate"
@@ -99,7 +101,7 @@ export default function Hero() {
               }
           }
         >
-          <div className="relative mx-auto w-[260px] aspect-[9/16] rounded-[2.5rem] border border-card-border bg-card-bg shadow-[0_0_80px_rgba(255,92,69,0.08)] overflow-hidden">
+          <div className="relative mx-auto w-[180px] sm:w-[260px] aspect-[9/16] rounded-[2.5rem] border border-card-border bg-card-bg shadow-[0_0_80px_rgba(255,92,69,0.08)] overflow-hidden">
             <Image
               src="/images/hero-app.png"
               alt="Salmon Wallet App"
@@ -126,7 +128,7 @@ export default function Hero() {
           <motion.h1
             variants={fadeBlurUp}
             transition={transition}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight whitespace-pre-line mb-6"
+            className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight whitespace-pre-line mb-4 sm:mb-6"
           >
             {t('heading')}
           </motion.h1>
@@ -134,10 +136,20 @@ export default function Hero() {
           <motion.p
             variants={fadeBlurUp}
             transition={transition}
-            className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-6 leading-relaxed"
+            className="text-base sm:text-xl text-text-secondary max-w-2xl mx-auto mb-6 leading-relaxed"
           >
             {t('subheading')}
           </motion.p>
+
+          <motion.div
+            variants={fadeBlurUp}
+            transition={transition}
+            className="mb-8"
+          >
+            <GradientButton href="#get-salmon" variant="primary">
+              {tNav('getSalmon')}
+            </GradientButton>
+          </motion.div>
 
 
 
