@@ -73,7 +73,7 @@ export default function Navbar() {
             ? { duration: 0 }
             : { duration: 0.4, ease: [0.16, 1, 0.3, 1] }
         }
-        className="fixed top-0 left-0 right-0 z-50"
+        className="fixed top-0 left-0 right-0 z-[100]"
       >
         {/* Scroll-linked glassmorphic background layer */}
         {!prefersReducedMotion ? (
@@ -188,7 +188,7 @@ export default function Navbar() {
                 ? { duration: 0 }
                 : { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
             }
-            className="fixed inset-0 z-50 bg-bg-primary/95 backdrop-blur-xl pt-20 px-6 lg:hidden"
+            className="fixed inset-0 z-[90] bg-bg-primary/95 backdrop-blur-xl pt-20 px-6 lg:hidden"
           >
             <motion.div
               className="flex flex-col gap-6"
