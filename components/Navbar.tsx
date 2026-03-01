@@ -158,7 +158,7 @@ export default function Navbar() {
             aria-label={t('toggleMenu')}
           >
             <motion.span
-              animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+              animate={mobileOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="block w-5 h-0.5 bg-text-primary"
             />
@@ -168,7 +168,7 @@ export default function Navbar() {
               className="block w-5 h-0.5 bg-text-primary"
             />
             <motion.span
-              animate={mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+              animate={mobileOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="block w-5 h-0.5 bg-text-primary"
             />
@@ -188,7 +188,7 @@ export default function Navbar() {
                 ? { duration: 0 }
                 : { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
             }
-            className="fixed inset-0 z-[90] bg-bg-primary/95 backdrop-blur-xl pt-20 px-6 lg:hidden"
+            className="fixed inset-y-0 right-0 w-[80vw] z-[90] bg-bg-primary/95 backdrop-blur-xl pt-28 px-8 lg:hidden shadow-[-20px_0_40px_rgba(0,0,0,0.4)]"
           >
             <motion.div
               className="flex flex-col gap-6"
@@ -203,7 +203,7 @@ export default function Navbar() {
                   key={key}
                   href={NAV_HREFS[i]}
                   onClick={() => setMobileOpen(false)}
-                  className="text-2xl font-medium text-text-secondary hover:text-text-primary transition-colors"
+                  className="text-xl font-medium text-text-secondary hover:text-text-primary transition-colors"
                   variants={
                     prefersReducedMotion
                       ? {}
