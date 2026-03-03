@@ -28,6 +28,8 @@ function PlatformCard({
   showQrLabel,
   hideQrLabel,
   hoverTint,
+  comingSoon,
+  comingSoonLabel,
 }: {
   title: string;
   description: string;
@@ -39,6 +41,8 @@ function PlatformCard({
   showQrLabel: string;
   hideQrLabel: string;
   hoverTint?: string;
+  comingSoon?: boolean;
+  comingSoonLabel?: string;
 }) {
   const [expanded, setExpanded] = useState(false);
   const prefersReducedMotion = useReducedMotion();
@@ -52,7 +56,11 @@ function PlatformCard({
         <h3 className="text-lg font-semibold mb-1">{title}</h3>
         <p className="text-sm text-text-secondary mb-4 flex-1">{description}</p>
 
-        {expandable ? (
+        {comingSoon ? (
+          <span className="text-sm text-text-secondary/60 font-medium py-1">
+            {comingSoonLabel}
+          </span>
+        ) : expandable ? (
           <>
             <button
               onClick={() => setExpanded(!expanded)}
@@ -153,8 +161,8 @@ export default function GetSalmon() {
               description={t('androidDescription')}
               href={LINKS.playStore}
               hoverTint="#3DDC84"
-              expandable
-              qrLabel="Android"
+              comingSoon
+              comingSoonLabel={t('comingSoon')}
               downloadLabel={t('download')}
               showQrLabel={t('showQr')}
               hideQrLabel={t('hideQr')}
@@ -178,8 +186,8 @@ export default function GetSalmon() {
               description={t('iosDescription')}
               href={LINKS.appStore}
               hoverTint="#A2AAAD"
-              expandable
-              qrLabel="iOS"
+              comingSoon
+              comingSoonLabel={t('comingSoon')}
               downloadLabel={t('download')}
               showQrLabel={t('showQr')}
               hideQrLabel={t('hideQr')}

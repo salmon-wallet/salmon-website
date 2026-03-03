@@ -328,7 +328,8 @@
     "download": "Baixar",
     "open": "Abrir",
     "showQr": "Mostrar QR",
-    "hideQr": "Ocultar QR"
+    "hideQr": "Ocultar QR",
+    "comingSoon": "Em breve"
   },
   "footer": {
     "description": "Carteira cripto open-source e multi-chain. Suas chaves, suas moedas, seu código.",

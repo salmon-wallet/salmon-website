@@ -257,7 +257,8 @@
     "download": "Download",
     "open": "Open",
     "showQr": "Show QR",
-    "hideQr": "Hide QR"
+    "hideQr": "Hide QR",
+    "comingSoon": "Coming soon"
   },
   "footer": {
     "description": "Open-source, multi-chain crypto wallet. Your keys, your coins, your code.",

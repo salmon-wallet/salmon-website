@@ -308,7 +308,8 @@
     "download": "Descargar",
     "open": "Abrir",
     "showQr": "Mostrar QR",
-    "hideQr": "Ocultar QR"
+    "hideQr": "Ocultar QR",
+    "comingSoon": "Próximamente"
   },
   "footer": {
     "description": "Wallet cripto open-source y multi-chain. Tus llaves, tus monedas, tu código.",
