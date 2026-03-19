@@ -67,19 +67,19 @@
   },
   "why": {
     "heading": "El código abierto no es negociable",
-    "subheading": "El código cerrado es un impuesto a la confianza. El código abierto es la única forma de eliminar el poder oculto, las puertas traseras y el control asimétrico. Si no puedes verificarlo, no es tuyo.",
+    "subheading": "El código cerrado es un impuesto a la confianza. La mayoría de las wallets resuelven la custodia, pero no el control. El código abierto es la única forma de eliminar el poder oculto, las puertas traseras y el control asimétrico en la capa de la wallet. Si no puedes verificarlo, no lo posees.",
     "items": [
       {
         "title": "La descentralización sin transparencia es teatro.",
-        "description": "No se descentraliza el poder diciéndolo — se hace exponiendo las reglas. El código abierto es el contrato social de las criptomonedas. Todo lo demás es narrativa."
+        "description": "No descentralizas el poder diciéndolo, lo haces exponiendo las reglas. El código abierto es el contrato social de las criptomonedas. Sin transparencia, los usuarios pueden tener las claves y aun así depender de sistemas cerrados que condicionan el acceso, las integraciones y la distribución."
       },
       {
-        "title": "La seguridad mejora en público",
-        "description": "El silencio debilita los sistemas. La transparencia los fortalece, forzando resiliencia. Los sistemas cerrados fallan en silencio. Los abiertos fallan en voz alta, y mejoran."
+        "title": "La seguridad mejora en público.",
+        "description": "El silencio debilita los sistemas. La transparencia los endurece, forzando la resiliencia. Los sistemas cerrados fallan en silencio. Los abiertos fallan en voz alta, y mejoran."
       },
       {
-        "title": "Si los usuarios no son dueños, no es Web3.",
-        "description": "La propiedad comunitaria no es un punto en la hoja de ruta. Es una decisión arquitectónica. Salmon está construido para ser propiedad, gobernado y evolucionado por sus usuarios — o no debería existir."
+        "title": "Si los usuarios no lo poseen, no es Web3.",
+        "description": "La propiedad comunitaria no es un punto en la hoja de ruta. Es una decisión arquitectónica. Salmon está construido para usuarios que quieren más que acceso a las criptomonedas: quieren una capa de wallet que pueda ser poseída, gobernada y evolucionada de forma abierta."
       }
     ]
   },

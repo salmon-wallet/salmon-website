@@ -58,11 +58,11 @@
   },
   "why": {
     "heading": "Open source is non-negotiable",
-    "subheading": "Closed code is a trust tax. Open source is the only way to eliminate hidden power, backdoors, and asymmetric control. If you can't verify it, you don't own it.",
+    "subheading": "Closed code is a trust tax. Most wallets solve custody, but not control. Open source is the only way to eliminate hidden power, backdoors, and asymmetric control at the wallet layer. If you can't verify it, you don't own it.",
     "items": [
       {
         "title": "Decentralization without transparency is theater.",
-        "description": "You don't decentralize power by saying it — you do it by exposing the rules. Open code is the social contract of crypto. Everything else is narrative."
+        "description": "You don't decentralize power by saying it — you do it by exposing the rules. Open code is the social contract of crypto. Without transparency, users may hold keys while still depending on closed systems that shape access, integrations, and distribution."
       },
       {
         "title": "Security improves in public",
@@ -70,7 +70,7 @@
       },
       {
         "title": "If users don't own it, it's not Web3.",
-        "description": "Community ownership is not a roadmap item. It's an architectural decision. Salmon is built to be owned, governed, and evolved by its users — or it shouldn't exist."
+        "description": "Community ownership is not a roadmap item. It's an architectural decision. Salmon is built for users who want more than access to crypto — they want a wallet layer that can be owned, governed, and evolved in the open."
       }
     ]
   },
