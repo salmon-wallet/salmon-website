@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Salmon Wallet — Open code. Open ownership.",
+    "title": "Salmon Wallet — Open Wallet Infrastructure.",
     "description": "The open-source, multi-chain crypto wallet. Your keys, your coins, your code. Available on iOS, Android, and as a browser extension.",
     "ogDescription": "The open-source, multi-chain crypto wallet. Your keys, your coins, your code.",
     "privacy": {
@@ -24,7 +24,7 @@
   },
   "hero": {
     "badge": "Since 2022",
-    "heading": "Open code.\nOpen ownership.",
+    "heading": "Open Wallet Infrastructure",
     "subheading": "A community-owned wallet built for real decentralization.",
     "walletPreview": "Wallet Preview"
   },

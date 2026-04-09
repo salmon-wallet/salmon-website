@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Salmon Wallet — Código aberto. Propriedade aberta.",
+    "title": "Salmon Wallet — Infraestrutura Aberta de Carteira",
     "description": "A carteira cripto open-source e multi-chain. Suas chaves, suas moedas, seu código. Disponível para iOS, Android e como extensão de navegador.",
     "ogDescription": "A carteira cripto open-source e multi-chain. Suas chaves, suas moedas, seu código.",
     "privacy": {
@@ -23,7 +23,7 @@
   },
   "hero": {
     "badge": "Desde 2022",
-    "heading": "Código aberto.\nPropriedade aberta.",
+    "heading": "Infraestrutura Aberta de Carteira",
     "subheading": "Uma carteira comunitária construída para a verdadeira descentralização.",
     "walletPreview": "Prévia da carteira"
   },
