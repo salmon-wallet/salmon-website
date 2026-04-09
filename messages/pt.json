@@ -5,7 +5,7 @@
     "ogDescription": "A carteira cripto open-source e multi-chain. Suas chaves, suas moedas, seu código.",
     "privacy": {
       "title": "Política de Privacidade — Salmon Wallet",
-      "description": "Política de privacidade da Salmon Wallet — como coletamos, usamos e protegemos seus datos."
+      "description": "Política de privacidade da Salmon Wallet — como coletamos, usamos e protegemos seus dados."
     },
     "terms": {
       "title": "Termos e Condições — Salmon Wallet",
@@ -338,7 +338,6 @@
     "xTwitter": "X / Twitter",
     "github": "GitHub",
     "medium": "Medium",
-    "discord": "Discord",
     "telegram": "Telegram",
     "terms": "Termos e Condições",
     "privacy": "Política de Privacidade",

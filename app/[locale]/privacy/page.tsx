@@ -134,7 +134,7 @@ export default async function PrivacyPage({ params }: Props) {
             </p>
 
             <p>
-              Session cookies existe only during an online session. They disappear from your computer when you close your browser or turn off your computer. We do not currently use session cookies.
+              Session cookies exist only during an online session. They disappear from your computer when you close your browser or turn off your computer. We do not currently use session cookies.
             </p>
 
             <p>
@@ -142,7 +142,7 @@ export default async function PrivacyPage({ params }: Props) {
             </p>
 
             <p>
-              Most web browsers automatically accept cookies, but if you prefer, you can edit your browser options to block them in the future. The Hel portion of the toolbar on most browsers will tell you how to prevent your computer from accepting new cookies, how to have the browser notify you when you receive a new cookie, or how to disable cookies altogether. Visitors to our Site who disable cookies will not be able to browse certain areas of the Site or use the Services.
+              Most web browsers automatically accept cookies, but if you prefer, you can edit your browser options to block them in the future. The Help portion of the toolbar on most browsers will tell you how to prevent your computer from accepting new cookies, how to have the browser notify you when you receive a new cookie, or how to disable cookies altogether. Visitors to our Site who disable cookies will not be able to browse certain areas of the Site or use the Services.
             </p>
 
             <p>

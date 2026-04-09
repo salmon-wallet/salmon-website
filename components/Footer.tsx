@@ -13,7 +13,6 @@ export default function Footer() {
     { label: t('xTwitter'), href: LINKS.twitter, external: true },
     { label: t('github'), href: LINKS.github, external: true },
     { label: t('medium'), href: LINKS.medium, external: true },
-    { label: t('discord'), href: LINKS.discord, external: true },
     { label: t('telegram'), href: LINKS.telegram, external: true },
     { label: t('terms'), href: '/terms', external: false },
     { label: t('privacy'), href: '/privacy', external: false },

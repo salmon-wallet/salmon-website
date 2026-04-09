@@ -9,8 +9,7 @@ export const LINKS = {
   twitter: 'https://x.com/salmonwallet',
   medium: 'https://medium.com/@salmonwallet',
   mediaKit: 'https://salmonwallet.io/assets/salmonwallet-mediakit.zip',
-  discord: '#',
-  telegram: '#',
+  telegram: 'https://t.me/salmonwallet',
 } as const;
 
 export const NAV_HREFS = [
@@ -21,6 +20,4 @@ export const NAV_HREFS = [
   '#faq',
 ] as const;
 
-export const FEATURE_ICONS = ['swap', 'clean', 'dapps', 'growth'] as const;
 
-export const SECURITY_ICONS = ['keys', 'privacy', 'audit', 'review'] as const;

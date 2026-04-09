@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { FEATURE_ICONS } from '@/lib/constants';
 import ScrollReveal from './ui/ScrollReveal';
 import GlassmorphicCard from './ui/GlassmorphicCard';
 

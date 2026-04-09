@@ -76,53 +76,53 @@
   },
   "features": {
     "heading": "Advanced tools, without the complexity",
-    "subheading": "Built to grow with you.",
+    "subheading": "Built for users who want simplicity first — and control when it matters.",
     "preview": "Preview",
     "items": [
       {
         "title": "Swap & Bridge",
-        "description": "Swap and bridge tokens. Fast and seamless."
+        "description": "Swap and bridge tokens. Fast, seamless, and self-custodial."
       },
       {
         "title": "Clean your wallet",
-        "description": "Hide spam. Burn noise."
+        "description": "Hide spam. Burn noise. Keep your wallet focused on what matters."
       },
       {
         "title": "Connect to dApps",
-        "description": "Explore the ecosystem. Directly from your wallet."
+        "description": "Access the ecosystem directly from your wallet — without giving up control."
       },
       {
         "title": "Built to grow with you",
-        "description": "Simple to start. Powerful when you need it."
+        "description": "Simple to start. Powerful for users who want more than convenience."
       }
     ]
   },
   "security": {
     "heading": "Security by design",
-    "subheading": "Built to protect without asking for trust.",
+    "subheading": "Built to protect without asking for blind trust.",
     "preview": "Preview",
     "items": [
       {
         "title": "Keys stay with you",
-        "description": "Your private keys are encrypted on your device. Protected by your password. Never shared. Never accessible to us."
+        "description": "Your private keys are encrypted on your device. Protected by your password. Never shared. Never accessible to us. Because custody should stay with the user."
       },
       {
         "title": "Privacy by default",
-        "description": "No tracking. No data collection. Your balances, addresses, and activity stay private."
+        "description": "No tracking. No data collection. Your balances, addresses, and activity stay private. No hidden extraction behind the interface."
       },
       {
         "title": "Open security model",
-        "description": "Security through transparency. Open-source code, reviewed in public. Audited continuously by the community."
+        "description": "Security through transparency. Open-source code, reviewed in public. Audited continuously by the community. Because trust should be verifiable."
       },
       {
         "title": "Every change reviewed",
-        "description": "All contributions are inspected. Every pull request meets strict internal standards before becoming part of the protocol."
+        "description": "All contributions are inspected. Every pull request is reviewed before becoming part of the wallet. Critical infrastructure should evolve in public, not behind closed doors."
       }
     ]
   },
   "manifesto": {
     "heading": "Salmon is public infrastructure.",
-    "subheading": "No permissions. No intermediaries. Just proof.",
+    "subheading": "No permissions. No hidden gatekeepers. Just proof.",
     "principles": [
       {
         "title": "Salmon is open-source.",
@@ -130,7 +130,7 @@
       },
       {
         "title": "Salmon is community-owned.",
-        "description": "Because users, not corporations, bear the consequences."
+        "description": "Because users, not corporations, bear the consequences — and should shape the wallet layer accordingly."
       },
       {
         "title": "Salmon assumes adversaries.",
@@ -138,11 +138,11 @@
       },
       {
         "title": "Salmon prioritizes longevity over growth.",
-        "description": "A protocol that survives hype cycles is more valuable than one that chases them."
+        "description": "A wallet that earns trust over time is more valuable than one that only optimizes for short-term growth."
       },
       {
         "title": "If Salmon fails, it should fail in public.",
-        "description": "If it succeeds, it should belong to everyone who backed."
+        "description": "If it succeeds, it should belong to everyone who backed it."
       }
     ]
   },
@@ -267,7 +267,6 @@
     "xTwitter": "X / Twitter",
     "github": "GitHub",
     "medium": "Medium",
-    "discord": "Discord",
     "telegram": "Telegram",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
