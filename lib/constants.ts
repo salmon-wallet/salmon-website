@@ -9,7 +9,6 @@ export const LINKS = {
   twitter: 'https://x.com/salmonwallet',
   medium: 'https://medium.com/@salmonwallet',
   mediaKit: 'https://salmonwallet.io/assets/salmonwallet-mediakit.zip',
-  telegram: 'https://t.me/salmonwallet',
 } as const;
 
 export const NAV_HREFS = [
@@ -17,7 +16,4 @@ export const NAV_HREFS = [
   '#features',
   '#security',
   '#manifesto',
-  '#faq',
 ] as const;
-
-
