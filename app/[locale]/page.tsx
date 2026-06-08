@@ -6,7 +6,6 @@ import Why from '@/components/Why';
 import CardSection from '@/components/CardSection';
 import Manifesto from '@/components/Manifesto';
 import FAQ from '@/components/FAQ';
-import Blog from '@/components/Blog';
 import GetSalmon from '@/components/GetSalmon';
 import Footer from '@/components/Footer';
 import ParticlesBackground from '@/components/ui/ParticlesBackground';
@@ -32,7 +31,6 @@ export default async function Home({ params }: Props) {
         <Manifesto />
         <FAQ />
         <GetSalmon />
-        <Blog />
       </main>
       <Footer />
     </>
