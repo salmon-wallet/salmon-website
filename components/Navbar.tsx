@@ -16,7 +16,7 @@ import { LINKS, NAV_HREFS } from '@/lib/constants';
 import { routing } from '@/lib/i18n/routing';
 import GradientButton from './ui/GradientButton';
 
-const NAV_KEYS = ['why', 'features', 'security', 'manifesto', 'faq'] as const;
+const NAV_KEYS = ['why', 'features', 'security', 'manifesto'] as const;
 
 export default function Navbar() {
   const t = useTranslations('nav');
@@ -114,8 +114,8 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Right Navigation */}
-          <div className="hidden lg:flex items-center gap-8 ml-auto">
-            <div className="flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6 ml-auto">
+            <div className="flex items-center gap-6">
               {NAV_KEYS.map((key, i) => (
                 <a
                   key={key}
@@ -125,16 +125,10 @@ export default function Navbar() {
                   {t(key)}
                 </a>
               ))}
-              <a
-                href="#get-salmon"
-                className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300 underline decoration-accent/30 underline-offset-4 hover:decoration-accent"
-              >
-                {t('getSalmon')}
-              </a>
             </div>
 
             {/* Language switcher */}
-            <div className="flex items-center gap-1 border-l border-border-subtle pl-6">
+            <div className="flex items-center gap-1 border-l border-border-subtle pl-5">
               {routing.locales.map((l) => (
                 <Link
                   key={l}
@@ -148,6 +142,15 @@ export default function Navbar() {
                   {l.toUpperCase()}
                 </Link>
               ))}
+            </div>
+
+            <div className="flex items-center gap-3">
+              <GradientButton variant="secondary" href="#get-salmon" className="px-4 py-2">
+                {t('getSalmon')}
+              </GradientButton>
+              <GradientButton variant="primary" href={LINKS.webWallet} className="px-4 py-2">
+                {t('accessWebWallet')}
+              </GradientButton>
             </div>
           </div>
 
@@ -261,6 +264,9 @@ export default function Navbar() {
               >
                 <GradientButton variant="primary" href="#get-salmon">
                   {t('getSalmon')}
+                </GradientButton>
+                <GradientButton variant="secondary" href={LINKS.webWallet}>
+                  {t('accessWebWallet')}
                 </GradientButton>
               </motion.div>
             </motion.div>

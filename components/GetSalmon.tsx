@@ -161,8 +161,8 @@ export default function GetSalmon() {
               description={t('androidDescription')}
               href={LINKS.playStore}
               hoverTint="#3DDC84"
-              comingSoon
-              comingSoonLabel={t('comingSoon')}
+              expandable
+              qrLabel={t('android')}
               downloadLabel={t('download')}
               showQrLabel={t('showQr')}
               hideQrLabel={t('hideQr')}

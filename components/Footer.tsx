@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/lib/i18n/navigation';
 import { LINKS } from '@/lib/constants';
-import ScrollReveal from './ui/ScrollReveal';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -13,7 +12,6 @@ export default function Footer() {
     { label: t('xTwitter'), href: LINKS.twitter, external: true },
     { label: t('github'), href: LINKS.github, external: true },
     { label: t('medium'), href: LINKS.medium, external: true },
-    { label: t('telegram'), href: LINKS.telegram, external: true },
     { label: t('terms'), href: '/terms', external: false },
     { label: t('privacy'), href: '/privacy', external: false },
     { label: t('mediaKit'), href: LINKS.mediaKit, external: true },
@@ -24,7 +22,7 @@ export default function Footer() {
 
       <div className="relative mx-auto max-w-6xl px-6 py-16">
         <div className="flex flex-col gap-10">
-          {/* Top row: logo + description + status */}
+          {/* Top row: logo + description */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div className="flex flex-col gap-3">
               <Link href="/" className="flex items-center gap-3">
@@ -47,19 +45,6 @@ export default function Footer() {
                 {t('description')}
               </p>
             </div>
-
-            {/* Status indicator */}
-            <ScrollReveal direction="left" delay={0.1}>
-              <div className="flex items-center gap-2">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-75" />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-success" />
-                </span>
-                <span className="text-xs text-text-secondary font-mono">
-                  {t('status')}
-                </span>
-              </div>
-            </ScrollReveal>
           </div>
 
           {/* Links row */}

@@ -65,7 +65,7 @@ const securityIcons: Record<string, React.ReactNode> = {
 
 const SECTION_CONFIG = {
   features: {
-    images: ['swap.jpeg', 'clean.jpeg', 'dapps.jpeg', 'grow.jpeg'] as const,
+    images: ['swap.jpeg', 'keys.jpeg', 'dapps.jpeg', 'grow.jpeg', 'openmodel.jpeg'] as const,
     iconSet: featureIcons,
     iconKeys: ['swap', 'clean', 'dapps', 'growth'] as const,
     glowClassName: '',
@@ -123,7 +123,7 @@ export default function CardSection({ id }: CardSectionProps) {
                 {/* Image area */}
                 <div className="relative h-40 sm:h-48 bg-bg-secondary overflow-hidden">
                   <Image
-                    src={`/images/${images[i]}`}
+                    src={`/images/${images[i % images.length]}`}
                     alt={item.title}
                     fill
                     className={imageClassName}
