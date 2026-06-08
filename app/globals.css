@@ -89,14 +89,8 @@ body {
   animation: marquee 40s linear infinite;
 }
 
-/* Blog marquee — slower for wider cards */
-.animate-marquee-blog {
-  animation: marquee 60s linear infinite;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee,
-  .animate-marquee-blog {
+  .animate-marquee {
     animation: none;
   }
 }
