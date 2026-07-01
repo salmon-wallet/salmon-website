@@ -4,7 +4,7 @@ export const LINKS = {
     'https://chromewebstore.google.com/detail/salmon-wallet/ejbidfepgijlcgahbmbckmnaljagjoll',
   firefox: '#',
   appStore: '#',
-  playStore: '#',
+  playStore: 'https://play.google.com/store/apps/details?id=io.salmonwallet.app',
   github: 'https://github.com/salmon-wallet',
   twitter: 'https://x.com/salmonwallet',
   medium: 'https://medium.com/@salmonwallet',

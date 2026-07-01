@@ -217,6 +217,7 @@
   },
   "validator": {
     "eyebrow": "Active Solana validator",
+    "since": "Since June 2026",
     "heading": "Aligned with the network it serves.",
     "apy": "Est. APY",
     "commission": "Commission",

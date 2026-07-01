@@ -41,7 +41,12 @@ export default async function ValidatorStats() {
       className="relative py-[var(--space-section)]"
     >
       <div className="mx-auto max-w-6xl px-[var(--space-gutter)]">
-        <p className="eyebrow mb-4">{t('eyebrow')}</p>
+        <div className="mb-4 flex flex-wrap items-center gap-2.5">
+          <p className="eyebrow">{t('eyebrow')}</p>
+          <span className="rounded-full bg-accent/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-accent">
+            {t('since')}
+          </span>
+        </div>
         <h2
           id="validator-heading"
           className="font-display mb-10 max-w-2xl text-[length:var(--text-h2)] font-semibold leading-[1.05]"

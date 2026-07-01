@@ -217,6 +217,7 @@
   },
   "validator": {
     "eyebrow": "Validador Solana ativo",
+    "since": "Desde junho de 2026",
     "heading": "Alinhado com a rede que serve.",
     "apy": "APY est.",
     "commission": "Comissão",
