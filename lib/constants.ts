@@ -17,3 +17,9 @@ export const NAV_HREFS = [
   '#security',
   '#manifesto',
 ] as const;
+
+/** Salmon's Solana validator (for live stats in the ValidatorStats section). */
+export const VALIDATOR = {
+  voteAccount: 'Sa1HXZsn2u6p2dMLZGhfxtsRw7Jo32hF15yBghWJsCz',
+  jpool: 'https://app.jpool.one/validators/Sa1HXZsn2u6p2dMLZGhfxtsRw7Jo32hF15yBghWJsCz',
+} as const;

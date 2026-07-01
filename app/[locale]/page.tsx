@@ -8,6 +8,7 @@ import Manifesto from '@/components/Manifesto';
 import FAQ from '@/components/FAQ';
 import GetSalmon from '@/components/GetSalmon';
 import Footer from '@/components/Footer';
+import ValidatorStats from '@/components/sections/ValidatorStats';
 import ParticlesBackground from '@/components/ui/ParticlesBackground';
 
 type Props = {
@@ -28,6 +29,7 @@ export default async function Home({ params }: Props) {
         <Why />
         <CardSection id="features" />
         <CardSection id="security" />
+        <ValidatorStats />
         <Manifesto />
         <FAQ />
         <GetSalmon />

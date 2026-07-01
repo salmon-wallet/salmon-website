@@ -98,25 +98,26 @@ export default async function LocaleLayout({ children, params }: Props) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              {
-                '@context': 'https://schema.org',
-                '@type': 'Organization',
-                name: 'Salmon Wallet',
-                url: 'https://salmonwallet.io',
-                logo: 'https://salmonwallet.io/images/app-icon.png',
-                sameAs: [
-                  'https://x.com/salmonwallet',
-                  'https://github.com/salmon-wallet',
-                ],
-              },
-              {
-                '@context': 'https://schema.org',
-                '@type': 'WebSite',
-                name: 'Salmon Wallet',
-                url: 'https://salmonwallet.io',
-              },
-            ]),
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  name: 'Salmon Wallet',
+                  url: 'https://salmonwallet.io',
+                  logo: 'https://salmonwallet.io/images/app-icon.png',
+                  sameAs: [
+                    'https://x.com/salmonwallet',
+                    'https://github.com/salmon-wallet',
+                  ],
+                },
+                {
+                  '@type': 'WebSite',
+                  name: 'Salmon Wallet',
+                  url: 'https://salmonwallet.io',
+                },
+              ],
+            }),
           }}
         />
         <NextIntlClientProvider locale={locale} messages={messages}>

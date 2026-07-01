@@ -23,6 +23,7 @@
   /* Accent */
   --color-accent: #ff5c45;
   --color-accent-end: rgba(161, 42, 42, 0.9);
+  --color-accent-soft: #ff7e6d;
 
   /* Status */
   --color-success: #10b981;
@@ -31,10 +32,39 @@
   /* Fonts */
   --font-sans: var(--font-dm-sans), system-ui, sans-serif;
   --font-mono: var(--font-dm-mono), ui-monospace, monospace;
+  --font-display: var(--font-dm-sans), system-ui, sans-serif;
+
+  /* Type scale (ValidatorStats) */
+  --text-eyebrow: 0.75rem;
+  --text-h2: clamp(2rem, 1.4rem + 2.6vw, 3.5rem);
+
+  /* Spacing (ValidatorStats) */
+  --space-section: clamp(5rem, 3.5rem + 7vw, 11rem);
+  --space-gutter: clamp(1.25rem, 0.5rem + 3vw, 2rem);
 
   /* Easing */
   --ease-expo-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Editorial headline defaults (ValidatorStats heading) */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* Mono eyebrow/label helper (ValidatorStats) */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+/* Hide scrollbar (single-line stat strip on mobile) */
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
 
 /* Base styles */
 html {

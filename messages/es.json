@@ -215,6 +215,21 @@
     "hideQr": "Ocultar QR",
     "comingSoon": "Próximamente"
   },
+  "validator": {
+    "eyebrow": "Validador Solana activo",
+    "heading": "Alineado con la red a la que sirve.",
+    "apy": "APY est.",
+    "commission": "Comisión",
+    "activeStake": "Stake activo",
+    "uptime": "Uptime",
+    "skipRate": "Skip rate",
+    "wizScore": "Wiz Score",
+    "status": "Estado",
+    "active": "Activo",
+    "live": "En vivo",
+    "snapshot": "Snapshot",
+    "verify": "Verificar on-chain"
+  },
   "footer": {
     "description": "Infraestructura abierta de wallet para usuarios que quieren control, no solo custodia.",
     "copyright": "© {year} Salmon Wallet. Todos los derechos reservados.",
