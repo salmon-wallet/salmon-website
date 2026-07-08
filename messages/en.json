@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Salmon Wallet — Open Wallet Infrastructure",
-    "description": "Open wallet infrastructure for high-alignment users who want control, not just custody.",
-    "ogDescription": "Open code. Open ownership. Open wallet infrastructure for users who want control, not just custody.",
+    "title": "Salmon Wallet — The Open Wallet Layer for Solana",
+    "description": "Open-source, self-custodial Solana wallet — and an open distribution layer for emerging protocols. Live on extension, web, and Android.",
+    "ogDescription": "Open code. No gatekeepers. The open-source, self-custodial wallet built for Solana.",
     "privacy": {
       "title": "Privacy Policy — Salmon Wallet",
       "description": "Privacy policy for Salmon Wallet — how we collect, use, and protect your data."
@@ -14,19 +14,30 @@
   },
   "nav": {
     "why": "Why",
+    "protocols": "For Protocols",
     "features": "Features",
     "security": "Security",
     "manifesto": "Manifesto",
     "faq": "FAQ",
     "getSalmon": "Get Salmon",
     "accessWebWallet": "Access Web Wallet",
+    "github": "GitHub",
     "toggleMenu": "Toggle menu"
   },
   "hero": {
     "badge": "Live since 2023",
-    "heading": "Open code. Open ownership.",
-    "subheading": "The open wallet infrastructure for high-alignment users who want control, not just custody.",
+    "heading": "Open code. No gatekeepers.",
+    "subheading": "Salmon is an open-source, self-custodial Solana wallet — and an open distribution layer for the protocols building there. Live on extension, web, and Android.",
+    "viewCode": "View the code",
     "walletPreview": "Wallet Preview"
+  },
+  "proof": {
+    "eyebrow": "Verifiable by design",
+    "openSource": "Open source",
+    "contributors": "Contributors",
+    "staked": "Staked with our validator",
+    "uptime": "Validator uptime",
+    "since": "Live since"
   },
   "chains": {
     "heading": "Multi-chain by design",
@@ -57,53 +68,77 @@
     }
   },
   "why": {
-    "heading": "Open source is non-negotiable.",
-    "subheading": "Closed code is a trust tax. Most wallets solve custody, but not control. Open source is the clearest way to reduce hidden power, opaque decisions, and asymmetric control at the wallet layer.",
+    "heading": "The problem is not custody. It is control.",
+    "subheading": "Crypto users hold their keys — but closed wallets still decide what gets integrated, what gets surfaced, and who gets distribution. That is not neutral infrastructure. That is private control over a critical layer.",
     "items": [
       {
-        "title": "Decentralization without transparency is theater.",
-        "description": "You do not decentralize power by saying it. You do it by exposing the rules. Without transparency, users may hold keys while still depending on closed systems that shape access, integrations, defaults, and distribution."
+        "title": "Distribution is the hidden power.",
+        "description": "Emerging protocols can build great products and still depend on a private wallet's roadmap to get surfaced, integrated, or prioritized. Holding your keys does not fix that."
       },
       {
-        "title": "Security improves in public.",
-        "description": "Closed systems fail silently. Open systems fail in public and improve faster. For users who care about resilience and verifiability, transparency is not optional."
+        "title": "Salmon opens that layer.",
+        "description": "An open-source wallet no one has to ask permission to build on. Protocols integrate. Communities arrive. Users act. Less roadmap theater. More access."
       },
       {
-        "title": "If users do not shape it, it is not aligned.",
-        "description": "Ownership and governance are not cosmetic layers. They are structural choices. Salmon is built for users who want a wallet layer that can evolve in the open and align with the ecosystem it serves."
+        "title": "Open infrastructure creates stronger alignment.",
+        "description": "Wallets are not just UX — they are distribution infrastructure. The more important the access layer becomes, the more transparent, verifiable, and forkable it should be."
       }
     ]
   },
+  "protocols": {
+    "eyebrow": "For protocols",
+    "heading": "Open the wallet layer.",
+    "subheading": "Emerging Solana protocols should not have to wait for a private company to decide whether they deserve access to users. Salmon gives them an open path.",
+    "items": [
+      {
+        "title": "Built for distribution",
+        "description": "An integration should bring users, not just another logo for a deck. Salmon is designed so protocols can turn integrations into traction, feedback, and repeat usage."
+      },
+      {
+        "title": "A direct path to users",
+        "description": "Ship your integration, onboard the community that follows it, and keep a feedback loop that no closed roadmap can cut off."
+      },
+      {
+        "title": "No gatekeeper to convince",
+        "description": "The code is public and open-source. You do not pitch a business development team — you open a pull request."
+      }
+    ],
+    "cta": "Integrate with Salmon"
+  },
   "features": {
-    "heading": "Open wallet infrastructure, already live",
-    "subheading": "Salmon is not a theoretical alternative. It is already live across browser extension, web wallet, Android, and a public open-source repository.",
+    "heading": "Everything you need in a Solana wallet. Nothing you can't verify.",
+    "subheading": "One reliable path: create or import a wallet, receive funds, transact — and use the integration that brought you here.",
     "preview": "Preview",
     "items": [
       {
-        "title": "Built for high-alignment users",
-        "description": "Designed for crypto natives, builders, integrators, contributors, and communities that care about open, verifiable wallet infrastructure."
+        "title": "Send & receive",
+        "description": "Move tokens and NFTs on Solana with a wallet that stays out of your way."
+      },
+      {
+        "title": "Swap in-wallet",
+        "description": "Trade tokens directly from the wallet — no extra sites, no custodial detour."
+      },
+      {
+        "title": "NFTs included",
+        "description": "Store, view, and send your NFTs alongside your tokens."
+      },
+      {
+        "title": "Solana + Bitcoin",
+        "description": "Built for Solana first, with Bitcoin support — devnets and testnets included."
       },
       {
         "title": "Self-custodial by design",
-        "description": "Use core wallet flows, manage assets, and interact with the ecosystem without giving up custody of your keys."
+        "description": "Keys are encrypted on your device and never leave it. Custody stays with you."
       },
       {
-        "title": "Active Solana validator",
-        "description": "Salmon also operates an active Solana validator, reinforcing its operational alignment with the ecosystem it is building for."
-      },
-      {
-        "title": "Ready to deepen integrations",
-        "description": "The next phase is focused on reliability, mobile parity, security, and stronger ecosystem integrations across the users and projects that matter most."
-      },
-      {
-        "title": "Public open-source repository",
-        "description": "Core software is available through a public repository so the wallet layer can be inspected, challenged, and improved in the open."
+        "title": "Open-source, all of it",
+        "description": "The code behind every flow is public — inspect it, challenge it, fork it."
       }
     ]
   },
   "security": {
-    "heading": "Security by design",
-    "subheading": "Built to reduce trust assumptions through transparency, testing, and disciplined execution.",
+    "heading": "Security is a product decision.",
+    "subheading": "Not only code — discipline. The most important wallet actions must work reliably before anything else gets layered on top.",
     "preview": "Preview",
     "items": [
       {
@@ -112,41 +147,41 @@
       },
       {
         "title": "Privacy with restraint",
-        "description": "Salmon is designed to minimize unnecessary data collection and reduce hidden extraction at the interface layer. The goal is a wallet experience with fewer trust assumptions and more user control."
+        "description": "Salmon is designed to minimize unnecessary data collection and reduce hidden extraction at the interface layer."
       },
       {
         "title": "Open security model",
-        "description": "Security improves through transparency. Open-source code, public review, continuous testing, and audit readiness create a stronger and more verifiable security posture."
+        "description": "Security improves through transparency. Open-source code, public review, continuous testing, and audit readiness create a verifiable security posture."
       },
       {
-        "title": "Every change reviewed",
-        "description": "Contributions are inspected before they become part of the wallet. Critical infrastructure should evolve through visible review and accountable engineering, not behind closed doors."
+        "title": "Visible review, accountable shipping",
+        "description": "Critical infrastructure should not evolve behind closed doors. Changes are reviewed, challenged, and improved in the open."
       }
     ]
   },
   "manifesto": {
-    "heading": "Salmon is public infrastructure.",
-    "subheading": "No hidden gatekeepers. No opaque control. Just systems that can be inspected, challenged, and improved.",
+    "heading": "Salmon is not here to blend in.",
+    "subheading": "It is here to open one of crypto's most important control layers.",
     "principles": [
       {
-        "title": "Salmon is open-source.",
-        "description": "Because closed code creates invisible power."
+        "title": "Built for protocols that need reach. Not permission.",
+        "description": "If protocols cannot reach users, they do not have a growth problem. They have an access problem."
       },
       {
-        "title": "Salmon is built for aligned ownership.",
-        "description": "Because the people who depend on the wallet layer should have a path to shape how it evolves."
+        "title": "Built for users who care what they depend on.",
+        "description": "Builders. Integrators. Contributors. Early communities."
       },
       {
-        "title": "Salmon assumes adversaries.",
-        "description": "Security is earned through exposure, not secrecy."
+        "title": "Open-source is not branding.",
+        "description": "It is the point. Closed infrastructure creates invisible power."
       },
       {
-        "title": "Salmon prioritizes longevity over growth.",
-        "description": "A wallet that earns trust over time is more valuable than one that only optimizes for short-term growth."
+        "title": "Traction first. Narrative second.",
+        "description": "If nobody uses it, nothing else matters. Credibility is earned through protocols integrating, users arriving, and communities returning."
       },
       {
-        "title": "If Salmon fails, it should fail in public.",
-        "description": "If it succeeds, it should remain open to the ecosystem that helped build it."
+        "title": "If Salmon wins, it wins in public.",
+        "description": "If it fails, it fails in public too."
       }
     ]
   },
@@ -155,31 +190,47 @@
     "items": [
       {
         "question": "What is Salmon?",
-        "answer": "Salmon is an open-source, self-custodial wallet built as open wallet infrastructure. It is designed for users, builders, and contributors who want control without depending on closed wallet-layer decisions."
+        "answer": "Salmon is an open-source, self-custodial wallet built as open wallet infrastructure. It helps emerging Solana protocols distribute their integrations, and helps their communities access them without depending on closed wallet-layer decisions."
       },
       {
         "question": "Does Salmon have access to my private keys?",
         "answer": "No. Your private keys are encrypted locally on your device and remain under your control. If you lose your recovery phrase, no one can recover it for you."
       },
       {
-        "question": "What makes Salmon different from other wallets?",
-        "answer": "Most wallets give users custody, but still keep roadmap decisions, integrations, defaults, and product evolution under private control. Salmon is built differently: open-source, verifiable, and aligned with the ecosystem it serves."
+        "question": "Why would a user switch to Salmon?",
+        "answer": "Because Salmon is not only about storing assets. It is about access. Users come to Salmon to use integrations, support emerging ecosystems, and avoid closed wallet-layer gatekeeping."
+      },
+      {
+        "question": "Why would a protocol integrate Salmon?",
+        "answer": "Because distribution matters. Salmon gives protocols a way to ship integrations, onboard real users, gather feedback, and create measurable traction through an open wallet layer."
       },
       {
         "question": "Is Salmon really open-source?",
-        "answer": "Yes. Salmon’s core software is open-source and available through its public repository. The goal is not only to make the code visible, but to keep the wallet layer transparent and verifiable."
+        "answer": "Yes. Salmon's core software is open-source and available through its public repositories on GitHub."
       },
       {
-        "question": "What chains does Salmon support?",
-        "answer": "Salmon is built initially around Solana and is expanding toward Bitcoin and additional networks where demand and alignment are strongest."
+        "question": "Is Salmon audited?",
+        "answer": "Salmon follows an open security model built around reviews, continuous testing, and audit readiness. Security is treated as an ongoing process, not a one-time marketing claim."
       },
       {
         "question": "Can I use Salmon today?",
-        "answer": "Yes. Salmon is already live across browser extension, web wallet, and Android, with continued work toward stronger mobile parity and deeper ecosystem integrations."
+        "answer": "Yes. Salmon is live across browser extension, web wallet, and Android."
+      },
+      {
+        "question": "What chains does Salmon support?",
+        "answer": "Salmon is built initially around Solana, with Bitcoin support, and expands carefully where demand and alignment are strongest."
       },
       {
         "question": "Does Salmon operate beyond the wallet itself?",
-        "answer": "Yes. Salmon also operates an active Solana validator, reinforcing its role as infrastructure aligned with the ecosystem it serves."
+        "answer": "Yes. Salmon also operates an active Solana validator, reinforcing its operational alignment with the ecosystem it serves."
+      },
+      {
+        "question": "What does community-owned mean here?",
+        "answer": "It should mean more than feature requests or symbolic participation. The goal is to align the project's future with structures that can represent real ownership and governance over the core assets and direction of Salmon."
+      },
+      {
+        "question": "What would SAL represent?",
+        "answer": "SAL should represent meaningful alignment around the future of the project, not just a token added to finance a wallet. The long-term objective is for ownership and governance to be tied to the real infrastructure, assets, and direction that make Salmon valuable."
       },
       {
         "question": "Does Salmon collect user data?",
@@ -188,19 +239,12 @@
       {
         "question": "What happens if Salmon stops operating?",
         "answer": "Salmon is open-source infrastructure. Even if the original team disappears, the code remains accessible and the project can continue to evolve in the open rather than disappear behind a closed company structure."
-      },
-      {
-        "question": "Is Salmon audited?",
-        "answer": "Salmon follows an open security model built around reviews, continuous testing, and audit readiness. Security is treated as an ongoing process, not a one-time marketing claim."
-      },
-      {
-        "question": "Who controls Salmon?",
-        "answer": "Salmon is being built so the wallet layer does not remain dependent on private control alone. The direction is toward governance and ownership structures that can align the project with the community and ecosystem it serves."
       }
     ]
   },
   "getSalmon": {
-    "heading": "Get Salmon Now",
+    "heading": "Use it. Or fork it.",
+    "subheading": "Reach what closed wallets ignore.",
     "web": "Web",
     "webDescription": "Access directly from your browser",
     "extension": "Extension",
@@ -213,7 +257,10 @@
     "open": "Open",
     "showQr": "Show QR",
     "hideQr": "Hide QR",
-    "comingSoon": "Coming soon"
+    "comingSoon": "Coming soon",
+    "buildHeading": "Building a protocol?",
+    "buildDescription": "The wallet layer is open. Ship your integration without waiting for permission.",
+    "buildCta": "Integrate with Salmon"
   },
   "validator": {
     "eyebrow": "Active Solana validator",
@@ -232,7 +279,7 @@
     "verify": "Verify on-chain"
   },
   "footer": {
-    "description": "Open wallet infrastructure for users who want control, not just custody.",
+    "description": "The open wallet layer. Open-source, self-custodial, built for Solana.",
     "copyright": "© {year} Salmon Wallet. All rights reserved.",
     "xTwitter": "X / Twitter",
     "github": "GitHub",

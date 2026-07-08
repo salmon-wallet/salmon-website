@@ -6,6 +6,7 @@ export const LINKS = {
   appStore: '#',
   playStore: 'https://play.google.com/store/apps/details?id=io.salmonwallet.app',
   github: 'https://github.com/salmon-wallet',
+  repo: 'https://github.com/salmon-wallet/salmon-wallet-v2',
   twitter: 'https://x.com/salmonwallet',
   medium: 'https://medium.com/@salmonwallet',
   mediaKit: 'https://salmonwallet.io/assets/salmonwallet-mediakit.zip',
@@ -13,6 +14,7 @@ export const LINKS = {
 
 export const NAV_HREFS = [
   '#why',
+  '#protocols',
   '#features',
   '#security',
   '#manifesto',

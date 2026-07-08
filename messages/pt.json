@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Salmon Wallet — Infraestrutura aberta de carteira",
-    "description": "Infraestrutura aberta de carteira para usuários altamente alinhados que querem controle, não apenas custódia.",
-    "ogDescription": "Código aberto. Propriedade aberta. Infraestrutura aberta de carteira para usuários que querem controle, não apenas custódia.",
+    "title": "Salmon Wallet — A camada aberta de carteira para Solana",
+    "description": "Carteira Solana open-source e autocustodial — e uma camada aberta de distribuição para protocolos emergentes. Live em extensão, web e Android.",
+    "ogDescription": "Código aberto. Sem gatekeepers. A carteira open-source e autocustodial construída para Solana.",
     "privacy": {
       "title": "Política de Privacidade — Salmon Wallet",
       "description": "Política de privacidade da Salmon Wallet — como coletamos, usamos e protegemos seus dados."
@@ -14,19 +14,30 @@
   },
   "nav": {
     "why": "Por quê",
+    "protocols": "Para Protocolos",
     "features": "Recursos",
     "security": "Segurança",
     "manifesto": "Manifesto",
     "faq": "FAQ",
     "getSalmon": "Baixar Salmon",
-    "toggleMenu": "Abrir menu",
-    "accessWebWallet": "Acessar Web Wallet"
+    "accessWebWallet": "Acessar Web Wallet",
+    "github": "GitHub",
+    "toggleMenu": "Abrir menu"
   },
   "hero": {
     "badge": "Live desde 2023",
-    "heading": "Código aberto. Propriedade aberta.",
-    "subheading": "A infraestrutura aberta de carteira para usuários altamente alinhados que querem controle, não apenas custódia.",
+    "heading": "Código aberto. Sem gatekeepers.",
+    "subheading": "Salmon é uma carteira Solana open-source e autocustodial — e uma camada aberta de distribuição para os protocolos que constroem lá. Live em extensão, web e Android.",
+    "viewCode": "Ver o código",
     "walletPreview": "Prévia da carteira"
+  },
+  "proof": {
+    "eyebrow": "Verificável por design",
+    "openSource": "Open source",
+    "contributors": "Contribuidores",
+    "staked": "Em stake com nosso validador",
+    "uptime": "Uptime do validador",
+    "since": "Live desde"
   },
   "chains": {
     "heading": "Multi-chain por design",
@@ -57,53 +68,77 @@
     }
   },
   "why": {
-    "heading": "Código aberto não é negociável.",
-    "subheading": "Código fechado é um imposto sobre a confiança. A maioria das carteiras resolve custódia, mas não controle. Código aberto é a forma mais clara de reduzir poder oculto, decisões opacas e controle assimétrico na camada da carteira.",
+    "heading": "O problema não é a custódia. É o controle.",
+    "subheading": "Usuários de cripto têm suas chaves — mas carteiras fechadas ainda decidem o que é integrado, o que é exibido e quem consegue distribuição. Isso não é infraestrutura neutra. É controle privado sobre uma camada crítica.",
     "items": [
       {
-        "title": "Descentralização sem transparência é teatro.",
-        "description": "Você não descentraliza poder apenas dizendo isso. Você faz isso expondo as regras. Sem transparência, usuários podem manter suas chaves e ainda depender de sistemas fechados que moldam acesso, integrações, padrões e distribuição."
+        "title": "Distribuição é o poder oculto.",
+        "description": "Protocolos emergentes podem construir ótimos produtos e ainda depender do roadmap de uma carteira privada para serem exibidos, integrados ou priorizados. Ter suas chaves não resolve isso."
       },
       {
-        "title": "A segurança melhora em público.",
-        "description": "Sistemas fechados falham em silêncio. Sistemas abertos falham em público e melhoram mais rápido. Para usuários que se importam com resiliência e verificabilidade, transparência não é opcional."
+        "title": "Salmon abre essa camada.",
+        "description": "Uma carteira open-source sobre a qual ninguém precisa pedir permissão para construir. Protocolos integram. Comunidades chegam. Usuários agem. Menos teatro de roadmap. Mais acesso."
       },
       {
-        "title": "Se os usuários não moldam, não está alinhado.",
-        "description": "Propriedade e governança não são camadas cosméticas. São escolhas estruturais. Salmon é construído para usuários que querem uma camada de carteira capaz de evoluir em aberto e se alinhar ao ecossistema que serve."
+        "title": "Infraestrutura aberta cria alinhamento mais forte.",
+        "description": "Carteiras não são apenas UX — são infraestrutura de distribuição. Quanto mais importante a camada de acesso se torna, mais transparente, verificável e forkeável ela deveria ser."
       }
     ]
   },
+  "protocols": {
+    "eyebrow": "Para protocolos",
+    "heading": "Abra a camada de carteira.",
+    "subheading": "Protocolos emergentes de Solana não deveriam ter que esperar uma empresa privada decidir se merecem acesso a usuários. Salmon oferece um caminho aberto.",
+    "items": [
+      {
+        "title": "Construído para distribuição",
+        "description": "Uma integração deveria trazer usuários, não apenas mais um logo para um deck. Salmon é projetado para que protocolos transformem integrações em tração, feedback e uso recorrente."
+      },
+      {
+        "title": "Um caminho direto até usuários",
+        "description": "Lance sua integração, faça onboarding da comunidade que a segue e mantenha um loop de feedback que nenhum roadmap fechado pode cortar."
+      },
+      {
+        "title": "Sem gatekeeper para convencer",
+        "description": "O código é público e open-source. Você não faz pitch para um time de business development — você abre um pull request."
+      }
+    ],
+    "cta": "Integre com Salmon"
+  },
   "features": {
-    "heading": "Infraestrutura aberta de carteira, já live",
-    "subheading": "Salmon não é uma alternativa teórica. Já está live em extensão de navegador, web wallet, Android e em um repositório público open-source.",
+    "heading": "Tudo o que você precisa em uma carteira Solana. Nada que você não possa verificar.",
+    "subheading": "Um caminho confiável: crie ou importe uma carteira, receba fundos, transacione — e use a integração que trouxe você até aqui.",
     "preview": "Prévia",
     "items": [
       {
-        "title": "Construído para usuários altamente alinhados",
-        "description": "Projetado para crypto natives, builders, integradores, contribuidores e comunidades que se importam com infraestrutura de carteira aberta e verificável."
+        "title": "Enviar e receber",
+        "description": "Mova tokens e NFTs na Solana com uma carteira que não atrapalha o seu caminho."
+      },
+      {
+        "title": "Swap dentro da carteira",
+        "description": "Troque tokens diretamente da carteira — sem sites extras, sem desvio custodial."
+      },
+      {
+        "title": "NFTs incluídos",
+        "description": "Guarde, veja e envie seus NFTs junto com seus tokens."
+      },
+      {
+        "title": "Solana + Bitcoin",
+        "description": "Construída primeiro para Solana, com suporte a Bitcoin — devnets e testnets incluídas."
       },
       {
         "title": "Autocustodial por design",
-        "description": "Use fluxos essenciais de carteira, gerencie ativos e interaja com o ecossistema sem abrir mão da custódia das suas chaves."
+        "description": "As chaves são criptografadas no seu dispositivo e nunca saem dele. A custódia fica com você."
       },
       {
-        "title": "Validador ativo de Solana",
-        "description": "Salmon também opera um validador ativo de Solana, reforçando seu alinhamento operacional com o ecossistema para o qual está construindo."
-      },
-      {
-        "title": "Pronto para aprofundar integrações",
-        "description": "A próxima fase é focada em confiabilidade, paridade mobile, segurança e integrações mais fortes com os usuários e projetos mais importantes."
-      },
-      {
-        "title": "Repositório público open-source",
-        "description": "O software core está disponível em um repositório público para que a camada de carteira possa ser inspecionada, questionada e melhorada em aberto."
+        "title": "Open-source, tudo",
+        "description": "O código por trás de cada fluxo é público — inspecione, questione, faça fork."
       }
     ]
   },
   "security": {
-    "heading": "Segurança por design",
-    "subheading": "Construído para reduzir pressupostos de confiança por meio de transparência, testes e execução disciplinada.",
+    "heading": "Segurança é uma decisão de produto.",
+    "subheading": "Não é só código — é disciplina. As ações mais importantes da carteira devem funcionar de forma confiável antes que qualquer outra coisa seja adicionada por cima.",
     "preview": "Prévia",
     "items": [
       {
@@ -112,41 +147,41 @@
       },
       {
         "title": "Privacidade com critério",
-        "description": "Salmon é projetado para minimizar coleta desnecessária de dados e reduzir extração oculta na camada de interface. O objetivo é uma experiência de carteira com menos pressupostos de confiança e mais controle do usuário."
+        "description": "Salmon é projetado para minimizar coleta desnecessária de dados e reduzir extração oculta na camada de interface."
       },
       {
         "title": "Modelo de segurança aberto",
-        "description": "A segurança melhora por meio da transparência. Código open-source, revisão pública, testes contínuos e preparação para auditorias criam uma postura de segurança mais forte e verificável."
+        "description": "A segurança melhora por meio da transparência. Código open-source, revisão pública, testes contínuos e preparação para auditorias criam uma postura de segurança verificável."
       },
       {
-        "title": "Cada mudança revisada",
-        "description": "Contribuições são inspecionadas antes de se tornarem parte da carteira. Infraestrutura crítica deve evoluir por meio de revisão visível e engenharia responsável, não a portas fechadas."
+        "title": "Revisão visível, entrega responsável",
+        "description": "Infraestrutura crítica não deveria evoluir a portas fechadas. Mudanças são revisadas, questionadas e melhoradas em aberto."
       }
     ]
   },
   "manifesto": {
-    "heading": "Salmon é infraestrutura pública.",
-    "subheading": "Sem gatekeepers ocultos. Sem controle opaco. Apenas sistemas que podem ser inspecionados, questionados e melhorados.",
+    "heading": "Salmon não está aqui para se misturar.",
+    "subheading": "Está aqui para abrir uma das camadas de controle mais importantes de cripto.",
     "principles": [
       {
-        "title": "Salmon é open-source.",
-        "description": "Porque código fechado cria poder invisível."
+        "title": "Construído para protocolos que precisam de alcance. Não de permissão.",
+        "description": "Se protocolos não conseguem chegar a usuários, eles não têm um problema de crescimento. Têm um problema de acesso."
       },
       {
-        "title": "Salmon é construído para propriedade alinhada.",
-        "description": "Porque as pessoas que dependem da camada de carteira devem ter um caminho para moldar sua evolução."
+        "title": "Construído para usuários que se importam com aquilo de que dependem.",
+        "description": "Builders. Integradores. Contribuidores. Comunidades iniciais."
       },
       {
-        "title": "Salmon assume adversários.",
-        "description": "Segurança é conquistada por exposição, não por segredo."
+        "title": "Open-source não é branding.",
+        "description": "É o ponto. Infraestrutura fechada cria poder invisível."
       },
       {
-        "title": "Salmon prioriza longevidade sobre crescimento.",
-        "description": "Uma carteira que conquista confiança ao longo do tempo é mais valiosa do que uma que apenas otimiza crescimento de curto prazo."
+        "title": "Primeiro tração. Depois narrativa.",
+        "description": "Se ninguém usa, nada mais importa. Credibilidade se conquista com protocolos integrando, usuários chegando e comunidades voltando."
       },
       {
-        "title": "Se Salmon falhar, deve falhar em público.",
-        "description": "Se tiver sucesso, deve permanecer aberto ao ecossistema que ajudou a construí-lo."
+        "title": "Se Salmon vencer, vence em público.",
+        "description": "Se falhar, também falha em público."
       }
     ]
   },
@@ -155,31 +190,47 @@
     "items": [
       {
         "question": "O que é Salmon?",
-        "answer": "Salmon é uma carteira autocustodial e open-source construída como infraestrutura aberta de carteira. Foi projetada para usuários, builders e contribuidores que querem controle sem depender de decisões fechadas na camada da carteira."
+        "answer": "Salmon é uma carteira autocustodial e open-source construída como infraestrutura aberta de carteira. Ajuda protocolos emergentes de Solana a distribuir suas integrações, e suas comunidades a acessá-las sem depender de decisões fechadas na camada da carteira."
       },
       {
         "question": "O Salmon tem acesso às minhas chaves privadas?",
         "answer": "Não. Suas chaves privadas são criptografadas localmente no seu dispositivo e permanecem sob seu controle. Se você perder sua frase de recuperação, ninguém poderá recuperá-la para você."
       },
       {
-        "question": "O que torna Salmon diferente de outras carteiras?",
-        "answer": "A maioria das carteiras oferece custódia aos usuários, mas mantém decisões de roadmap, integrações, padrões e evolução do produto sob controle privado. Salmon é construído de forma diferente: open-source, verificável e alinhado ao ecossistema que serve."
+        "question": "Por que um usuário mudaria para o Salmon?",
+        "answer": "Porque Salmon não é só guardar ativos. É acesso. Usuários vêm ao Salmon para usar integrações, apoiar ecossistemas emergentes e evitar o gatekeeping das carteiras fechadas."
+      },
+      {
+        "question": "Por que um protocolo integraria o Salmon?",
+        "answer": "Porque distribuição importa. Salmon dá aos protocolos uma forma de lançar integrações, fazer onboarding de usuários reais, coletar feedback e gerar tração mensurável através de uma camada aberta de carteira."
       },
       {
         "question": "Salmon é realmente open-source?",
-        "answer": "Sim. O software core do Salmon é open-source e está disponível em seu repositório público. O objetivo não é apenas tornar o código visível, mas manter a camada da carteira transparente e verificável."
+        "answer": "Sim. O software core do Salmon é open-source e está disponível em seus repositórios públicos no GitHub."
       },
       {
-        "question": "Quais redes Salmon suporta?",
-        "answer": "Salmon é construído inicialmente em torno da Solana e está se expandindo para Bitcoin e redes adicionais onde a demanda e o alinhamento forem mais fortes."
+        "question": "Salmon é auditado?",
+        "answer": "Salmon segue um modelo de segurança aberto baseado em revisões, testes contínuos e preparação para auditorias. Segurança é tratada como um processo contínuo, não como uma alegação pontual de marketing."
       },
       {
         "question": "Posso usar Salmon hoje?",
-        "answer": "Sim. Salmon já está live em extensão de navegador, web wallet e Android, com trabalho contínuo rumo a maior paridade mobile e integrações mais profundas com o ecossistema."
+        "answer": "Sim. Salmon está live em extensão de navegador, web wallet e Android."
       },
       {
-        "question": "Salmon opera além da wallet?",
-        "answer": "Sim. Salmon também opera um validador ativo de Solana, reforçando seu papel como infraestrutura alinhada ao ecossistema que serve."
+        "question": "Quais redes o Salmon suporta?",
+        "answer": "Salmon é construído inicialmente em torno da Solana, com suporte a Bitcoin, e se expande com critério onde a demanda e o alinhamento forem mais fortes."
+      },
+      {
+        "question": "Salmon opera além da carteira?",
+        "answer": "Sim. Salmon também opera um validador ativo de Solana, reforçando seu alinhamento operacional com o ecossistema que serve."
+      },
+      {
+        "question": "O que significa community-owned aqui?",
+        "answer": "Deveria significar mais do que pedidos de recursos ou participação simbólica. O objetivo é alinhar o futuro do projeto com estruturas que representem propriedade e governança reais sobre os ativos e a direção do Salmon."
+      },
+      {
+        "question": "O que o SAL representaria?",
+        "answer": "SAL deveria representar alinhamento real em torno do futuro do projeto, não apenas um token adicionado para financiar uma carteira. O objetivo de longo prazo é que propriedade e governança estejam ligadas à infraestrutura, aos ativos e à direção que tornam o Salmon valioso."
       },
       {
         "question": "Salmon coleta dados de usuários?",
@@ -188,19 +239,12 @@
       {
         "question": "O que acontece se Salmon parar de operar?",
         "answer": "Salmon é infraestrutura open-source. Mesmo que a equipe original desapareça, o código permanece acessível e o projeto pode continuar evoluindo em aberto em vez de desaparecer atrás de uma estrutura corporativa fechada."
-      },
-      {
-        "question": "Salmon é auditado?",
-        "answer": "Salmon segue um modelo de segurança aberto baseado em revisões, testes contínuos e preparação para auditorias. Segurança é tratada como um processo contínuo, não como uma alegação pontual de marketing."
-      },
-      {
-        "question": "Quem controla Salmon?",
-        "answer": "Salmon está sendo construído para que a camada da carteira não dependa apenas de controle privado. A direção aponta para estruturas de governança e propriedade que possam alinhar o projeto com a comunidade e o ecossistema que serve."
       }
     ]
   },
   "getSalmon": {
-    "heading": "Baixe o Salmon agora",
+    "heading": "Use. Ou faça fork.",
+    "subheading": "Alcance o que as carteiras fechadas ignoram.",
     "web": "Web",
     "webDescription": "Acesse diretamente pelo navegador",
     "extension": "Extensão",
@@ -213,7 +257,10 @@
     "open": "Abrir",
     "showQr": "Mostrar QR",
     "hideQr": "Ocultar QR",
-    "comingSoon": "Em breve"
+    "comingSoon": "Em breve",
+    "buildHeading": "Construindo um protocolo?",
+    "buildDescription": "A camada de carteira está aberta. Lance sua integração sem esperar permissão.",
+    "buildCta": "Integre com Salmon"
   },
   "validator": {
     "eyebrow": "Validador Solana ativo",
@@ -232,7 +279,7 @@
     "verify": "Verificar on-chain"
   },
   "footer": {
-    "description": "Infraestrutura aberta de carteira para usuários que querem controle, não apenas custódia.",
+    "description": "A camada aberta de carteira. Open-source, autocustodial, construída para Solana.",
     "copyright": "© {year} Salmon Wallet. Todos os direitos reservados.",
     "xTwitter": "X / Twitter",
     "github": "GitHub",
