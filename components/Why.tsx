@@ -128,29 +128,32 @@ function OpenDiagram({ animated, labels }: { animated: boolean; labels: DiagramL
         <circle key={y} cx="264" cy={y} r="6" className="fill-none stroke-accent" strokeWidth="1.5" opacity="0.5" />
       ))}
 
-      {/* traffic passing through */}
+      {/* traffic passing through: one request per protocol, fanning out to users */}
       {animated &&
-        [0, 1, 2].map((i) => (
-          <motion.circle
-            key={i}
-            r="3"
-            className="fill-accent"
-            animate={{
-              cx: [26, 150, 258],
-              cy: [IN_LANES[i * 2], 60, OUT_LANES[i]],
-              opacity: [0, 1, 1, 0],
-            }}
-            transition={{
-              duration: 2.6,
-              times: [0, 0.5, 1],
-              delay: i * 0.55,
-              repeat: Infinity,
-              repeatDelay: 0.7,
-              ease: 'linear',
-              opacity: { duration: 2.6, times: [0, 0.1, 0.9, 1], delay: i * 0.55, repeat: Infinity, repeatDelay: 0.7 },
-            }}
-          />
-        ))}
+        IN_LANES.map((y, i) => {
+          const outY = OUT_LANES[[0, 0, 1, 2, 2][i]];
+          return (
+            <motion.circle
+              key={y}
+              r="3"
+              className="fill-accent"
+              animate={{
+                cx: [26, 150, 258],
+                cy: [y, 60, outY],
+                opacity: [0, 1, 1, 0],
+              }}
+              transition={{
+                duration: 2.6,
+                times: [0, 0.5, 1],
+                delay: i * 0.45,
+                repeat: Infinity,
+                repeatDelay: 0.7,
+                ease: 'linear',
+                opacity: { duration: 2.6, times: [0, 0.1, 0.9, 1], delay: i * 0.45, repeat: Infinity, repeatDelay: 0.7 },
+              }}
+            />
+          );
+        })}
 
       {/* labels */}
       <text x="10" y="122" className="fill-[#6b6e7b]" style={LABEL_STYLE}>{labels.protocols}</text>
