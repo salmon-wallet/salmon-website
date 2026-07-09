@@ -100,7 +100,7 @@ export default function Navbar() {
           />
         )}
 
-        <div className="relative mx-auto max-w-6xl px-6 flex items-center justify-between h-16">
+        <div className="relative mx-auto max-w-7xl px-6 flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0 transition-opacity hover:opacity-90">
             <Image
@@ -120,13 +120,13 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Right Navigation */}
-          <div className="hidden lg:flex items-center gap-6 ml-auto">
-            <div className="flex items-center gap-6">
+          <div className="hidden xl:flex items-center gap-5 ml-auto">
+            <div className="flex items-center gap-5">
               {NAV_KEYS.map((key, i) => (
                 <a
                   key={key}
                   href={NAV_HREFS[i]}
-                  className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300"
+                  className="text-sm whitespace-nowrap text-text-secondary hover:text-text-primary transition-colors duration-300"
                 >
                   {t(key)}
                 </a>
@@ -161,11 +161,11 @@ export default function Navbar() {
               ))}
             </div>
 
-            <div className="flex items-center gap-3">
-              <GradientButton variant="secondary" href="#get-salmon" className="px-4 py-2">
+            <div className="flex shrink-0 items-center gap-3">
+              <GradientButton variant="secondary" href="#get-salmon" className="px-4 py-2 whitespace-nowrap">
                 {t('getSalmon')}
               </GradientButton>
-              <GradientButton variant="primary" href={LINKS.webWallet} className="px-4 py-2">
+              <GradientButton variant="primary" href={LINKS.webWallet} className="px-4 py-2 whitespace-nowrap">
                 {t('accessWebWallet')}
               </GradientButton>
             </div>
@@ -173,7 +173,7 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden flex flex-col gap-1.5 p-2 cursor-pointer"
+            className="xl:hidden flex flex-col gap-1.5 p-2 cursor-pointer"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={t('toggleMenu')}
           >
@@ -208,7 +208,7 @@ export default function Navbar() {
                 ? { duration: 0 }
                 : { duration: 0.5, ease: [0.16, 1, 0.3, 1] }
             }
-            className="fixed inset-y-0 right-0 w-[80vw] z-[90] bg-bg-primary/95 backdrop-blur-xl pt-28 px-8 lg:hidden shadow-[-20px_0_40px_rgba(0,0,0,0.4)]"
+            className="fixed inset-y-0 right-0 w-[80vw] z-[90] bg-bg-primary/95 backdrop-blur-xl pt-28 px-8 xl:hidden shadow-[-20px_0_40px_rgba(0,0,0,0.4)]"
           >
             <motion.div
               className="flex flex-col gap-6"

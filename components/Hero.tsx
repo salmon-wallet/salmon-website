@@ -80,7 +80,7 @@ export default function Hero() {
       />
 
       <motion.div
-        className="relative z-10 mx-auto max-w-4xl px-6 text-center pt-2 sm:pt-12 pb-12 sm:pb-20 flex flex-col items-center"
+        className="relative z-10 mx-auto max-w-4xl px-6 text-center pt-2 sm:pt-6 pb-10 sm:pb-14 flex flex-col items-center"
         variants={stagger}
         initial="initial"
         animate="animate"
@@ -102,7 +102,8 @@ export default function Hero() {
               }
           }
         >
-          <div className="relative mx-auto w-[200px] sm:w-[260px] aspect-[9/16] rounded-[2.5rem] border border-card-border bg-card-bg shadow-[0_0_80px_rgba(255,92,69,0.08)] overflow-hidden">
+          {/* Width tracks viewport height so the full hero (CTAs included) always fits above the fold. */}
+          <div className="relative mx-auto w-[clamp(150px,21vh,260px)] aspect-[9/16] rounded-[2.5rem] border border-card-border bg-card-bg shadow-[0_0_80px_rgba(255,92,69,0.08)] overflow-hidden">
             <Image
               src="/images/hero-app.png"
               alt="Salmon Wallet App"

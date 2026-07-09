@@ -25,7 +25,7 @@ function Item({ label, value, href, testId }: ItemProps) {
   );
 
   const cellClasses =
-    'flex shrink-0 snap-start flex-col gap-1 px-5 py-4 sm:px-7 [&:not(:first-child)]:border-l [&:not(:first-child)]:border-border-subtle';
+    'flex shrink-0 snap-start flex-col gap-1 px-5 py-4 sm:px-7 lg:flex-1 lg:shrink lg:px-5 [&:not(:first-child)]:border-l [&:not(:first-child)]:border-border-subtle';
 
   if (href) {
     return (

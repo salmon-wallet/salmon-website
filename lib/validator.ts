@@ -57,9 +57,13 @@ export async function getValidatorStats(): Promise<ValidatorStats> {
       return FALLBACK;
     }
 
+    // Stakewiz switched `commission` from percent to basis points (500 = 5%).
+    // A percentage can never exceed 100, so larger values must be bps.
+    const rawCommission = v.commission ?? FALLBACK.commission;
+
     return {
       apy: v.apy_estimate,
-      commission: v.commission ?? FALLBACK.commission,
+      commission: rawCommission > 100 ? rawCommission / 100 : rawCommission,
       activeStake: v.activated_stake,
       uptime: v.uptime ?? FALLBACK.uptime,
       skipRate: v.skip_rate ?? FALLBACK.skipRate,

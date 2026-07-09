@@ -14,7 +14,7 @@ function Stat({ label, testId, children }: StatProps) {
   return (
     <div
       role="listitem"
-      className="flex shrink-0 snap-start flex-col gap-1.5 px-5 py-5 first:pl-5 sm:px-7 sm:first:pl-7 [&:not(:first-child)]:border-l [&:not(:first-child)]:border-border-subtle"
+      className="flex shrink-0 snap-start flex-col gap-1.5 px-5 py-5 first:pl-5 sm:px-7 sm:first:pl-7 lg:flex-1 lg:shrink lg:px-5 lg:first:pl-5 [&:not(:first-child)]:border-l [&:not(:first-child)]:border-border-subtle"
     >
       <div
         data-testid={testId}
