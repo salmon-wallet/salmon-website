@@ -17,6 +17,24 @@ interface DiagramLabels {
 
 /* ── Closed layer: requests pile up in front of a wallet nothing gets through ── */
 
+/** Lanes from each protocol square into the wallet's left edge. */
+const CLOSED_LANES = [
+  { y0: 28, y1: 54 },
+  { y0: 60, y1: 60 },
+  { y0: 92, y1: 66 },
+] as const;
+
+/** Point at parameter t (0..1) along a closed lane — keeps dots ON the line. */
+function lanePoint(lane: (typeof CLOSED_LANES)[number], t: number) {
+  return { x: 26 + 98 * t, y: lane.y0 + (lane.y1 - lane.y0) * t };
+}
+
+const QUEUE_STOPS = [
+  { t: 0.9, opacity: 0.9 },
+  { t: 0.8, opacity: 0.65 },
+  { t: 0.7, opacity: 0.4 },
+] as const;
+
 function ClosedDiagram({ animated, labels }: { animated: boolean; labels: DiagramLabels }) {
   return (
     <svg viewBox="0 0 300 132" className="w-full" aria-hidden="true">
@@ -24,22 +42,30 @@ function ClosedDiagram({ animated, labels }: { animated: boolean; labels: Diagra
       {[20, 52, 84].map((y) => (
         <rect key={y} x="10" y={y} width="16" height="16" rx="4" className="fill-none stroke-[#404962]" strokeWidth="1.5" />
       ))}
-      <line x1="26" y1="28" x2="124" y2="54" className="stroke-[#404962]" strokeWidth="1.5" opacity="0.6" />
-      <line x1="26" y1="60" x2="124" y2="60" className="stroke-[#404962]" strokeWidth="1.5" opacity="0.6" />
-      <line x1="26" y1="92" x2="124" y2="66" className="stroke-[#404962]" strokeWidth="1.5" opacity="0.6" />
+      {CLOSED_LANES.map((l) => (
+        <line key={l.y0} x1="26" y1={l.y0} x2="124" y2={l.y1} className="stroke-[#404962]" strokeWidth="1.5" opacity="0.6" />
+      ))}
 
-      {/* the queue: requests waiting in front of the wallet */}
-      <circle cx="116" cy="60" r="3" className="fill-[#8a8d98]" opacity="0.9" />
-      <circle cx="107" cy="60" r="3" className="fill-[#8a8d98]" opacity="0.65" />
-      <circle cx="98" cy="60" r="3" className="fill-[#8a8d98]" opacity="0.4" />
-      {animated && (
-        <motion.circle
-          r="3"
-          className="fill-[#8a8d98]"
-          animate={{ cx: [26, 89, 89], cy: [28, 60, 60], opacity: [0.9, 0.9, 0] }}
-          transition={{ duration: 2.8, times: [0, 0.5, 1], repeat: Infinity, repeatDelay: 0.4, ease: 'linear' }}
-        />
+      {/* the queue: requests waiting on every lane */}
+      {CLOSED_LANES.map((lane) =>
+        QUEUE_STOPS.map(({ t, opacity }) => {
+          const p = lanePoint(lane, t);
+          return <circle key={`${lane.y0}-${t}`} cx={p.x} cy={p.y} r="2.5" className="fill-[#8a8d98]" opacity={opacity} />;
+        })
       )}
+      {animated &&
+        CLOSED_LANES.map((lane, i) => {
+          const end = lanePoint(lane, 0.62);
+          return (
+            <motion.circle
+              key={lane.y0}
+              r="2.5"
+              className="fill-[#8a8d98]"
+              animate={{ cx: [26, end.x, end.x], cy: [lane.y0, end.y, end.y], opacity: [0.9, 0.9, 0] }}
+              transition={{ duration: 2.8, times: [0, 0.5, 1], delay: i * 0.9, repeat: Infinity, repeatDelay: 0.4, ease: 'linear' }}
+            />
+          );
+        })}
 
       {/* the closed wallet: a box with a lock */}
       <rect x="124" y="38" width="40" height="44" rx="8" className="fill-[#161c2d] stroke-[#404962]" strokeWidth="1.5" />
