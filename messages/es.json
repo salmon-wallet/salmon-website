@@ -81,7 +81,7 @@
     "open": {
       "label": "La capa de wallet abierta",
       "items": [
-        "Los protocolos integran sin pedir permiso.",
+        "Las integraciones se revisan en público y entran por mérito.",
         "Abrís un pull request, no un deck de partnership.",
         "Cada default y cada integración es código público."
       ]
@@ -102,8 +102,8 @@
         "description": "Lanzá tu integración, onboardeá a la comunidad que la sigue y mantené un loop de feedback que ningún roadmap cerrado puede cortar."
       },
       {
-        "title": "Sin gatekeeper que convencer",
-        "description": "El código es público y open-source. No le pitcheás a un equipo de business development — abrís un pull request."
+        "title": "Revisión abierta, no puertas cerradas",
+        "description": "Cada integración se revisa en público antes de subir — la seguridad primero. La vara es la calidad del código, no un acuerdo comercial."
       }
     ],
     "cta": "Integrá con Salmon"
@@ -268,7 +268,7 @@
     "hideQr": "Ocultar QR",
     "comingSoon": "Próximamente",
     "buildHeading": "¿Estás construyendo un protocolo?",
-    "buildDescription": "La capa de wallet está abierta. Lanzá tu integración sin esperar permiso.",
+    "buildDescription": "La capa de wallet está abierta. Subí tu integración por revisión pública — sin acuerdos a puerta cerrada.",
     "buildCta": "Integrá con Salmon"
   },
   "validator": {

@@ -38,28 +38,31 @@ function ClosedDiagram({ animated }: { animated: boolean }) {
   );
 }
 
-/* ── Open layer: protocols reach users directly; flow never stops ── */
+/* ── Open layer: more protocols, reaching Salmon directly; flow never stops ── */
 
 const OPEN_LANES = [
-  { y1: 20, y2: 56 },
-  { y1: 60, y2: 60 },
-  { y1: 100, y2: 64 },
+  { y1: 12, y2: 54 },
+  { y1: 34, y2: 57 },
+  { y1: 56, y2: 60 },
+  { y1: 78, y2: 63 },
+  { y1: 100, y2: 66 },
 ] as const;
 
 function OpenDiagram({ animated }: { animated: boolean }) {
   return (
     <svg viewBox="0 0 300 120" className="w-full" aria-hidden="true">
-      {[12, 52, 92].map((y) => (
-        <rect key={y} x="10" y={y} width="16" height="16" rx="4" className="fill-none stroke-accent" strokeWidth="1.5" opacity="0.55" />
+      {OPEN_LANES.map((l) => (
+        <rect key={l.y1} x="10" y={l.y1 - 8} width="16" height="16" rx="4" className="fill-none stroke-accent" strokeWidth="1.5" opacity="0.55" />
       ))}
       {OPEN_LANES.map((l) => (
-        <line key={l.y1} x1="26" y1={l.y1} x2="246" y2={l.y2} className="stroke-accent" strokeWidth="1.5" strokeDasharray="3 4" opacity="0.3" />
+        <line key={l.y1} x1="26" y1={l.y1} x2="242" y2={l.y2} className="stroke-accent" strokeWidth="1.5" strokeDasharray="3 4" opacity="0.3" />
       ))}
+      {/* Salmon is the destination */}
       {animated ? (
         <motion.circle
           cx="260"
           cy="60"
-          r="12"
+          r="15"
           className="fill-accent/15 stroke-accent"
           strokeWidth="1.5"
           animate={{ scale: [1, 1.08, 1] }}
@@ -67,23 +70,23 @@ function OpenDiagram({ animated }: { animated: boolean }) {
           style={{ transformOrigin: '260px 60px' }}
         />
       ) : (
-        <circle cx="260" cy="60" r="12" className="fill-accent/15 stroke-accent" strokeWidth="1.5" />
+        <circle cx="260" cy="60" r="15" className="fill-accent/15 stroke-accent" strokeWidth="1.5" />
       )}
-      <circle cx="260" cy="60" r="3" className="fill-accent" />
+      <image href="/images/logo.png" x="251" y="51" width="18" height="18" />
       {animated &&
         OPEN_LANES.map((l, i) => (
           <motion.circle
             key={l.y1}
-            r="3.5"
+            r="3"
             className="fill-accent"
-            animate={{ cx: [26, 246], cy: [l.y1, l.y2], opacity: [0, 1, 1, 0] }}
+            animate={{ cx: [26, 242], cy: [l.y1, l.y2], opacity: [0, 1, 1, 0] }}
             transition={{
               duration: 2,
-              delay: i * 0.65,
+              delay: i * 0.4,
               repeat: Infinity,
-              repeatDelay: 0.6,
+              repeatDelay: 0.8,
               ease: 'linear',
-              opacity: { duration: 2, times: [0, 0.12, 0.88, 1], delay: i * 0.65, repeat: Infinity, repeatDelay: 0.6 },
+              opacity: { duration: 2, times: [0, 0.12, 0.88, 1], delay: i * 0.4, repeat: Infinity, repeatDelay: 0.8 },
             }}
           />
         ))}

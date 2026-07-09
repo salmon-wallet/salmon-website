@@ -81,7 +81,7 @@
     "open": {
       "label": "The open wallet layer",
       "items": [
-        "Protocols integrate without asking for permission.",
+        "Integrations are reviewed in public and land on merit.",
         "You open a pull request, not a partnership deck.",
         "Every default and integration is public code."
       ]
@@ -102,8 +102,8 @@
         "description": "Ship your integration, onboard the community that follows it, and keep a feedback loop that no closed roadmap can cut off."
       },
       {
-        "title": "No gatekeeper to convince",
-        "description": "The code is public and open-source. You do not pitch a business development team — you open a pull request."
+        "title": "Open review, not closed doors",
+        "description": "Every integration is reviewed in public before it ships — security first. The bar is code quality, not a business deal."
       }
     ],
     "cta": "Integrate with Salmon"
@@ -268,7 +268,7 @@
     "hideQr": "Hide QR",
     "comingSoon": "Coming soon",
     "buildHeading": "Building a protocol?",
-    "buildDescription": "The wallet layer is open. Ship your integration without waiting for permission.",
+    "buildDescription": "The wallet layer is open. Ship your integration through public review — no closed-door deals.",
     "buildCta": "Integrate with Salmon"
   },
   "validator": {

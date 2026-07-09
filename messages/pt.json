@@ -81,7 +81,7 @@
     "open": {
       "label": "A camada de carteira aberta",
       "items": [
-        "Protocolos integram sem pedir permissão.",
+        "Integrações são revisadas em público e entram por mérito.",
         "Você abre um pull request, não um deck de parceria.",
         "Cada padrão e cada integração é código público."
       ]
@@ -102,8 +102,8 @@
         "description": "Lance sua integração, faça onboarding da comunidade que a segue e mantenha um loop de feedback que nenhum roadmap fechado pode cortar."
       },
       {
-        "title": "Sem gatekeeper para convencer",
-        "description": "O código é público e open-source. Você não faz pitch para um time de business development — você abre um pull request."
+        "title": "Revisão aberta, não portas fechadas",
+        "description": "Cada integração é revisada em público antes de subir — segurança primeiro. A régua é a qualidade do código, não um acordo comercial."
       }
     ],
     "cta": "Integre com Salmon"
@@ -268,7 +268,7 @@
     "hideQr": "Ocultar QR",
     "comingSoon": "Em breve",
     "buildHeading": "Construindo um protocolo?",
-    "buildDescription": "A camada de carteira está aberta. Lance sua integração sem esperar permissão.",
+    "buildDescription": "A camada de carteira está aberta. Envie sua integração por revisão pública — sem acordos de portas fechadas.",
     "buildCta": "Integre com Salmon"
   },
   "validator": {

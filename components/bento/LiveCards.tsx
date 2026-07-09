@@ -24,9 +24,8 @@ export function ValidatorVisual({ apy, uptime, activeStake }: ValidatorVisualPro
       {/* Stake flowing from wallet to node */}
       <div className="flex-1">
         <svg viewBox="0 0 220 64" className="w-full" aria-hidden="true">
-          {/* wallet */}
-          <rect x="8" y="22" width="26" height="20" rx="5" className="fill-none stroke-[#404962]" strokeWidth="1.5" />
-          <circle cx="28" cy="32" r="2" className="fill-[#8a8d98]" />
+          {/* the wallet is Salmon */}
+          <image href="/images/logo.png" x="11" y="22" width="20" height="20" />
           {/* link */}
           <line x1="42" y1="32" x2="178" y2="32" className="stroke-[#404962]" strokeWidth="1.5" strokeDasharray="3 4" />
           {/* traveling stake */}
