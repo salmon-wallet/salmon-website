@@ -14,7 +14,22 @@ const FALLBACK: RepoStats = {
   live: false,
 };
 
+export interface RepoCommit {
+  sha: string;
+  message: string;
+}
+
 const REPO_API = 'https://api.github.com/repos/salmon-wallet/salmon-wallet-v2';
+
+/** v3 is the official frontend repo — the commit feed reads from it. */
+const V3_API = 'https://api.github.com/repos/salmon-wallet/salmon-wallet-v3';
+
+/** Snapshot fallback (2026-07-08) so the open-source card never renders empty. */
+const COMMITS_FALLBACK: RepoCommit[] = [
+  { sha: '40a823a', message: 'Merge pull request #15 from salmon-wallet…' },
+  { sha: 'de2ff2e', message: 'docs(qa): add QA runbook' },
+  { sha: 'b8e98f6', message: 'perf(web): fix Lighthouse measurement and…' },
+];
 
 const HEADERS = { Accept: 'application/vnd.github+json' };
 
@@ -55,5 +70,36 @@ export async function getRepoStats(): Promise<RepoStats> {
     };
   } catch {
     return FALLBACK;
+  }
+}
+
+/**
+ * Latest commits from the official frontend repo (v3), for the open-source
+ * bento card. Cached 1h; always resolves via the static snapshot on error.
+ */
+export async function getRecentCommits(): Promise<RepoCommit[]> {
+  try {
+    const res = await fetch(`${V3_API}/commits?per_page=3`, {
+      headers: HEADERS,
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return COMMITS_FALLBACK;
+
+    const commits = (await res.json()) as Array<{
+      sha?: string;
+      commit?: { message?: string };
+    }>;
+    if (!Array.isArray(commits) || commits.length === 0) return COMMITS_FALLBACK;
+
+    return commits.slice(0, 3).map((c) => {
+      const firstLine = (c.commit?.message ?? '').split('\n')[0];
+      return {
+        sha: (c.sha ?? '').slice(0, 7),
+        message:
+          firstLine.length > 44 ? `${firstLine.slice(0, 44)}…` : firstLine,
+      };
+    });
+  } catch {
+    return COMMITS_FALLBACK;
   }
 }

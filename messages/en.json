@@ -70,20 +70,23 @@
   "why": {
     "heading": "The problem is not custody. It is control.",
     "subheading": "Crypto users hold their keys — but closed wallets still decide what gets integrated, what gets surfaced, and who gets distribution. That is not neutral infrastructure. That is private control over a critical layer.",
-    "items": [
-      {
-        "title": "Distribution is the hidden power.",
-        "description": "Emerging protocols can build great products and still depend on a private wallet's roadmap to get surfaced, integrated, or prioritized. Holding your keys does not fix that."
-      },
-      {
-        "title": "Salmon opens that layer.",
-        "description": "An open-source wallet no one has to ask permission to build on. Protocols integrate. Communities arrive. Users act. Less roadmap theater. More access."
-      },
-      {
-        "title": "Open infrastructure creates stronger alignment.",
-        "description": "Wallets are not just UX — they are distribution infrastructure. The more important the access layer becomes, the more transparent, verifiable, and forkable it should be."
-      }
-    ]
+    "closed": {
+      "label": "The closed wallet layer",
+      "items": [
+        "A private roadmap decides what gets surfaced, integrated, and prioritized.",
+        "Protocols pitch a business development team — and wait.",
+        "Defaults and integrations users cannot inspect."
+      ]
+    },
+    "open": {
+      "label": "The open wallet layer",
+      "items": [
+        "Protocols integrate without asking for permission.",
+        "You open a pull request, not a partnership deck.",
+        "Every default and integration is public code."
+      ]
+    },
+    "kicker": "Wallets are not just UX — they are distribution infrastructure. The more important the access layer becomes, the more transparent, verifiable, and forkable it should be."
   },
   "protocols": {
     "eyebrow": "For protocols",
@@ -108,38 +111,44 @@
   "features": {
     "heading": "Everything you need in a Solana wallet. Nothing you can't verify.",
     "subheading": "One reliable path: create or import a wallet, receive funds, transact — and use the integration that brought you here.",
-    "preview": "Preview",
-    "items": [
-      {
+    "cards": {
+      "send": {
         "title": "Send & receive",
         "description": "Move tokens and NFTs on Solana with a wallet that stays out of your way."
       },
-      {
+      "swap": {
         "title": "Swap in-wallet",
         "description": "Trade tokens directly from the wallet — no extra sites, no custodial detour."
       },
-      {
-        "title": "NFTs included",
-        "description": "Store, view, and send your NFTs alongside your tokens."
-      },
-      {
-        "title": "Solana + Bitcoin",
-        "description": "Built for Solana first, with Bitcoin support — devnets and testnets included."
-      },
-      {
+      "custody": {
         "title": "Self-custodial by design",
         "description": "Keys are encrypted on your device and never leave it. Custody stays with you."
       },
-      {
+      "validator": {
+        "title": "An active Solana validator",
+        "description": "Salmon runs its own validator — skin in the game, live and verifiable on-chain."
+      },
+      "opensource": {
         "title": "Open-source, all of it",
         "description": "The code behind every flow is public — inspect it, challenge it, fork it."
+      },
+      "nfts": {
+        "title": "NFTs included",
+        "description": "Store, view, and send your NFTs alongside your tokens."
+      },
+      "dapps": {
+        "title": "Connect to dApps",
+        "description": "You approve every connection explicitly — you decide what each app can see."
+      },
+      "chains": {
+        "title": "Solana + Bitcoin",
+        "description": "Built for Solana first, with Bitcoin support — devnets and testnets included."
       }
-    ]
+    }
   },
   "security": {
     "heading": "Security is a product decision.",
     "subheading": "Not only code — discipline. The most important wallet actions must work reliably before anything else gets layered on top.",
-    "preview": "Preview",
     "items": [
       {
         "title": "Keys stay with you",

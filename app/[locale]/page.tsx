@@ -4,8 +4,9 @@ import Hero from '@/components/Hero';
 import Chains from '@/components/Chains';
 import Why from '@/components/Why';
 import ForProtocols from '@/components/ForProtocols';
-import CardSection from '@/components/CardSection';
+import Security from '@/components/Security';
 import ProofStrip from '@/components/sections/ProofStrip';
+import CapabilityBento from '@/components/sections/CapabilityBento';
 import Manifesto from '@/components/Manifesto';
 import FAQ from '@/components/FAQ';
 import GetSalmon from '@/components/GetSalmon';
@@ -31,8 +32,8 @@ export default async function Home({ params }: Props) {
         {/* <Chains /> */}
         <Why />
         <ForProtocols />
-        <CardSection id="features" />
-        <CardSection id="security" />
+        <CapabilityBento />
+        <Security />
         <ValidatorStats />
         <Manifesto />
         <FAQ />

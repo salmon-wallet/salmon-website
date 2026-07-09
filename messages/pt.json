@@ -14,7 +14,7 @@
   },
   "nav": {
     "why": "Por quê",
-    "protocols": "Para Protocolos",
+    "protocols": "Protocolos",
     "features": "Recursos",
     "security": "Segurança",
     "manifesto": "Manifesto",
@@ -70,20 +70,23 @@
   "why": {
     "heading": "O problema não é a custódia. É o controle.",
     "subheading": "Usuários de cripto têm suas chaves — mas carteiras fechadas ainda decidem o que é integrado, o que é exibido e quem consegue distribuição. Isso não é infraestrutura neutra. É controle privado sobre uma camada crítica.",
-    "items": [
-      {
-        "title": "Distribuição é o poder oculto.",
-        "description": "Protocolos emergentes podem construir ótimos produtos e ainda depender do roadmap de uma carteira privada para serem exibidos, integrados ou priorizados. Ter suas chaves não resolve isso."
-      },
-      {
-        "title": "Salmon abre essa camada.",
-        "description": "Uma carteira open-source sobre a qual ninguém precisa pedir permissão para construir. Protocolos integram. Comunidades chegam. Usuários agem. Menos teatro de roadmap. Mais acesso."
-      },
-      {
-        "title": "Infraestrutura aberta cria alinhamento mais forte.",
-        "description": "Carteiras não são apenas UX — são infraestrutura de distribuição. Quanto mais importante a camada de acesso se torna, mais transparente, verificável e forkeável ela deveria ser."
-      }
-    ]
+    "closed": {
+      "label": "A camada de carteira fechada",
+      "items": [
+        "Um roadmap privado decide o que é exibido, integrado e priorizado.",
+        "Protocolos fazem pitch para um time de business development — e esperam.",
+        "Padrões e integrações que os usuários não podem inspecionar."
+      ]
+    },
+    "open": {
+      "label": "A camada de carteira aberta",
+      "items": [
+        "Protocolos integram sem pedir permissão.",
+        "Você abre um pull request, não um deck de parceria.",
+        "Cada padrão e cada integração é código público."
+      ]
+    },
+    "kicker": "Carteiras não são apenas UX — são infraestrutura de distribuição. Quanto mais importante a camada de acesso se torna, mais transparente, verificável e forkeável ela deveria ser."
   },
   "protocols": {
     "eyebrow": "Para protocolos",
@@ -108,38 +111,44 @@
   "features": {
     "heading": "Tudo o que você precisa em uma carteira Solana. Nada que você não possa verificar.",
     "subheading": "Um caminho confiável: crie ou importe uma carteira, receba fundos, transacione — e use a integração que trouxe você até aqui.",
-    "preview": "Prévia",
-    "items": [
-      {
+    "cards": {
+      "send": {
         "title": "Enviar e receber",
         "description": "Mova tokens e NFTs na Solana com uma carteira que não atrapalha o seu caminho."
       },
-      {
+      "swap": {
         "title": "Swap dentro da carteira",
         "description": "Troque tokens diretamente da carteira — sem sites extras, sem desvio custodial."
       },
-      {
-        "title": "NFTs incluídos",
-        "description": "Guarde, veja e envie seus NFTs junto com seus tokens."
-      },
-      {
-        "title": "Solana + Bitcoin",
-        "description": "Construída primeiro para Solana, com suporte a Bitcoin — devnets e testnets incluídas."
-      },
-      {
+      "custody": {
         "title": "Autocustodial por design",
         "description": "As chaves são criptografadas no seu dispositivo e nunca saem dele. A custódia fica com você."
       },
-      {
+      "validator": {
+        "title": "Um validador Solana ativo",
+        "description": "Salmon opera seu próprio validador — skin in the game, ao vivo e verificável on-chain."
+      },
+      "opensource": {
         "title": "Open-source, tudo",
         "description": "O código por trás de cada fluxo é público — inspecione, questione, faça fork."
+      },
+      "nfts": {
+        "title": "NFTs incluídos",
+        "description": "Guarde, veja e envie seus NFTs junto com seus tokens."
+      },
+      "dapps": {
+        "title": "Conecte-se a dApps",
+        "description": "Você aprova cada conexão explicitamente — você decide o que cada app pode ver."
+      },
+      "chains": {
+        "title": "Solana + Bitcoin",
+        "description": "Construída primeiro para Solana, com suporte a Bitcoin — devnets e testnets incluídas."
       }
-    ]
+    }
   },
   "security": {
     "heading": "Segurança é uma decisão de produto.",
     "subheading": "Não é só código — é disciplina. As ações mais importantes da carteira devem funcionar de forma confiável antes que qualquer outra coisa seja adicionada por cima.",
-    "preview": "Prévia",
     "items": [
       {
         "title": "As chaves ficam com você",

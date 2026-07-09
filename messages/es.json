@@ -14,7 +14,7 @@
   },
   "nav": {
     "why": "Por qué",
-    "protocols": "Para Protocolos",
+    "protocols": "Protocolos",
     "features": "Funciones",
     "security": "Seguridad",
     "manifesto": "Manifiesto",
@@ -70,20 +70,23 @@
   "why": {
     "heading": "El problema no es la custodia. Es el control.",
     "subheading": "Los usuarios de crypto tienen sus llaves — pero las wallets cerradas siguen decidiendo qué se integra, qué se muestra y quién consigue distribución. Eso no es infraestructura neutral. Es control privado sobre una capa crítica.",
-    "items": [
-      {
-        "title": "La distribución es el poder oculto.",
-        "description": "Los protocolos emergentes pueden construir grandes productos y aun así depender del roadmap de una wallet privada para ser mostrados, integrados o priorizados. Tener tus llaves no arregla eso."
-      },
-      {
-        "title": "Salmon abre esa capa.",
-        "description": "Una wallet open-source sobre la que nadie tiene que pedir permiso para construir. Los protocolos integran. Las comunidades llegan. Los usuarios actúan. Menos teatro de roadmap. Más acceso."
-      },
-      {
-        "title": "La infraestructura abierta crea mayor alineación.",
-        "description": "Las wallets no son solo UX — son infraestructura de distribución. Cuanto más importante se vuelve la capa de acceso, más transparente, verificable y forkeable debería ser."
-      }
-    ]
+    "closed": {
+      "label": "La capa de wallet cerrada",
+      "items": [
+        "Un roadmap privado decide qué se muestra, se integra y se prioriza.",
+        "Los protocolos le pitchean a un equipo de business development — y esperan.",
+        "Defaults e integraciones que los usuarios no pueden inspeccionar."
+      ]
+    },
+    "open": {
+      "label": "La capa de wallet abierta",
+      "items": [
+        "Los protocolos integran sin pedir permiso.",
+        "Abrís un pull request, no un deck de partnership.",
+        "Cada default y cada integración es código público."
+      ]
+    },
+    "kicker": "Las wallets no son solo UX — son infraestructura de distribución. Cuanto más importante se vuelve la capa de acceso, más transparente, verificable y forkeable debería ser."
   },
   "protocols": {
     "eyebrow": "Para protocolos",
@@ -108,38 +111,44 @@
   "features": {
     "heading": "Todo lo que necesitás en una wallet de Solana. Nada que no puedas verificar.",
     "subheading": "Un camino confiable: creá o importá una wallet, recibí fondos, transaccioná — y usá la integración que te trajo hasta acá.",
-    "preview": "Vista previa",
-    "items": [
-      {
+    "cards": {
+      "send": {
         "title": "Enviar y recibir",
         "description": "Mové tokens y NFTs en Solana con una wallet que no se te cruza en el camino."
       },
-      {
+      "swap": {
         "title": "Swap dentro de la wallet",
         "description": "Intercambiá tokens directamente desde la wallet — sin sitios extra ni desvíos custodiales."
       },
-      {
-        "title": "NFTs incluidos",
-        "description": "Guardá, mirá y enviá tus NFTs junto a tus tokens."
-      },
-      {
-        "title": "Solana + Bitcoin",
-        "description": "Construida primero para Solana, con soporte de Bitcoin — devnets y testnets incluidas."
-      },
-      {
+      "custody": {
         "title": "Autocustodial por diseño",
         "description": "Las llaves se cifran en tu dispositivo y nunca salen de ahí. La custodia queda con vos."
       },
-      {
+      "validator": {
+        "title": "Un validador Solana activo",
+        "description": "Salmon opera su propio validador — skin in the game, en vivo y verificable on-chain."
+      },
+      "opensource": {
         "title": "Open-source, todo",
         "description": "El código detrás de cada flujo es público — inspeccionalo, cuestionalo, forkealo."
+      },
+      "nfts": {
+        "title": "NFTs incluidos",
+        "description": "Guardá, mirá y enviá tus NFTs junto a tus tokens."
+      },
+      "dapps": {
+        "title": "Conectate a dApps",
+        "description": "Aprobás cada conexión explícitamente — vos decidís qué puede ver cada app."
+      },
+      "chains": {
+        "title": "Solana + Bitcoin",
+        "description": "Construida primero para Solana, con soporte de Bitcoin — devnets y testnets incluidas."
       }
-    ]
+    }
   },
   "security": {
     "heading": "La seguridad es una decisión de producto.",
     "subheading": "No es solo código — es disciplina. Las acciones más importantes de la wallet deben funcionar de forma confiable antes de que cualquier otra cosa se sume encima.",
-    "preview": "Vista previa",
     "items": [
       {
         "title": "Las llaves se quedan con vos",
