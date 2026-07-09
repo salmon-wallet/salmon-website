@@ -70,8 +70,14 @@
   "why": {
     "heading": "The problem is not custody. It is control.",
     "subheading": "Crypto users hold their keys — but closed wallets still decide what gets integrated, what gets surfaced, and who gets distribution. That is not neutral infrastructure. That is private control over a critical layer.",
+    "labels": {
+      "protocols": "PROTOCOLS",
+      "closedWallet": "CLOSED WALLET",
+      "users": "USERS"
+    },
     "closed": {
       "label": "The closed wallet layer",
+      "status": "Integration request — pending since 2024",
       "items": [
         "A private roadmap decides what gets surfaced, integrated, and prioritized.",
         "Protocols pitch a business development team — and wait.",
@@ -80,6 +86,7 @@
     },
     "open": {
       "label": "The open wallet layer",
+      "status": "PR #15 — reviewed & merged",
       "items": [
         "Integrations are reviewed in public and land on merit.",
         "You open a pull request, not a partnership deck.",

@@ -4,92 +4,132 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import ScrollReveal from './ui/ScrollReveal';
 
-/* ── Closed layer: protocols converge on a gate; the dot never gets through ── */
+const LABEL_STYLE = {
+  font: '600 8px var(--font-mono)',
+  letterSpacing: '0.14em',
+} as const;
 
-function ClosedDiagram({ animated }: { animated: boolean }) {
+interface DiagramLabels {
+  protocols: string;
+  wallet: string;
+  users: string;
+}
+
+/* ── Closed layer: requests pile up in front of a wallet nothing gets through ── */
+
+function ClosedDiagram({ animated, labels }: { animated: boolean; labels: DiagramLabels }) {
   return (
-    <svg viewBox="0 0 300 120" className="w-full" aria-hidden="true">
-      {[12, 52, 92].map((y) => (
+    <svg viewBox="0 0 300 132" className="w-full" aria-hidden="true">
+      {/* protocols */}
+      {[20, 52, 84].map((y) => (
         <rect key={y} x="10" y={y} width="16" height="16" rx="4" className="fill-none stroke-[#404962]" strokeWidth="1.5" />
       ))}
-      <line x1="26" y1="20" x2="136" y2="56" className="stroke-[#404962]" strokeWidth="1.5" opacity="0.6" />
-      <line x1="26" y1="60" x2="136" y2="60" className="stroke-[#404962]" strokeWidth="1.5" opacity="0.6" />
-      <line x1="26" y1="100" x2="136" y2="64" className="stroke-[#404962]" strokeWidth="1.5" opacity="0.6" />
-      {/* the gate */}
-      <rect x="142" y="34" width="4" height="52" rx="2" className="fill-[#404962]" />
-      <rect x="150" y="34" width="4" height="52" rx="2" className="fill-[#404962]" />
-      {/* the other side, out of reach */}
-      <line x1="162" y1="60" x2="248" y2="60" className="stroke-[#404962]" strokeWidth="1.5" strokeDasharray="3 4" opacity="0.4" />
-      <circle cx="262" cy="60" r="10" className="fill-none stroke-[#404962]" strokeWidth="1.5" opacity="0.6" />
-      <circle cx="262" cy="60" r="2" className="fill-[#6b6e7b]" />
-      {/* blocked at the gate, forever */}
-      {animated ? (
+      <line x1="26" y1="28" x2="124" y2="54" className="stroke-[#404962]" strokeWidth="1.5" opacity="0.6" />
+      <line x1="26" y1="60" x2="124" y2="60" className="stroke-[#404962]" strokeWidth="1.5" opacity="0.6" />
+      <line x1="26" y1="92" x2="124" y2="66" className="stroke-[#404962]" strokeWidth="1.5" opacity="0.6" />
+
+      {/* the queue: requests waiting in front of the wallet */}
+      <circle cx="116" cy="60" r="3" className="fill-[#8a8d98]" opacity="0.9" />
+      <circle cx="107" cy="60" r="3" className="fill-[#8a8d98]" opacity="0.65" />
+      <circle cx="98" cy="60" r="3" className="fill-[#8a8d98]" opacity="0.4" />
+      {animated && (
         <motion.circle
-          r="3.5"
-          cy="60"
+          r="3"
           className="fill-[#8a8d98]"
-          animate={{ cx: [26, 134, 134], opacity: [0.9, 0.9, 0] }}
-          transition={{ duration: 2.6, times: [0, 0.55, 1], repeat: Infinity, repeatDelay: 0.5, ease: 'linear' }}
+          animate={{ cx: [26, 89, 89], cy: [28, 60, 60], opacity: [0.9, 0.9, 0] }}
+          transition={{ duration: 2.8, times: [0, 0.5, 1], repeat: Infinity, repeatDelay: 0.4, ease: 'linear' }}
         />
-      ) : (
-        <circle cx="134" cy="60" r="3.5" className="fill-[#8a8d98]" />
       )}
+
+      {/* the closed wallet: a box with a lock */}
+      <rect x="124" y="38" width="40" height="44" rx="8" className="fill-[#161c2d] stroke-[#404962]" strokeWidth="1.5" />
+      <path d="M138 58 v-3 a6 6 0 0 1 12 0 v3" className="fill-none stroke-[#6b6e7b]" strokeWidth="1.5" />
+      <rect x="136" y="58" width="16" height="11" rx="2" className="fill-[#6b6e7b]" />
+
+      {/* the other side never connects */}
+      <line x1="170" y1="60" x2="204" y2="60" className="stroke-[#404962]" strokeWidth="1.5" strokeDasharray="2 5" opacity="0.35" />
+      {[36, 60, 84].map((y) => (
+        <circle key={y} cx="264" cy={y} r="6" className="fill-none stroke-[#404962]" strokeWidth="1.5" opacity="0.5" />
+      ))}
+
+      {/* labels */}
+      <text x="10" y="122" className="fill-[#6b6e7b]" style={LABEL_STYLE}>{labels.protocols}</text>
+      <text x="144" y="122" textAnchor="middle" className="fill-[#6b6e7b]" style={LABEL_STYLE}>{labels.wallet}</text>
+      <text x="272" y="122" textAnchor="end" className="fill-[#6b6e7b]" style={LABEL_STYLE}>{labels.users}</text>
     </svg>
   );
 }
 
-/* ── Open layer: more protocols, reaching Salmon directly; flow never stops ── */
+/* ── Open layer: more protocols, flowing through Salmon to users ── */
 
-const OPEN_LANES = [
-  { y1: 12, y2: 54 },
-  { y1: 34, y2: 57 },
-  { y1: 56, y2: 60 },
-  { y1: 78, y2: 63 },
-  { y1: 100, y2: 66 },
-] as const;
+const IN_LANES = [20, 40, 60, 80, 100] as const;
+const OUT_LANES = [36, 60, 84] as const;
 
-function OpenDiagram({ animated }: { animated: boolean }) {
+function OpenDiagram({ animated, labels }: { animated: boolean; labels: DiagramLabels }) {
   return (
-    <svg viewBox="0 0 300 120" className="w-full" aria-hidden="true">
-      {OPEN_LANES.map((l) => (
-        <rect key={l.y1} x="10" y={l.y1 - 8} width="16" height="16" rx="4" className="fill-none stroke-accent" strokeWidth="1.5" opacity="0.55" />
+    <svg viewBox="0 0 300 132" className="w-full" aria-hidden="true">
+      {/* protocols */}
+      {IN_LANES.map((y) => (
+        <rect key={y} x="10" y={y - 8} width="16" height="16" rx="4" className="fill-none stroke-accent" strokeWidth="1.5" opacity="0.55" />
       ))}
-      {OPEN_LANES.map((l) => (
-        <line key={l.y1} x1="26" y1={l.y1} x2="242" y2={l.y2} className="stroke-accent" strokeWidth="1.5" strokeDasharray="3 4" opacity="0.3" />
+      {IN_LANES.map((y) => (
+        <line key={y} x1="26" y1={y} x2="136" y2={57 + (y - 60) * 0.05} className="stroke-accent" strokeWidth="1.5" strokeDasharray="3 4" opacity="0.3" />
       ))}
-      {/* Salmon is the destination */}
+      {/* it flows out the other side */}
+      {OUT_LANES.map((y) => (
+        <line key={y} x1="164" y1="60" x2="256" y2={y} className="stroke-accent" strokeWidth="1.5" strokeDasharray="3 4" opacity="0.3" />
+      ))}
+
+      {/* Salmon in the middle, letting everything through */}
       {animated ? (
         <motion.circle
-          cx="260"
+          cx="150"
           cy="60"
           r="15"
           className="fill-accent/15 stroke-accent"
           strokeWidth="1.5"
           animate={{ scale: [1, 1.08, 1] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          style={{ transformOrigin: '260px 60px' }}
+          style={{ transformOrigin: '150px 60px' }}
         />
       ) : (
-        <circle cx="260" cy="60" r="15" className="fill-accent/15 stroke-accent" strokeWidth="1.5" />
+        <circle cx="150" cy="60" r="15" className="fill-accent/15 stroke-accent" strokeWidth="1.5" />
       )}
-      <image href="/images/logo.png" x="251" y="51" width="18" height="18" />
+      <image href="/images/logo.png" x="141" y="51" width="18" height="18" />
+
+      {/* users, actually reached */}
+      {OUT_LANES.map((y) => (
+        <circle key={y} cx="264" cy={y} r="6" className="fill-none stroke-accent" strokeWidth="1.5" opacity="0.5" />
+      ))}
+
+      {/* traffic passing through */}
       {animated &&
-        OPEN_LANES.map((l, i) => (
+        [0, 1, 2].map((i) => (
           <motion.circle
-            key={l.y1}
+            key={i}
             r="3"
             className="fill-accent"
-            animate={{ cx: [26, 242], cy: [l.y1, l.y2], opacity: [0, 1, 1, 0] }}
+            animate={{
+              cx: [26, 150, 258],
+              cy: [IN_LANES[i * 2], 60, OUT_LANES[i]],
+              opacity: [0, 1, 1, 0],
+            }}
             transition={{
-              duration: 2,
-              delay: i * 0.4,
+              duration: 2.6,
+              times: [0, 0.5, 1],
+              delay: i * 0.55,
               repeat: Infinity,
-              repeatDelay: 0.8,
+              repeatDelay: 0.7,
               ease: 'linear',
-              opacity: { duration: 2, times: [0, 0.12, 0.88, 1], delay: i * 0.4, repeat: Infinity, repeatDelay: 0.8 },
+              opacity: { duration: 2.6, times: [0, 0.1, 0.9, 1], delay: i * 0.55, repeat: Infinity, repeatDelay: 0.7 },
             }}
           />
         ))}
+
+      {/* labels */}
+      <text x="10" y="122" className="fill-[#6b6e7b]" style={LABEL_STYLE}>{labels.protocols}</text>
+      <text x="150" y="122" textAnchor="middle" className="fill-accent" style={LABEL_STYLE}>{labels.wallet}</text>
+      <text x="272" y="122" textAnchor="end" className="fill-[#6b6e7b]" style={LABEL_STYLE}>{labels.users}</text>
     </svg>
   );
 }
@@ -121,7 +161,18 @@ export default function Why() {
           <ScrollReveal direction="right" duration={1.1}>
             <div className="h-full rounded-2xl border border-border-subtle bg-card-bg/30 p-6 sm:p-8">
               <p className="eyebrow mb-6 text-text-tertiary">{t('closed.label')}</p>
-              <ClosedDiagram animated={animated} />
+              <ClosedDiagram
+                animated={animated}
+                labels={{
+                  protocols: t('labels.protocols'),
+                  wallet: t('labels.closedWallet'),
+                  users: t('labels.users'),
+                }}
+              />
+              <div className="mt-4 flex items-center gap-2.5 rounded-lg border border-border-subtle bg-bg-primary/50 px-3 py-2 font-mono text-[10px] tracking-wide text-text-tertiary">
+                <span className={`h-1.5 w-1.5 rounded-full bg-text-tertiary ${animated ? 'animate-pulse' : ''}`} />
+                {t('closed.status')}
+              </div>
               <ul className="mt-6 space-y-3">
                 {closedItems.map((item) => (
                   <li key={item} className="flex gap-3 text-sm leading-relaxed text-text-tertiary">
@@ -136,7 +187,18 @@ export default function Why() {
           <ScrollReveal direction="left" delay={0.15} duration={1.1}>
             <div className="h-full rounded-2xl border border-accent/25 bg-accent/[0.04] p-6 sm:p-8 shadow-[0_0_60px_rgba(255,92,69,0.06)]">
               <p className="eyebrow mb-6 text-accent">{t('open.label')}</p>
-              <OpenDiagram animated={animated} />
+              <OpenDiagram
+                animated={animated}
+                labels={{
+                  protocols: t('labels.protocols'),
+                  wallet: 'SALMON',
+                  users: t('labels.users'),
+                }}
+              />
+              <div className="mt-4 flex items-center gap-2.5 rounded-lg border border-success/30 bg-bg-primary/50 px-3 py-2 font-mono text-[10px] tracking-wide text-success">
+                <span className="h-1.5 w-1.5 rounded-full bg-success" />
+                {t('open.status')}
+              </div>
               <ul className="mt-6 space-y-3">
                 {openItems.map((item) => (
                   <li key={item} className="flex gap-3 text-sm leading-relaxed text-text-secondary">

@@ -70,8 +70,14 @@
   "why": {
     "heading": "O problema não é a custódia. É o controle.",
     "subheading": "Usuários de cripto têm suas chaves — mas carteiras fechadas ainda decidem o que é integrado, o que é exibido e quem consegue distribuição. Isso não é infraestrutura neutra. É controle privado sobre uma camada crítica.",
+    "labels": {
+      "protocols": "PROTOCOLOS",
+      "closedWallet": "CARTEIRA FECHADA",
+      "users": "USUÁRIOS"
+    },
     "closed": {
       "label": "A camada de carteira fechada",
+      "status": "Pedido de integração — pendente desde 2024",
       "items": [
         "Um roadmap privado decide o que é exibido, integrado e priorizado.",
         "Protocolos fazem pitch para um time de business development — e esperam.",
@@ -80,6 +86,7 @@
     },
     "open": {
       "label": "A camada de carteira aberta",
+      "status": "PR #15 — revisado e merged",
       "items": [
         "Integrações são revisadas em público e entram por mérito.",
         "Você abre um pull request, não um deck de parceria.",

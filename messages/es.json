@@ -70,8 +70,14 @@
   "why": {
     "heading": "El problema no es la custodia. Es el control.",
     "subheading": "Los usuarios de crypto tienen sus llaves — pero las wallets cerradas siguen decidiendo qué se integra, qué se muestra y quién consigue distribución. Eso no es infraestructura neutral. Es control privado sobre una capa crítica.",
+    "labels": {
+      "protocols": "PROTOCOLOS",
+      "closedWallet": "WALLET CERRADA",
+      "users": "USUARIOS"
+    },
     "closed": {
       "label": "La capa de wallet cerrada",
+      "status": "Solicitud de integración — pendiente desde 2024",
       "items": [
         "Un roadmap privado decide qué se muestra, se integra y se prioriza.",
         "Los protocolos le pitchean a un equipo de business development — y esperan.",
@@ -80,6 +86,7 @@
     },
     "open": {
       "label": "La capa de wallet abierta",
+      "status": "PR #15 — revisado y mergeado",
       "items": [
         "Las integraciones se revisan en público y entran por mérito.",
         "Abrís un pull request, no un deck de partnership.",
