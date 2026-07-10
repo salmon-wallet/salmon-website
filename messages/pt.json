@@ -167,6 +167,39 @@
       "integrate": "Vamos falar sobre uma integração"
     }
   },
+  "audience": {
+    "eyebrow": "Para quem é",
+    "heading": "Para quem a Salmon é construída.",
+    "subheading": "Um wedge definido, não uma carteira genérica para todos.",
+    "eg": "ex.",
+    "items": [
+      {
+        "title": "Protocolos emergentes de Solana",
+        "description": "Equipes que precisam de um caminho melhor para integração e distribuição.",
+        "example": "Um novo primitivo DeFi, um app de consumo ou uma nova camada de rede construída sobre Solana."
+      },
+      {
+        "title": "Comunidades NFT",
+        "description": "Projetos que dependem do suporte da carteira para manter o acesso de holders, a visibilidade ou os claims funcionando.",
+        "example": "Comunidades como a Mindfolk."
+      },
+      {
+        "title": "Ferramentas de segurança e autocustódia",
+        "description": "Produtos construídos em torno de assinatura mais segura, recuperação, proteção e controle.",
+        "example": "Ferramentas como a Unruggable."
+      },
+      {
+        "title": "Builders Solana-first",
+        "description": "Equipes com produtos reais e uma necessidade clara de distribuição via carteira.",
+        "example": "Produtos onde a carteira é a porta de entrada para o app ou serviço."
+      },
+      {
+        "title": "Comunidades alinhadas",
+        "description": "Builders, contribuidores e usuários que valorizam infraestrutura aberta e progresso visível.",
+        "example": "Comunidades ecosystem-native que valorizam transparência, acesso e alinhamento de longo prazo."
+      }
+    ]
+  },
   "features": {
     "heading": "Tudo o que você precisa em uma carteira Solana. Nada que você não possa verificar.",
     "subheading": "Envie, faça swap, guarde NFTs e conecte a dApps — cada fluxo open-source e verificável.",

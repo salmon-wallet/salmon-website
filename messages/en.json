@@ -167,6 +167,39 @@
       "integrate": "Talk to us about an integration"
     }
   },
+  "audience": {
+    "eyebrow": "Who it's for",
+    "heading": "Who Salmon is built for.",
+    "subheading": "A defined wedge, not a generic wallet for everyone.",
+    "eg": "e.g.",
+    "items": [
+      {
+        "title": "Emerging Solana protocols",
+        "description": "Teams that need a better path to integration and distribution.",
+        "example": "A new DeFi primitive, a consumer app, or a new network layer built around Solana."
+      },
+      {
+        "title": "NFT communities",
+        "description": "Projects that depend on wallet support to keep holder access, visibility, or claims working.",
+        "example": "Communities like Mindfolk."
+      },
+      {
+        "title": "Security and self-custody tools",
+        "description": "Products built around safer signing, recovery, protection, and control.",
+        "example": "Tools like Unruggable."
+      },
+      {
+        "title": "Solana-first builders",
+        "description": "Teams with real products and a clear need for wallet-driven distribution.",
+        "example": "Products where the wallet is the gateway to the app or service itself."
+      },
+      {
+        "title": "Aligned communities",
+        "description": "Builders, contributors, and users who value open infrastructure and visible progress.",
+        "example": "Ecosystem-native communities that care about transparency, access, and long-term alignment."
+      }
+    ]
+  },
   "features": {
     "heading": "Everything you need in a Solana wallet. Nothing you can't verify.",
     "subheading": "Send, swap, hold NFTs, and connect to dApps — every flow open-source and verifiable.",
