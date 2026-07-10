@@ -7,6 +7,7 @@ import ForProtocols from '@/components/ForProtocols';
 import Ecosystem from '@/components/sections/Ecosystem';
 import Security from '@/components/Security';
 import ProofStrip from '@/components/sections/ProofStrip';
+import WhatMattersFirst from '@/components/sections/WhatMattersFirst';
 import CapabilityBento from '@/components/sections/CapabilityBento';
 import Manifesto from '@/components/Manifesto';
 import FAQ from '@/components/FAQ';
@@ -31,6 +32,7 @@ export default async function Home({ params }: Props) {
         <Hero />
         <ProofStrip />
         {/* <Chains /> */}
+        <WhatMattersFirst />
         <Why />
         <ForProtocols />
         <Ecosystem />

@@ -67,6 +67,32 @@
       }
     }
   },
+  "whatMatters": {
+    "eyebrow": "Start here",
+    "heading": "One reliable path.",
+    "live": "Live now",
+    "subheading": "Create a wallet, move funds, and use the integration that brought you here. That flow has to work before anything else.",
+    "steps": {
+      "create": "Create or import a wallet",
+      "receive": "Receive funds",
+      "send": "Send a transaction",
+      "use": "Use the integration that brought you here"
+    },
+    "support": {
+      "activation": {
+        "title": "Integrations that bring users",
+        "description": "More than visibility — real activation and real return behavior."
+      },
+      "channels": {
+        "title": "Protocols as channels",
+        "description": "Salmon helps emerging protocols turn integration into distribution."
+      },
+      "live": {
+        "title": "Live product",
+        "description": "Extension, Web Wallet, Android, and a public repository. iOS coming soon."
+      }
+    }
+  },
   "why": {
     "heading": "The problem is not custody. It is control.",
     "subheading": "Crypto users hold their keys — but closed wallets still decide what gets integrated, what gets surfaced, and who gets distribution. That is not neutral infrastructure. That is private control over a critical layer.",
@@ -143,7 +169,7 @@
   },
   "features": {
     "heading": "Everything you need in a Solana wallet. Nothing you can't verify.",
-    "subheading": "One reliable path: create or import a wallet, receive funds, transact — and use the integration that brought you here.",
+    "subheading": "Send, swap, hold NFTs, and connect to dApps — every flow open-source and verifiable.",
     "cards": {
       "send": {
         "title": "Send & receive",

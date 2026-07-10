@@ -67,6 +67,32 @@
       }
     }
   },
+  "whatMatters": {
+    "eyebrow": "Empezá acá",
+    "heading": "Un camino confiable.",
+    "live": "Live ahora",
+    "subheading": "Creá una wallet, mové fondos y usá la integración que te trajo hasta acá. Ese flujo tiene que funcionar antes que cualquier otra cosa.",
+    "steps": {
+      "create": "Creá o importá una wallet",
+      "receive": "Recibí fondos",
+      "send": "Enviá una transacción",
+      "use": "Usá la integración que te trajo hasta acá"
+    },
+    "support": {
+      "activation": {
+        "title": "Integraciones que traen usuarios",
+        "description": "Más que visibilidad — activación real y comportamiento de retorno real."
+      },
+      "channels": {
+        "title": "Protocolos como canales",
+        "description": "Salmon ayuda a protocolos emergentes a convertir la integración en distribución."
+      },
+      "live": {
+        "title": "Producto en vivo",
+        "description": "Extensión, Web Wallet, Android y un repositorio público. iOS próximamente."
+      }
+    }
+  },
   "why": {
     "heading": "El problema no es la custodia. Es el control.",
     "subheading": "Los usuarios de crypto tienen sus llaves — pero las wallets cerradas siguen decidiendo qué se integra, qué se muestra y quién consigue distribución. Eso no es infraestructura neutral. Es control privado sobre una capa crítica.",
@@ -143,7 +169,7 @@
   },
   "features": {
     "heading": "Todo lo que necesitás en una wallet de Solana. Nada que no puedas verificar.",
-    "subheading": "Un camino confiable: creá o importá una wallet, recibí fondos, transaccioná — y usá la integración que te trajo hasta acá.",
+    "subheading": "Enviá, swapeá, guardá NFTs y conectá a dApps — cada flujo open-source y verificable.",
     "cards": {
       "send": {
         "title": "Enviar y recibir",

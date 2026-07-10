@@ -5,19 +5,7 @@ import { LINKS } from '@/lib/constants';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import GlassmorphicCard from '@/components/ui/GlassmorphicCard';
 import GradientButton from '@/components/ui/GradientButton';
-
-/** Small status chip: pulsing accent dot + label (reuses the Why status motif). */
-function StatusPill({ label }: { label: string }) {
-  return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-border-subtle bg-card-bg px-3 py-1 text-xs font-medium text-text-primary">
-      <span className="relative flex h-1.5 w-1.5">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
-      </span>
-      {label}
-    </span>
-  );
-}
+import StatusPill from '@/components/ui/StatusPill';
 
 /**
  * Three-node reroute story: repo changed → Salmon reroute → holders keep access.

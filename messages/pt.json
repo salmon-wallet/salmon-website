@@ -67,6 +67,32 @@
       }
     }
   },
+  "whatMatters": {
+    "eyebrow": "Comece aqui",
+    "heading": "Um caminho confiável.",
+    "live": "Live agora",
+    "subheading": "Crie uma carteira, mova fundos e use a integração que trouxe você até aqui. Esse fluxo precisa funcionar antes de qualquer outra coisa.",
+    "steps": {
+      "create": "Crie ou importe uma carteira",
+      "receive": "Receba fundos",
+      "send": "Envie uma transação",
+      "use": "Use a integração que trouxe você até aqui"
+    },
+    "support": {
+      "activation": {
+        "title": "Integrações que trazem usuários",
+        "description": "Mais do que visibilidade — ativação real e comportamento de retorno real."
+      },
+      "channels": {
+        "title": "Protocolos como canais",
+        "description": "A Salmon ajuda protocolos emergentes a transformar integração em distribuição."
+      },
+      "live": {
+        "title": "Produto ao vivo",
+        "description": "Extensão, Web Wallet, Android e um repositório público. iOS em breve."
+      }
+    }
+  },
   "why": {
     "heading": "O problema não é a custódia. É o controle.",
     "subheading": "Usuários de cripto têm suas chaves — mas carteiras fechadas ainda decidem o que é integrado, o que é exibido e quem consegue distribuição. Isso não é infraestrutura neutra. É controle privado sobre uma camada crítica.",
@@ -143,7 +169,7 @@
   },
   "features": {
     "heading": "Tudo o que você precisa em uma carteira Solana. Nada que você não possa verificar.",
-    "subheading": "Um caminho confiável: crie ou importe uma carteira, receba fundos, transacione — e use a integração que trouxe você até aqui.",
+    "subheading": "Envie, faça swap, guarde NFTs e conecte a dApps — cada fluxo open-source e verificável.",
     "cards": {
       "send": {
         "title": "Enviar e receber",
