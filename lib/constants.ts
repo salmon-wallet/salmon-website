@@ -8,8 +8,10 @@ export const LINKS = {
   github: 'https://github.com/salmon-wallet',
   repo: 'https://github.com/salmon-wallet/salmon-wallet-v2',
   twitter: 'https://x.com/salmonwallet',
+  telegram: 'https://t.me/salmon_wallet',
   medium: 'https://medium.com/@salmonwallet',
   mediaKit: 'https://salmonwallet.io/assets/salmonwallet-mediakit.zip',
+  contact: 'mailto:integrations@salmonwallet.io',
 } as const;
 
 export const NAV_HREFS = [
