@@ -374,12 +374,15 @@
     "comingSoon": "Próximamente",
     "buildHeading": "¿Estás construyendo un protocolo?",
     "buildDescription": "La capa de wallet está abierta. Subí tu integración por revisión pública — sin acuerdos a puerta cerrada.",
-    "buildCta": "Integrá con Salmon"
+    "buildCta": "Integrá con Salmon",
+    "follow": "Seguí la construcción"
   },
   "validator": {
-    "eyebrow": "Validador Solana activo",
+    "eyebrow": "Stakeá con Salmon",
     "since": "Desde junio 2026",
-    "heading": "Alineado con la red a la que sirve.",
+    "heading": "Stakeá directamente en la wallet.",
+    "lead": "El staking está disponible dentro de Salmon. Como servicio adyacente, también operamos nuestro propio validador de Solana — alineado con la red a la que sirve.",
+    "stake": "Stakear en la wallet",
     "apy": "APY est.",
     "commission": "Comisión",
     "activeStake": "Stake activo",

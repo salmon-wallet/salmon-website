@@ -374,12 +374,15 @@
     "comingSoon": "Em breve",
     "buildHeading": "Construindo um protocolo?",
     "buildDescription": "A camada de carteira está aberta. Envie sua integração por revisão pública — sem acordos de portas fechadas.",
-    "buildCta": "Integre com Salmon"
+    "buildCta": "Integre com Salmon",
+    "follow": "Acompanhe a construção"
   },
   "validator": {
-    "eyebrow": "Validador Solana ativo",
+    "eyebrow": "Faça stake com a Salmon",
     "since": "Desde junho de 2026",
-    "heading": "Alinhado com a rede que serve.",
+    "heading": "Faça stake direto na carteira.",
+    "lead": "O staking está disponível dentro da Salmon. Como serviço adjacente, também operamos nosso próprio validador de Solana — alinhado com a rede que serve.",
+    "stake": "Fazer stake na carteira",
     "apy": "APY est.",
     "commission": "Comissão",
     "activeStake": "Stake ativo",

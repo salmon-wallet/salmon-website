@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { getValidatorStats } from '@/lib/validator';
-import { VALIDATOR } from '@/lib/constants';
+import { VALIDATOR, LINKS } from '@/lib/constants';
 import NumberTicker from '@/components/ui/NumberTicker';
 
 interface StatProps {
@@ -49,10 +49,13 @@ export default async function ValidatorStats() {
         </div>
         <h2
           id="validator-heading"
-          className="font-display mb-10 max-w-2xl text-[length:var(--text-h2)] font-semibold leading-[1.05]"
+          className="font-display mb-5 max-w-2xl text-[length:var(--text-h2)] font-semibold leading-[1.05]"
         >
           {t('heading')}
         </h2>
+        <p className="mb-10 max-w-2xl text-lg leading-relaxed text-text-secondary">
+          {t('lead')}
+        </p>
 
         {/* Single line: all stats inline. Mobile → horizontal scroll (stays one line). */}
         <div
@@ -88,7 +91,7 @@ export default async function ValidatorStats() {
           </Stat>
         </div>
 
-        {/* Radical transparency: verify the full record yourself. */}
+        {/* Adjacent-service CTA + radical transparency: verify the full record yourself. */}
         <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
           <span className="eyebrow flex items-center gap-2 text-text-tertiary">
             <span
@@ -98,10 +101,18 @@ export default async function ValidatorStats() {
             {stats.live ? t('live') : t('snapshot')} · {stats.name}
           </span>
           <a
+            href={LINKS.webWallet}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-accent transition-colors hover:text-accent-soft"
+          >
+            {t('stake')} ↗
+          </a>
+          <a
             href={VALIDATOR.jpool}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-accent transition-colors hover:text-accent-soft"
+            className="text-sm text-text-secondary transition-colors hover:text-text-primary"
           >
             {t('verify')} ↗
           </a>
