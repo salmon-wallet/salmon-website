@@ -4,6 +4,7 @@ import Hero from '@/components/Hero';
 import Chains from '@/components/Chains';
 import Why from '@/components/Why';
 import ForProtocols from '@/components/ForProtocols';
+import Ecosystem from '@/components/sections/Ecosystem';
 import Security from '@/components/Security';
 import ProofStrip from '@/components/sections/ProofStrip';
 import CapabilityBento from '@/components/sections/CapabilityBento';
@@ -32,6 +33,7 @@ export default async function Home({ params }: Props) {
         {/* <Chains /> */}
         <Why />
         <ForProtocols />
+        <Ecosystem />
         <CapabilityBento />
         <Security />
         <ValidatorStats />

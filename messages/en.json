@@ -115,6 +115,32 @@
     ],
     "cta": "Integrate with Salmon"
   },
+  "ecosystem": {
+    "eyebrow": "Ecosystem",
+    "heading": "Real integrations, shipped in the open.",
+    "subheading": "Projects Salmon has supported, integrated, or is beginning to work with across the Solana ecosystem.",
+    "status": "Shipped",
+    "mindfolk": {
+      "name": "Mindfolk",
+      "tag": "NFT community",
+      "body": "When Mindfolk's NFT repository changed, holder wallet access broke. Salmon shipped the reroute that kept access working — no migration, no downtime for holders.",
+      "outcome": "A concrete example of what Salmon is built for: solving real integration problems for emerging communities."
+    },
+    "flow": {
+      "before": "Repo changed",
+      "action": "Salmon reroute",
+      "after": "Holders keep access"
+    },
+    "progress": {
+      "eyebrow": "More in progress",
+      "body": "Salmon is continuing to work with emerging teams that need a more open path to integration and distribution.",
+      "follow": "Follow progress on X and Telegram."
+    },
+    "cta": {
+      "github": "View on GitHub",
+      "integrate": "Talk to us about an integration"
+    }
+  },
   "features": {
     "heading": "Everything you need in a Solana wallet. Nothing you can't verify.",
     "subheading": "One reliable path: create or import a wallet, receive funds, transact — and use the integration that brought you here.",
