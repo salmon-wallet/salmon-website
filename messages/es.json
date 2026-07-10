@@ -123,20 +123,29 @@
   },
   "protocols": {
     "eyebrow": "Para protocolos",
-    "heading": "Abrí la capa de wallet.",
-    "subheading": "Los protocolos emergentes de Solana no deberían tener que esperar a que una empresa privada decida si merecen acceso a usuarios. Salmon les da un camino abierto.",
+    "heading": "Un camino más abierto a la integración.",
+    "subheading": "Los protocolos emergentes de Solana no deberían tener que esperar a que una empresa privada decida si merecen acceso a usuarios. Las integraciones siguen requiriendo revisión y priorización — la diferencia es un camino menos limitado por prioridades cerradas.",
+    "flow": {
+      "integration": "Integración",
+      "usage": "Uso",
+      "return": "Retorno"
+    },
     "items": [
       {
-        "title": "Construido para distribución",
-        "description": "Una integración debería traer usuarios, no solo otro logo para un deck. Salmon está diseñado para que los protocolos conviertan integraciones en tracción, feedback y uso recurrente."
+        "title": "Un camino más abierto",
+        "description": "Las integraciones entran por mérito vía revisión pública, no por una cola de business development."
       },
       {
-        "title": "Un camino directo a usuarios",
-        "description": "Lanzá tu integración, onboardeá a la comunidad que la sigue y mantené un loop de feedback que ningún roadmap cerrado puede cortar."
+        "title": "Construido para protocolos emergentes",
+        "description": "Un wedge enfocado, elegido con criterio — no una wallet que intenta servir a todos."
       },
       {
-        "title": "Revisión abierta, no puertas cerradas",
-        "description": "Cada integración se revisa en público antes de subir — la seguridad primero. La vara es la calidad del código, no un acuerdo comercial."
+        "title": "Construido para el uso real",
+        "description": "La vara no son los anuncios. Es activación, uso y retorno."
+      },
+      {
+        "title": "Construido en público",
+        "description": "Código open-source. Progreso visible. Iteración con responsabilidad."
       }
     ],
     "cta": "Integrá con Salmon"

@@ -6,44 +6,7 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 import GlassmorphicCard from '@/components/ui/GlassmorphicCard';
 import GradientButton from '@/components/ui/GradientButton';
 import StatusPill from '@/components/ui/StatusPill';
-
-/**
- * Three-node reroute story: repo changed → Salmon reroute → holders keep access.
- * Horizontal on desktop, vertical on mobile; the middle (Salmon) node is accented.
- */
-function RerouteFlow({
-  before,
-  action,
-  after,
-}: {
-  before: string;
-  action: string;
-  after: string;
-}) {
-  const nodeBase =
-    'flex-1 rounded-lg border px-3 py-2.5 text-center text-sm leading-tight';
-  return (
-    <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:gap-0">
-      <div className={`${nodeBase} border-border-subtle bg-card-bg/40 text-text-secondary`}>
-        {before}
-      </div>
-      <span aria-hidden="true" className="self-center px-2 text-accent sm:px-3">
-        <span className="hidden sm:inline">→</span>
-        <span className="sm:hidden">↓</span>
-      </span>
-      <div className={`${nodeBase} border-accent/50 bg-accent/10 font-medium text-text-primary`}>
-        {action}
-      </div>
-      <span aria-hidden="true" className="self-center px-2 text-accent sm:px-3">
-        <span className="hidden sm:inline">→</span>
-        <span className="sm:hidden">↓</span>
-      </span>
-      <div className={`${nodeBase} border-border-subtle bg-card-bg/40 text-text-secondary`}>
-        {after}
-      </div>
-    </div>
-  );
-}
+import FlowStrip from '@/components/ui/FlowStrip';
 
 const X_ICON = (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -93,10 +56,9 @@ export default function Ecosystem() {
                 </p>
 
                 <div className="mb-6">
-                  <RerouteFlow
-                    before={t('flow.before')}
-                    action={t('flow.action')}
-                    after={t('flow.after')}
+                  <FlowStrip
+                    nodes={[t('flow.before'), t('flow.action'), t('flow.after')]}
+                    accentIndex={1}
                   />
                 </div>
 

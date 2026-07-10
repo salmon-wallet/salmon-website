@@ -123,20 +123,29 @@
   },
   "protocols": {
     "eyebrow": "For protocols",
-    "heading": "Open the wallet layer.",
-    "subheading": "Emerging Solana protocols should not have to wait for a private company to decide whether they deserve access to users. Salmon gives them an open path.",
+    "heading": "A more open path to integration.",
+    "subheading": "Emerging Solana protocols should not have to wait for a private company to decide whether they deserve access to users. Integrations still require review and prioritization — the difference is a path less constrained by closed priorities.",
+    "flow": {
+      "integration": "Integration",
+      "usage": "Usage",
+      "return": "Return"
+    },
     "items": [
       {
-        "title": "Built for distribution",
-        "description": "An integration should bring users, not just another logo for a deck. Salmon is designed so protocols can turn integrations into traction, feedback, and repeat usage."
+        "title": "A more open path",
+        "description": "Integrations land on merit through public review, not a business-development queue."
       },
       {
-        "title": "A direct path to users",
-        "description": "Ship your integration, onboard the community that follows it, and keep a feedback loop that no closed roadmap can cut off."
+        "title": "Built for emerging protocols",
+        "description": "A focused wedge, chosen deliberately — not a wallet trying to serve everyone."
       },
       {
-        "title": "Open review, not closed doors",
-        "description": "Every integration is reviewed in public before it ships — security first. The bar is code quality, not a business deal."
+        "title": "Built for real usage",
+        "description": "The standard is not announcements. It is activation, usage, and return."
+      },
+      {
+        "title": "Built in public",
+        "description": "Open-source code. Visible progress. Accountable iteration."
       }
     ],
     "cta": "Integrate with Salmon"

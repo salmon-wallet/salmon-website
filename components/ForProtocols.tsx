@@ -3,9 +3,8 @@
 import { useTranslations } from 'next-intl';
 import ScrollReveal from './ui/ScrollReveal';
 import GradientButton from './ui/GradientButton';
+import FlowStrip from './ui/FlowStrip';
 import { LINKS } from '@/lib/constants';
-
-const directions = ['right', 'up', 'left'] as const;
 
 export default function ForProtocols() {
   const t = useTranslations('protocols');
@@ -15,25 +14,35 @@ export default function ForProtocols() {
     <section id="protocols" className="relative py-24 sm:py-32">
       <div className="relative mx-auto max-w-6xl px-6">
         <ScrollReveal>
-          <div className="max-w-3xl mb-16">
+          <div className="mb-12 max-w-3xl">
             <p className="eyebrow mb-4">{t('eyebrow')}</p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
               {t('heading')}
             </h2>
-            <p className="text-lg text-text-secondary leading-relaxed">
+            <p className="text-lg leading-relaxed text-text-secondary">
               {t('subheading')}
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid gap-8 md:grid-cols-3 mb-14">
+        {/* Positioning flow: an integration is only worth it if it drives usage and return */}
+        <ScrollReveal duration={1.1}>
+          <div className="mb-14 max-w-xl">
+            <FlowStrip
+              nodes={[t('flow.integration'), t('flow.usage'), t('flow.return')]}
+              accentIndex={2}
+            />
+          </div>
+        </ScrollReveal>
+
+        <div className="mb-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => (
-            <ScrollReveal key={i} direction={directions[i]} delay={i * 0.15} duration={1.1}>
-              <div className="space-y-3">
-                <h3 className="text-xl font-semibold text-text-primary">
+            <ScrollReveal key={i} delay={i * 0.1} duration={1.1}>
+              <div className="space-y-3 border-t border-border-subtle pt-5">
+                <h3 className="text-lg font-semibold text-text-primary">
                   {item.title}
                 </h3>
-                <p className="text-text-secondary leading-relaxed">
+                <p className="leading-relaxed text-text-secondary">
                   {item.description}
                 </p>
               </div>

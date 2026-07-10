@@ -123,20 +123,29 @@
   },
   "protocols": {
     "eyebrow": "Para protocolos",
-    "heading": "Abra a camada de carteira.",
-    "subheading": "Protocolos emergentes de Solana não deveriam ter que esperar uma empresa privada decidir se merecem acesso a usuários. Salmon oferece um caminho aberto.",
+    "heading": "Um caminho mais aberto para integração.",
+    "subheading": "Protocolos emergentes de Solana não deveriam ter que esperar uma empresa privada decidir se merecem acesso a usuários. As integrações ainda exigem revisão e priorização — a diferença é um caminho menos limitado por prioridades fechadas.",
+    "flow": {
+      "integration": "Integração",
+      "usage": "Uso",
+      "return": "Retorno"
+    },
     "items": [
       {
-        "title": "Construído para distribuição",
-        "description": "Uma integração deveria trazer usuários, não apenas mais um logo para um deck. Salmon é projetado para que protocolos transformem integrações em tração, feedback e uso recorrente."
+        "title": "Um caminho mais aberto",
+        "description": "As integrações entram por mérito via revisão pública, não por uma fila de business development."
       },
       {
-        "title": "Um caminho direto até usuários",
-        "description": "Lance sua integração, faça onboarding da comunidade que a segue e mantenha um loop de feedback que nenhum roadmap fechado pode cortar."
+        "title": "Construído para protocolos emergentes",
+        "description": "Um wedge focado, escolhido com critério — não uma carteira que tenta servir a todos."
       },
       {
-        "title": "Revisão aberta, não portas fechadas",
-        "description": "Cada integração é revisada em público antes de subir — segurança primeiro. A régua é a qualidade do código, não um acordo comercial."
+        "title": "Construído para o uso real",
+        "description": "A régua não são os anúncios. É ativação, uso e retorno."
+      },
+      {
+        "title": "Construído em público",
+        "description": "Código open-source. Progresso visível. Iteração com responsabilidade."
       }
     ],
     "cta": "Integre com Salmon"
