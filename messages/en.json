@@ -94,7 +94,8 @@
     }
   },
   "why": {
-    "heading": "The problem is not custody. It is control.",
+    "eyebrow": "Why Salmon",
+    "heading": "The problem is not custody. It is control over the wallet layer.",
     "subheading": "Crypto users hold their keys — but closed wallets still decide what gets integrated, what gets surfaced, and who gets distribution. That is not neutral infrastructure. That is private control over a critical layer.",
     "labels": {
       "protocols": "PROTOCOLS",

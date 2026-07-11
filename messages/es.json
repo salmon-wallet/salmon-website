@@ -94,7 +94,8 @@
     }
   },
   "why": {
-    "heading": "El problema no es la custodia. Es el control.",
+    "eyebrow": "Por qué Salmon",
+    "heading": "El problema no es la custodia. Es el control de la capa de wallet.",
     "subheading": "Los usuarios de crypto tienen sus llaves — pero las wallets cerradas siguen decidiendo qué se integra, qué se muestra y quién consigue distribución. Eso no es infraestructura neutral. Es control privado sobre una capa crítica.",
     "labels": {
       "protocols": "PROTOCOLOS",

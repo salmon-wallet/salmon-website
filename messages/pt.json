@@ -94,7 +94,8 @@
     }
   },
   "why": {
-    "heading": "O problema não é a custódia. É o controle.",
+    "eyebrow": "Por que a Salmon",
+    "heading": "O problema não é a custódia. É o controle da camada de carteira.",
     "subheading": "Usuários de cripto têm suas chaves — mas carteiras fechadas ainda decidem o que é integrado, o que é exibido e quem consegue distribuição. Isso não é infraestrutura neutra. É controle privado sobre uma camada crítica.",
     "labels": {
       "protocols": "PROTOCOLOS",
