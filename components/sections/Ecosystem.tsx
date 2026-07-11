@@ -1,12 +1,11 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import { motion, useInView, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { LINKS } from '@/lib/constants';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import GlassmorphicCard from '@/components/ui/GlassmorphicCard';
 import StatusPill from '@/components/ui/StatusPill';
+import MindfolkStory from './MindfolkStory';
 
 const X_ICON = (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -20,159 +19,45 @@ const TELEGRAM_ICON = (
   </svg>
 );
 
-const NODE = 'flex-1 rounded-lg border px-3 py-2.5 text-center text-sm leading-tight';
-
-/** Connector that lights up (grey → accent) when the story plays. */
-function Arrow({ active }: { active: boolean }) {
-  return (
-    <motion.span
-      aria-hidden="true"
-      animate={{ color: active ? 'rgb(255,92,69)' : 'rgb(107,110,123)' }}
-      transition={{ duration: 0.4 }}
-      className="self-center px-2 sm:px-3"
-    >
-      <span className="hidden sm:inline">→</span>
-      <span className="sm:hidden">↓</span>
-    </motion.span>
-  );
-}
-
-/**
- * The reroute plays as a story: idle shows the break, active runs the fix —
- * Salmon reroute glows and "Holders keep access" restores to green.
- */
-function Reroute({
-  before,
-  action,
-  after,
-  active,
-}: {
-  before: string;
-  action: string;
-  after: string;
-  active: boolean;
-}) {
-  return (
-    <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:gap-0">
-      <div className={`${NODE} border-border-subtle bg-card-bg/40 text-text-secondary`}>
-        <span className="inline-flex items-center gap-1.5">
-          <span className="h-1.5 w-1.5 rounded-full bg-accent/70" />
-          {before}
-        </span>
-      </div>
-      <Arrow active={active} />
-      <motion.div
-        animate={
-          active
-            ? { scale: 1.03, boxShadow: '0 0 24px rgba(255,92,69,0.25)' }
-            : { scale: 1, boxShadow: '0 0 0 rgba(0,0,0,0)' }
-        }
-        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className={`${NODE} border-accent/50 bg-accent/10 font-medium text-text-primary`}
-      >
-        {action}
-      </motion.div>
-      <Arrow active={active} />
-      <motion.div
-        animate={
-          active
-            ? {
-                borderColor: 'rgba(74,222,128,0.45)',
-                backgroundColor: 'rgba(74,222,128,0.10)',
-                color: 'rgb(74,222,128)',
-              }
-            : {
-                borderColor: 'rgba(255,255,255,0.15)',
-                backgroundColor: 'rgba(64,73,98,0.15)',
-                color: 'rgb(138,141,152)',
-              }
-        }
-        transition={{ duration: 0.5, delay: active ? 0.2 : 0 }}
-        className={NODE}
-      >
-        <span className="inline-flex items-center gap-1.5">
-          <motion.svg
-            animate={{ opacity: active ? 1 : 0, scale: active ? 1 : 0.6 }}
-            transition={{ duration: 0.3, delay: active ? 0.35 : 0 }}
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="3"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="shrink-0"
-          >
-            <path d="M20 6L9 17l-5-5" />
-          </motion.svg>
-          {after}
-        </span>
-      </motion.div>
-    </div>
-  );
-}
-
-/** Mindfolk spotlight — the reroute story plays on hover (pointer) or in-view (touch). */
+/** Mindfolk spotlight — the reroute plays as a graphic story (see MindfolkStory). */
 function MindfolkCard() {
   const t = useTranslations('ecosystem');
-  const prefersReducedMotion = useReducedMotion();
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { margin: '-30% 0px -30% 0px' });
-  const [hovered, setHovered] = useState(false);
-  const [canHover, setCanHover] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    setCanHover(window.matchMedia('(hover: hover)').matches);
-  }, []);
-
-  const active =
-    prefersReducedMotion || !mounted ? true : canHover ? hovered : inView;
 
   return (
-    <div
-      ref={ref}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      <GlassmorphicCard className="h-full">
-        <div className="flex h-full flex-col">
-          <div className="mb-5 flex items-start justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-accent-end text-lg font-bold text-white">
-                M
-              </span>
-              <div>
-                <h3 className="text-2xl font-semibold leading-tight text-text-primary">
-                  {t('mindfolk.name')}
-                </h3>
-                <span className="eyebrow">{t('mindfolk.tag')}</span>
-              </div>
+    <GlassmorphicCard className="h-full">
+      <div className="flex h-full flex-col">
+        <div className="mb-5 flex items-start justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-accent-end text-lg font-bold text-white">
+              M
+            </span>
+            <div>
+              <h3 className="text-2xl font-semibold leading-tight text-text-primary">
+                {t('mindfolk.name')}
+              </h3>
+              <span className="eyebrow">{t('mindfolk.tag')}</span>
             </div>
-            <StatusPill label={t('status')} />
           </div>
-
-          <p className="mb-6 leading-relaxed text-text-secondary">
-            {t('mindfolk.body')}
-          </p>
-
-          <div className="mb-6">
-            <Reroute
-              before={t('flow.before')}
-              action={t('flow.action')}
-              after={t('flow.after')}
-              active={active}
-            />
-          </div>
-
-          <p className="mt-auto border-t border-border-subtle pt-5 text-sm leading-relaxed text-text-tertiary">
-            {t('mindfolk.outcome')}
-          </p>
+          <StatusPill label={t('status')} />
         </div>
-      </GlassmorphicCard>
-    </div>
+
+        <p className="mb-6 leading-relaxed text-text-secondary">
+          {t('mindfolk.body')}
+        </p>
+
+        <div className="mb-6">
+          <MindfolkStory
+            repo={t('flow.before')}
+            reroute={t('flow.action')}
+            kept={t('flow.after')}
+          />
+        </div>
+
+        <p className="mt-auto border-t border-border-subtle pt-5 text-sm leading-relaxed text-text-tertiary">
+          {t('mindfolk.outcome')}
+        </p>
+      </div>
+    </GlassmorphicCard>
   );
 }
 
