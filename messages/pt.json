@@ -123,29 +123,24 @@
   },
   "protocols": {
     "eyebrow": "Para protocolos",
-    "heading": "Um caminho mais aberto para integração.",
-    "subheading": "Protocolos emergentes de Solana não deveriam ter que esperar uma empresa privada decidir se merecem acesso a usuários. As integrações ainda exigem revisão e priorização — a diferença é um caminho menos limitado por prioridades fechadas.",
-    "flow": {
-      "integration": "Integração",
-      "usage": "Uso",
-      "return": "Retorno"
-    },
+    "heading": "O que torna a Salmon diferente.",
+    "subheading": "A Salmon não é uma carteira genérica. É uma camada de distribuição aberta com um foco estreito — é isto que significa na prática.",
     "items": [
       {
-        "title": "Um caminho mais aberto",
-        "description": "As integrações entram por mérito via revisão pública, não por uma fila de business development."
+        "title": "Integre por pull request",
+        "description": "Abra sua integração em público e ela entra por mérito — sem fila de business development, sem roadmap fechado decidindo seu destino."
       },
       {
-        "title": "Construído para protocolos emergentes",
-        "description": "Um wedge focado, escolhido com critério — não uma carteira que tenta servir a todos."
+        "title": "Um wedge, não tudo",
+        "description": "Construída especificamente para protocolos emergentes de Solana — não uma carteira que tenta servir a todos em toda chain."
       },
       {
-        "title": "Construído para o uso real",
-        "description": "A régua não são os anúncios. É ativação, uso e retorno."
+        "title": "Medida por uso, não por imprensa",
+        "description": "Sucesso são usuários que chegam pela sua integração e voltam — não um anúncio."
       },
       {
-        "title": "Construído em público",
-        "description": "Código open-source. Progresso visível. Iteração com responsabilidade."
+        "title": "Tudo em aberto",
+        "description": "Código open-source, revisão pública e progresso visível que você pode auditar a qualquer momento."
       }
     ],
     "cta": "Integre com Salmon"
@@ -180,32 +175,26 @@
     "eyebrow": "Para quem é",
     "heading": "Para quem a Salmon é construída.",
     "subheading": "Um wedge definido, não uma carteira genérica para todos.",
-    "eg": "ex.",
     "items": [
       {
         "title": "Protocolos emergentes de Solana",
-        "description": "Equipes que precisam de um caminho melhor para integração e distribuição.",
-        "example": "Um novo primitivo DeFi, um app de consumo ou uma nova camada de rede construída sobre Solana."
+        "description": "Equipes que precisam de um caminho melhor para integração e distribuição — um novo primitivo DeFi, um app de consumo ou uma nova camada de rede."
       },
       {
         "title": "Comunidades NFT",
-        "description": "Projetos que dependem do suporte da carteira para manter o acesso de holders, a visibilidade ou os claims funcionando.",
-        "example": "Comunidades como a Mindfolk."
+        "description": "Projetos que dependem do suporte da carteira para manter o acesso de holders, a visibilidade ou os claims — como a Mindfolk."
       },
       {
         "title": "Ferramentas de segurança e autocustódia",
-        "description": "Produtos construídos em torno de assinatura mais segura, recuperação, proteção e controle.",
-        "example": "Ferramentas como a Unruggable."
+        "description": "Produtos construídos em torno de assinatura mais segura, recuperação, proteção e controle — como a Unruggable."
       },
       {
         "title": "Builders Solana-first",
-        "description": "Equipes com produtos reais e uma necessidade clara de distribuição via carteira.",
-        "example": "Produtos onde a carteira é a porta de entrada para o app ou serviço."
+        "description": "Equipes cujo produto precisa de distribuição via carteira — onde a carteira é a porta de entrada para o app."
       },
       {
         "title": "Comunidades alinhadas",
-        "description": "Builders, contribuidores e usuários que valorizam infraestrutura aberta e progresso visível.",
-        "example": "Comunidades ecosystem-native que valorizam transparência, acesso e alinhamento de longo prazo."
+        "description": "Builders, contribuidores e usuários que valorizam infraestrutura aberta e progresso visível."
       }
     ]
   },
