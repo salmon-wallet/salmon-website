@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Salmon Wallet — La capa abierta de wallet para Solana",
-    "description": "Wallet de Solana open-source y autocustodial — y una capa abierta de distribución para protocolos emergentes. Live en extensión, web y Android.",
-    "ogDescription": "Código abierto. Sin gatekeepers. La wallet open-source y autocustodial construida para Solana.",
+    "title": "Salmon — Infraestructura de wallet abierta para Solana",
+    "description": "Infraestructura de wallet abierta que convierte integraciones en distribución. Open-source, autocustodial, construida para protocolos emergentes de Solana. Live en extensión, web y Android.",
+    "ogDescription": "Infraestructura de wallet abierta. Convirtiendo integraciones en distribución. Open-source, autocustodial, construida con foco.",
     "privacy": {
       "title": "Política de Privacidad — Salmon Wallet",
       "description": "Política de privacidad de Salmon Wallet — cómo recopilamos, usamos y protegemos sus datos."
@@ -10,62 +10,50 @@
     "terms": {
       "title": "Términos y Condiciones — Salmon Wallet",
       "description": "Términos y condiciones para el uso de los servicios de Salmon Wallet."
+    },
+    "stake": {
+      "title": "Stake con Salmon — Validador de Solana",
+      "description": "Hacé stake de SOL directamente en Salmon y con nuestro propio validador de Solana — stats en vivo, verificables on-chain."
     }
   },
   "nav": {
-    "why": "Por qué",
-    "protocols": "Protocolos",
-    "features": "Funciones",
-    "security": "Seguridad",
-    "manifesto": "Manifiesto",
-    "faq": "FAQ",
+    "github": "GitHub",
+    "x": "X / Twitter",
+    "telegram": "Telegram",
+    "stake": "Stake",
     "getSalmon": "Obtener Salmon",
     "accessWebWallet": "Acceder a Web Wallet",
-    "github": "GitHub",
     "toggleMenu": "Abrir menú"
   },
   "hero": {
-    "badge": "Live desde 2023",
-    "heading": "Infraestructura de wallet abierta\npara protocolos emergentes de Solana.",
-    "subheading": "Un camino más abierto a la integración y la distribución. Open-source, autocustodial, construida con foco. Live ahora en extensión, web y Android.",
-    "viewCode": "Ver el código",
+    "heading": "Infraestructura de wallet abierta.\nConvirtiendo integraciones en distribución.",
+    "subheading": "Para protocolos emergentes de Solana que necesitan un camino creíble hacia los usuarios.",
+    "tagline": "Open-source. Autocustodial. Construida con foco.",
+    "liveNow": "Live ahora: Extensión · Web Wallet · Android — iOS próximamente",
+    "integrate": "¿Querés integrar? Hablemos",
     "walletPreview": "Vista previa"
   },
-  "proof": {
-    "eyebrow": "Verificable por diseño",
-    "openSource": "Open source",
-    "contributors": "Contribuidores",
-    "staked": "En stake con nuestro validador",
-    "uptime": "Uptime del validador",
-    "since": "Live desde"
-  },
-  "chains": {
-    "heading": "Multi-chain por diseño",
-    "subheading": "Gestioná activos en Solana y Bitcoin — incluyendo devnets y testnets.",
-    "primary": "Principal",
-    "chains": {
-      "solana": {
-        "name": "Solana",
-        "networks": {
-          "mainnet": "Mainnet Beta",
-          "devnet": "Devnet"
-        }
+  "why": {
+    "heading": "No es otra wallet.",
+    "headingAccent": "Es infraestructura de wallet abierta.",
+    "statements": [
+      {
+        "lead": "El problema no es la custodia.",
+        "support": "Es el control sobre la capa de wallet."
       },
-      "bitcoin": {
-        "name": "Bitcoin",
-        "networks": {
-          "mainnet": "Mainnet",
-          "testnet": "Testnet"
-        }
+      {
+        "lead": "Las wallets cerradas moldean la distribución.",
+        "support": "Influyen en qué se integra, qué se muestra y qué se usa."
       },
-      "ethereum": {
-        "name": "Ethereum",
-        "networks": {
-          "mainnet": "Mainnet",
-          "sepolia": "Sepolia"
-        }
+      {
+        "lead": "Salmon crea un camino más abierto.",
+        "support": "No acceso automático. Una ruta más creíble hacia integración, uso y tracción."
+      },
+      {
+        "lead": "La prioridad es clara.",
+        "support": "Una experiencia confiable que la gente realmente use."
       }
-    }
+    ]
   },
   "whatMatters": {
     "eyebrow": "Empezá acá",
@@ -81,7 +69,7 @@
     "support": {
       "activation": {
         "title": "Integraciones que traen usuarios",
-        "description": "Más que visibilidad — activación real y comportamiento de retorno real."
+        "description": "Más que visibilidad. Activación real. Comportamiento de retorno real."
       },
       "channels": {
         "title": "Protocolos como canales",
@@ -93,68 +81,15 @@
       }
     }
   },
-  "why": {
-    "eyebrow": "Por qué Salmon",
-    "heading": "El problema no es la custodia. Es el control de la capa de wallet.",
-    "subheading": "Los usuarios de crypto tienen sus llaves — pero las wallets cerradas siguen decidiendo qué se integra, qué se muestra y quién consigue distribución. Eso no es infraestructura neutral. Es control privado sobre una capa crítica.",
-    "labels": {
-      "protocols": "PROTOCOLOS",
-      "closedWallet": "WALLET CERRADA",
-      "users": "USUARIOS"
-    },
-    "closed": {
-      "label": "La capa de wallet cerrada",
-      "status": "Solicitud de integración — pendiente desde 2024",
-      "items": [
-        "Un roadmap privado decide qué se muestra, se integra y se prioriza.",
-        "Los protocolos le pitchean a un equipo de business development — y esperan.",
-        "Defaults e integraciones que los usuarios no pueden inspeccionar."
-      ]
-    },
-    "open": {
-      "label": "La capa de wallet abierta",
-      "status": "PR #15 — revisado y mergeado",
-      "items": [
-        "Las integraciones se revisan en público y entran por mérito.",
-        "Abrís un pull request, no un deck de partnership.",
-        "Cada default y cada integración es código público."
-      ]
-    },
-    "kicker": "Las wallets no son solo UX — son infraestructura de distribución. Cuanto más importante se vuelve la capa de acceso, más transparente, verificable y forkeable debería ser."
-  },
-  "protocols": {
-    "eyebrow": "Para protocolos",
-    "heading": "Qué hace diferente a Salmon.",
-    "subheading": "Salmon no es una wallet genérica. Es una capa de distribución abierta con un foco estrecho — esto es lo que significa en la práctica.",
-    "items": [
-      {
-        "title": "Integrás por pull request",
-        "description": "Abrís tu integración en público y entra por mérito — sin cola de business development, sin roadmap cerrado decidiendo tu destino."
-      },
-      {
-        "title": "Un wedge, no todo",
-        "description": "Construida específicamente para protocolos emergentes de Solana — no una wallet que intenta servir a todos en toda chain."
-      },
-      {
-        "title": "Se mide por uso, no por prensa",
-        "description": "El éxito son usuarios que llegan por tu integración y vuelven — no un anuncio."
-      },
-      {
-        "title": "Todo en abierto",
-        "description": "Código open-source, revisión pública y progreso visible que podés auditar en cualquier momento."
-      }
-    ],
-    "cta": "Integrá con Salmon"
-  },
   "ecosystem": {
     "eyebrow": "Ecosistema",
-    "heading": "Integraciones reales, shippeadas en abierto.",
+    "heading": "Integraciones del ecosistema.",
     "subheading": "Proyectos que Salmon apoyó, integró o con los que está empezando a trabajar en el ecosistema Solana.",
     "status": "Shippeado",
     "mindfolk": {
       "name": "Mindfolk",
       "tag": "Comunidad NFT",
-      "body": "Cuando el repositorio NFT de Mindfolk cambió, el acceso de los holders a la wallet se rompió. Salmon shippeó el reroute que mantuvo el acceso funcionando — sin migración, sin downtime para los holders.",
+      "body": "Cuando Mindfolk necesitó soporte de wallet después de que su repositorio NFT cambió, Salmon shippeó el reroute necesario para mantener el acceso funcionando para los holders.",
       "outcome": "Un ejemplo concreto de para qué está construido Salmon: resolver problemas reales de integración para comunidades emergentes."
     },
     "flow": {
@@ -163,9 +98,9 @@
       "after": "Holders mantienen acceso"
     },
     "progress": {
-      "eyebrow": "Más en progreso",
+      "eyebrow": "Hay más integraciones en progreso",
       "body": "Salmon sigue trabajando con equipos emergentes que necesitan un camino más abierto a la integración y la distribución.",
-      "follow": "Seguí el progreso en X y Telegram."
+      "follow": "Seguí las novedades en X y Telegram."
     },
     "cta": {
       "github": "Ver en GitHub",
@@ -175,87 +110,32 @@
   "audience": {
     "eyebrow": "Para quién es",
     "heading": "Para quién está construido Salmon.",
-    "subheading": "Un wedge definido, no una wallet genérica para todos.",
+    "eg": "Por ejemplo:",
     "items": [
       {
         "title": "Protocolos emergentes de Solana",
-        "description": "Equipos que necesitan un mejor camino a la integración y la distribución — un nuevo primitivo DeFi, una app de consumo o una nueva capa de red."
+        "description": "Equipos que necesitan un mejor camino a la integración y la distribución.",
+        "example": "Un nuevo primitivo DeFi, una app de consumo o una nueva capa de red construida sobre Solana."
       },
       {
         "title": "Comunidades NFT",
-        "description": "Proyectos que dependen del soporte de la wallet para mantener el acceso de holders, la visibilidad o los claims — como Mindfolk."
+        "description": "Proyectos que dependen del soporte de la wallet para mantener el acceso de holders, la visibilidad o los claims funcionando.",
+        "example": "Comunidades como Mindfolk."
       },
       {
         "title": "Herramientas de seguridad y autocustodia",
-        "description": "Productos construidos alrededor de firma más segura, recuperación, protección y control — como Unruggable."
+        "description": "Productos construidos alrededor de firma más segura, recuperación, protección y control.",
+        "example": "Herramientas como Unruggable."
       },
       {
         "title": "Builders Solana-first",
-        "description": "Equipos cuyo producto necesita distribución vía wallet — donde la wallet es la puerta de entrada a la app."
+        "description": "Equipos con productos reales y una necesidad clara de distribución vía wallet.",
+        "example": "Productos donde la wallet es la puerta de entrada a la app o el servicio."
       },
       {
         "title": "Comunidades alineadas",
-        "description": "Builders, contribuidores y usuarios que valoran la infraestructura abierta y el progreso visible."
-      }
-    ]
-  },
-  "features": {
-    "heading": "Todo lo que necesitás en una wallet de Solana. Nada que no puedas verificar.",
-    "subheading": "Enviá, swapeá, guardá NFTs y conectá a dApps — cada flujo open-source y verificable.",
-    "cards": {
-      "send": {
-        "title": "Enviar y recibir",
-        "description": "Mové tokens y NFTs en Solana con una wallet que no se te cruza en el camino."
-      },
-      "swap": {
-        "title": "Swap dentro de la wallet",
-        "description": "Intercambiá tokens directamente desde la wallet — sin sitios extra ni desvíos custodiales."
-      },
-      "custody": {
-        "title": "Autocustodial por diseño",
-        "description": "Las llaves se cifran en tu dispositivo y nunca salen de ahí. La custodia queda con vos."
-      },
-      "validator": {
-        "title": "Un validador Solana activo",
-        "description": "Salmon opera su propio validador — skin in the game, en vivo y verificable on-chain."
-      },
-      "opensource": {
-        "title": "Open-source, todo",
-        "description": "El código detrás de cada flujo es público — inspeccionalo, cuestionalo, forkealo."
-      },
-      "nfts": {
-        "title": "NFTs incluidos",
-        "description": "Guardá, mirá y enviá tus NFTs junto a tus tokens."
-      },
-      "dapps": {
-        "title": "Conectate a dApps",
-        "description": "Aprobás cada conexión explícitamente — vos decidís qué puede ver cada app."
-      },
-      "chains": {
-        "title": "Solana + Bitcoin",
-        "description": "Construida primero para Solana, con soporte de Bitcoin — devnets y testnets incluidas."
-      }
-    }
-  },
-  "security": {
-    "heading": "Seguridad por diseño.",
-    "subheading": "Menos confianza. Más verificación.",
-    "items": [
-      {
-        "title": "Las llaves se quedan con vos",
-        "description": "Tus claves privadas se cifran en tu dispositivo y están protegidas por tu contraseña. La custodia nunca sale de tus manos."
-      },
-      {
-        "title": "Modelo de seguridad abierto",
-        "description": "Revisión pública, testing continuo y preparación para auditorías. La seguridad mejora con transparencia, no con secretismo."
-      },
-      {
-        "title": "Primero los flujos críticos confiables",
-        "description": "Las acciones críticas deben funcionar de forma confiable antes de que crezca la complejidad. Las operaciones más importantes de la wallet van primero."
-      },
-      {
-        "title": "Privacidad con criterio",
-        "description": "Menos recopilación innecesaria, más control. Salmon minimiza la extracción oculta en la capa de interfaz."
+        "description": "Builders, contribuidores y usuarios que valoran la infraestructura abierta y el progreso visible.",
+        "example": "Comunidades ecosystem-native que valoran transparencia, acceso y alineación de largo plazo."
       }
     ]
   },
@@ -264,19 +144,19 @@
     "subheading": "Esa es la tesis.",
     "principles": [
       {
-        "title": "Construido hacia la propiedad comunitaria.",
-        "description": "La capa de wallet no debería quedar gobernada permanentemente solo por control privado."
+        "title": "Salmon se está construyendo hacia la propiedad comunitaria.",
+        "description": "Porque la capa de wallet no debería quedar permanentemente gobernada solo por control privado."
       },
       {
-        "title": "Abre una capa estratégica.",
+        "title": "Salmon abre una capa estratégica.",
         "description": "No quitando criterio, sino haciendo el camino a la integración más abierto y más visible."
       },
       {
-        "title": "Empieza con un wedge concreto.",
+        "title": "Salmon empieza con un wedge concreto.",
         "description": "Los protocolos emergentes de Solana necesitan una mejor ruta a los usuarios."
       },
       {
-        "title": "Construido para el uso, no para la narrativa.",
+        "title": "Salmon está construida para el uso, no para la narrativa.",
         "description": "Si las integraciones no traen usuarios, nada más importa."
       },
       {
@@ -291,64 +171,99 @@
   },
   "faq": {
     "heading": "Preguntas frecuentes",
-    "items": [
+    "groups": [
       {
-        "question": "¿Qué es Salmon?",
-        "answer": "Una wallet open-source y autocustodial construida como infraestructura de wallet abierta para Solana."
+        "label": "Producto",
+        "items": [
+          {
+            "question": "¿Qué es Salmon?",
+            "answer": "Una wallet open-source y autocustodial construida como infraestructura de wallet abierta para Solana."
+          },
+          {
+            "question": "¿Puedo usar Salmon hoy?",
+            "answer": "Sí. Extensión, Web Wallet y Android están live. iOS llega pronto."
+          },
+          {
+            "question": "¿Puedo hacer stake con Salmon?",
+            "answer": "Sí. El staking está disponible en la wallet."
+          },
+          {
+            "question": "¿Salmon hace más que la wallet?",
+            "answer": "Sí. Salmon también opera un validador de Solana."
+          },
+          {
+            "question": "¿Por qué usar Salmon?",
+            "answer": "Porque el acceso importa, no solo el almacenamiento."
+          }
+        ]
       },
       {
-        "question": "¿Qué problema resuelve Salmon?",
-        "answer": "Las wallets cerradas moldean la distribución. Salmon crea un camino más abierto para que los protocolos emergentes se integren y lleguen a usuarios."
+        "label": "Integración",
+        "items": [
+          {
+            "question": "¿Qué problema resuelve Salmon?",
+            "answer": "Las wallets cerradas moldean la distribución. Salmon crea un camino más abierto para que los protocolos emergentes se integren y lleguen a usuarios."
+          },
+          {
+            "question": "¿Salmon es integración permissionless?",
+            "answer": "No. Las integraciones siguen requiriendo revisión y priorización. La propuesta es un camino más abierto y creíble, no acceso automático."
+          },
+          {
+            "question": "¿En qué se diferencia Salmon de otras wallets?",
+            "answer": "Salmon está construida para que el camino a la integración esté menos condicionado por prioridades cerradas. No intenta ser una wallet genérica para todos. Empieza con un wedge claro: ayudar a protocolos emergentes de Solana a convertir integraciones en uso."
+          },
+          {
+            "question": "¿Por qué el foco en protocolos emergentes?",
+            "answer": "Porque Salmon está construida alrededor de un wedge definido. Los equipos tempranos suelen necesitar una mejor ruta hacia usuarios, feedback y tracción que la que ofrecen las prioridades de las wallets cerradas."
+          },
+          {
+            "question": "¿Por qué integrar Salmon?",
+            "answer": "Para llegar a usuarios, juntar feedback y construir tracción a través de una capa de wallet más abierta."
+          },
+          {
+            "question": "¿Para quién es Salmon?",
+            "answer": "Protocolos emergentes de Solana, builders, contribuidores, integradores y usuarios que valoran la infraestructura abierta."
+          },
+          {
+            "question": "¿Qué es lo que más importa ahora?",
+            "answer": "Un wedge claro, flujos confiables, integraciones reales y evidencia pública de uso."
+          }
+        ]
       },
       {
-        "question": "¿Salmon es integración permissionless?",
-        "answer": "No. Las integraciones siguen requiriendo revisión y priorización. La propuesta es un camino más abierto y creíble, no acceso automático."
+        "label": "Seguridad",
+        "items": [
+          {
+            "question": "¿Salmon es open-source?",
+            "answer": "Sí. El software core es público en GitHub."
+          },
+          {
+            "question": "¿Salmon está auditado?",
+            "answer": "La seguridad se trata como un proceso continuo: revisión, testing y preparación para auditorías."
+          }
+        ]
       },
       {
-        "question": "¿Para quién es Salmon?",
-        "answer": "Protocolos emergentes de Solana, builders, contribuidores, integradores y usuarios que valoran la infraestructura abierta."
-      },
-      {
-        "question": "¿Por qué integrar Salmon?",
-        "answer": "Para llegar a usuarios, juntar feedback y construir tracción a través de una capa de wallet más abierta."
-      },
-      {
-        "question": "¿Por qué usar Salmon?",
-        "answer": "Porque el acceso importa, no solo el almacenamiento."
-      },
-      {
-        "question": "¿Puedo usar Salmon hoy?",
-        "answer": "Sí. Extensión, Web Wallet y Android están live. iOS llega pronto."
-      },
-      {
-        "question": "¿Puedo hacer stake con Salmon?",
-        "answer": "Sí. El staking está disponible directamente en la wallet."
-      },
-      {
-        "question": "¿Salmon hace más que la wallet?",
-        "answer": "Sí. Salmon también opera un validador de Solana."
-      },
-      {
-        "question": "¿Salmon es open-source?",
-        "answer": "Sí. El software core es público en GitHub."
-      },
-      {
-        "question": "¿Qué es lo que más importa ahora?",
-        "answer": "Un wedge claro, flujos confiables, integraciones reales y evidencia pública de uso."
-      },
-      {
-        "question": "¿Qué significa propiedad comunitaria en Salmon?",
-        "answer": "Significa construir hacia estructuras de propiedad y gobernanza que puedan alinear el futuro de la capa de wallet con el ecosistema al que sirve, no solo con la empresa que lo empezó."
-      },
-      {
-        "question": "¿Salmon está auditado?",
-        "answer": "La seguridad se trata como un proceso continuo: revisión, testing y preparación para auditorías."
+        "label": "Propiedad",
+        "items": [
+          {
+            "question": "¿Qué significa \"built in public\"?",
+            "answer": "Significa código open-source, progreso visible e iteración con rendición de cuentas. Salmon está pensada para evolucionar en abierto, no detrás de un roadmap cerrado."
+          },
+          {
+            "question": "¿Qué significa propiedad comunitaria en Salmon?",
+            "answer": "Significa construir hacia estructuras de propiedad y gobernanza que puedan alinear el futuro de la capa de wallet con el ecosistema al que sirve, no solo con la empresa que lo empezó."
+          },
+          {
+            "question": "¿Cómo se ve el éxito para Salmon?",
+            "answer": "No son anuncios. No es alcance abstracto. Éxito significa activación, uso y retorno."
+          }
+        ]
       }
     ]
   },
   "getSalmon": {
-    "heading": "Usalo. O forkealo.",
-    "subheading": "Llegá a lo que las wallets cerradas ignoran.",
+    "heading": "Obtener Salmon",
     "web": "Web",
     "webDescription": "Accedé directamente desde tu navegador",
     "extension": "Extensión",
@@ -362,10 +277,27 @@
     "showQr": "Mostrar QR",
     "hideQr": "Ocultar QR",
     "comingSoon": "Próximamente",
-    "buildHeading": "¿Estás construyendo un protocolo?",
-    "buildDescription": "La capa de wallet está abierta. Subí tu integración por revisión pública — sin acuerdos a puerta cerrada.",
-    "buildCta": "Integrá con Salmon",
-    "follow": "Seguí la construcción"
+    "build": {
+      "heading": "Construí sobre Salmon",
+      "description": "¿Tenés un protocolo o una integración para shippear? Hablemos.",
+      "cta": "Hablemos"
+    },
+    "code": {
+      "heading": "Explorá el código",
+      "description": "Mirá cómo Salmon se construye en público.",
+      "cta": "Ver en GitHub"
+    },
+    "followX": {
+      "heading": "Seguí la construcción",
+      "description": "Updates, integraciones y qué se está shippeando.",
+      "cta": "Seguí a Salmon en X"
+    },
+    "community": {
+      "heading": "Unite a la comunidad",
+      "description": "Cerca de los anuncios, releases y la gente que construye alrededor de Salmon.",
+      "cta": "Unite a Salmon en Telegram"
+    },
+    "closing": "Un camino más abierto a la integración y la distribución."
   },
   "validator": {
     "eyebrow": "Stakeá con Salmon",

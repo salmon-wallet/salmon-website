@@ -5,7 +5,8 @@ import { motion, useInView, useReducedMotion } from 'framer-motion';
 
 interface BentoCardProps {
   title: string;
-  description: string;
+  description?: string;
+  eyebrow?: string;
   visual: ReactNode;
   className?: string;
 }
@@ -19,6 +20,7 @@ interface BentoCardProps {
 export default function BentoCard({
   title,
   description,
+  eyebrow,
   visual,
   className = '',
 }: BentoCardProps) {
@@ -50,10 +52,15 @@ export default function BentoCard({
         {visual}
       </div>
       <div className="p-5">
-        <h3 className="mb-1 text-base font-semibold">{title}</h3>
-        <p className="text-sm leading-relaxed text-text-secondary">
-          {description}
-        </p>
+        {eyebrow && (
+          <span className="mb-1.5 block font-mono text-sm text-accent">{eyebrow}</span>
+        )}
+        <h3 className={`text-base font-semibold ${description ? 'mb-1' : ''}`}>{title}</h3>
+        {description && (
+          <p className="text-sm leading-relaxed text-text-secondary">
+            {description}
+          </p>
+        )}
       </div>
     </motion.div>
   );

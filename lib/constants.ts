@@ -14,13 +14,6 @@ export const LINKS = {
   contact: 'mailto:integrations@salmonwallet.io',
 } as const;
 
-export const NAV_HREFS = [
-  '#why',
-  '#protocols',
-  '#features',
-  '#security',
-  '#manifesto',
-] as const;
 
 /** Salmon's Solana validator (for live stats in the ValidatorStats section). */
 export const VALIDATOR = {

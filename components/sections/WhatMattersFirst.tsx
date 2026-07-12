@@ -1,22 +1,27 @@
 'use client';
 
-import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import GlassmorphicCard from '@/components/ui/GlassmorphicCard';
 import StatusPill from '@/components/ui/StatusPill';
+import BentoCard from '@/components/bento/BentoCard';
+import {
+  CreateVisual,
+  ReceiveVisual,
+  SendVisual,
+  UseIntegrationVisual,
+} from '@/components/bento/StepCards';
 
-const STEP_KEYS = ['create', 'receive', 'send', 'use'] as const;
+const STEPS = [
+  { key: 'create', visual: <CreateVisual /> },
+  { key: 'receive', visual: <ReceiveVisual /> },
+  { key: 'send', visual: <SendVisual /> },
+  { key: 'use', visual: <UseIntegrationVisual /> },
+] as const;
+
 const SUPPORT_KEYS = ['activation', 'channels', 'live'] as const;
-
-const stepVariants = {
-  hidden: { opacity: 0, x: -28, filter: 'blur(4px)' },
-  show: { opacity: 1, x: 0, filter: 'blur(0px)' },
-};
 
 export default function WhatMattersFirst() {
   const t = useTranslations('whatMatters');
-  const prefersReducedMotion = useReducedMotion();
 
   return (
     <section id="start" className="relative py-24 sm:py-32">
@@ -36,31 +41,20 @@ export default function WhatMattersFirst() {
           </div>
         </ScrollReveal>
 
-        {/* Quickstart panel: each step slides in on its own */}
-        <GlassmorphicCard noPadding className="overflow-hidden">
-          <motion.ol
-            initial={prefersReducedMotion ? undefined : 'hidden'}
-            whileInView={prefersReducedMotion ? undefined : 'show'}
-            viewport={{ once: true, margin: '-80px' }}
-            variants={{ show: { transition: { staggerChildren: 0.13 } } }}
-          >
-            {STEP_KEYS.map((key, i) => (
-              <motion.li
-                key={key}
-                variants={stepVariants}
-                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="flex items-center gap-5 border-border-subtle px-6 py-5 [&:not(:first-child)]:border-t sm:px-8"
-              >
-                <span className="font-mono text-sm text-accent">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <span className="text-base font-medium text-text-primary sm:text-lg">
-                  {t(`steps.${key}`)}
-                </span>
-              </motion.li>
+        {/* Quickstart: each step idles, then "executes" on hover (in-view on touch) */}
+        <ScrollReveal direction="up" duration={1.1}>
+          <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {STEPS.map(({ key, visual }, i) => (
+              <li key={key} className="h-full">
+                <BentoCard
+                  eyebrow={String(i + 1).padStart(2, '0')}
+                  title={t(`steps.${key}`)}
+                  visual={visual}
+                />
+              </li>
             ))}
-          </motion.ol>
-        </GlassmorphicCard>
+          </ol>
+        </ScrollReveal>
 
         {/* Supporting frame: why the path matters */}
         <div className="mt-14 grid gap-8 md:grid-cols-3">
