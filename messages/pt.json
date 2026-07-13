@@ -89,22 +89,16 @@
     "mindfolk": {
       "name": "Mindfolk",
       "tag": "Comunidade NFT",
-      "body": "Quando a Mindfolk precisou de suporte de carteira depois que seu repositório NFT mudou, a Salmon lançou o reroute necessário para manter o acesso dos holders funcionando.",
+      "problem": "O repositório NFT da Mindfolk mudou. Os holders perderam o suporte de carteira.",
+      "fix": "A Salmon lançou o reroute. Os holders mantêm o acesso.",
       "outcome": "Um exemplo concreto do que a Salmon foi construída para fazer: resolver problemas reais de integração para comunidades emergentes."
     },
-    "flow": {
-      "before": "Repo mudou",
-      "action": "Reroute da Salmon",
-      "after": "Holders mantêm acesso"
-    },
-    "progress": {
-      "eyebrow": "Há mais integrações em progresso",
+    "open": {
+      "status": "Aberto",
+      "title": "Sua integração",
+      "tag": "Slot aberto",
       "body": "A Salmon segue trabalhando com equipes emergentes que precisam de um caminho mais aberto para integração e distribuição.",
-      "follow": "Fique ligado no X e no Telegram."
-    },
-    "cta": {
-      "github": "Ver no GitHub",
-      "integrate": "Vamos falar sobre uma integração"
+      "cta": "Vamos falar sobre uma integração"
     }
   },
   "audience": {
