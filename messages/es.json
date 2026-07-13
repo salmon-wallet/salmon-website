@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Salmon — Infraestructura de wallet abierta para Solana",
     "description": "Infraestructura de wallet abierta que convierte integraciones en distribución. Open-source, autocustodial, construida para protocolos emergentes de Solana. Live en extensión, web y Android.",
-    "ogDescription": "Infraestructura de wallet abierta. Convirtiendo integraciones en distribución. Open-source, autocustodial, construida con foco.",
+    "ogDescription": "Infraestructura de wallet abierta. Convirtiendo integraciones en distribución. Open-source, autocustodial, impulsada por la comunidad.",
     "privacy": {
       "title": "Política de Privacidad — Salmon Wallet",
       "description": "Política de privacidad de Salmon Wallet — cómo recopilamos, usamos y protegemos sus datos."
@@ -27,8 +27,8 @@
   },
   "hero": {
     "heading": "Infraestructura de wallet abierta.\nConvirtiendo integraciones en distribución.",
-    "subheading": "Para protocolos emergentes de Solana que necesitan un camino creíble hacia los usuarios.",
-    "tagline": "Open-source. Autocustodial. Construida con foco.",
+    "subheading": "Construida para equipos que necesitan un camino creíble hacia los usuarios.",
+    "tagline": "Open-source. Autocustodial. Impulsada por la comunidad.",
     "liveNow": "Live ahora: Extensión · Web Wallet · Android — iOS próximamente",
     "integrate": "¿Querés integrar? Hablemos",
     "walletPreview": "Vista previa"
