@@ -1,106 +1,50 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { LINKS } from '@/lib/constants';
 import ScrollReveal from './ui/ScrollReveal';
-import GlassmorphicCard from './ui/GlassmorphicCard';
 import { WebIcon, ExtensionIcon, AndroidIcon, IosIcon } from './ui/platform-icons';
 
-function QrPlaceholder({ label }: { label: string }) {
-  return (
-    <div className="w-40 h-40 rounded-xl border border-card-border bg-white flex items-center justify-center">
-      <span className="text-bg-primary text-xs font-mono text-center px-2">
-        {label} QR
-      </span>
-    </div>
-  );
-}
-
+/** The whole card is the target, and the card itself carries the platform's
+    colour. No description, no separate action link. */
 function PlatformCard({
   title,
-  description,
   href,
   icon,
-  expandable,
-  qrLabel,
-  downloadLabel,
-  showQrLabel,
-  hideQrLabel,
-  hoverTint,
+  tint,
   comingSoon,
   comingSoonLabel,
 }: {
   title: string;
-  description: string;
   href: string;
   icon: React.ReactNode;
-  expandable?: boolean;
-  qrLabel?: string;
-  downloadLabel: string;
-  showQrLabel: string;
-  hideQrLabel: string;
-  hoverTint?: string;
+  tint: string;
   comingSoon?: boolean;
   comingSoonLabel?: string;
 }) {
-  const [expanded, setExpanded] = useState(false);
-  const prefersReducedMotion = useReducedMotion();
+  const card = (
+    <div
+      className="platform-card flex h-full min-h-52 flex-col items-center justify-center gap-5 rounded-2xl border p-8 text-center"
+      style={{ '--tint': tint } as React.CSSProperties}
+    >
+      {icon}
+      <h3 className="text-lg font-semibold text-text-primary">{title}</h3>
+    </div>
+  );
+
+  if (comingSoon) {
+    return (
+      <div className="h-full cursor-default opacity-45" title={comingSoonLabel}>
+        {card}
+        <span className="sr-only">{comingSoonLabel}</span>
+      </div>
+    );
+  }
 
   return (
-    <GlassmorphicCard hoverTint={hoverTint} className="text-center h-full">
-      <div className="flex flex-col items-center h-full">
-        <div className="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-4">
-          {icon}
-        </div>
-        <h3 className="text-lg font-semibold mb-1">{title}</h3>
-        <p className="text-sm text-text-secondary mb-4 flex-1">{description}</p>
-
-        {comingSoon ? (
-          <span className="text-sm text-text-secondary/60 font-medium py-1">
-            {comingSoonLabel}
-          </span>
-        ) : expandable ? (
-          <>
-            <button
-              onClick={() => setExpanded(!expanded)}
-              className="text-sm text-accent hover:text-accent/80 transition-colors cursor-pointer"
-            >
-              {expanded ? hideQrLabel : showQrLabel}
-            </button>
-            <AnimatePresence initial={false}>
-              {expanded && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={
-                    prefersReducedMotion
-                      ? { duration: 0 }
-                      : { type: 'spring', damping: 20, stiffness: 200, mass: 0.5 }
-                  }
-                  className="overflow-hidden"
-                >
-                  <div className="pt-4 flex justify-center">
-                    <QrPlaceholder label={qrLabel ?? title} />
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </>
-        ) : (
-          <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-accent hover:text-accent/80 transition-colors"
-          >
-            {downloadLabel}
-          </a>
-        )}
-      </div>
-    </GlassmorphicCard>
+    <a href={href} target="_blank" rel="noopener noreferrer" className="group block h-full">
+      {card}
+    </a>
   );
 }
 
@@ -129,54 +73,38 @@ export default function GetSalmon() {
           <ScrollReveal direction={cardDirections[0]} delay={0} duration={1.1} className="h-full">
             <PlatformCard
               title={t('web')}
-              description={t('webDescription')}
               href={LINKS.webWallet}
-              hoverTint="#4FC3F7"
-              downloadLabel={t('open')}
-              showQrLabel={t('showQr')}
-              hideQrLabel={t('hideQr')}
-              icon={<WebIcon />}
+              tint="#4FC3F7"
+              icon={<WebIcon size={48} />}
             />
           </ScrollReveal>
 
           <ScrollReveal direction={cardDirections[1]} delay={0.12} duration={1.1} className="h-full">
             <PlatformCard
-              title={t('extension')}
-              description={t('extensionDescription')}
+              title={t('extensionChrome')}
               href={LINKS.chrome}
-              hoverTint="#4285F4"
-              downloadLabel={t('download')}
-              showQrLabel={t('showQr')}
-              hideQrLabel={t('hideQr')}
-              icon={<ExtensionIcon />}
+              tint="#4285F4"
+              icon={<ExtensionIcon size={48} />}
             />
           </ScrollReveal>
 
           <ScrollReveal direction={cardDirections[2]} delay={0.24} duration={1.1} className="h-full">
             <PlatformCard
               title={t('android')}
-              description={t('androidDescription')}
               href={LINKS.playStore}
-              hoverTint="#3DDC84"
-              downloadLabel={t('download')}
-              showQrLabel={t('showQr')}
-              hideQrLabel={t('hideQr')}
-              icon={<AndroidIcon />}
+              tint="#3DDC84"
+              icon={<AndroidIcon size={48} />}
             />
           </ScrollReveal>
 
           <ScrollReveal direction={cardDirections[3]} delay={0.36} duration={1.1} className="h-full">
             <PlatformCard
               title={t('ios')}
-              description={t('iosDescription')}
               href={LINKS.appStore}
-              hoverTint="#A2AAAD"
+              tint="#A2AAAD"
               comingSoon
               comingSoonLabel={t('comingSoon')}
-              downloadLabel={t('download')}
-              showQrLabel={t('showQr')}
-              hideQrLabel={t('hideQr')}
-              icon={<IosIcon />}
+              icon={<IosIcon size={48} />}
             />
           </ScrollReveal>
         </div>

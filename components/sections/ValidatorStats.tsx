@@ -1,7 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 import { getValidatorStats } from '@/lib/validator';
-import { VALIDATOR, LINKS } from '@/lib/constants';
+import { VALIDATOR } from '@/lib/constants';
 import NumberTicker from '@/components/ui/NumberTicker';
+import GradientButton from '@/components/ui/GradientButton';
 
 interface StatProps {
   label: string;
@@ -91,8 +92,8 @@ export default async function ValidatorStats() {
           </Stat>
         </div>
 
-        {/* Adjacent-service CTA + radical transparency: verify the full record yourself. */}
-        <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+        {/* Staking runs through JPool, against Salmon's own validator. */}
+        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3">
           <span className="eyebrow flex items-center gap-2 text-text-tertiary">
             <span
               className={`h-1.5 w-1.5 rounded-full ${stats.live ? 'bg-success' : 'bg-text-tertiary'}`}
@@ -100,22 +101,10 @@ export default async function ValidatorStats() {
             />
             {stats.live ? t('live') : t('snapshot')} · {stats.name}
           </span>
-          <a
-            href={LINKS.webWallet}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-accent transition-colors hover:text-accent-soft"
-          >
+
+          <GradientButton href={VALIDATOR.jpool} variant="primary" className="px-5 py-2.5">
             {t('stake')} ↗
-          </a>
-          <a
-            href={VALIDATOR.jpool}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-text-secondary transition-colors hover:text-text-primary"
-          >
-            {t('verify')} ↗
-          </a>
+          </GradientButton>
         </div>
       </div>
     </section>

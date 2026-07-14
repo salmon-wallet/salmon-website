@@ -111,6 +111,35 @@
   }
 }
 
+/* Get Salmon cards: the whole card carries the platform's colour, same --tint
+   contract as .platform-tile. */
+.platform-card {
+  color: var(--tint);
+  background-color: color-mix(in oklab, var(--tint) 12%, transparent);
+  border-color: color-mix(in oklab, var(--tint) 45%, transparent);
+  box-shadow: 0 4px 24px color-mix(in oklab, var(--tint) 10%, transparent);
+  transition:
+    background-color 400ms var(--ease-expo-out),
+    border-color 400ms var(--ease-expo-out),
+    box-shadow 400ms var(--ease-expo-out),
+    transform 400ms var(--ease-expo-out);
+}
+
+.group:hover .platform-card,
+.group:focus-visible .platform-card {
+  background-color: color-mix(in oklab, var(--tint) 22%, transparent);
+  border-color: color-mix(in oklab, var(--tint) 75%, transparent);
+  box-shadow: 0 16px 44px color-mix(in oklab, var(--tint) 24%, transparent);
+  transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .group:hover .platform-card,
+  .group:focus-visible .platform-card {
+    transform: none;
+  }
+}
+
 /* Hide scrollbar (single-line stat strip on mobile) */
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }

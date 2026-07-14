@@ -20,7 +20,7 @@
     "github": "GitHub",
     "x": "X / Twitter",
     "telegram": "Telegram",
-    "stake": "Stake",
+    "stake": "Stake com a gente",
     "getSalmon": "Baixar Salmon",
     "accessWebWallet": "Acessar Web Wallet",
     "toggleMenu": "Abrir menu"
@@ -255,17 +255,9 @@
   "getSalmon": {
     "heading": "Baixar Salmon",
     "web": "Web",
-    "webDescription": "Acesse diretamente pelo navegador",
     "extension": "Extensão",
-    "extensionDescription": "Extensão de navegador",
     "android": "Android",
-    "androidDescription": "Google Play Store",
     "ios": "iOS",
-    "iosDescription": "App Store",
-    "download": "Baixar",
-    "open": "Abrir",
-    "showQr": "Mostrar QR",
-    "hideQr": "Ocultar QR",
     "comingSoon": "Em breve",
     "build": {
       "description": "Tem um protocolo ou integração para lançar? Vamos conversar.",
@@ -274,14 +266,14 @@
     "code": {
       "cta": "Ver no GitHub"
     },
-    "closing": "Um caminho mais aberto para integração e distribuição."
+    "closing": "Um caminho mais aberto para integração e distribuição.",
+    "extensionChrome": "Extensão (Chrome)"
   },
   "validator": {
     "eyebrow": "Faça stake com a Salmon",
     "since": "Desde junho de 2026",
     "heading": "Faça stake direto na carteira.",
     "lead": "O staking está disponível dentro da Salmon. Como serviço adjacente, também operamos nosso próprio validador de Solana — alinhado com a rede que serve.",
-    "stake": "Fazer stake na carteira",
     "apy": "APY est.",
     "commission": "Comissão",
     "activeStake": "Stake ativo",
@@ -292,7 +284,7 @@
     "active": "Ativo",
     "live": "Ao vivo",
     "snapshot": "Snapshot",
-    "verify": "Verificar on-chain"
+    "stake": "Fazer stake na carteira"
   },
   "footer": {
     "description": "Infraestrutura de carteira aberta para Solana. Open-source, autocustodial, construída para protocolos emergentes.",

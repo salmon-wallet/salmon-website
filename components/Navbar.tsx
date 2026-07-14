@@ -128,9 +128,11 @@ export default function Navbar() {
         <div className="relative mx-auto max-w-7xl px-6 flex items-center h-16">
           {/* Left: utility link + ecosystem quick links */}
           <div className="hidden lg:flex items-center gap-5">
+            {/* Secondary CTA. Styled like GradientButton's secondary variant, but on
+                next-intl's Link so the locale prefix and client-side nav survive. */}
             <Link
               href="/stake"
-              className="text-sm whitespace-nowrap text-text-secondary hover:text-text-primary transition-colors duration-300"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-border-subtle px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:border-white/25 hover:bg-white/5"
             >
               {t('stake')}
             </Link>

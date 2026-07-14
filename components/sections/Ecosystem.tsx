@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { LINKS } from '@/lib/constants';
+import GradientButton from '@/components/ui/GradientButton';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import StatusPill from '@/components/ui/StatusPill';
 
@@ -113,15 +114,9 @@ export default function Ecosystem() {
         <ScrollReveal delay={0.1}>
           <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-xl leading-relaxed text-text-secondary">{t('open.body')}</p>
-            <a
-              href={LINKS.contact}
-              className="group inline-flex shrink-0 items-center gap-2 text-sm font-medium text-accent"
-            >
-              {t('open.cta')}
-              <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
-                →
-              </span>
-            </a>
+            <GradientButton href={LINKS.contact} variant="secondary" className="shrink-0 px-5 py-2.5">
+              {t('open.cta')} →
+            </GradientButton>
           </div>
         </ScrollReveal>
       </div>

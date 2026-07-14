@@ -20,7 +20,7 @@
     "github": "GitHub",
     "x": "X / Twitter",
     "telegram": "Telegram",
-    "stake": "Stake",
+    "stake": "Stake with us",
     "getSalmon": "Get Salmon",
     "accessWebWallet": "Access Web Wallet",
     "toggleMenu": "Toggle menu"
@@ -255,17 +255,9 @@
   "getSalmon": {
     "heading": "Get Salmon",
     "web": "Web",
-    "webDescription": "Access directly from your browser",
     "extension": "Extension",
-    "extensionDescription": "Browser extension",
     "android": "Android",
-    "androidDescription": "Google Play Store",
     "ios": "iOS",
-    "iosDescription": "App Store",
-    "download": "Download",
-    "open": "Open",
-    "showQr": "Show QR",
-    "hideQr": "Hide QR",
     "comingSoon": "Coming soon",
     "build": {
       "description": "Have a protocol or integration to ship? Let's connect.",
@@ -274,14 +266,14 @@
     "code": {
       "cta": "View on GitHub"
     },
-    "closing": "A more open path to integration and distribution."
+    "closing": "A more open path to integration and distribution.",
+    "extensionChrome": "Extension (Chrome)"
   },
   "validator": {
     "eyebrow": "Stake with Salmon",
     "since": "Since June 2026",
     "heading": "Stake directly in the wallet.",
     "lead": "Staking is available right inside Salmon. As an adjacent service, we also run our own Solana validator — aligned with the network it serves.",
-    "stake": "Stake in the wallet",
     "apy": "Est. APY",
     "commission": "Commission",
     "activeStake": "Active stake",
@@ -292,7 +284,7 @@
     "active": "Active",
     "live": "Live",
     "snapshot": "Snapshot",
-    "verify": "Verify on-chain"
+    "stake": "Stake in the wallet"
   },
   "footer": {
     "description": "Open wallet infrastructure for Solana. Open-source, self-custodial, built for emerging protocols.",

@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 import { motion, useReducedMotion, type Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { LINKS } from '@/lib/constants';
 import GradientButton from './ui/GradientButton';
+import LockScreenMock from './hero/LockScreenMock';
 import { WebIcon, ExtensionIcon, AndroidIcon, IosIcon } from './ui/platform-icons';
 
 export default function Hero() {
@@ -167,25 +167,22 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Phone column — desktop only; keeps the hero fitting the viewport on small screens */}
+        {/* Phone column */}
         <motion.div
           initial={prefersReducedMotion || !mounted ? undefined : { opacity: 0, scale: 0.96, filter: 'blur(12px)' }}
           animate={prefersReducedMotion || !mounted ? undefined : { opacity: 1, scale: 1, filter: 'blur(0px)' }}
           transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="hidden justify-center lg:flex"
+          className="flex justify-center"
         >
+          {/* Phone frame is the container the lock screen sizes itself against */}
           <motion.div
             animate={prefersReducedMotion ? undefined : { y: [0, -12, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-            className="relative w-[clamp(220px,22vw,300px)] aspect-[9/16] overflow-hidden rounded-[2.5rem] border border-card-border bg-card-bg shadow-[0_0_80px_rgba(255,92,69,0.1)]"
+            role="img"
+            aria-label={t('walletPreview')}
+            className="relative aspect-[390/844] h-[min(46dvh,380px)] w-auto max-w-full overflow-hidden rounded-[3rem] border border-card-border shadow-[0_0_80px_rgba(255,92,69,0.1)] @container sm:h-[min(52dvh,460px)] lg:h-[min(68dvh,620px)]"
           >
-            <Image
-              src="/images/hero-app.png"
-              alt="Salmon Wallet App"
-              fill
-              className="object-cover"
-              priority
-            />
+            <LockScreenMock />
           </motion.div>
         </motion.div>
       </div>
