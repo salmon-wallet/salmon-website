@@ -60,7 +60,7 @@ export default function Ecosystem() {
       <div className="relative mx-auto max-w-5xl px-6">
         <ScrollReveal>
           <div className="mb-14 max-w-3xl">
-            <p className="eyebrow mb-4">{t('eyebrow')}</p>
+            <p className="eyebrow-pill mb-4">{t('eyebrow')}</p>
             <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
               {t('heading')}
             </h2>

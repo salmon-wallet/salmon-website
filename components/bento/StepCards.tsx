@@ -14,18 +14,50 @@ function Row({ children, className = '' }: { children: React.ReactNode; classNam
   );
 }
 
+/* Address field: blank while the card idles, filled once it activates.
+   The fixed height keeps the row from jumping when the value appears. */
+function AddressValue({ children, delay = 0 }: { children: string; delay?: number }) {
+  return (
+    <span className="flex h-5 items-center justify-end">
+      <motion.span
+        variants={fade}
+        transition={{ ...springy, delay }}
+        className="text-text-secondary"
+      >
+        {children}
+      </motion.span>
+    </span>
+  );
+}
+
 /* ── 01. Create or import: seed words fill in, wallet is ready ── */
 
-const SEED_WORDS = ['orbit', 'canyon', 'velvet', 'harbor', 'signal', 'ember'];
+/* A real seed phrase is 12 words, so the card shows 12. */
+const SEED_WORDS = [
+  'orbit',
+  'canyon',
+  'velvet',
+  'harbor',
+  'signal',
+  'ember',
+  'quartz',
+  'meadow',
+  'anchor',
+  'tundra',
+  'marble',
+  'pilot',
+];
 
 export function CreateVisual() {
   return (
     <div className="flex h-full flex-col justify-center gap-3">
-      <div className="grid grid-cols-3 gap-1.5">
+      {/* 4×3 keeps the same block height the 6-word 3×2 grid had, so the card
+          titles across the row stay on one baseline. */}
+      <div className="grid grid-cols-4 gap-1.5">
         {SEED_WORDS.map((w, i) => (
           <span
             key={w}
-            className="relative rounded-md border border-border-subtle bg-bg-primary/60 px-2 py-1.5 text-center font-mono text-[10px]"
+            className="relative rounded-md border border-border-subtle bg-bg-primary/60 px-1.5 py-1.5 text-center font-mono text-[10px]"
           >
             <motion.span
               variants={{ idle: { opacity: 1 }, active: { opacity: 0 } }}
@@ -36,7 +68,7 @@ export function CreateVisual() {
             </motion.span>
             <motion.span
               variants={fade}
-              transition={{ ...springy, delay: i * 0.06 }}
+              transition={{ ...springy, delay: i * 0.035 }}
               className="text-text-secondary"
             >
               {w}
@@ -63,7 +95,7 @@ export function ReceiveVisual() {
     <div className="flex h-full flex-col justify-center gap-2.5 font-mono text-xs">
       <Row>
         <span className="text-text-tertiary">From</span>
-        <span className="text-text-secondary">3xQm…8kLp</span>
+        <AddressValue>3xQm…8kLp</AddressValue>
       </Row>
       <Row>
         <span className="text-text-tertiary">Balance</span>
@@ -102,7 +134,7 @@ export function SendVisual() {
     <div className="flex h-full flex-col justify-center gap-2.5 font-mono text-xs">
       <Row>
         <span className="text-text-tertiary">To</span>
-        <span className="text-text-secondary">7xKX…9fRt</span>
+        <AddressValue>7xKX…9fRt</AddressValue>
       </Row>
       <Row>
         <span className="font-semibold text-text-primary">2.4 SOL</span>

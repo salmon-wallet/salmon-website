@@ -5,6 +5,7 @@ import { motion, useReducedMotion, type Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { LINKS } from '@/lib/constants';
+import GradientButton from './ui/GradientButton';
 import { WebIcon, ExtensionIcon, AndroidIcon, IosIcon } from './ui/platform-icons';
 
 export default function Hero() {
@@ -13,10 +14,10 @@ export default function Hero() {
   const prefersReducedMotion = useReducedMotion();
 
   const platforms = [
-    { key: 'web', label: tPlatform('web'), href: LINKS.webWallet, icon: <WebIcon size={20} />, tint: '#4FC3F7' },
-    { key: 'extension', label: tPlatform('extension'), href: LINKS.chrome, icon: <ExtensionIcon size={20} />, tint: '#4285F4' },
-    { key: 'android', label: tPlatform('android'), href: LINKS.playStore, icon: <AndroidIcon size={20} />, tint: '#3DDC84' },
-    { key: 'ios', label: tPlatform('ios'), href: null, icon: <IosIcon size={20} />, tint: '#A2AAAD' },
+    { key: 'web', label: tPlatform('web'), href: LINKS.webWallet, icon: <WebIcon size={28} />, tint: '#4FC3F7' },
+    { key: 'extension', label: tPlatform('extension'), href: LINKS.chrome, icon: <ExtensionIcon size={28} />, tint: '#4285F4' },
+    { key: 'android', label: tPlatform('android'), href: LINKS.playStore, icon: <AndroidIcon size={28} />, tint: '#3DDC84' },
+    { key: 'ios', label: tPlatform('ios'), href: null, icon: <IosIcon size={28} />, tint: '#A2AAAD' },
   ] as const;
 
   // Mount guard: avoid FOIC — content visible during SSR, animations after hydration
@@ -81,15 +82,17 @@ export default function Hero() {
           <motion.ul
             variants={fadeBlurUp}
             transition={transition}
-            className="mb-7 flex items-start gap-3"
+            className="mb-7 flex items-start gap-4"
           >
             {platforms.map(({ key, label, href, icon, tint }) => {
               const tile = (
                 <>
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-card-border bg-card-bg transition-colors duration-300 group-hover:border-current">
+                  <span className="platform-tile flex h-16 w-16 items-center justify-center rounded-2xl border">
                     {icon}
                   </span>
-                  <span className="text-[0.6875rem] text-text-tertiary">{label}</span>
+                  <span className="text-xs font-medium text-text-secondary transition-colors duration-300 group-hover:text-text-primary">
+                    {label}
+                  </span>
                 </>
               );
 
@@ -100,14 +103,14 @@ export default function Hero() {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex flex-col items-center gap-1.5 text-text-secondary transition-colors duration-300 hover:text-[color:var(--tint)]"
+                      className="group flex flex-col items-center gap-2"
                     >
                       {tile}
                     </a>
                   ) : (
                     <span
                       title={tPlatform('comingSoon')}
-                      className="flex cursor-default flex-col items-center gap-1.5 text-text-secondary opacity-40"
+                      className="flex cursor-default flex-col items-center gap-2 opacity-45"
                     >
                       {tile}
                     </span>
@@ -156,12 +159,11 @@ export default function Hero() {
                 <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
               </svg>
             </a>
-            <a
-              href={LINKS.contact}
-              className="border-l border-border-subtle pl-6 text-sm transition-colors hover:text-text-primary"
-            >
-              {t('integrate')} ↗
-            </a>
+            <div className="border-l border-border-subtle pl-6">
+              <GradientButton href={LINKS.contact} variant="secondary" className="px-5 py-2.5">
+                {t('integrate')} ↗
+              </GradientButton>
+            </div>
           </motion.div>
         </motion.div>
 

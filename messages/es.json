@@ -268,24 +268,11 @@
     "hideQr": "Ocultar QR",
     "comingSoon": "Próximamente",
     "build": {
-      "heading": "Construí sobre Salmon",
       "description": "¿Tenés un protocolo o una integración para shippear? Hablemos.",
       "cta": "Hablemos"
     },
     "code": {
-      "heading": "Explorá el código",
-      "description": "Mirá cómo Salmon se construye en público.",
       "cta": "Ver en GitHub"
-    },
-    "followX": {
-      "heading": "Seguí la construcción",
-      "description": "Updates, integraciones y qué se está shippeando.",
-      "cta": "Seguí a Salmon en X"
-    },
-    "community": {
-      "heading": "Unite a la comunidad",
-      "description": "Cerca de los anuncios, releases y la gente que construye alrededor de Salmon.",
-      "cta": "Unite a Salmon en Telegram"
     },
     "closing": "Un camino más abierto a la integración y la distribución."
   },
@@ -317,6 +304,11 @@
     "terms": "Términos y Condiciones",
     "privacy": "Política de Privacidad",
     "mediaKit": "Kit de Medios",
-    "contact": "Contacto / Integraciones"
+    "contact": "Contacto / Integraciones",
+    "columns": {
+      "product": "Producto",
+      "developers": "Desarrolladores",
+      "community": "Comunidad"
+    }
   }
 }

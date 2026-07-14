@@ -28,7 +28,7 @@ export default function WhatMattersFirst() {
       <div className="relative mx-auto max-w-6xl px-6">
         <ScrollReveal>
           <div className="mb-10 max-w-3xl">
-            <p className="eyebrow mb-4">{t('eyebrow')}</p>
+            <p className="eyebrow-pill mb-4">{t('eyebrow')}</p>
             <div className="mb-6 flex flex-wrap items-center gap-4">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
                 {t('heading')}
