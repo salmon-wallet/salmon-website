@@ -48,10 +48,11 @@ export default function BentoCard({
       onHoverEnd={() => setHovered(false)}
       className={`flex h-full flex-col overflow-hidden rounded-xl border border-card-border bg-card-bg backdrop-blur-xl transition-[border-color,box-shadow] duration-500 hover:border-accent/25 hover:shadow-[0_0_40px_rgba(255,92,69,0.12)] ${className}`}
     >
-      <div className="relative min-h-44 flex-1 overflow-hidden border-b border-border-subtle/60 bg-bg-secondary/40 p-5">
+      {/* Visual keeps a fixed height so every card's title starts on the same baseline */}
+      <div className="relative min-h-44 overflow-hidden border-b border-border-subtle/60 bg-bg-secondary/40 p-5">
         {visual}
       </div>
-      <div className="p-5">
+      <div className="flex-1 p-5">
         {eyebrow && (
           <span className="mb-1.5 block font-mono text-sm text-accent">{eyebrow}</span>
         )}

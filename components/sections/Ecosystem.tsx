@@ -108,49 +108,22 @@ export default function Ecosystem() {
             </ScrollReveal>
           </li>
 
-          {/* 002 — the open slot, which is also the integration CTA */}
-          <li className="border-b border-dashed border-border-subtle">
-            <ScrollReveal delay={0.1}>
-              <a
-                href={LINKS.contact}
-                className="group grid gap-6 py-10 transition-colors sm:grid-cols-[auto_1fr] sm:gap-10 sm:py-12"
-              >
-                <span
-                  aria-hidden="true"
-                  className="font-mono text-4xl leading-none tracking-tight text-text-tertiary transition-colors group-hover:text-accent sm:text-5xl"
-                >
-                  002
-                </span>
-
-                <div>
-                  <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-                    <div>
-                      <h3 className="text-2xl font-semibold text-text-secondary transition-colors group-hover:text-text-primary sm:text-3xl">
-                        {t('open.title')}
-                      </h3>
-                      <p className="eyebrow mt-2">{t('open.tag')}</p>
-                    </div>
-                    <span className="inline-flex items-center rounded-full border border-dashed border-border-default px-3 py-1 text-xs font-medium text-text-tertiary">
-                      {t('open.status')}
-                    </span>
-                  </div>
-
-                  <p className="mb-5 leading-relaxed text-text-secondary">{t('open.body')}</p>
-
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-accent">
-                    {t('open.cta')}
-                    <span
-                      aria-hidden="true"
-                      className="transition-transform group-hover:translate-x-1"
-                    >
-                      →
-                    </span>
-                  </span>
-                </div>
-              </a>
-            </ScrollReveal>
-          </li>
         </ol>
+
+        <ScrollReveal delay={0.1}>
+          <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-xl leading-relaxed text-text-secondary">{t('open.body')}</p>
+            <a
+              href={LINKS.contact}
+              className="group inline-flex shrink-0 items-center gap-2 text-sm font-medium text-accent"
+            >
+              {t('open.cta')}
+              <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
+                →
+              </span>
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

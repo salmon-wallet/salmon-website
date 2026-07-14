@@ -4,13 +4,20 @@ import { useState, useEffect } from 'react';
 import { motion, useReducedMotion, type Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import GradientButton from './ui/GradientButton';
 import { LINKS } from '@/lib/constants';
+import { WebIcon, ExtensionIcon, AndroidIcon, IosIcon } from './ui/platform-icons';
 
 export default function Hero() {
   const t = useTranslations('hero');
-  const tNav = useTranslations('nav');
+  const tPlatform = useTranslations('getSalmon');
   const prefersReducedMotion = useReducedMotion();
+
+  const platforms = [
+    { key: 'web', label: tPlatform('web'), href: LINKS.webWallet, icon: <WebIcon size={20} />, tint: '#4FC3F7' },
+    { key: 'extension', label: tPlatform('extension'), href: LINKS.chrome, icon: <ExtensionIcon size={20} />, tint: '#4285F4' },
+    { key: 'android', label: tPlatform('android'), href: LINKS.playStore, icon: <AndroidIcon size={20} />, tint: '#3DDC84' },
+    { key: 'ios', label: tPlatform('ios'), href: null, icon: <IosIcon size={20} />, tint: '#A2AAAD' },
+  ] as const;
 
   // Mount guard: avoid FOIC — content visible during SSR, animations after hydration
   const [mounted, setMounted] = useState(false);
@@ -70,24 +77,51 @@ export default function Hero() {
             {t('tagline')}
           </motion.p>
 
-          <motion.div
+          {/* Where you can get Salmon today — iOS stays inert until it ships */}
+          <motion.ul
             variants={fadeBlurUp}
             transition={transition}
-            className="mb-6 flex flex-col items-center gap-3 sm:flex-row lg:items-start"
+            className="mb-7 flex items-start gap-3"
           >
-            <GradientButton href="#get-salmon" variant="primary">
-              {tNav('getSalmon')}
-            </GradientButton>
-            <GradientButton href={LINKS.webWallet} variant="secondary">
-              {tNav('accessWebWallet')}
-            </GradientButton>
-          </motion.div>
+            {platforms.map(({ key, label, href, icon, tint }) => {
+              const tile = (
+                <>
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-card-border bg-card-bg transition-colors duration-300 group-hover:border-current">
+                    {icon}
+                  </span>
+                  <span className="text-[0.6875rem] text-text-tertiary">{label}</span>
+                </>
+              );
+
+              return (
+                <li key={key} style={{ '--tint': tint } as React.CSSProperties}>
+                  {href ? (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex flex-col items-center gap-1.5 text-text-secondary transition-colors duration-300 hover:text-[color:var(--tint)]"
+                    >
+                      {tile}
+                    </a>
+                  ) : (
+                    <span
+                      title={tPlatform('comingSoon')}
+                      className="flex cursor-default flex-col items-center gap-1.5 text-text-secondary opacity-40"
+                    >
+                      {tile}
+                    </span>
+                  )}
+                </li>
+              );
+            })}
+          </motion.ul>
 
           {/* Builder-first util links: code + socials */}
           <motion.div
             variants={fadeBlurUp}
             transition={transition}
-            className="mb-7 flex items-center gap-6 text-text-secondary"
+            className="flex items-center gap-6 text-text-secondary"
           >
             <a
               href={LINKS.github}
@@ -128,12 +162,6 @@ export default function Hero() {
             >
               {t('integrate')} ↗
             </a>
-          </motion.div>
-
-          <motion.div variants={fadeBlurUp} transition={transition}>
-            <span className="inline-block rounded-full border border-border-subtle bg-card-bg px-4 py-1.5 text-xs font-mono tracking-wide text-text-secondary">
-              {t('liveNow')}
-            </span>
           </motion.div>
         </motion.div>
 

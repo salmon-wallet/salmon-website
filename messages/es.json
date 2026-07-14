@@ -26,10 +26,9 @@
     "toggleMenu": "Abrir menú"
   },
   "hero": {
-    "heading": "Infraestructura de wallet abierta.\nConvirtiendo integraciones en distribución.",
-    "subheading": "Construida para equipos que necesitan un camino creíble hacia los usuarios.",
+    "heading": "Infraestructura de wallet abierta.",
+    "subheading": "Convirtiendo integraciones en distribución. Construida para equipos que necesitan un camino creíble hacia los usuarios.",
     "tagline": "Open-source. Autocustodial. Impulsada por la comunidad.",
-    "liveNow": "Live ahora: Extensión · Web Wallet · Android — iOS próximamente",
     "integrate": "¿Querés integrar? Hablemos",
     "walletPreview": "Vista previa"
   },
@@ -94,9 +93,6 @@
       "outcome": "Un ejemplo concreto de para qué está construido Salmon: resolver problemas reales de integración para comunidades emergentes."
     },
     "open": {
-      "status": "Abierto",
-      "title": "Tu integración",
-      "tag": "Slot abierto",
       "body": "Salmon sigue trabajando con equipos emergentes que necesitan un camino más abierto a la integración y la distribución.",
       "cta": "Hablemos de una integración"
     }

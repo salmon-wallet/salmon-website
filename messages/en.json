@@ -26,10 +26,9 @@
     "toggleMenu": "Toggle menu"
   },
   "hero": {
-    "heading": "Open wallet infrastructure.\nTurning integrations into distribution.",
-    "subheading": "Built for teams that need a credible path to users.",
+    "heading": "Open wallet infrastructure.",
+    "subheading": "Turning integrations into distribution. Built for teams that need a credible path to users.",
     "tagline": "Open-source. Self-custodial. Community Driven.",
-    "liveNow": "Live now: Extension · Web Wallet · Android — iOS coming soon",
     "integrate": "Want to integrate? Let's connect",
     "walletPreview": "Wallet Preview"
   },
@@ -94,9 +93,6 @@
       "outcome": "A concrete example of what Salmon is built for: solving real integration problems for emerging communities."
     },
     "open": {
-      "status": "Open",
-      "title": "Your integration",
-      "tag": "Open slot",
       "body": "Salmon is continuing to work with emerging teams that need a more open path to integration and distribution.",
       "cta": "Talk to us about an integration"
     }

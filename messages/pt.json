@@ -26,10 +26,9 @@
     "toggleMenu": "Abrir menu"
   },
   "hero": {
-    "heading": "Infraestrutura de carteira aberta.\nTransformando integrações em distribuição.",
-    "subheading": "Construída para equipes que precisam de um caminho crível até os usuários.",
+    "heading": "Infraestrutura de carteira aberta.",
+    "subheading": "Transformando integrações em distribuição. Construída para equipes que precisam de um caminho crível até os usuários.",
     "tagline": "Open-source. Autocustodial. Movida pela comunidade.",
-    "liveNow": "Live agora: Extensão · Web Wallet · Android — iOS em breve",
     "integrate": "Quer integrar? Vamos conversar",
     "walletPreview": "Prévia da carteira"
   },
@@ -94,9 +93,6 @@
       "outcome": "Um exemplo concreto do que a Salmon foi construída para fazer: resolver problemas reais de integração para comunidades emergentes."
     },
     "open": {
-      "status": "Aberto",
-      "title": "Sua integração",
-      "tag": "Slot aberto",
       "body": "A Salmon segue trabalhando com equipes emergentes que precisam de um caminho mais aberto para integração e distribuição.",
       "cta": "Vamos falar sobre uma integração"
     }

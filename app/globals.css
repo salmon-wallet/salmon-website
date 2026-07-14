@@ -70,13 +70,14 @@
 html {
   color-scheme: dark;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* clip, not hidden: hidden turns the root into a scroll container and breaks position: sticky */
+  overflow-x: clip;
 }
 
 body {
   background-color: #10131c;
   color: #ffffff;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

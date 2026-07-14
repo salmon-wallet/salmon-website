@@ -25,35 +25,38 @@ export default function WhoItsFor() {
           </div>
         </ScrollReveal>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          {items.map((item, i) => {
-            const isLast = i === items.length - 1;
-            return (
-              <ScrollReveal
-                key={i}
-                direction={i % 2 === 0 ? 'right' : 'left'}
-                delay={(i % 2) * 0.08}
-                duration={1.0}
-                className={isLast ? 'sm:col-span-2' : undefined}
-              >
-                <div className="h-full rounded-xl border border-border-subtle bg-card-bg/30 p-6 transition-colors hover:border-white/20">
-                  <span className="mb-3 block font-mono text-sm text-accent">
+        {/* Numbered rows: five profiles never split evenly into a card grid */}
+        <ol className="border-t border-border-subtle">
+          {items.map((item, i) => (
+            <li
+              key={i}
+              className="group border-b border-border-subtle transition-colors hover:bg-white/[0.02]"
+            >
+              <ScrollReveal delay={0.05} duration={1.0}>
+                <div className="grid gap-x-8 gap-y-3 py-8 sm:grid-cols-[auto_1fr] sm:py-10">
+                  <span
+                    aria-hidden="true"
+                    className="font-mono text-2xl leading-none tracking-tight text-text-tertiary transition-colors group-hover:text-accent sm:text-3xl"
+                  >
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <h3 className="mb-2 text-lg font-semibold text-text-primary">
-                    {item.title}
-                  </h3>
-                  <p className="mb-3 leading-relaxed text-text-secondary">
-                    {item.description}
-                  </p>
-                  <p className="text-sm text-text-tertiary">
-                    <span className="text-accent/70">{t('eg')}</span> {item.example}
-                  </p>
+
+                  <div className="max-w-3xl">
+                    <h3 className="mb-2 text-xl font-semibold text-text-primary sm:text-2xl">
+                      {item.title}
+                    </h3>
+                    <p className="mb-3 leading-relaxed text-text-secondary">
+                      {item.description}
+                    </p>
+                    <p className="text-sm text-text-tertiary">
+                      <span className="text-accent/70">{t('eg')}</span> {item.example}
+                    </p>
+                  </div>
                 </div>
               </ScrollReveal>
-            );
-          })}
-        </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

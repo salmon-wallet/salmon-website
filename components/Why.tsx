@@ -15,28 +15,36 @@ export default function Why() {
 
   return (
     <section id="why" className="relative py-24 sm:py-32">
-      <div className="relative mx-auto max-w-4xl px-6">
-        <ScrollReveal>
-          <h2 className="mb-16 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl sm:mb-20">
-            <span className="block text-text-tertiary">{t('heading')}</span>
-            <span className="block">{t('headingAccent')}</span>
-          </h2>
-        </ScrollReveal>
+      <div className="relative mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-12 lg:gap-16">
+        {/* Heading holds the left rail while the argument scrolls past it */}
+        <div className="lg:col-span-5">
+          {/* Sticky lives outside ScrollReveal: its transform/filter would trap the sticky box */}
+          <div className="lg:sticky lg:top-28">
+            <ScrollReveal>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                <span className="block text-text-tertiary">{t('heading')}</span>
+                <span className="block">{t('headingAccent')}</span>
+              </h2>
+            </ScrollReveal>
+          </div>
+        </div>
 
-        <div className="space-y-12 sm:space-y-16">
+        <div className="lg:col-span-7">
           {statements.map((s, i) => {
-            const isTurn = i === statements.length - 2; // "Salmon creates a more open path."
+            const isLast = i === statements.length - 1;
             return (
-              <ScrollReveal key={s.lead} delay={0.05} duration={1.0}>
-                <div className={isTurn ? 'border-l-2 border-accent pl-5 sm:pl-7' : undefined}>
-                  <p
-                    className={`mb-2 text-2xl font-semibold tracking-tight sm:text-3xl ${
-                      isTurn ? 'text-accent' : 'text-text-primary'
-                    }`}
-                  >
+              <ScrollReveal
+                key={s.lead}
+                delay={0.05}
+                duration={1.0}
+                className={isLast ? undefined : 'border-b border-border-subtle'}
+              >
+                {/* Accent is a hover state, not a fixed highlight on one statement */}
+                <div className="group my-2 rounded-2xl border border-transparent p-6 transition-colors duration-300 hover:border-accent/30 hover:bg-accent/[0.06]">
+                  <p className="mb-2 text-xl font-semibold tracking-tight text-text-primary transition-colors duration-300 group-hover:text-accent sm:text-2xl">
                     {s.lead}
                   </p>
-                  <p className="max-w-2xl text-lg leading-relaxed text-text-secondary">
+                  <p className="text-base leading-relaxed text-text-secondary sm:text-lg">
                     {s.support}
                   </p>
                 </div>

@@ -125,9 +125,37 @@ export default function Navbar() {
           />
         )}
 
-        <div className="relative mx-auto max-w-7xl px-6 flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 shrink-0 transition-opacity hover:opacity-90">
+        <div className="relative mx-auto max-w-7xl px-6 flex items-center h-16">
+          {/* Left: utility link + ecosystem quick links */}
+          <div className="hidden lg:flex items-center gap-5">
+            <Link
+              href="/stake"
+              className="text-sm whitespace-nowrap text-text-secondary hover:text-text-primary transition-colors duration-300"
+            >
+              {t('stake')}
+            </Link>
+
+            <div className="flex items-center gap-4">
+              {SOCIAL_LINKS.map(({ key, href, icon }) => (
+                <a
+                  key={key}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t(key)}
+                  className="text-text-secondary hover:text-text-primary transition-colors duration-300"
+                >
+                  {icon}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Center: logo + wordmark (left-aligned below lg, where the hamburger holds the right edge) */}
+          <Link
+            href="/"
+            className="flex items-center gap-2.5 shrink-0 transition-opacity hover:opacity-90 lg:absolute lg:left-1/2 lg:-translate-x-1/2"
+          >
             <Image
               src="/images/logo.png"
               alt="Salmon Wallet"
@@ -144,34 +172,9 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop Right Navigation */}
-          <div className="hidden lg:flex items-center gap-5 ml-auto">
-            {/* Ecosystem quick links */}
-            <div className="flex items-center gap-4">
-              {SOCIAL_LINKS.map(({ key, href, icon }) => (
-                <a
-                  key={key}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={t(key)}
-                  className="text-text-secondary hover:text-text-primary transition-colors duration-300"
-                >
-                  {icon}
-                </a>
-              ))}
-            </div>
-
-            {/* Stake — secondary utility link */}
-            <Link
-              href="/stake"
-              className="text-sm whitespace-nowrap text-text-secondary hover:text-text-primary transition-colors duration-300"
-            >
-              {t('stake')}
-            </Link>
-
-            {/* Language switcher */}
-            <div className="flex items-center gap-1 border-l border-border-subtle pl-5">
+          {/* Right: language + primary CTA */}
+          <div className="hidden lg:flex items-center gap-4 ml-auto">
+            <div className="flex items-center gap-1">
               {routing.locales.map((l) => (
                 <Link
                   key={l}
@@ -187,7 +190,6 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Primary CTA */}
             <GradientButton variant="primary" href={getSalmonHref} className="px-4 py-2 whitespace-nowrap">
               {t('getSalmon')}
             </GradientButton>
@@ -195,7 +197,7 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden flex flex-col gap-1.5 p-2 cursor-pointer"
+            className="lg:hidden ml-auto flex flex-col gap-1.5 p-2 cursor-pointer"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={t('toggleMenu')}
           >
