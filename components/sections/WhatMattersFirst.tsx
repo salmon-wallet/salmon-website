@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import StatusPill from '@/components/ui/StatusPill';
 import BentoCard from '@/components/bento/BentoCard';
 import {
   CreateVisual,
@@ -29,11 +28,10 @@ export default function WhatMattersFirst() {
         <ScrollReveal>
           <div className="mb-10 max-w-3xl">
             <p className="eyebrow-pill mb-4">{t('eyebrow')}</p>
-            <div className="mb-6 flex flex-wrap items-center gap-4">
+            <div className="mb-6">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
                 {t('heading')}
               </h2>
-              <StatusPill label={t('live')} />
             </div>
             <p className="text-lg leading-relaxed text-text-secondary">
               {t('subheading')}

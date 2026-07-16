@@ -130,6 +130,7 @@
     ]
   },
   "manifesto": {
+    "eyebrow": "Manifesto",
     "heading": "Salmon es infraestructura de wallet abierta.",
     "subheading": "Esa es la tesis.",
     "principles": [
@@ -144,10 +145,6 @@
       {
         "title": "Salmon empieza con un wedge concreto.",
         "description": "Los protocolos emergentes de Solana necesitan una mejor ruta a los usuarios."
-      },
-      {
-        "title": "Salmon está construida para el uso, no para la narrativa.",
-        "description": "Si las integraciones no traen usuarios, nada más importa."
       },
       {
         "title": "Open-source no es branding.",

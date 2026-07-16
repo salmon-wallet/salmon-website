@@ -130,6 +130,7 @@
     ]
   },
   "manifesto": {
+    "eyebrow": "Manifesto",
     "heading": "Salmon é infraestrutura de carteira aberta.",
     "subheading": "Essa é a tese.",
     "principles": [
@@ -144,10 +145,6 @@
       {
         "title": "A Salmon começa com um wedge concreto.",
         "description": "Protocolos emergentes de Solana precisam de uma rota melhor até os usuários."
-      },
-      {
-        "title": "A Salmon é construída para uso, não para narrativa.",
-        "description": "Se as integrações não trazem usuários, nada mais importa."
       },
       {
         "title": "Open-source não é branding.",

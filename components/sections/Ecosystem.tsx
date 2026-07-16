@@ -58,7 +58,7 @@ export default function Ecosystem() {
 
   return (
     <section id="ecosystem" className="relative py-24 sm:py-32">
-      <div className="relative mx-auto max-w-5xl px-6">
+      <div className="relative mx-auto max-w-6xl px-6">
         <ScrollReveal>
           <div className="mb-14 max-w-3xl">
             <p className="eyebrow-pill mb-4">{t('eyebrow')}</p>

@@ -4,7 +4,7 @@ import Hero from '@/components/Hero';
 import Why from '@/components/Why';
 import WhatMattersFirst from '@/components/sections/WhatMattersFirst';
 import Ecosystem from '@/components/sections/Ecosystem';
-import WhoItsFor from '@/components/sections/WhoItsFor';
+// import WhoItsFor from '@/components/sections/WhoItsFor';
 import Manifesto from '@/components/Manifesto';
 import FAQ from '@/components/FAQ';
 import GetSalmon from '@/components/GetSalmon';
@@ -28,7 +28,7 @@ export default async function Home({ params }: Props) {
         <Why />
         <WhatMattersFirst />
         <Ecosystem />
-        <WhoItsFor />
+        {/* <WhoItsFor /> */}
         <Manifesto />
         <FAQ />
         <GetSalmon />
