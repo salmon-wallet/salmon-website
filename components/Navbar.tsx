@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import {
   motion,
   AnimatePresence,
@@ -46,10 +46,8 @@ export default function Navbar() {
   const locale = useLocale();
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
-  const lastScrollY = useRef(0);
 
   // The CTA anchors to the home page's Get Salmon section from any route.
   const getSalmonHref =
@@ -63,16 +61,6 @@ export default function Navbar() {
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     setScrolled(latest > 20);
-
-    // Hide on scroll down, show on scroll up (only after passing 80px)
-    if (!mobileOpen) {
-      if (latest > 80 && latest > lastScrollY.current) {
-        setHidden(true);
-      } else {
-        setHidden(false);
-      }
-    }
-    lastScrollY.current = latest;
   });
 
   // Scroll-linked glassmorphic values
@@ -81,7 +69,7 @@ export default function Navbar() {
   const navBorder = useTransform(
     scrollY,
     [0, 200],
-    ['1px solid rgba(255,255,255,0)', '1px solid rgba(255,255,255,0.15)']
+    ['1px solid rgba(255,255,255,0.12)', '1px solid rgba(255,255,255,0.15)']
   );
 
   useEffect(() => {
@@ -98,13 +86,7 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        animate={hidden ? { y: '-100%' } : { y: 0 }}
-        transition={
-          prefersReducedMotion
-            ? { duration: 0 }
-            : { duration: 0.4, ease: [0.16, 1, 0.3, 1] }
-        }
-        className="fixed top-0 left-0 right-0 z-[100]"
+        className="sticky top-0 z-[100]"
       >
         {/* Scroll-linked glassmorphic background layer */}
         {!prefersReducedMotion ? (
@@ -118,8 +100,8 @@ export default function Navbar() {
           />
         ) : (
           <div
-            className={`absolute inset-0 pointer-events-none transition-all duration-500 ${scrolled
-              ? 'bg-bg-glass backdrop-blur-xl border-b border-border-subtle'
+            className={`absolute inset-0 pointer-events-none border-b border-border-subtle transition-all duration-500 ${scrolled
+              ? 'bg-bg-glass backdrop-blur-xl'
               : ''
               }`}
           />
@@ -128,14 +110,16 @@ export default function Navbar() {
         <div className="relative mx-auto max-w-7xl px-6 flex items-center h-16">
           {/* Left: utility link + ecosystem quick links */}
           <div className="hidden lg:flex items-center gap-5">
-            {/* Secondary CTA. Styled like GradientButton's secondary variant, but on
-                next-intl's Link so the locale prefix and client-side nav survive. */}
+            {/* Secondary CTA temporarily hidden. Styled like GradientButton's
+                secondary variant, but on next-intl's Link so the locale prefix
+                and client-side nav survive.
             <Link
               href="/stake"
               className="inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-border-subtle px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:border-white/25 hover:bg-white/5"
             >
               {t('stake')}
             </Link>
+            */}
 
             <div className="flex items-center gap-4">
               {SOCIAL_LINKS.map(({ key, href, icon }) => (
@@ -161,16 +145,16 @@ export default function Navbar() {
             <Image
               src="/images/logo.png"
               alt="Salmon Wallet"
-              width={29}
-              height={29}
-              className="w-[29px] h-[29px]"
+              width={16}
+              height={16}
+              className="size-4"
             />
             <Image
               src="/images/app-title.png"
               alt="Salmon"
               width={90}
               height={22}
-              className="h-[18px] w-auto hidden sm:block"
+              className="h-4 w-auto hidden sm:block"
             />
           </Link>
 
@@ -192,7 +176,7 @@ export default function Navbar() {
               ))}
             </div>
 
-            <GradientButton variant="primary" href={getSalmonHref} className="px-4 py-2 whitespace-nowrap">
+            <GradientButton variant="primary" href={getSalmonHref} className="px-4 !py-2 whitespace-nowrap">
               {t('getSalmon')}
             </GradientButton>
           </div>
@@ -244,7 +228,7 @@ export default function Navbar() {
                 animate: { transition: { staggerChildren: 0.1 } },
               }}
             >
-              {/* Stake */}
+              {/* Stake (temporarily hidden)
               <motion.div
                 variants={
                   prefersReducedMotion
@@ -264,6 +248,7 @@ export default function Navbar() {
                   {t('stake')}
                 </Link>
               </motion.div>
+              */}
 
               {/* Ecosystem quick links */}
               {SOCIAL_LINKS.map(({ key, href, icon }) => (
@@ -330,7 +315,7 @@ export default function Navbar() {
                 }
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               >
-                <GradientButton variant="primary" href={getSalmonHref}>
+                <GradientButton variant="primary" href={getSalmonHref} className="!py-2">
                   {t('getSalmon')}
                 </GradientButton>
               </motion.div>
