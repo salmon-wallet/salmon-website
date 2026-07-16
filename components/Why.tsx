@@ -29,18 +29,16 @@ export default function Why() {
           </div>
         </div>
 
-        <div className="lg:col-span-7">
-          {statements.map((s, i) => {
-            const isLast = i === statements.length - 1;
+        <div className="flex flex-col gap-8 lg:col-span-7">
+          {statements.map((s) => {
             return (
               <ScrollReveal
                 key={s.lead}
                 delay={0.05}
                 duration={1.0}
-                className={isLast ? undefined : 'border-b border-border-subtle'}
               >
                 {/* Accent is a hover state, not a fixed highlight on one statement */}
-                <div className="group my-2 rounded-2xl border border-transparent p-6 transition-colors duration-300 hover:border-accent/30 hover:bg-accent/[0.06]">
+                <div className="group">
                   <p className="mb-2 text-xl font-semibold tracking-tight text-text-primary transition-colors duration-300 group-hover:text-accent sm:text-2xl">
                     {s.lead}
                   </p>
