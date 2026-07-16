@@ -171,16 +171,12 @@
             "answer": "Sim. Extensão, Web Wallet e Android estão live. iOS chega em breve."
           },
           {
-            "question": "Posso fazer stake com o Salmon?",
-            "answer": "Sim. O staking está disponível na carteira."
-          },
-          {
-            "question": "Salmon faz mais do que a carteira?",
-            "answer": "Sim. Salmon também opera um validador de Solana."
+            "question": "Posso fazer stake nativo com a Salmon?",
+            "answer": "Ainda não. Native Stake estará disponível em breve. Enquanto isso, a Salmon opera seu próprio validador da Solana com dados de desempenho públicos e verificáveis."
           },
           {
             "question": "Por que usar o Salmon?",
-            "answer": "Porque o acesso importa, não apenas o armazenamento."
+            "answer": "A Salmon oferece acesso autocustodial à Solana por meio de software open-source, com Extensão, Web Wallet e Android disponíveis hoje. Você mantém o controle dos seus ativos enquanto usa uma carteira construída em torno de transparência, interoperabilidade e um ecossistema aberto."
           }
         ]
       },
@@ -200,20 +196,8 @@
             "answer": "A Salmon é construída para tornar o caminho até a integração menos limitado por prioridades fechadas. Ela não tenta ser uma carteira genérica para todos. Começa com um wedge claro: ajudar protocolos emergentes de Solana a transformar integrações em uso."
           },
           {
-            "question": "Por que focar em protocolos emergentes?",
-            "answer": "Porque a Salmon é construída em torno de um wedge definido. Times em estágio inicial costumam precisar de uma rota melhor para usuários, feedback e tração do que as prioridades de carteiras fechadas normalmente oferecem."
-          },
-          {
-            "question": "Por que integrar o Salmon?",
-            "answer": "Para chegar a usuários, coletar feedback e construir tração através de uma camada de carteira mais aberta."
-          },
-          {
             "question": "Para quem é o Salmon?",
             "answer": "Protocolos emergentes de Solana, builders, contribuidores, integradores e usuários que valorizam infraestrutura aberta."
-          },
-          {
-            "question": "O que mais importa agora?",
-            "answer": "Um wedge claro, fluxos confiáveis, integrações reais e evidência pública de uso."
           }
         ]
       },
@@ -226,7 +210,7 @@
           },
           {
             "question": "Salmon é auditado?",
-            "answer": "A segurança é tratada como um processo contínuo: revisão, testes e preparação para auditorias."
+            "answer": "Sim. A Salmon passou por uma auditoria em 2024 patrocinada pela Eclipse Foundation e realizada pela Halborn. Seguimos um modelo de segurança aberto baseado em revisões, testes contínuos e preparação para auditorias. A segurança é tratada como um processo permanente, não como uma alegação pontual de marketing."
           }
         ]
       },
@@ -240,10 +224,6 @@
           {
             "question": "O que significa propriedade comunitária no Salmon?",
             "answer": "Significa construir rumo a estruturas de propriedade e governança que possam alinhar o futuro da camada de carteira com o ecossistema que ela serve, não apenas com a empresa que a começou."
-          },
-          {
-            "question": "Como é o sucesso para a Salmon?",
-            "answer": "Não são anúncios. Não é alcance abstrato. Sucesso significa ativação, uso e retorno."
           }
         ]
       }

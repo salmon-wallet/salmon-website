@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { LINKS } from '@/lib/constants';
 import ScrollReveal from './ui/ScrollReveal';
-import { WebIcon, ExtensionIcon, AndroidIcon, IosIcon } from './ui/platform-icons';
+import { WebIcon, ChromeIcon, AndroidIcon, IosIcon } from './ui/platform-icons';
 
 /** The whole card is the target, and the card itself carries the platform's
     colour. No description, no separate action link. */
@@ -84,7 +84,7 @@ export default function GetSalmon() {
               title={t('extensionChrome')}
               href={LINKS.chrome}
               tint="#4285F4"
-              icon={<ExtensionIcon size={48} />}
+              icon={<ChromeIcon size={48} />}
             />
           </ScrollReveal>
 
