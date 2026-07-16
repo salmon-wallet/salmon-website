@@ -69,7 +69,7 @@ export default function Navbar() {
   const navBorder = useTransform(
     scrollY,
     [0, 200],
-    ['1px solid rgba(255,255,255,0.12)', '1px solid rgba(255,255,255,0.15)']
+    ['1px solid rgba(225,225,221,0.12)', '1px solid rgba(225,225,221,0.15)']
   );
 
   useEffect(() => {
