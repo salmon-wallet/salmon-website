@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import { LINKS } from '@/lib/constants';
 import GradientButton from './ui/GradientButton';
 import LockScreenMock from './hero/LockScreenMock';
-import { WebIcon, ExtensionIcon, AndroidIcon, IosIcon } from './ui/platform-icons';
+import { WebIcon, ChromeIcon, AndroidIcon, IosIcon } from './ui/platform-icons';
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -15,7 +15,7 @@ export default function Hero() {
 
   const platforms = [
     { key: 'web', label: tPlatform('web'), href: LINKS.webWallet, icon: <WebIcon size={28} />, tint: '#4FC3F7' },
-    { key: 'extension', label: tPlatform('extension'), href: LINKS.chrome, icon: <ExtensionIcon size={28} />, tint: '#4285F4' },
+    { key: 'extension', label: tPlatform('extension'), href: LINKS.chrome, icon: <ChromeIcon size={28} />, tint: '#4285F4' },
     { key: 'android', label: tPlatform('android'), href: LINKS.playStore, icon: <AndroidIcon size={28} />, tint: '#3DDC84' },
     { key: 'ios', label: tPlatform('ios'), href: null, icon: <IosIcon size={28} />, tint: '#A2AAAD' },
   ] as const;
@@ -49,7 +49,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-10 px-6 py-10 lg:grid-cols-2 lg:gap-12">
         {/* Text column */}
         <motion.div
-          className="flex flex-col items-center text-center lg:items-start lg:text-left"
+          className="flex flex-col items-center text-center lg:items-start lg:text-left min-[1024px]:max-[1160px]:pl-8"
           variants={stagger}
           initial="initial"
           animate="animate"
@@ -90,8 +90,15 @@ export default function Hero() {
                   <span className="platform-tile flex h-16 w-16 items-center justify-center rounded-2xl border">
                     {icon}
                   </span>
-                  <span className="text-xs font-medium text-text-secondary transition-colors duration-300 group-hover:text-text-primary">
-                    {label}
+                  <span className="relative text-xs font-medium text-text-secondary transition-colors duration-300 group-hover:text-text-primary">
+                    <span className={key === 'ios' ? 'transition-opacity duration-300 group-hover:opacity-0' : undefined}>
+                      {label}
+                    </span>
+                    {key === 'ios' && (
+                      <span className="absolute left-1/2 top-0 -translate-x-1/2 whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        Soon
+                      </span>
+                    )}
                   </span>
                 </>
               );
@@ -110,7 +117,7 @@ export default function Hero() {
                   ) : (
                     <span
                       title={tPlatform('comingSoon')}
-                      className="flex cursor-default flex-col items-center gap-2 opacity-45"
+                      className="group flex cursor-default flex-col items-center gap-2 opacity-25 transition-opacity duration-300 hover:opacity-40"
                     >
                       {tile}
                     </span>
