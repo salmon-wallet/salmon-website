@@ -1,10 +1,13 @@
 import { setRequestLocale } from 'next-intl/server';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Chains from '@/components/Chains';
 import Why from '@/components/Why';
-import CardSection from '@/components/CardSection';
+import WhatMattersFirst from '@/components/sections/WhatMattersFirst';
+// import Ecosystem from '@/components/sections/Ecosystem';
+import Powerups from '@/components/sections/Powerups';
+// import WhoItsFor from '@/components/sections/WhoItsFor';
 import Manifesto from '@/components/Manifesto';
+import ValidatorStats from '@/components/sections/ValidatorStats';
 import FAQ from '@/components/FAQ';
 import GetSalmon from '@/components/GetSalmon';
 import Footer from '@/components/Footer';
@@ -24,11 +27,13 @@ export default async function Home({ params }: Props) {
       <Navbar />
       <main>
         <Hero />
-        {/* <Chains /> */}
         <Why />
-        <CardSection id="features" />
-        <CardSection id="security" />
+        <WhatMattersFirst />
+        {/* <Ecosystem /> */}
+        <Powerups />
+        {/* <WhoItsFor /> */}
         <Manifesto />
+        <ValidatorStats />
         <FAQ />
         <GetSalmon />
       </main>

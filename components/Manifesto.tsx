@@ -9,36 +9,24 @@ export default function Manifesto() {
 
   return (
     <section id="manifesto" className="relative py-24 sm:py-32">
-
-      <div className="relative mx-auto max-w-4xl px-6">
+      <div className="relative mx-auto max-w-6xl px-6">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-3">
+          <p className="eyebrow-pill mb-4">{t('eyebrow')}</p>
+          <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             {t('heading')}
           </h2>
-          <p className="text-lg text-text-secondary mb-16">
-            {t('subheading')}
+          <p className="text-lg leading-[1.9] text-text-secondary sm:text-xl">
+            {principles.map((principle, index) => (
+              <span key={principle.title}>
+                {index > 0 && ' '}
+                <strong className="font-bold text-text-primary transition-colors duration-300 hover:text-accent">
+                  {principle.title}
+                </strong>{' '}
+                {principle.description}
+              </span>
+            ))}
           </p>
         </ScrollReveal>
-
-        <div className="space-y-10">
-          {principles.map((p, i) => (
-            <ScrollReveal
-              key={i}
-              direction={i % 2 === 0 ? 'right' : 'left'}
-              delay={i * 0.12}
-              duration={1.1}
-            >
-              <div>
-                <h3 className="text-xl sm:text-2xl font-semibold mb-2">
-                  {p.title}
-                </h3>
-                <p className="text-text-secondary leading-relaxed">
-                  {p.description}
-                </p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
       </div>
     </section>
   );
