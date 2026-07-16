@@ -18,5 +18,6 @@ export const LINKS = {
 /** Salmon's Solana validator (for live stats in the ValidatorStats section). */
 export const VALIDATOR = {
   voteAccount: 'Sa1HXZsn2u6p2dMLZGhfxtsRw7Jo32hF15yBghWJsCz',
-  jpool: 'https://app.jpool.one/validators/Sa1HXZsn2u6p2dMLZGhfxtsRw7Jo32hF15yBghWJsCz',
+  details:
+    'https://www.validators.app/validators/SA1LFXr4os2P4VKGUyRv84uFfuUYgcQkFh2uA4SmRcr?locale=en&network=mainnet',
 } as const;

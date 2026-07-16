@@ -36,14 +36,14 @@ export default async function ValidatorStats() {
 
   return (
     <section
-      id="validator"
+      id="stake"
       data-testid="validator-stats"
       aria-labelledby="validator-heading"
       className="relative py-[var(--space-section)]"
     >
       <div className="mx-auto max-w-6xl px-[var(--space-gutter)]">
         <div className="mb-4 flex flex-wrap items-center gap-2.5">
-          <p className="eyebrow">{t('eyebrow')}</p>
+          <p className="eyebrow-pill">{t('eyebrow')}</p>
           <span className="rounded-full bg-accent/10 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-accent">
             {t('since')}
           </span>
@@ -92,7 +92,7 @@ export default async function ValidatorStats() {
           </Stat>
         </div>
 
-        {/* Staking runs through JPool, against Salmon's own validator. */}
+        {/* Link to the validator's independently reported details. */}
         <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3">
           <span className="eyebrow flex items-center gap-2 text-text-tertiary">
             <span
@@ -102,7 +102,7 @@ export default async function ValidatorStats() {
             {stats.live ? t('live') : t('snapshot')} · {stats.name}
           </span>
 
-          <GradientButton href={VALIDATOR.jpool} variant="primary" className="px-5 py-2.5">
+          <GradientButton href={VALIDATOR.details} variant="primary" className="px-5 py-2.5">
             {t('stake')} ↗
           </GradientButton>
         </div>

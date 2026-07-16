@@ -6,6 +6,7 @@ import WhatMattersFirst from '@/components/sections/WhatMattersFirst';
 import Ecosystem from '@/components/sections/Ecosystem';
 // import WhoItsFor from '@/components/sections/WhoItsFor';
 import Manifesto from '@/components/Manifesto';
+import ValidatorStats from '@/components/sections/ValidatorStats';
 import FAQ from '@/components/FAQ';
 import GetSalmon from '@/components/GetSalmon';
 import Footer from '@/components/Footer';
@@ -30,6 +31,7 @@ export default async function Home({ params }: Props) {
         <Ecosystem />
         {/* <WhoItsFor /> */}
         <Manifesto />
+        <ValidatorStats />
         <FAQ />
         <GetSalmon />
       </main>

@@ -114,7 +114,7 @@ export default function Navbar() {
                 secondary variant, but on next-intl's Link so the locale prefix
                 and client-side nav survive.
             <Link
-              href="/stake"
+              href="/#stake"
               className="inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-border-subtle px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:border-white/25 hover:bg-white/5"
             >
               {t('stake')}
@@ -241,7 +241,7 @@ export default function Navbar() {
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               >
                 <Link
-                  href="/stake"
+                  href="/#stake"
                   onClick={() => setMobileOpen(false)}
                   className="text-xl font-medium text-text-secondary hover:text-text-primary transition-colors"
                 >

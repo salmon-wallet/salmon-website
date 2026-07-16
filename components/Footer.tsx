@@ -23,7 +23,7 @@ export default function Footer() {
         { label: tPlatform('web'), href: LINKS.webWallet, external: true },
         { label: tPlatform('extension'), href: LINKS.chrome, external: true },
         { label: tPlatform('android'), href: LINKS.playStore, external: true },
-        { label: tNav('stake'), href: '/stake', external: false },
+        { label: tNav('stake'), href: '/#stake', external: false },
       ],
     },
     {

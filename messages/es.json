@@ -267,10 +267,10 @@
     "extensionChrome": "Extensión (Chrome)"
   },
   "validator": {
-    "eyebrow": "Stakeá con Salmon",
+    "eyebrow": "Salmon Validator",
     "since": "Desde junio 2026",
-    "heading": "Stakeá directamente en la wallet.",
-    "lead": "El staking está disponible dentro de Salmon. Como servicio adyacente, también operamos nuestro propio validador de Solana — alineado con la red a la que sirve.",
+    "heading": "Salmon Wallet Validator",
+    "lead": "Operar un validador de Solana es parte de nuestro compromiso a largo plazo con el ecosistema: aportar infraestructura confiable y hacer que su rendimiento sea visible y verificable. Native Stake próximamente.",
     "apy": "APY est.",
     "commission": "Comisión",
     "activeStake": "Stake activo",
@@ -281,7 +281,7 @@
     "active": "Activo",
     "live": "En vivo",
     "snapshot": "Snapshot",
-    "stake": "Stakear en la wallet"
+    "stake": "Detalles del validador"
   },
   "footer": {
     "description": "Infraestructura de wallet abierta para Solana. Open-source, autocustodial, construida para protocolos emergentes.",
