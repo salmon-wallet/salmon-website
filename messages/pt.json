@@ -97,6 +97,74 @@
       "cta": "Vamos falar sobre uma integração"
     }
   },
+  "powerups": {
+    "eyebrow": "Introducing Powerups",
+    "heading": "Um core menor. Uma carteira que pode fazer mais.",
+    "comingSoon": "Em breve",
+    "subheading": "A Salmon mantém o essencial no core. Powerups adicionam novas capacidades sem tornar a carteira mais pesada para todos.",
+    "labels": {
+      "official": "Oficial",
+      "community": "Community",
+      "comingSoon": "Em breve"
+    },
+    "core": {
+      "eyebrow": "Sempre disponível",
+      "title": "Salmon Core",
+      "balance": "Saldo",
+      "send": "Enviar",
+      "receive": "Receber",
+      "connect": "Conectar",
+      "nfts": "NFTs",
+      "description": "Uma base focada para guardar ativos e interagir com a Solana."
+    },
+    "items": {
+      "swap": {
+        "type": "Oficial",
+        "title": "Swap",
+        "description": "Troca de tokens como capacidade modular mantida pela Salmon."
+      },
+      "bridge": {
+        "type": "Oficial",
+        "title": "Bridge",
+        "description": "Movimentação entre redes sem expandir o core da carteira."
+      },
+      "explore": {
+        "type": "Oficial",
+        "title": "Explore",
+        "description": "Descubra apps, protocolos e oportunidades dentro do ecossistema."
+      },
+      "portfolio": {
+        "type": "Community · Em breve",
+        "title": "Portfolio",
+        "description": "Uma visão mais completa de ativos e atividade como capacidade modular."
+      },
+      "stake": {
+        "type": "Em breve",
+        "title": "Stake",
+        "description": "Staking nativo como capacidade opcional dentro da carteira."
+      },
+      "onRamp": {
+        "type": "Community · Em breve",
+        "title": "On/Off Ramp",
+        "description": "Movimente entre fiat e cripto por meio de um módulo opcional da comunidade."
+      },
+      "news": {
+        "type": "Community · Em breve",
+        "title": "News",
+        "description": "Acompanhe novidades do ecossistema sem transformá-las em uma função do core."
+      },
+      "chat": {
+        "type": "Community · Em breve",
+        "title": "Chat",
+        "description": "Comunicação dentro da carteira por meio de um Powerup opcional."
+      },
+      "privateSend": {
+        "type": "Community · Em breve",
+        "title": "Private Send",
+        "description": "Privacidade adicional para transações por meio de um módulo comunitário."
+      }
+    }
+  },
   "audience": {
     "eyebrow": "Para quem é",
     "heading": "Para quem a Salmon é construída.",

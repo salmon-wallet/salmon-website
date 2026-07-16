@@ -97,6 +97,74 @@
       "cta": "Talk to us about an integration"
     }
   },
+  "powerups": {
+    "eyebrow": "Introducing Powerups",
+    "heading": "A smaller core. A wallet that can do more.",
+    "comingSoon": "Coming soon",
+    "subheading": "Salmon keeps the essentials in the core. Powerups add new capabilities without making the wallet heavier for everyone.",
+    "labels": {
+      "official": "Official",
+      "community": "Community",
+      "comingSoon": "Coming soon"
+    },
+    "core": {
+      "eyebrow": "Always available",
+      "title": "Salmon Core",
+      "balance": "Balance",
+      "send": "Send",
+      "receive": "Receive",
+      "connect": "Connect",
+      "nfts": "NFTs",
+      "description": "A focused foundation for holding assets and interacting with Solana."
+    },
+    "items": {
+      "swap": {
+        "type": "Official",
+        "title": "Swap",
+        "description": "Token exchange as a modular capability maintained by Salmon."
+      },
+      "bridge": {
+        "type": "Official",
+        "title": "Bridge",
+        "description": "Cross-network movement without expanding the wallet core."
+      },
+      "explore": {
+        "type": "Official",
+        "title": "Explore",
+        "description": "Discover apps, protocols, and opportunities across the ecosystem."
+      },
+      "portfolio": {
+        "type": "Community · Coming soon",
+        "title": "Portfolio",
+        "description": "A richer view of assets and activity as a modular wallet capability."
+      },
+      "stake": {
+        "type": "Coming soon",
+        "title": "Stake",
+        "description": "Native staking as an optional capability inside the wallet."
+      },
+      "onRamp": {
+        "type": "Community · Coming soon",
+        "title": "On/Off Ramp",
+        "description": "Move between fiat and crypto through an optional community module."
+      },
+      "news": {
+        "type": "Community · Coming soon",
+        "title": "News",
+        "description": "Follow ecosystem updates without turning them into a core wallet feature."
+      },
+      "chat": {
+        "type": "Community · Coming soon",
+        "title": "Chat",
+        "description": "Wallet-native communication delivered as an optional Powerup."
+      },
+      "privateSend": {
+        "type": "Community · Coming soon",
+        "title": "Private Send",
+        "description": "Additional transaction privacy through an optional community module."
+      }
+    }
+  },
   "audience": {
     "eyebrow": "Who it's for",
     "heading": "Who Salmon is built for.",
