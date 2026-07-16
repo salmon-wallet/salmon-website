@@ -148,17 +148,26 @@ export function ChevronUpIcon({ size, color }: IconProps) {
  * Repeating fish-scales pattern from ScalesBackground.tsx. The pattern tile is
  * 822×26 in device points; the 440-wide viewBox keeps the same
  * scale-to-screen proportion the app has on the reference device.
+ * `patternId` must be unique per instance — SVG ids are document-global.
  */
-export function ScalesPattern({ stroke }: { stroke: string }) {
+export function ScalesPattern({
+  stroke,
+  patternId,
+  height = 280,
+}: {
+  stroke: string;
+  patternId: string;
+  height?: number;
+}) {
   return (
     <svg
       className="pointer-events-none absolute inset-0 h-full w-full"
-      viewBox="0 0 440 280"
+      viewBox={`0 0 440 ${height}`}
       preserveAspectRatio="xMinYMin slice"
       aria-hidden="true"
     >
       <defs>
-        <pattern id="hero-scales" patternUnits="userSpaceOnUse" width={822} height={26}>
+        <pattern id={patternId} patternUnits="userSpaceOnUse" width={822} height={26}>
           <path
             d="M15.0858 13.8306C14.7343 1.01231 39.3378 -7.21907 43.5555 13.8306C44.9615 -1.01168 69.0729 -5.33023 72.7283 13.8307C73.0798 0.337654 96.4179 -6.40963 101.198 13.8307C101.55 2.02432 124.114 -7.75896 130.019 13.8307C131.425 -0.674348 154.904 -5.06029 158.84 13.8307C158.84 2.02432 181.476 -7.2861 187.662 13.4937C188.013 2.02432 210.297 -7.2861 216.483 13.4937C217.889 -0.674348 240.805 -5.12716 245.304 13.4937C246.007 0.000319639 269.556 -5.93676 273.774 13.4937C274.828 1.34966 296.409 -6.81383 302.595 13.1563C303.65 1.68699 325.512 -7.0837 331.416 13.1563C332.471 2.36166 353.489 -7.35356 360.238 13.1563C360.238 2.02432 383.365 -7.0837 388.707 13.1563C389.762 4.04833 410.288 -8.7029 417.88 13.1563"
             stroke={stroke}
@@ -185,7 +194,7 @@ export function ScalesPattern({ stroke }: { stroke: string }) {
           />
         </pattern>
       </defs>
-      <rect width="100%" height="100%" fill="url(#hero-scales)" />
+      <rect width="100%" height="100%" fill={`url(#${patternId})`} />
     </svg>
   );
 }

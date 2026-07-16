@@ -110,6 +110,12 @@ const TABS = [
 export default function HomeScreenMock() {
   return (
     <div aria-hidden="true" className="absolute inset-0 flex flex-col bg-[#10131c]">
+      {/* Layout scales — the app's (tabs)/_layout.tsx tiles them from below the
+          header (y = 118) to the bottom of the screen, over the solid background */}
+      <div className="absolute inset-x-0 bottom-0 z-0" style={{ top: u(118) }}>
+        <ScalesPattern stroke="rgba(0, 0, 0, 0.5)" patternId="bg-scales" height={838} />
+      </div>
+
       {/* Wallet header — the collapsed gate bar the balance card slides under */}
       <div
         className="absolute left-0 right-0 top-0 z-20 bg-[#10131c]"
@@ -153,7 +159,7 @@ export default function HomeScreenMock() {
           boxShadow: '0 12px 16px rgba(0, 0, 0, 0.8)',
         }}
       >
-        <ScalesPattern stroke="rgba(153, 69, 255, 0.15)" />
+        <ScalesPattern stroke="rgba(153, 69, 255, 0.15)" patternId="card-scales" />
         <div
           className="relative flex flex-col items-center"
           style={{ paddingTop: u(75), paddingInline: u(24), paddingBottom: u(16), gap: u(8) }}
@@ -221,7 +227,7 @@ export default function HomeScreenMock() {
 
       {/* Send / Receive / Activity */}
       <div
-        className="flex items-center justify-between"
+        className="relative z-10 flex items-center justify-between"
         style={{ marginBlock: u(24), paddingInline: u(40) }}
       >
         <span
@@ -269,7 +275,7 @@ export default function HomeScreenMock() {
       </div>
 
       {/* Token list */}
-      <div className="flex flex-col">
+      <div className="relative z-10 flex flex-col">
         {TOKENS.map((token) => (
           <div
             key={token.symbol}
