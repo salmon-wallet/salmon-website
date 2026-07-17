@@ -5,7 +5,8 @@ import { motion, useReducedMotion, type Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { LINKS } from '@/lib/constants';
 import GradientButton from './ui/GradientButton';
-import LockScreenMock from './hero/LockScreenMock';
+import PhoneFrame from './hero/PhoneFrame';
+import HomeScreenMock from './hero/HomeScreenMock';
 import { WebIcon, ChromeIcon, AndroidIcon, IosIcon } from './ui/platform-icons';
 
 export default function Hero() {
@@ -181,15 +182,17 @@ export default function Hero() {
           transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="flex justify-center"
         >
-          {/* Phone frame is the container the lock screen sizes itself against */}
+          {/* iPhone 17 Pro Max proportions; the frame is the container the screen sizes itself against */}
           <motion.div
             animate={prefersReducedMotion ? undefined : { y: [0, -12, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             role="img"
             aria-label={t('walletPreview')}
-            className="relative aspect-[390/844] h-[min(46dvh,380px)] w-auto max-w-full overflow-hidden rounded-[3rem] border border-card-border shadow-[0_0_80px_rgba(255,92,69,0.1)] @container sm:h-[min(52dvh,460px)] lg:h-[min(68dvh,620px)]"
+            className="relative aspect-[440/956] h-[min(46dvh,380px)] w-auto max-w-full @container sm:h-[min(52dvh,460px)] lg:h-[min(68dvh,620px)]"
           >
-            <LockScreenMock />
+            <PhoneFrame>
+              <HomeScreenMock />
+            </PhoneFrame>
           </motion.div>
         </motion.div>
       </div>

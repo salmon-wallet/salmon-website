@@ -3,7 +3,8 @@ import './globals.css';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '700'],
+  // 300/600 are used by the hero phone mock (token change text, balance/labels)
+  weight: ['300', '400', '500', '600', '700'],
   variable: '--font-dm-sans',
   display: 'swap',
 });
