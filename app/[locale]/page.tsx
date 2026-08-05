@@ -5,6 +5,8 @@ import Why from '@/components/Why';
 import WhatMattersFirst from '@/components/sections/WhatMattersFirst';
 // import Ecosystem from '@/components/sections/Ecosystem';
 import Powerups from '@/components/sections/Powerups';
+import HowIntegrationsWork from '@/components/sections/HowIntegrationsWork';
+import DistributionPath from '@/components/sections/DistributionPath';
 // import WhoItsFor from '@/components/sections/WhoItsFor';
 import Manifesto from '@/components/Manifesto';
 import ValidatorStats from '@/components/sections/ValidatorStats';
@@ -31,6 +33,8 @@ export default async function Home({ params }: Props) {
         <WhatMattersFirst />
         {/* <Ecosystem /> */}
         <Powerups />
+        <HowIntegrationsWork />
+        <DistributionPath />
         {/* <WhoItsFor /> */}
         <Manifesto />
         <ValidatorStats />

@@ -13,7 +13,6 @@ interface FooterLink {
 
 export default function Footer() {
   const t = useTranslations('footer');
-  const tNav = useTranslations('nav');
   const tPlatform = useTranslations('getSalmon');
 
   const columns: { label: string; links: FooterLink[] }[] = [
@@ -23,14 +22,13 @@ export default function Footer() {
         { label: tPlatform('web'), href: LINKS.webWallet, external: true },
         { label: tPlatform('extension'), href: LINKS.chrome, external: true },
         { label: tPlatform('android'), href: LINKS.playStore, external: true },
-        { label: tNav('stake'), href: '/#stake', external: false },
       ],
     },
     {
       label: t('columns.developers'),
       links: [
         { label: t('github'), href: LINKS.github, external: true },
-        { label: t('contact'), href: LINKS.contact, external: true },
+        { label: t('apply'), href: LINKS.contact, external: true },
         { label: t('mediaKit'), href: LINKS.mediaKit, external: true },
       ],
     },
@@ -42,11 +40,13 @@ export default function Footer() {
         { label: t('medium'), href: LINKS.medium, external: true },
       ],
     },
-  ];
-
-  const legalLinks: FooterLink[] = [
-    { label: t('terms'), href: '/terms', external: false },
-    { label: t('privacy'), href: '/privacy', external: false },
+    {
+      label: t('columns.legal'),
+      links: [
+        { label: t('terms'), href: '/terms', external: false },
+        { label: t('privacy'), href: '/privacy', external: false },
+      ],
+    },
   ];
 
   const linkClass =
@@ -72,7 +72,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-border-default bg-bg-secondary/50">
       <div className="relative mx-auto max-w-6xl px-6 py-16">
-        <div className="grid gap-10 lg:grid-cols-[1.5fr_repeat(3,1fr)] lg:gap-12">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.5fr_repeat(4,1fr)] lg:gap-10">
           {/* Brand */}
           <div className="flex flex-col gap-3">
             <Link href="/" className="flex items-center gap-3">
@@ -102,12 +102,10 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Copyright left, legal right */}
-        <div className="mt-14 flex flex-col gap-4 border-t border-border-default/50 pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 border-t border-border-default/50 pt-6">
           <p className="text-sm text-text-tertiary">
             {t('copyright', { year: new Date().getFullYear() })}
           </p>
-          <div className="flex items-center gap-6">{legalLinks.map(renderLink)}</div>
         </div>
       </div>
     </footer>

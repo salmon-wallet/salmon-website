@@ -220,6 +220,16 @@ export default function Navbar() {
             }
             className="fixed inset-y-0 right-0 w-[80vw] z-[90] bg-bg-primary/95 backdrop-blur-xl pt-28 px-8 lg:hidden shadow-[-20px_0_40px_rgba(0,0,0,0.4)]"
           >
+            <button
+              type="button"
+              onClick={() => setMobileOpen(false)}
+              aria-label={t('closeMenu')}
+              className="absolute right-6 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-border-subtle text-text-secondary transition-colors hover:text-text-primary"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+              </svg>
+            </button>
             <motion.div
               className="flex flex-col gap-6"
               initial="initial"

@@ -23,13 +23,22 @@
     "stake": "Stake con nosotros",
     "getSalmon": "Obtener Salmon",
     "accessWebWallet": "Acceder a Web Wallet",
-    "toggleMenu": "Abrir menú"
+    "toggleMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
   },
   "hero": {
     "heading": "Infraestructura de wallet abierta.",
     "subheading": "Convirtiendo integraciones en distribución.",
     "tagline": "Open-source. Autocustodial. Impulsada por la comunidad.",
+    "proof": "Open-source. Autocustodial. Ligera. Impulsada por la comunidad.",
+    "liveLabel": "Disponible ahora",
+    "live": "Extensión de navegador, Web Wallet y Android.",
+    "getSalmon": "Obtener Salmon",
+    "github": "Ver en GitHub",
     "integrate": "¿Querés integrar? Hablemos",
+    "webWallet": "Acceder a Web Wallet",
+    "followX": "Seguir a Salmon en X",
+    "joinTelegram": "Unirse a la comunidad en Telegram",
     "walletPreview": "Vista previa"
   },
   "why": {
@@ -38,15 +47,11 @@
     "statements": [
       {
         "lead": "El problema no es la custodia.",
-        "support": "Es el control sobre la capa de wallet."
-      },
-      {
-        "lead": "Las wallets cerradas moldean la distribución.",
-        "support": "Influyen en qué se integra, qué se muestra y qué se usa."
+        "support": "Es el control sobre la capa de wallet. Las wallets cerradas influyen en qué se integra, qué se muestra y qué se usa."
       },
       {
         "lead": "Salmon crea un camino más abierto.",
-        "support": "No acceso automático. Una ruta más creíble hacia integración, uso y tracción."
+        "support": "No es acceso automático. Es una ruta más abierta, estructurada, transparente y responsable desde la integración hasta el uso real."
       },
       {
         "lead": "La prioridad es clara.",
@@ -58,7 +63,8 @@
     "eyebrow": "Empezá acá",
     "heading": "Un camino confiable.",
     "live": "Live ahora",
-    "subheading": "Creá una wallet, mové fondos y usá la integración que te trajo hasta acá. Ese flujo tiene que funcionar antes que cualquier otra cosa.",
+    "subheading": "Creá o importá una wallet, mové fondos de forma segura, entendé lo que estás firmando y usá la integración que te trajo hasta acá. Ese flujo tiene que funcionar antes que cualquier otra cosa.",
+    "checklist": ["Creá o importá una wallet", "Recibí fondos", "Enviá transacciones de forma segura", "Entendé y aprobá solicitudes de firma", "Usá la integración que te trajo a Salmon", "Volvé porque el producto sigue siendo útil y confiable"],
     "steps": {
       "create": "Creá o importá una wallet",
       "receive": "Recibí fondos",
@@ -72,11 +78,11 @@
       },
       "channels": {
         "title": "Protocolos como canales",
-        "description": "Salmon ayuda a protocolos emergentes a convertir la integración en distribución."
+        "description": "Salmon ayuda a partners seleccionados a convertir la integración en adopción y distribución medible."
       },
       "live": {
         "title": "Producto en vivo",
-        "description": "Extensión, Web Wallet, Android y un repositorio público. iOS próximamente."
+        "description": "Extensión de navegador, Web Wallet, Android y un repositorio público open-source."
       }
     }
   },
@@ -101,10 +107,14 @@
     "eyebrow": "Introducing Powerups",
     "heading": "Un core más pequeño. Una wallet que puede hacer más.",
     "comingSoon": "Próximamente",
-    "subheading": "Salmon mantiene lo esencial en el core. Los Powerups agregan nuevas capacidades sin hacer la wallet más pesada para todos.",
+    "subheading": "Salmon mantiene el core de la wallet ligero, confiable y comprensible. Los Powerups agregan capacidades seleccionadas cuando resuelven un problema real, sin convertir la wallet en una super-app pesada llena de funciones permanentes. Pueden probarse y mejorarse de forma independiente, perder prioridad si dejan de crear valor o promoverse cuando demuestran un uso claro.",
     "labels": {
       "official": "Oficial",
+      "salmon": "Salmon",
       "community": "Community",
+      "communitySalmon": "Community / Salmon",
+      "available": "Disponible",
+      "inDevelopment": "En desarrollo",
       "comingSoon": "Próximamente"
     },
     "core": {
@@ -115,7 +125,7 @@
       "receive": "Recibir",
       "connect": "Conectar",
       "nfts": "NFTs",
-      "description": "Una base enfocada para guardar activos e interactuar con Solana."
+      "description": "Una base enfocada para controlar activos, entender solicitudes de firma e interactuar con Solana de forma segura."
     },
     "items": {
       "swap": {
@@ -165,6 +175,35 @@
       }
     }
   },
+  "integrations": {
+    "eyebrow": "Cómo funcionan las integraciones",
+    "heading": "Entrada abierta. Producción curada.",
+    "intro": "Los proyectos pueden aplicar mediante un proceso abierto. El acceso a producción se obtiene mediante calificación porque las integraciones afectan firmas, permisos, navegación, rendimiento, seguridad y la experiencia completa de la wallet.",
+    "apply": "Aplicar para una integración",
+    "steps": [
+      {"title": "Aplicar", "description": "Compartí el caso de uso, usuarios objetivo, alcance técnico, permisos, plan de mantenimiento e hipótesis de distribución."},
+      {"title": "Calificar", "description": "Salmon evalúa encaje estratégico, valor para el usuario, viabilidad técnica, potencial de adopción y coherencia de producto."},
+      {"title": "Construir", "description": "Salmon y el partner definen ownership, hitos, dependencias, responsabilidades y camino de implementación."},
+      {"title": "Validar", "description": "Se revisan seguridad, UX, flujos de firma, permisos, compatibilidad, mantenibilidad e impacto operativo."},
+      {"title": "Lanzar", "description": "Las integraciones aprobadas pasan a una versión controlada o de producción con responsabilidades y soporte claros."},
+      {"title": "Medir", "description": "Se siguen activación, acciones completadas, uso recurrente, cohortes retenidas, feedback y estado de mantenimiento."}
+    ],
+    "evaluates": "Qué evalúa Salmon",
+    "criteria": ["Seguridad", "Valor para el usuario", "Coherencia de UX", "Compatibilidad técnica", "Mantenibilidad", "Potencial de adopción"],
+    "levelsHeading": "Niveles de soporte de integración",
+    "levels": [
+      {"title": "Experimental", "description": "Lanzamiento limitado o controlado para validar viabilidad, UX y demanda."},
+      {"title": "Verificada", "description": "Integración lista para producción y revisada en seguridad, UX, compatibilidad y mantenimiento."},
+      {"title": "Destacada", "description": "Integración de alto valor con mayor visibilidad, onboarding o activación coordinada con el partner."}
+    ],
+    "disclaimer": "La aprobación y la promoción son decisiones separadas. La inclusión técnica no garantiza automáticamente respaldo ni una posición destacada."
+  },
+  "distribution": {
+    "eyebrow": "De la integración a la distribución",
+    "steps": ["Demanda del partner", "Integración seleccionada", "Activación de usuarios", "Uso recurrente", "Prueba de distribución"],
+    "heading": "Las integraciones no son el objetivo. El uso sí.",
+    "description": "Salmon mide onboarding, acciones completadas, retorno, cohortes retenidas, rendimiento de la integración y feedback del partner. Lo que demuestra activación repetible se amplía; lo que no, se mejora, pierde prioridad o se detiene."
+  },
   "audience": {
     "eyebrow": "Para quién es",
     "heading": "Para quién está construido Salmon.",
@@ -203,16 +242,20 @@
     "subheading": "Esa es la tesis.",
     "principles": [
       {
-        "title": "Salmon se está construyendo hacia la propiedad comunitaria.",
-        "description": "Porque la capa de wallet no debería quedar permanentemente gobernada solo por control privado."
+        "title": "Salmon está impulsada por la comunidad hoy y se construye hacia la propiedad comunitaria.",
+        "description": "La infraestructura crítica de wallet no debería quedar permanentemente gobernada solo por control privado."
       },
       {
-        "title": "Salmon abre una capa estratégica.",
-        "description": "No quitando criterio, sino haciendo el camino a la integración más abierto y más visible."
+        "title": "Salmon mantiene el core ligero, confiable y comprensible.",
+        "description": "Los Powerups seleccionados amplían lo que los usuarios pueden hacer cuando resuelven un problema real, sin convertir la wallet en una super-app pesada."
+      },
+      {
+        "title": "Abierto no significa acceso automático ni producción permissionless.",
+        "description": "Las integraciones requieren criterio, revisión y responsabilidad. Salmon hace el camino más abierto, estructurado, transparente y medible."
       },
       {
         "title": "Salmon empieza con un wedge concreto.",
-        "description": "Los protocolos emergentes de Solana necesitan una mejor ruta a los usuarios."
+        "description": "Ayuda a proyectos de Solana a convertir integraciones útiles en activación, uso recurrente y distribución."
       },
       {
         "title": "Open-source no es branding.",
@@ -220,7 +263,7 @@
       },
       {
         "title": "El progreso debería ser visible.",
-        "description": "Qué se está lanzando. Qué está mejorando. Qué todavía necesita pruebas."
+        "description": "Qué se está lanzando. Qué adoptan los usuarios. Qué está mejorando. Qué todavía necesita pruebas."
       }
     ]
   },
@@ -236,7 +279,15 @@
           },
           {
             "question": "¿Puedo usar Salmon hoy?",
-            "answer": "Sí. Extensión, Web Wallet y Android están live. iOS llega pronto."
+            "answer": "Sí. La Extensión, Web Wallet y Android están disponibles. iOS llega próximamente."
+          },
+          {
+            "question": "¿Qué es Salmon Core?",
+            "answer": "La base enfocada de la wallet para controlar activos, entender solicitudes de firma e interactuar con Solana de forma segura y confiable."
+          },
+          {
+            "question": "¿Qué es un Powerup?",
+            "answer": "Una integración modular seleccionada que amplía lo que los usuarios pueden hacer sin aumentar permanentemente la complejidad del core."
           },
           {
             "question": "¿Puedo hacer stake nativo con Salmon?",
@@ -244,20 +295,28 @@
           },
           {
             "question": "¿Por qué usar Salmon?",
-            "answer": "Salmon te da acceso autocustodial a Solana mediante software open-source, con Extensión, Web Wallet y Android disponibles hoy. Mantenés el control de tus activos mientras usás una wallet construida alrededor de la transparencia, la interoperabilidad y un ecosistema abierto."
+            "answer": "Porque el acceso, la claridad de firma y una interacción confiable importan, no solo el almacenamiento."
           }
         ]
       },
       {
-        "label": "Integración",
+        "label": "Integraciones",
         "items": [
           {
             "question": "¿Qué problema resuelve Salmon?",
-            "answer": "Las wallets cerradas moldean la distribución. Salmon crea un camino más abierto para que los protocolos emergentes se integren y lleguen a usuarios."
+            "answer": "Incluso los proyectos sólidos pueden tener dificultades para llegar a usuarios activos. Salmon crea un camino más abierto, estructurado y medible desde una integración seleccionada hasta activación, feedback, uso recurrente y prueba de distribución."
           },
           {
-            "question": "¿Salmon es integración permissionless?",
-            "answer": "No. Las integraciones siguen requiriendo revisión y priorización. La propuesta es un camino más abierto y creíble, no acceso automático."
+            "question": "¿Salmon ofrece producción permissionless?",
+            "answer": "No. Los proyectos pueden aplicar mediante un proceso abierto, pero las integraciones de producción requieren calificación, revisión de seguridad, criterio de producto y responsabilidad operativa."
+          },
+          {
+            "question": "¿Cómo se seleccionan las integraciones?",
+            "answer": "Salmon evalúa seguridad, valor para el usuario, coherencia de UX, compatibilidad técnica, mantenibilidad, compromiso del partner y potencial de adopción."
+          },
+          {
+            "question": "¿Qué significan Experimental, Verificada y Destacada?",
+            "answer": "Representan distintos niveles de madurez, revisión, preparación para producción y soporte de distribución. La inclusión técnica no garantiza respaldo ni una posición destacada."
           },
           {
             "question": "¿En qué se diferencia Salmon de otras wallets?",
@@ -265,7 +324,15 @@
           },
           {
             "question": "¿Para quién es Salmon?",
-            "answer": "Protocolos emergentes de Solana, builders, contribuidores, integradores y usuarios que valoran la infraestructura abierta."
+            "answer": "Aplicaciones nativas de Solana, comunidades NFT, herramientas de autocustodia y seguridad, productos de infraestructura, builders alineados y usuarios que valoran la infraestructura abierta."
+          },
+          {
+            "question": "¿Por qué integrar Salmon?",
+            "answer": "Para llegar a usuarios, obtener feedback de producto, validar comportamiento recurrente y construir tracción medible mediante un camino de integración estructurado."
+          },
+          {
+            "question": "¿Cómo se ve el éxito?",
+            "answer": "Activación de usuarios, acciones completadas, uso recurrente, cohortes retenidas, feedback del partner y evidencia de valor duradero."
           }
         ]
       },
@@ -277,8 +344,12 @@
             "answer": "Sí. El software core es público en GitHub."
           },
           {
+            "question": "¿Cómo aborda Salmon la seguridad de firma?",
+            "answer": "La experiencia core prioriza ayudar a los usuarios a entender y aprobar solicitudes de firma. Cada Powerup se evalúa por permisos, claridad de UX, compatibilidad, dependencias y riesgo."
+          },
+          {
             "question": "¿Salmon está auditado?",
-            "answer": "Sí. Salmon superó una auditoría en 2024 patrocinada por Eclipse Foundation y realizada por Halborn. Seguimos un modelo de seguridad abierto basado en revisiones, testing continuo y preparación para auditorías. La seguridad se trata como un proceso permanente, no como un claim de marketing puntual."
+            "answer": "La seguridad se trata como un proceso continuo: revisión, testing, preparación para auditorías y mejora visible."
           }
         ]
       },
@@ -304,13 +375,22 @@
     "android": "Android",
     "ios": "iOS",
     "comingSoon": "Próximamente",
+    "webWallet": "Web Wallet",
+    "use": {"eyebrow": "Obtener Salmon", "title": "Usá la wallet"},
     "build": {
+      "eyebrow": "Construí sobre Salmon",
+      "title": "Convertí un caso de uso en un Powerup",
       "description": "¿Tenés un protocolo o una integración para shippear? Hablemos.",
       "cta": "Hablemos"
     },
     "code": {
+      "eyebrow": "Explorá el código",
+      "title": "Mirá cómo Salmon se construye en público",
+      "description": "Revisá la wallet open-source y seguí su desarrollo.",
       "cta": "Ver en GitHub"
     },
+    "followX": "Seguí el desarrollo en X",
+    "joinTelegram": "Unite a la comunidad en Telegram",
     "closing": "Un camino más abierto a la integración y la distribución.",
     "extensionChrome": "Extensión (Chrome)"
   },
@@ -332,7 +412,7 @@
     "stake": "Detalles del validador"
   },
   "footer": {
-    "description": "Infraestructura de wallet abierta para Solana. Open-source, autocustodial, construida para protocolos emergentes.",
+    "description": "Open wallet infrastructure",
     "copyright": "© {year} Salmon Wallet. Todos los derechos reservados.",
     "xTwitter": "X / Twitter",
     "telegram": "Comunidad de Telegram",
@@ -342,10 +422,12 @@
     "privacy": "Política de Privacidad",
     "mediaKit": "Kit de Medios",
     "contact": "Contacto / Integraciones",
+    "apply": "Aplicar para una integración",
     "columns": {
       "product": "Producto",
       "developers": "Desarrolladores",
-      "community": "Comunidad"
+      "community": "Comunidad",
+      "legal": "Legal"
     }
   }
 }

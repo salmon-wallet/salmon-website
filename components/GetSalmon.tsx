@@ -5,8 +5,6 @@ import { LINKS } from '@/lib/constants';
 import ScrollReveal from './ui/ScrollReveal';
 import { WebIcon, ChromeIcon, AndroidIcon, IosIcon } from './ui/platform-icons';
 
-/** The whole card is the target, and the card itself carries the platform's
-    colour. No description, no separate action link. */
 function PlatformCard({
   title,
   href,
@@ -61,78 +59,38 @@ export default function GetSalmon() {
 
   return (
     <section id="get-salmon" className="relative py-24 sm:py-32">
-
       <div className="relative mx-auto max-w-5xl px-6">
         <ScrollReveal>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-center">
+          <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
             {t('heading')}
           </h2>
         </ScrollReveal>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-12">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <ScrollReveal direction={cardDirections[0]} delay={0} duration={1.1} className="h-full">
-            <PlatformCard
-              title={t('web')}
-              href={LINKS.webWallet}
-              tint="#4FC3F7"
-              icon={<WebIcon size={48} />}
-            />
+            <PlatformCard title={t('web')} href={LINKS.webWallet} tint="#4FC3F7" icon={<WebIcon size={48} />} />
           </ScrollReveal>
-
           <ScrollReveal direction={cardDirections[1]} delay={0.12} duration={1.1} className="h-full">
-            <PlatformCard
-              title={t('extensionChrome')}
-              href={LINKS.chrome}
-              tint="#4285F4"
-              icon={<ChromeIcon size={48} />}
-            />
+            <PlatformCard title={t('extensionChrome')} href={LINKS.chrome} tint="#4285F4" icon={<ChromeIcon size={48} />} />
           </ScrollReveal>
-
           <ScrollReveal direction={cardDirections[2]} delay={0.24} duration={1.1} className="h-full">
-            <PlatformCard
-              title={t('android')}
-              href={LINKS.playStore}
-              tint="#3DDC84"
-              icon={<AndroidIcon size={48} />}
-            />
+            <PlatformCard title={t('android')} href={LINKS.playStore} tint="#3DDC84" icon={<AndroidIcon size={48} />} />
           </ScrollReveal>
-
           <ScrollReveal direction={cardDirections[3]} delay={0.36} duration={1.1} className="h-full">
-            <PlatformCard
-              title={t('ios')}
-              href={LINKS.appStore}
-              tint="#A2AAAD"
-              comingSoon
-              comingSoonLabel={t('comingSoon')}
-              icon={<IosIcon size={48} />}
-            />
+            <PlatformCard title={t('ios')} href={LINKS.appStore} tint="#A2AAAD" comingSoon comingSoonLabel={t('comingSoon')} icon={<IosIcon size={48} />} />
           </ScrollReveal>
         </div>
 
-        {/* One closing band instead of four blocks in two styles */}
         <ScrollReveal delay={0.2} duration={1.1}>
           <div className="mt-20 text-center">
-            <h3 className="mx-auto max-w-2xl text-2xl font-bold tracking-tight sm:text-3xl">
-              {t('closing')}
-            </h3>
-            <p className="mx-auto mt-4 max-w-xl text-text-secondary">
-              {t('build.description')}
-            </p>
-
+            <h3 className="mx-auto max-w-2xl text-2xl font-bold tracking-tight sm:text-3xl">{t('closing')}</h3>
+            <p className="mx-auto mt-4 max-w-xl text-text-secondary">{t('build.description')}</p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href={LINKS.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-border-subtle px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:border-white/25 hover:bg-white/5"
-              >
+              <a href={LINKS.repo} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-border-subtle px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:border-white/25 hover:bg-white/5">
                 {GITHUB_ICON}
                 {t('code.cta')} ↗
               </a>
-              <a
-                href={LINKS.contact}
-                className="inline-flex items-center gap-2 rounded-xl border border-border-subtle px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:border-white/25 hover:bg-white/5"
-              >
+              <a href={LINKS.contact} className="inline-flex items-center gap-2 rounded-xl border border-border-subtle px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:border-white/25 hover:bg-white/5">
                 {t('build.cta')} ↗
               </a>
             </div>
