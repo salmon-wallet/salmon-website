@@ -7,7 +7,7 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 import { PowerupIcon } from '@/components/ui/powerup-icons';
 
 const POWERUPS = [
-  { key: 'swap', labels: ['comingSoon'] },
+  { key: 'swap', labels: ['available'] },
   { key: 'bridge', labels: ['comingSoon'] },
   { key: 'explore', labels: ['comingSoon'] },
   { key: 'portfolio', labels: ['comingSoon'] },
@@ -69,7 +69,7 @@ export default function Powerups() {
 
             <div className="relative grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {POWERUPS.map(({ key, labels }) => {
-                const isStake = key === 'stake';
+                const isEnabled = key === 'swap';
                 return (
                 <button
                   key={key}
@@ -79,15 +79,15 @@ export default function Powerups() {
                   onFocus={() => setActive(key)}
                   onBlur={() => setActive(null)}
                   className={`group relative z-10 flex min-h-36 cursor-default flex-col rounded-2xl border p-5 text-left transition-all duration-300 ${
-                    isStake && active === key
+                    isEnabled && active === key
                       ? 'border-accent/60 bg-accent/[0.09] shadow-[0_16px_44px_rgba(255,92,69,0.12)]'
-                      : isStake
+                      : isEnabled
                         ? 'border-accent/35 bg-accent/[0.05] hover:border-accent/55 hover:bg-accent/[0.08]'
                         : 'border-border-subtle bg-bg-secondary/20 opacity-50 grayscale'
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <span className={`shrink-0 ${isStake ? 'text-accent' : 'text-text-tertiary'}`}>
+                    <span className={`shrink-0 ${isEnabled ? 'text-accent' : 'text-text-tertiary'}`}>
                       <PowerupIcon type={key} className="h-6 w-6 transition-transform duration-300 group-hover:scale-110 group-focus-visible:scale-110" />
                     </span>
                     <h3 className="text-base font-semibold text-text-primary xl:text-lg">
