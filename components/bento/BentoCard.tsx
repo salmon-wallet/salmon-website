@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { motion, useInView, useReducedMotion } from 'framer-motion';
+import { useEffect, useState, type ReactNode } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 
 interface BentoCardProps {
   title: string;
@@ -13,9 +13,8 @@ interface BentoCardProps {
 
 /**
  * Two-state capability card (Clerk-style): the visual area renders the
- * feature idle, then "executes" it when active. Activation is hover on
- * pointer devices and in-view on touch devices. With reduced motion (or
- * before hydration) the card stays in its final, fully-populated state.
+ * feature idle, then "executes" it on hover-capable devices. Touch devices
+ * always keep the final state visible; content never depends on an observer.
  */
 export default function BentoCard({
   title,
@@ -25,8 +24,6 @@ export default function BentoCard({
   className = '',
 }: BentoCardProps) {
   const prefersReducedMotion = useReducedMotion();
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { margin: '-40% 0px -40% 0px' });
   const [hovered, setHovered] = useState(false);
   const [canHover, setCanHover] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -36,12 +33,10 @@ export default function BentoCard({
     setCanHover(window.matchMedia('(hover: hover)').matches);
   }, []);
 
-  const active =
-    prefersReducedMotion || !mounted ? true : canHover ? hovered : inView;
+  const active = prefersReducedMotion || !mounted || !canHover ? true : hovered;
 
   return (
     <motion.div
-      ref={ref}
       initial={false}
       animate={active ? 'active' : 'idle'}
       onHoverStart={() => setHovered(true)}

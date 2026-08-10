@@ -40,7 +40,7 @@ export default function Hero() {
   const transition = { duration: 1.1, ease: [0.16, 1, 0.3, 1] as const };
 
   return (
-    <section className="relative flex min-h-[100dvh] items-center overflow-hidden pt-16">
+    <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-14 sm:pt-16 lg:min-h-[100dvh]">
       {/* Subtle gradient orb */}
       <div
         aria-hidden="true"
@@ -188,7 +188,7 @@ export default function Hero() {
             transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             role="img"
             aria-label={t('walletPreview')}
-            className="relative aspect-[440/956] h-[min(46dvh,380px)] w-auto max-w-full @container sm:h-[min(52dvh,460px)] lg:h-[min(68dvh,620px)]"
+            className="relative aspect-[440/956] h-[min(46svh,380px)] w-auto max-w-full @container sm:h-[min(52svh,460px)] lg:h-[min(68dvh,620px)]"
           >
             <PhoneFrame>
               <HomeScreenMock />

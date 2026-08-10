@@ -19,7 +19,8 @@ export default function ParticlesBackground() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas || prefersReducedMotion) return;
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    if (!canvas || prefersReducedMotion || isMobile) return;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
@@ -28,7 +29,7 @@ export default function ParticlesBackground() {
     let particles: Particle[] = [];
 
     const resize = () => {
-      const dpr = window.devicePixelRatio;
+      const dpr = Math.min(window.devicePixelRatio, 2);
       canvas.width = window.innerWidth * dpr;
       canvas.height = window.innerHeight * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -76,7 +77,12 @@ export default function ParticlesBackground() {
     createParticles();
     animate();
 
+    let previousWidth = window.innerWidth;
     const handleResize = () => {
+      // Safari's collapsing address bar changes only the viewport height while
+      // scrolling. Reallocating the fixed canvas for that event causes jank.
+      if (window.innerWidth === previousWidth) return;
+      previousWidth = window.innerWidth;
       resize();
       createParticles();
     };
@@ -94,7 +100,7 @@ export default function ParticlesBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full pointer-events-none z-0"
+      className="pointer-events-none fixed inset-0 z-0 hidden h-full w-full md:block"
       aria-hidden="true"
     />
   );

@@ -5,9 +5,6 @@ import {
   motion,
   AnimatePresence,
   useReducedMotion,
-  useScroll,
-  useTransform,
-  useMotionValueEvent,
 } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
@@ -45,7 +42,6 @@ export default function Navbar() {
   const t = useTranslations('nav');
   const locale = useLocale();
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
@@ -56,21 +52,6 @@ export default function Navbar() {
       : locale === routing.defaultLocale
         ? '/#get-salmon'
         : `/${locale}#get-salmon`;
-
-  const { scrollY } = useScroll();
-
-  useMotionValueEvent(scrollY, 'change', (latest) => {
-    setScrolled(latest > 20);
-  });
-
-  // Scroll-linked glassmorphic values
-  const navBg = useTransform(scrollY, [0, 200], ['rgba(0,0,0,0)', 'rgba(0,0,0,0.6)']);
-  const navBlur = useTransform(scrollY, [0, 200], ['blur(0px)', 'blur(20px)']);
-  const navBorder = useTransform(
-    scrollY,
-    [0, 200],
-    ['1px solid rgba(225,225,221,0.12)', '1px solid rgba(225,225,221,0.15)']
-  );
 
   useEffect(() => {
     if (mobileOpen) {
@@ -85,29 +66,8 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.nav
-        className="sticky top-0 z-[100]"
-      >
-        {/* Scroll-linked glassmorphic background layer */}
-        {!prefersReducedMotion ? (
-          <motion.div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundColor: navBg,
-              backdropFilter: navBlur,
-              borderBottom: navBorder,
-            }}
-          />
-        ) : (
-          <div
-            className={`absolute inset-0 pointer-events-none border-b border-border-subtle transition-all duration-500 ${scrolled
-              ? 'bg-bg-glass backdrop-blur-xl'
-              : ''
-              }`}
-          />
-        )}
-
-        <div className="relative mx-auto max-w-7xl px-6 flex items-center h-16">
+      <nav className="sticky top-0 z-[100] border-b border-border-subtle bg-bg-primary/92 shadow-[0_8px_28px_rgba(0,0,0,0.22)] backdrop-blur-md">
+        <div className="relative mx-auto flex h-14 max-w-7xl items-center px-5 sm:h-16 sm:px-6">
           {/* Left: utility link + ecosystem quick links */}
           <div className="hidden lg:flex items-center gap-5">
             {/* Secondary CTA temporarily hidden. Styled like GradientButton's
@@ -204,7 +164,7 @@ export default function Navbar() {
             />
           </button>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* Mobile menu */}
       <AnimatePresence>
