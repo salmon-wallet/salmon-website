@@ -34,11 +34,11 @@ export default async function PrivacyPage({ params }: Props) {
 
           <div className="prose prose-invert prose-sm max-w-none space-y-6 text-text-secondary leading-relaxed">
             <p>
-              <strong className="text-text-primary">Last updated:</strong> May 15, 2024
+              <strong className="text-text-primary">Last updated:</strong> August 13, 2026
             </p>
 
             <p>
-              Salmon (&quot;we&quot;, &quot;us&quot; or &quot;our&quot;) values your privacy. In this Privacy Policy (&quot;Policy&quot;), we describe how we collect, use, and disclose information that we obtain about visitors to our website at https://www.salmon.io (the &quot;Site&quot;) and the services available through our Site, including any mobile applications and browser extensions (collectively, the &quot;Services&quot;), and how we use and disclose that information.
+              Salmon (&quot;we&quot;, &quot;us&quot; or &quot;our&quot;) values your privacy. In this Privacy Policy (&quot;Policy&quot;), we describe how we collect, use, and disclose information that we obtain about visitors to our website at https://www.salmonwallet.io (the &quot;Site&quot;) and the services available through our Site, including any mobile applications and browser extensions (collectively, the &quot;Services&quot;), and how we use and disclose that information.
             </p>
 
             <p>
@@ -62,7 +62,7 @@ export default async function PrivacyPage({ params }: Props) {
             </p>
 
             <p>
-              We may automatically collect the following information about your use of our Site or Services through cookies and other similar technologies: your domain name; your browser type and operating system; web pages you view; links you click; your IP address; the length of time you visit our Site or use our Services; and the referring URL, or the webpage that led you to our Site. We may combine this information with other information that we have collected about you, including, where applicable, your user name, name, and other personal information.
+              We may automatically collect the following information about your use of our Site through cookies and other similar technologies: your domain name; your browser type and operating system; web pages you view; links you click; your IP address; the length of time you visit our Site; and the referring URL, or the webpage that led you to our Site. In the wallet applications, automatically collected usage data is limited to the pseudonymous in-app usage data described below, and your IP address is not collected by that analytics pipeline. We may combine this information with other information that we have collected about you, including, where applicable, your user name, name, and other personal information.
             </p>
 
             <p>
@@ -78,11 +78,11 @@ export default async function PrivacyPage({ params }: Props) {
             </p>
 
             <p>
-              (iii) We use your information to ensure our Site and Services are working as intended, to better understand how users access and use our Site and Services, both on and aggregated and individualized basis, to make improvements to our services, to develop new Services, and for other research and analytics purposes.
+              (iii) We use your information to ensure our Site and Services are working as intended, to better understand how users access and use our Site and Services, both on and aggregated and individualized basis, to make improvements to our services, to develop new Services, and for other research and analytics purposes; in-app usage data from the wallet applications is analyzed only in pseudonymous form and is not linked to you individually.
             </p>
 
             <p>
-              (iv) We may use your information for marketing and promotional purposes.
+              (iv) We may use your information for marketing and promotional purposes; in-app usage data from the wallet applications is not used for marketing.
             </p>
 
             <p>
@@ -146,7 +146,13 @@ export default async function PrivacyPage({ params }: Props) {
             </p>
 
             <p>
-              We used automated devices and applications, such as Google Analytics, to evaluate usage of our Site and our Services. We also may use other analytic means to evaluate our Services. We use these tools to help us improve our Services, performance and user experiences, These entities may use cookies and other tracking technologies to perform their services. We do not share your personal information with these third parties.
+              We used automated devices and applications, such as Google Analytics, to evaluate usage of our Site. We use these tools to help us improve our Services, performance and user experiences, These entities may use cookies and other tracking technologies to perform their services. We do not share your personal information with these third parties. In the wallet applications, usage measurement is first-party: the applications send a small set of allow-listed usage events to our own backend, and no third-party analytics SDK, cookies, or advertising trackers run in the wallet applications.
+            </p>
+
+            <h2 className="text-2xl font-bold text-text-primary">In-App Usage Data</h2>
+
+            <p>
+              Usage analytics in the wallet applications are disabled by default. When you first open the application, you choose whether to enable them; until you accept, nothing is validated, stored, or transmitted. The data collected is pseudonymous: it is tied to a random install identifier that is not linked to your wallets or to your identity, and event payloads cannot contain addresses, balances, or amounts. You may withdraw your consent at any time in Settings, which stops collection and deletes the install identifier.
             </p>
 
             <p>
