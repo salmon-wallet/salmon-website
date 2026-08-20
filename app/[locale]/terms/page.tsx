@@ -42,6 +42,10 @@ export default async function TermsPage({ params }: Props) {
             </p>
 
             <p>
+              These Terms are an agreement between you and <strong className="text-text-primary">GeekOcean Labs Ltd</strong>, a company incorporated in the British Virgin Islands, which operates Salmon (&quot;Salmon&quot;, &quot;we&quot;, &quot;us&quot; or &quot;our&quot;).
+            </p>
+
+            <p>
               Your access to and use of the Service (as is defined below) is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
             </p>
 
@@ -223,7 +227,7 @@ export default async function TermsPage({ params }: Props) {
               Governing Law, Jurisdiction, and Limitation of Actions
             </h2>
             <p>
-              The Service is created and controlled by Salmon Inc. in the British Virgin Islands. You agree that these Terms of Use will be governed by and construed in accordance with the laws of the British Virgin Islands, without regard to its conflicts of law provisions. You agree that all legal proceedings arising out of or in connection with these Terms of Use or the Service must be brought in the courts of the British Virgin Islands, and that your claim(s) will be forever waived and barred unless filed within one year of the time in which the event(s) giving rise to such claim(s) began. You expressly submit to the exclusive jurisdiction of said courts and consent to extraterritorial service of process.
+              The Service is created and controlled by GeekOcean Labs Ltd, incorporated in the British Virgin Islands. You agree that these Terms of Use will be governed by and construed in accordance with the laws of the British Virgin Islands, without regard to its conflicts of law provisions. You agree that all legal proceedings arising out of or in connection with these Terms of Use or the Service must be brought in the courts of the British Virgin Islands, and that your claim(s) will be forever waived and barred unless filed within one year of the time in which the event(s) giving rise to such claim(s) began. You expressly submit to the exclusive jurisdiction of said courts and consent to extraterritorial service of process.
             </p>
 
             <h2 className="text-xl font-semibold text-text-primary mt-8">
