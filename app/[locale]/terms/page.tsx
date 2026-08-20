@@ -34,11 +34,11 @@ export default async function TermsPage({ params }: Props) {
 
           <div className="prose prose-invert prose-sm max-w-none space-y-6 text-text-secondary leading-relaxed">
             <p>
-              <strong className="text-text-primary">Last updated:</strong> May 15, 2024
+              <strong className="text-text-primary">Last updated:</strong> August 20, 2026
             </p>
 
             <p>
-              Please read these Terms of Use (&quot;Terms&quot;, &quot;Terms of Use&quot;) carefully before using the software app provided at https://salmonwallet.io, AppStore &amp; Playstore, as well as subdomain for Salmon&apos;s product offering (hereinafter the &quot;Site&quot;).
+              Please read these Terms of Use (&quot;Terms&quot;, &quot;Terms of Use&quot;) carefully before using the software provided at https://www.salmonwallet.io, at the app stores where the App is published, and at the subdomains of Salmon&apos;s product offering (hereinafter the &quot;Site&quot;).
             </p>
 
             <p>
@@ -53,19 +53,93 @@ export default async function TermsPage({ params }: Props) {
               Services
             </h2>
             <p>
-              Salmon makes available to you a software service, including Salmon&apos;s unhosted wallet application and browser extension (hereinafter the &quot;Wallet&quot; or the &quot;App&quot; respectively). The Wallet enables you to (i) store in the blockchain tokens, cryptocurrencies and other crypto or blokchain-based digital assets (collectively, &quot;Digital Assets&quot;); (ii) link to decentralized applications, including, without limitation, decentralized exchanges (collectively &quot;Dapp(s)&quot;; (iii) from the App user interface,swap assets on a peer-to-peer basis via third-party Dapps (hereinafter &quot;Swapper&quot;); (iv) view addresses and information that are part of digital asset networks and broadcast transactions; (v) a bridge service that will allow you to move a particular token from one blockchain to another (i.g. Solana to Near or vice versa); and (vi) additional functionality as may be added to the App from time to time (collectively the &quot;Services&quot;).
+              Salmon makes available to you a software service, including Salmon&apos;s self-custodial mobile application, web wallet and browser extension (each and together, the &quot;Wallet&quot; or the &quot;App&quot;). The Wallet enables you to (i) hold tokens, cryptocurrencies and other crypto or blockchain-based digital assets recorded on a blockchain (collectively, &quot;Digital Assets&quot;); (ii) connect to decentralized applications (collectively &quot;Dapp(s)&quot;) and approve the transactions and off-chain messages they request; (iii) from the App user interface, swap Solana tokens through a third-party aggregator, routed through Salmon&apos;s servers, which obtain the quote and the unsigned transaction and relay the transaction you sign back to that aggregator for broadcast (hereinafter the &quot;Swap&quot;); (iv) view addresses, balances, transaction history and collectibles that are part of digital asset networks, and broadcast transactions; (v) exchange an asset on one blockchain for an asset on another — between Solana and Bitcoin — through StealthEX, a third-party exchange service (hereinafter the &quot;Bridge&quot;); and (vi) additional functionality as may be added to the App from time to time (collectively the &quot;Services&quot;).
             </p>
 
             <p>
-              You may use the Services if you are of the age of majority in your jurisdiction of residence, or older, and are nor barred from using the Services under applicable law. By using the Site or Services and agreeing to these Terms, you represented and warrant that: (i) You are of lawful age, and are lawfully able, to enter into contracts; and (ii) Neither you nor any person that owns or control you is subject to sanctions or otherwise designated on any list of prohibited or restricted parties.
+              You may use the Services if you are of the age of majority in your jurisdiction of residence, or older, and are not barred from using the Services under applicable law. By using the Site or Services and agreeing to these Terms, you represent and warrant that: (i) You are of lawful age, and are lawfully able, to enter into contracts; and (ii) Neither you nor any person that owns or controls you is subject to sanctions or otherwise designated on any list of prohibited or restricted parties, including the lists maintained by the United Nations Security Council, the United States government (among them the Specially Designated Nationals and Blocked Persons List and the Foreign Sanctions Evaders List administered by OFAC), the United Kingdom government, and the European Union or its Member States; and (iii) You are not located in, organised under the laws of, or resident in a jurisdiction subject to comprehensive sanctions or embargoes. We may restrict or refuse access to the Services in any jurisdiction, at our discretion and without notice.
             </p>
 
             <p>
-              To use certain Services, you may be asked to have or to create an account (hereinafter &quot;Account&quot;). To the extent you create an account, you agree that you won&apos;t disclose your Account credentials to anyone. You are absolutely aware that, as the Services are a non-custodial service we are not liable of any kind of misuse that you, or any other authorized or unauthorized third party may do on your Account. You&apos;re responsible for all activities that occur under your Account, or are otherwise referable to your Account credentials, whether or not you know about them, and you are solely responsible for your conduct, and the task and activities you undertake, on or utilizing the Site or Services.
+              The Services have no server-side account. Salmon does not issue you credentials, does not authenticate you, and holds no account that you could log in to or that we could restore. Access to the Wallet on a given device is protected by a password you set locally on that device, and by the device&apos;s own biometric unlock where you enable it. You are responsible for keeping that password and that device secure, and you are responsible for all activity carried out through your Wallet, whether or not you know about it. Because the Services are self-custodial, we are not liable for any misuse that you, or any authorized or unauthorized third party, may make of your Wallet, and we cannot restore access to it.
             </p>
 
             <p>
-              You acknowledge and understand that, in certain circumstances, such as if you lose or forget your password for your Wallet, you will need to use a recovery phrase to access any Digital Asset stored in your Wallet (the &quot;Seed Phrase&quot;). You are solely responsible for the retention and security of your Seed Phrase. Your Seed Phrase is the only way to restore access to the Digital Assets stored in your Wallet if you lose access to it. Anyone who knows your Seed Phrase can access, transfer or spend your Digital Assets. You acknowledge and agree that Salmon does not store and is not responsible for your Digital Asset as you are aware and acknowledge that Salmon is a non-custodial wallet, this is to say that all your Digital Assets are stored directly in the blockchain, and Salmon is just a technological integrator that ease your way to your Digital Assets. Considering this, you bear sole responsibility for any loss of your Digital Assets due to failure to retain and/or secure your Seed Phrase.
+              You acknowledge and understand that, in certain circumstances, such as if you lose or forget your password for your Wallet, you will need to use a recovery phrase to access any Digital Asset stored in your Wallet (the &quot;Seed Phrase&quot;). You are solely responsible for the retention and security of your Seed Phrase. Your Seed Phrase is the only way to restore access to the Digital Assets stored in your Wallet if you lose access to it. Anyone who knows your Seed Phrase can access, transfer or spend your Digital Assets. You acknowledge and agree that Salmon does not store and is not responsible for your Digital Asset as you are aware and acknowledge that Salmon is a non-custodial wallet, this is to say that all your Digital Assets are stored directly in the blockchain, and Salmon is just a technological integrator that eases your access to your Digital Assets. Considering this, you bear sole responsibility for any loss of your Digital Assets due to failure to retain and/or secure your Seed Phrase.
+            </p>
+
+            <h2 className="text-xl font-semibold text-text-primary mt-8">
+              Fees
+            </h2>
+            <p>
+              Salmon earns a fee on some Services. Those fees are taken from the assets moving through the transaction rather than billed to you separately.
+            </p>
+            <p>
+              <strong className="text-text-primary">Bridge.</strong> Every cross-chain exchange carries a partner fee of 0.4%, which StealthEX deducts from the exchange and credits to Salmon. The estimate shown to you before you confirm is already net of that fee, and the rate is disclosed on the review screen.
+            </p>
+            <p>
+              <strong className="text-text-primary">Swap.</strong> Every Solana-to-Solana swap carries a fee charged by the aggregator. Where the deployment you are using is configured for it, that fee is set at Salmon&apos;s referral rate and accrues to Salmon; where it is not, the aggregator applies its own base rate and keeps it. The two do not stack: one rate applies per swap, it is already reflected in the quote you are shown, and the review screen discloses it as a percentage rather than as an amount.
+            </p>
+            <p>
+              Network fees — such as gas, rent and priority fees — are paid to the relevant blockchain and never to Salmon. We may change our fees at any time. The fee that applies is the one disclosed to you at the moment you confirm the transaction.
+            </p>
+
+            <h2 className="text-xl font-semibold text-text-primary mt-8">
+              Third-Party Services and Cross-Chain Risk
+            </h2>
+            <p>
+              Some Services depend on third parties that Salmon does not control, and using those Services exposes you to those parties.
+            </p>
+            <p>
+              <strong className="text-text-primary">Bridge.</strong> A cross-chain exchange begins with an ordinary on-chain send from your own account to a deposit address owned by StealthEX. From that send until StealthEX pays out on the destination chain — typically minutes, and longer on Bitcoin — the funds are held by StealthEX. Salmon cannot cancel the exchange, recover the funds, or compel the payout, and has no wallet-side remedy if StealthEX fails to settle. Your recourse in that event is StealthEX&apos;s own refund process, and the App gives you the exchange identifier and the deposit address so that you can pursue it. Salmon keeps no record of your exchanges, so if you lose that identifier it has to come from StealthEX.
+            </p>
+            <p>
+              <strong className="text-text-primary">Swap.</strong> Quotes, routing and broadcasting are performed by a third-party aggregator. We do not guarantee any price, route, execution, timing or slippage outcome.
+            </p>
+            <p>
+              <strong className="text-text-primary">Blockchain and market data.</strong> Balances, transaction history, collectibles and prices are read from third-party blockchain-data and market-data providers — mostly through Salmon&apos;s servers, and in part directly from your device, which opens its own connection to a Solana node provider. That data may be delayed, incomplete or wrong, and you should not rely on it as the sole basis for a transaction.
+            </p>
+            <p>
+              In no case does Salmon hold your Digital Assets, your keys or your Seed Phrase, and no transaction can be reversed, cancelled or recalled by us once it has been broadcast.
+            </p>
+
+            <h2 className="text-xl font-semibold text-text-primary mt-8">
+              No Professional Advice; No Custody
+            </h2>
+            <p>
+              Salmon is software, not a financial service. Nothing made available through the Services is legal, financial, tax or investment advice, and nothing in these Terms creates a fiduciary duty, an advisory relationship or a duty of best execution. A quote, a route, a price or a token listing is information, not a recommendation.
+            </p>
+            <p>
+              The Wallet is self-custodial. Your keys and your recovery phrase are generated and held on your device; Salmon never holds them, never holds your Digital Assets, and cannot move, freeze, reverse or recover them. Because of that, Salmon is not an exchange, a broker or dealer, a custodian, a money transmitter or a money services business, operates no order book, and is counterparty to none of your transactions. Where a transaction is executed, it is executed by a third-party protocol or service, under its own terms.
+            </p>
+
+            <h2 className="text-xl font-semibold text-text-primary mt-8">
+              Risks You Accept
+            </h2>
+            <p>
+              <strong className="text-text-primary">Transactions are final.</strong> A transaction recorded on a blockchain cannot be cancelled, reversed or refunded by anyone, including us. Sending to a wrong address, approving a malicious transaction, or mistyping an amount is not recoverable.
+            </p>
+            <p>
+              <strong className="text-text-primary">Your recovery phrase is the wallet.</strong> Anyone who obtains it can spend your Digital Assets, and nobody who loses it can restore them. We do not store it, cannot reconstruct it, and cannot help you if it is lost or copied. Storing it in a cloud service, a photo library or a password manager increases the risk of loss or theft.
+            </p>
+            <p>
+              <strong className="text-text-primary">Digital Assets are volatile and experimental.</strong> Their value can fall to zero, for reasons including adoption, speculation, technical failure, security incidents and regulation. Networks can congest, halt, fork or be attacked, and a transaction may fail, stall or execute at a price different from the one quoted.
+            </p>
+            <p>
+              <strong className="text-text-primary">Anyone can create a token.</strong> That includes tokens that imitate the name, symbol or artwork of a real project. Metadata shown in the Wallet is read from the chain and from third-party registries; displaying a token is not a statement that it is genuine, safe or valuable, and you are responsible for verifying what you are trading and what you are signing.
+            </p>
+            <p>
+              <strong className="text-text-primary">Third parties can fail.</strong> Aggregators, exchange services, node providers and data providers can be unavailable, slow, wrong or compromised, and some of them hold your funds for a period — see the section on cross-chain risk above. Their failures are not ours to remedy.
+            </p>
+            <p>
+              <strong className="text-text-primary">Software has defects.</strong> The Wallet is open source and published so that it can be inspected, which is a safeguard and not a guarantee. Undiscovered vulnerabilities may exist, in our code and in the code we depend on.
+            </p>
+
+            <h2 className="text-xl font-semibold text-text-primary mt-8">
+              Forks and Airdrops
+            </h2>
+            <p>
+              If a network forks, we decide at our sole discretion whether and how to support the resulting assets, and we do not guarantee that you will be able to see, access or transact either version through the Wallet. The same is true of airdrops and other distributions: we do not guarantee support for them, we do not distribute them, and assets that arrive in your wallet unsolicited may be worthless or hostile — some exist only to induce you to sign a transaction. Any tax or legal consequence of a fork or an airdrop is yours.
             </p>
 
             <h2 className="text-xl font-semibold text-text-primary mt-8">
@@ -82,15 +156,15 @@ export default async function TermsPage({ params }: Props) {
               Acceptable Use
             </h2>
             <p>
-              You must not use the Services in any unlawful or fraudulent manner, or in a way that could damage or compromise our systems or security. And you must not access the Services by any means other than our publicly supported interfaces.
+              You must not use the Services in any unlawful or fraudulent manner, in a way that could damage or compromise our systems or security, or by any means other than our publicly supported interfaces.
             </p>
 
             <h2 className="text-xl font-semibold text-text-primary mt-8">
               Copyright, Trademarks, and other Intellectual Property
             </h2>
             <p>
-              All content and other materials available on our websites and presented as part of the Service, including, without limitation, trademarks, service marks, trade names, images, audio, text, software, and the &quot;look and feel&quot; of https://salmonwallet.io and its associated lower-level webpages (collectively, &quot;Site Content&quot;) are protected by copyright, trademark, and other intellectual property laws. Such Site Content includes Salmon and related stylized &quot;Salmon&quot; designs, which are common law trademarks of Salmon. You may not reproduce, republish, distribute, display, perform, transmit, sell, or otherwise use any Site Content without our express written permission, except when such actions occur in connection with bona fide uses of the Service through our publicly supported interfaces. In this regard, users are prohibited from downloading, republication, retransmission, reproduction, or other use of any image (and other similar content) as a stand-alone file. Furthermore, Site Content may not be used in any manner that is likely to cause confusion among consumers. The only exception to the aforementioned is to enter into a{' '}
-              <a href="https://github.com/salmon-wallet/salmon-wallet-v2/blob/main/CONTRIBUTION-AGREEMENT.md" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80">Contribution Agreement</a>.
+              All content and other materials available on our websites and presented as part of the Service, including, without limitation, trademarks, service marks, trade names, images, audio, text, software, and the &quot;look and feel&quot; of https://salmonwallet.io and its associated lower-level webpages (collectively, &quot;Site Content&quot;) are protected by copyright, trademark, and other intellectual property laws. Such Site Content includes Salmon and related stylized &quot;Salmon&quot; designs, which are common law trademarks of Salmon. You may not reproduce, republish, distribute, display, perform, transmit, sell, or otherwise use any Site Content without our express written permission, except when such actions occur in connection with bona fide uses of the Service through our publicly supported interfaces. In this regard, users are prohibited from downloading, republication, retransmission, reproduction, or other use of any image (and other similar content) as a stand-alone file. Furthermore, Site Content may not be used in any manner that is likely to cause confusion among consumers. The only exception to the aforementioned is the use permitted by the Wallet&apos;s open-source licence and by our{' '}
+              <a href="https://github.com/Salmon-HQ/salmon-wallet-frontend/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80">contribution guidelines</a>.
             </p>
 
             <h2 className="text-xl font-semibold text-text-primary mt-8">
@@ -107,8 +181,9 @@ export default async function TermsPage({ params }: Props) {
               We welcome feedback on our Service. However, you agree that any ideas, suggestions, drawings, graphics, innovations, concepts, recommendations, or similar materials (&quot;Submissions&quot;) you send us are not confidential. You hereby assign such Submissions to us without compensation (or the expectation of compensation), and agree that we may disclose, reproduce, republish, modify, distribute, display, perform, transmit, sell, or otherwise use your Submissions for commercial or non-commercial purposes with no compensation to you. For any Submissions that cannot be legally assigned to us, you hereby grant us an unrestricted, perpetual, royalty-free, irrevocable, fully paid-up, and worldwide license to reproduce, republish, modify, distribute, display, perform, transmit, sell, or otherwise use your Submissions for commercial or non-commercial purposes with no compensation to you.
             </p>
             <p>
-              The original source code is made freely available and may be redistributed and modified by any users as long as it is made with legal purposes, and in accordance with the{' '}
-              <a href="https://github.com/salmon-wallet/salmon-wallet-v2/blob/main/CONTRIBUTION-AGREEMENT.md" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80">Contribution Agreement</a>.
+              The source code of the Wallet is published under the Apache License 2.0 at{' '}
+              <a href="https://github.com/Salmon-HQ" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80">github.com/Salmon-HQ</a>, and may be used, redistributed and modified by anyone under the terms of that licence and for lawful purposes. Contributions are accepted under the same licence, in accordance with our{' '}
+              <a href="https://github.com/Salmon-HQ/salmon-wallet-frontend/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent/80">contribution guidelines</a>.
             </p>
 
             <h2 className="text-xl font-semibold text-text-primary mt-8">
@@ -127,7 +202,7 @@ export default async function TermsPage({ params }: Props) {
               We are not responsible for any loss or damage caused, or alleged to have been caused, directly or indirectly, by the information or ideas contained, suggested, or referenced at or through the Service.
             </p>
             <p className="uppercase">
-              We make no representations or warranties that the Service is appropriate or available for use in all geographic locations. If you access or use the Service from outside the United States of America, you are solely responsible for compliance with all applicable laws, including without limitation, export and import regulations of other countries.
+              We make no representations or warranties that the Service is appropriate or available for use in all geographic locations. If you access or use the Service from outside the British Virgin Islands, you are solely responsible for compliance with all applicable laws, including without limitation, export and import regulations of other countries.
             </p>
 
             <h2 className="text-xl font-semibold text-text-primary mt-8">
@@ -148,14 +223,14 @@ export default async function TermsPage({ params }: Props) {
               Governing Law, Jurisdiction, and Limitation of Actions
             </h2>
             <p>
-              The Service is created and controlled by Salmon Inc. in the British Virgin Island. You agree that these Terms of Use will be governed by and construed in accordance with the laws of the British Virgin Island, without regard to its conflicts of law provisions. You agree that all legal proceedings arising out of or in connection with these Terms of Use or the Service must be brought in a federal or state court located in a, and that your claim(s) will be forever waived and barred unless filed within one year of the time in which the event(s) giving rise to such claim(s) began. You expressly submit to the exclusive jurisdiction of said courts and consent to extraterritorial service of process.
+              The Service is created and controlled by Salmon Inc. in the British Virgin Islands. You agree that these Terms of Use will be governed by and construed in accordance with the laws of the British Virgin Islands, without regard to its conflicts of law provisions. You agree that all legal proceedings arising out of or in connection with these Terms of Use or the Service must be brought in the courts of the British Virgin Islands, and that your claim(s) will be forever waived and barred unless filed within one year of the time in which the event(s) giving rise to such claim(s) began. You expressly submit to the exclusive jurisdiction of said courts and consent to extraterritorial service of process.
             </p>
 
             <h2 className="text-xl font-semibold text-text-primary mt-8">
               General Provisions
             </h2>
             <p>
-              If any provision of these Terms of Use are found to be invalid or unenforceable, such provision shall be severed from the remainder of the Terms of Use, which shall remain in full force and effect. No waiver of any breach or default of the Terms of Use shall be deemed to be a waiver of any preceding or subsequent breach or default. You may be required to agree to additional terms and conditions to access particular sections or functions of the Service. We reserve the right, in our sole discretion and without consent or notice, to transfer, assign, sublicense, or pledge the Service or these Terms of Use, in whole or in part, to any person or entity. You may not assign, sublicense, or otherwise transfer in any manner any of your rights or obligations under the Terms of Use. The section headings used in the Terms of Use are for convenience only.
+              If any provision of these Terms of Use are found to be invalid or unenforceable, such provision shall be severed from the remainder of the Terms of Use, which shall remain in full force and effect. No waiver of any breach or default of the Terms of Use shall be deemed to be a waiver of any preceding or subsequent breach or default. You may be required to agree to additional terms and conditions to access particular sections or functions of the Service. We reserve the right, in our sole discretion and without consent or notice, to transfer, assign, sublicense, or pledge the Service or these Terms of Use, in whole or in part, to any person or entity. You may not assign, sublicense, or otherwise transfer in any manner any of your rights or obligations under the Terms of Use. The section headings used in the Terms of Use are for convenience only. These Terms are written in English. Parts of the Site and the App are available in other languages, and we may publish a translation of these Terms for convenience; if a translated version conflicts with the English version, the English version controls.
             </p>
 
             <h2 className="text-xl font-semibold text-text-primary mt-8">
@@ -172,7 +247,7 @@ export default async function TermsPage({ params }: Props) {
               Changes
             </h2>
             <p>
-              We reserve the right, at our sole discretion, to modify or replace these Terms at any time. What constitutes a material change will be determined at our sole discretion.
+              We may modify these Terms at any time. When we do, we update the date at the top of this page, and where a change is material we will also give notice through the Site or the App before it takes effect. Continuing to use the Services after a change takes effect means you accept it; if you do not, stop using the Services — your Digital Assets remain yours and reachable with your recovery phrase, with or without this agreement.
             </p>
 
             <h2 className="text-xl font-semibold text-text-primary mt-8">
