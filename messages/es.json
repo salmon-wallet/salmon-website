@@ -139,7 +139,7 @@
         "description": "Movimiento entre redes sin expandir el core de la wallet."
       },
       "explore": {
-        "type": "Oficial",
+        "type": "Próximamente",
         "title": "Explore",
         "description": "Descubrí apps, protocolos y oportunidades dentro del ecosistema."
       },
@@ -429,5 +429,12 @@
       "community": "Comunidad",
       "legal": "Legal"
     }
+  },
+  "cookies": {
+    "label": "Consentimiento de analítica",
+    "message": "Nos gustaría medir cómo se usa el sitio, con Google Analytics. Está apagado hasta que aceptes, y las aplicaciones del wallet no se ven afectadas en ningún caso.",
+    "policy": "Leé la política de privacidad",
+    "accept": "Aceptar",
+    "decline": "Rechazar"
   }
 }

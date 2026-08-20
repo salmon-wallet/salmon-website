@@ -139,7 +139,7 @@
         "description": "Cross-network movement without expanding the wallet core."
       },
       "explore": {
-        "type": "Official",
+        "type": "Coming soon",
         "title": "Explore",
         "description": "Discover apps, protocols, and opportunities across the ecosystem."
       },
@@ -429,5 +429,12 @@
       "community": "Community",
       "legal": "Legal"
     }
+  },
+  "cookies": {
+    "label": "Analytics consent",
+    "message": "We would like to measure how the site is used, with Google Analytics. It is off until you accept, and the wallet applications are unaffected either way.",
+    "policy": "Read the privacy policy",
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }

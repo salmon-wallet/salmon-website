@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import Script from 'next/script';
+import CookieConsent from '@/components/CookieConsent';
 import { routing } from '@/lib/i18n/routing';
 import { dmSans, dmMono } from '../layout';
 
@@ -82,19 +82,6 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={`${dmSans.variable} ${dmMono.variable}`}>
       <body className="font-sans bg-bg-primary text-text-primary antialiased">
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-YQYGS0LPNH"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-YQYGS0LPNH');
-          `}
-        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -108,7 +95,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                   logo: 'https://salmonwallet.io/images/app-icon.png',
                   sameAs: [
                     'https://x.com/salmonwallet',
-                    'https://github.com/salmon-wallet',
+                    'https://github.com/Salmon-HQ',
                   ],
                 },
                 {
@@ -122,6 +109,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>
