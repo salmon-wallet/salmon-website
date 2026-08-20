@@ -429,5 +429,12 @@
       "community": "Comunidade",
       "legal": "Legal"
     }
+  },
+  "cookies": {
+    "label": "Consentimento de análise",
+    "message": "Gostaríamos de medir como o site é usado, com o Google Analytics. Fica desligado até você aceitar, e os aplicativos da carteira não são afetados de nenhuma forma.",
+    "policy": "Leia a política de privacidade",
+    "accept": "Aceitar",
+    "decline": "Recusar"
   }
 }
