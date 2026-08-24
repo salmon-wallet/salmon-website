@@ -39,11 +39,21 @@ The development server starts with Turbopack. Open `http://localhost:3000`.
 npm run dev
 npm run build
 npm run start
+npm test
 ```
 
 - `dev` starts the local Next.js development server.
 - `build` creates a production build and runs TypeScript checks.
 - `start` serves the production build after `npm run build`.
+- `test` verifies Markdown negotiation helpers, recovery content, OpenAPI, and the CLI.
+
+## Agent and developer discovery
+
+- `/llms.txt` indexes the site's stable public resources.
+- `/openapi.json` describes the public machine-readable website surface. Salmon does not expose a transactional or custodial API from this site.
+- Public pages return Markdown when requested with `Accept: text/markdown`; negotiated responses include `Vary: Accept, Accept-Encoding`.
+- Unknown paths return HTTP 404 in both HTML and Markdown, with links that help agents recover.
+- `packages/salmon-cli` contains the registry-ready `@salmonwallet/cli` discovery CLI. Publishing it requires authorization for the npm scope.
 
 ## Project structure
 

@@ -1,0 +1,56 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Salmon Wallet Website",
+    "version": "1.0.0",
+    "description": "Machine-readable description of Salmon Wallet's public website resources. The website does not expose a public transactional, custodial, or wallet-management API. Wallet operations take place in the Salmon applications."
+  },
+  "servers": [
+    {
+      "url": "https://salmonwallet.io",
+      "description": "Canonical public website"
+    }
+  ],
+  "paths": {
+    "/llms.txt": {
+      "get": {
+        "operationId": "getAgentIndex",
+        "summary": "Get the agent-oriented site index",
+        "responses": {
+          "200": {
+            "description": "Agent-oriented index of public Salmon Wallet resources",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/openapi.json": {
+      "get": {
+        "operationId": "getOpenApiDescription",
+        "summary": "Get this OpenAPI description",
+        "responses": {
+          "200": {
+            "description": "OpenAPI 3.1 document",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Salmon Wallet source repository",
+    "url": "https://github.com/Salmon-HQ/salmon-wallet"
+  }
+}
