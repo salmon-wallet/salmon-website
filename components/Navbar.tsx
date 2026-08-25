@@ -38,6 +38,13 @@ const SOCIAL_LINKS = [
   { key: 'telegram', href: LINKS.telegram, icon: TELEGRAM_ICON },
 ] as const;
 
+const PAGE_LINKS = [
+  { key: 'product', hash: '#why' },
+  { key: 'powerups', hash: '#powerups' },
+  { key: 'integrations', hash: '#integrations' },
+  { key: 'validator', hash: '#stake' },
+] as const;
+
 export default function Navbar() {
   const t = useTranslations('nav');
   const locale = useLocale();
@@ -52,6 +59,13 @@ export default function Navbar() {
       : locale === routing.defaultLocale
         ? '/#get-salmon'
         : `/${locale}#get-salmon`;
+
+  const sectionHref = (hash: string) =>
+    pathname === '/'
+      ? hash
+      : locale === routing.defaultLocale
+        ? `/${hash}`
+        : `/${locale}/${hash}`;
 
   useEffect(() => {
     if (mobileOpen) {
@@ -68,8 +82,8 @@ export default function Navbar() {
     <>
       <nav className="sticky top-0 z-[100] border-b border-border-subtle bg-bg-primary/92 shadow-[0_8px_28px_rgba(0,0,0,0.22)] backdrop-blur-md">
         <div className="relative mx-auto flex h-14 max-w-7xl items-center px-5 sm:h-16 sm:px-6">
-          {/* Left: utility link + ecosystem quick links */}
-          <div className="hidden lg:flex items-center gap-5">
+          {/* Left: product navigation. GitHub remains the developer utility. */}
+          <div className="hidden lg:flex items-center gap-4">
             {/* Secondary CTA temporarily hidden. Styled like GradientButton's
                 secondary variant, but on next-intl's Link so the locale prefix
                 and client-side nav survive.
@@ -82,18 +96,14 @@ export default function Navbar() {
             */}
 
             <div className="flex items-center gap-4">
-              {SOCIAL_LINKS.map(({ key, href, icon }) => (
-                <a
-                  key={key}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={t(key)}
-                  className="text-text-secondary hover:text-text-primary transition-colors duration-300"
-                >
-                  {icon}
+              {PAGE_LINKS.map(({ key, hash }) => (
+                <a key={key} href={sectionHref(hash)} className="text-xs font-medium text-text-secondary transition-colors hover:text-text-primary xl:text-sm">
+                  {t(key)}
                 </a>
               ))}
+              <a href={LINKS.github} target="_blank" rel="noopener noreferrer" aria-label={t('github')} className="text-text-secondary transition-colors hover:text-text-primary">
+                {GITHUB_ICON}
+              </a>
             </div>
           </div>
 
@@ -219,6 +229,19 @@ export default function Navbar() {
                 </Link>
               </motion.div>
               */}
+
+              {PAGE_LINKS.map(({ key, hash }) => (
+                <motion.a
+                  key={key}
+                  href={sectionHref(hash)}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-xl font-medium text-text-secondary transition-colors hover:text-text-primary"
+                  variants={prefersReducedMotion ? {} : { initial: { opacity: 0, x: -20 }, animate: { opacity: 1, x: 0 } }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  {t(key)}
+                </motion.a>
+              ))}
 
               {/* Ecosystem quick links */}
               {SOCIAL_LINKS.map(({ key, href, icon }) => (

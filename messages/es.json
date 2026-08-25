@@ -17,6 +17,10 @@
     }
   },
   "nav": {
+    "product": "Producto",
+    "powerups": "Powerups",
+    "integrations": "Integraciones",
+    "validator": "Validator",
     "github": "GitHub",
     "x": "X / Twitter",
     "telegram": "Telegram",
@@ -28,8 +32,8 @@
   },
   "hero": {
     "heading": "Infraestructura de wallet abierta.",
-    "subheading": "Convirtiendo integraciones en distribución.",
-    "tagline": "Open-source. Autocustodial. Impulsada por la comunidad.",
+    "subheading": "Ligera por diseño. Preparada para crecer alrededor de lo que cada usuario realmente necesita.",
+    "tagline": "Open-source. Autocustodial. Ligera. Impulsada por la comunidad.",
     "proof": "Open-source. Autocustodial. Ligera. Impulsada por la comunidad.",
     "liveLabel": "Disponible ahora",
     "live": "Extensión de navegador, Web Wallet y Android.",
@@ -42,34 +46,34 @@
     "walletPreview": "Vista previa"
   },
   "why": {
-    "heading": "No es otra wallet.",
-    "headingAccent": "Es infraestructura de wallet abierta.",
+    "heading": "Las wallets deberían crecer",
+    "headingAccent": "sin volverse pesadas.",
     "statements": [
       {
-        "lead": "El problema no es la custodia.",
-        "support": "Es el control sobre la capa de wallet. Las wallets cerradas influyen en qué se integra, qué se muestra y qué se usa."
+        "lead": "Una wallet enfocada puede ser demasiado limitada.",
+        "support": "Puede funcionar bien al principio, pero no crecer junto con las necesidades que desarrollan sus usuarios."
       },
       {
-        "lead": "Salmon crea un camino más abierto.",
-        "support": "No es acceso automático. Es una ruta más abierta, estructurada, transparente y responsable desde la integración hasta el uso real."
+        "lead": "Una wallet cargada de funciones lleva demasiado peso.",
+        "support": "Cada capacidad permanente suma navegación, fricción, dependencias y superficie de seguridad para todos los usuarios."
       },
       {
-        "lead": "La prioridad es clara.",
-        "support": "Una experiencia confiable que la gente realmente use."
+        "lead": "Salmon adopta un enfoque modular.",
+        "support": "Mantiene el core claro y confiable, y suma capacidades opcionales solo cuando resuelven un problema real."
       }
     ]
   },
   "whatMatters": {
     "eyebrow": "Empezá acá",
-    "heading": "Un camino confiable.",
+    "heading": "La base tiene que funcionar antes que todo lo demás.",
     "live": "Live ahora",
-    "subheading": "Creá o importá una wallet, mové fondos de forma segura, entendé lo que estás firmando y usá la integración que te trajo hasta acá. Ese flujo tiene que funcionar antes que cualquier otra cosa.",
+    "subheading": "Creá o importá una wallet, mové fondos de forma segura, entendé lo que estás firmando y volvé porque el producto sigue siendo útil y confiable.",
     "checklist": ["Creá o importá una wallet", "Recibí fondos", "Enviá transacciones de forma segura", "Entendé y aprobá solicitudes de firma", "Usá la integración que te trajo a Salmon", "Volvé porque el producto sigue siendo útil y confiable"],
     "steps": {
       "create": "Creá o importá una wallet",
       "receive": "Recibí fondos",
       "send": "Enviá una transacción",
-      "use": "Usá la integración que te trajo hasta acá"
+      "use": "Volvé a una wallet útil y confiable"
     },
     "support": {
       "activation": {
@@ -104,10 +108,10 @@
     }
   },
   "powerups": {
-    "eyebrow": "Introducing Powerups",
-    "heading": "Un core más pequeño. Una wallet que puede hacer más.",
+    "eyebrow": "Wallet core + Powerups",
+    "heading": "Un core enfocado. Powerups cuando se ganen su lugar.",
     "comingSoon": "Próximamente",
-    "subheading": "Salmon mantiene el core de la wallet ligero, confiable y comprensible. Los Powerups agregan capacidades seleccionadas cuando resuelven un problema real, sin convertir la wallet en una super-app pesada llena de funciones permanentes. Pueden probarse y mejorarse de forma independiente, perder prioridad si dejan de crear valor o promoverse cuando demuestran un uso claro.",
+    "subheading": "Powerups es el modelo modular hacia el que Salmon está construyendo, no un catálogo de productos disponibles hoy. El core se mantiene ligero, confiable y comprensible; cada capacidad futura deberá resolver un problema claro y operar con permisos definidos.",
     "labels": {
       "official": "Oficial",
       "salmon": "Salmon",

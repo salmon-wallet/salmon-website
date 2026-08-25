@@ -17,6 +17,10 @@
     }
   },
   "nav": {
+    "product": "Product",
+    "powerups": "Powerups",
+    "integrations": "Integrations",
+    "validator": "Validator",
     "github": "GitHub",
     "x": "X / Twitter",
     "telegram": "Telegram",
@@ -28,8 +32,8 @@
   },
   "hero": {
     "heading": "Open wallet infrastructure.",
-    "subheading": "Turning integrations into distribution.",
-    "tagline": "Open-source. Self-custodial. Community Driven.",
+    "subheading": "Lightweight by design. Built to expand around what each user actually needs.",
+    "tagline": "Open-source. Self-custodial. Lightweight. Community-driven.",
     "proof": "Open-source. Self-custodial. Lightweight. Community-driven.",
     "liveLabel": "Live now",
     "live": "Browser Extension, Web Wallet, and Android.",
@@ -42,43 +46,43 @@
     "walletPreview": "Wallet Preview"
   },
   "why": {
-    "heading": "Not another wallet.",
-    "headingAccent": "Open wallet infrastructure.",
+    "heading": "Wallets should expand",
+    "headingAccent": "without becoming heavy.",
     "statements": [
       {
-        "lead": "The problem is not custody.",
-        "support": "It is control over the wallet layer. Closed wallets influence what gets integrated, surfaced, and used."
+        "lead": "A focused wallet can be too limited.",
+        "support": "It may work well at first, but cannot grow around the needs users develop over time."
       },
       {
-        "lead": "Salmon creates a more open path.",
-        "support": "Not automatic access. A more open, structured, transparent, and accountable route from integration to real usage."
+        "lead": "A feature-heavy wallet carries too much.",
+        "support": "Every permanent capability adds navigation, friction, dependencies, and security surface for every user."
       },
       {
-        "lead": "The priority is clear.",
-        "support": "One reliable experience that people actually use."
+        "lead": "Salmon takes a modular approach.",
+        "support": "Keep the wallet core clear and reliable, then add optional capabilities only when they solve a real user problem."
       }
     ]
   },
   "whatMatters": {
     "eyebrow": "Start here",
-    "heading": "One reliable path.",
+    "heading": "The foundation has to work before anything else.",
     "live": "Live now",
-    "subheading": "Create or import a wallet, move funds safely, understand what you are signing, and use the integration that brought you here. That flow has to work before anything else.",
+    "subheading": "Create or import a wallet, move funds safely, understand what you are signing, and return because the product remains useful and reliable.",
     "checklist": ["Create or import a wallet", "Receive funds", "Send transactions safely", "Understand and approve signing requests", "Use the integration that brought you to Salmon", "Return because the product remains useful and reliable"],
     "steps": {
       "create": "Create or import a wallet",
       "receive": "Receive funds",
       "send": "Send a transaction",
-      "use": "Use the integration that brought you here"
+      "use": "Return to a useful, reliable wallet"
     },
     "support": {
       "activation": {
-        "title": "Integrations that bring users",
-        "description": "More than visibility. Real activation. Real return behavior."
+        "title": "Focused by default",
+        "description": "Essential wallet activity remains clear, reliable, and understandable."
       },
       "channels": {
-        "title": "Protocols as channels",
-        "description": "Salmon helps selected partners turn integration into adoption and measurable distribution."
+        "title": "Modular by design",
+        "description": "Future capabilities can be added without becoming permanent weight for every user."
       },
       "live": {
         "title": "Live product",
@@ -104,10 +108,10 @@
     }
   },
   "powerups": {
-    "eyebrow": "Introducing Powerups",
-    "heading": "A smaller core. A wallet that can do more.",
+    "eyebrow": "Wallet core + Powerups",
+    "heading": "A focused wallet core. Powerups when they earn their place.",
     "comingSoon": "Coming soon",
-    "subheading": "Salmon keeps the wallet core lightweight, reliable, and understandable. Powerups add selected capabilities when they solve a real user problem—without turning the wallet into a heavy super-app filled with permanent features. Powerups can be tested independently, improved without rebuilding the entire wallet, deprioritized when they stop creating value, or promoted when they demonstrate clear usage.",
+    "subheading": "Powerups are the modular model Salmon is building toward—not a catalog of products available today. The wallet core stays lightweight, reliable, and understandable; future optional capabilities must solve a clear user problem and operate within defined permissions.",
     "labels": {
       "official": "Official",
       "salmon": "Salmon",
@@ -200,7 +204,7 @@
   },
   "distribution": {
     "eyebrow": "From integration to distribution",
-    "steps": ["Partner demand", "Selected integration", "User activation", "Repeat usage", "Distribution proof"],
+    "steps": ["Useful integration", "User activation", "Useful action", "Repeat usage", "Distribution proof"],
     "heading": "Integrations are not the goal. Usage is.",
     "description": "Salmon measures onboarding, completed actions, return usage, retained cohorts, integration performance, and partner feedback. What proves repeatable activation expands; what does not is improved, deprioritized, or stopped."
   },
