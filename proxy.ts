@@ -6,6 +6,7 @@ import {
     markdownNotFound,
     prefersMarkdown,
     routeDetails,
+    withVary,
 } from './lib/agent-content.mjs';
 
 const intlMiddleware = createMiddleware(routing);
@@ -36,7 +37,9 @@ export function proxy(request: NextRequest) {
         });
     }
 
-    return intlMiddleware(request);
+    const response = intlMiddleware(request);
+    response.headers.set('Vary', withVary(response.headers.get('Vary'), 'Accept'));
+    return response;
 }
 
 export const config = {

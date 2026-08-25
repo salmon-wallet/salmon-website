@@ -12,6 +12,7 @@ const product = {
   source: 'https://github.com/Salmon-HQ/salmon-wallet',
   agentIndex: `${BASE_URL}/llms.txt`,
   openapi: `${BASE_URL}/openapi.json`,
+  discoveryApi: `${BASE_URL}/api/v1/discovery`,
 };
 
 function printHelp() {

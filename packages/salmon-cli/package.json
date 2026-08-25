@@ -7,8 +7,16 @@
     "salmon": "./bin/salmon.mjs"
   },
   "files": [
-    "bin/"
+    "bin/",
+    "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salmon-HQ/salmon-website.git",
+    "directory": "packages/salmon-cli"
+  },
+  "homepage": "https://salmonwallet.io/",
+  "keywords": ["salmon-wallet", "solana", "wallet", "cli", "agent"],
   "engines": {
     "node": ">=20"
   },

@@ -51,6 +51,7 @@ npm test
 
 - `/llms.txt` indexes the site's stable public resources.
 - `/openapi.json` describes the public machine-readable website surface. Salmon does not expose a transactional or custodial API from this site.
+- `/api/v1/discovery` returns stable product and documentation links as JSON. Breaking API changes use a new URL major version; retirement is announced with `Deprecation` and `Sunset` headers at least 180 days in advance.
 - Public pages return Markdown when requested with `Accept: text/markdown`; negotiated responses include `Vary: Accept, Accept-Encoding`.
 - Unknown paths return HTTP 404 in both HTML and Markdown, with links that help agents recover.
 - `packages/salmon-cli` contains the registry-ready `@salmonwallet/cli` discovery CLI. Publishing it requires authorization for the npm scope.
