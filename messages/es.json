@@ -111,7 +111,7 @@
     "eyebrow": "Wallet core + Powerups",
     "heading": "Un core enfocado. Powerups cuando se ganen su lugar.",
     "comingSoon": "Próximamente",
-    "subheading": "Powerups es el modelo modular hacia el que Salmon está construyendo, no un catálogo de productos disponibles hoy. El core se mantiene ligero, confiable y comprensible; cada capacidad futura deberá resolver un problema claro y operar con permisos definidos.",
+    "subheading": "Los Powerups amplían Salmon sin sobrecargar el core de la wallet. Swap y Bridge están disponibles hoy; cada capacidad futura deberá resolver un problema claro y operar con permisos definidos.",
     "labels": {
       "official": "Oficial",
       "salmon": "Salmon",

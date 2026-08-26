@@ -9,7 +9,7 @@ const product = {
   webWallet: 'https://v2.salmonwallet.io/',
   browserExtension: 'https://chromewebstore.google.com/detail/salmon-wallet/ejbidfepgijlcgahbmbckmnaljagjoll',
   android: 'https://play.google.com/store/apps/details?id=io.salmonwallet.app',
-  source: 'https://github.com/Salmon-HQ/salmon-wallet',
+  source: 'https://github.com/Salmon-HQ/salmon-wallet-frontend',
   agentIndex: `${BASE_URL}/llms.txt`,
   openapi: `${BASE_URL}/openapi.json`,
   discoveryApi: `${BASE_URL}/api/v1/discovery`,

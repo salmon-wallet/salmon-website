@@ -19,10 +19,10 @@ export interface RepoCommit {
   message: string;
 }
 
-const REPO_API = 'https://api.github.com/repos/Salmon-HQ/salmon-wallet';
+const REPO_API = 'https://api.github.com/repos/Salmon-HQ/salmon-wallet-frontend';
 
 /** The official frontend repo — the commit feed reads from it. */
-const V3_API = 'https://api.github.com/repos/Salmon-HQ/salmon-wallet';
+const V3_API = 'https://api.github.com/repos/Salmon-HQ/salmon-wallet-frontend';
 
 /** Snapshot fallback (2026-07-08) so the open-source card never renders empty. */
 const COMMITS_FALLBACK: RepoCommit[] = [

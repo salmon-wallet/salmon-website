@@ -10,7 +10,7 @@ const discovery = {
   website: 'https://salmonwallet.io/',
   agentIndex: 'https://salmonwallet.io/llms.txt',
   openapi: 'https://salmonwallet.io/openapi.json',
-  source: 'https://github.com/Salmon-HQ/salmon-wallet',
+  source: 'https://github.com/Salmon-HQ/salmon-wallet-frontend',
   products: {
     webWallet: 'https://v2.salmonwallet.io/',
     browserExtension: 'https://chromewebstore.google.com/detail/salmon-wallet/ejbidfepgijlcgahbmbckmnaljagjoll',

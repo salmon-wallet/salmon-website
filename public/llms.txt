@@ -26,7 +26,7 @@ For agent calls:
 - [OpenAPI](https://salmonwallet.io/openapi.json): Description of the website's public machine-readable surface
 - [Discovery API](https://salmonwallet.io/api/v1/discovery): Versioned, read-only JSON with canonical product links
 - [Markdown homepage](https://salmonwallet.io/): Request with `Accept: text/markdown`
-- [Source repository](https://github.com/Salmon-HQ/salmon-wallet): Open-source wallet code
+- [Source repository](https://github.com/Salmon-HQ/salmon-wallet-frontend): Open-source wallet code
 
 ## Product access
 
