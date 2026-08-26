@@ -17,12 +17,15 @@
             "description": "Canonical public resources",
             "headers": {
               "API-Version": { "description": "Major API version.", "schema": { "type": "string", "const": "1" } },
+              "RateLimit-Policy": { "$ref": "#/components/headers/RateLimitPolicy" },
+              "RateLimit": { "$ref": "#/components/headers/RateLimit" },
               "Deprecation": { "$ref": "#/components/headers/Deprecation" },
               "Sunset": { "$ref": "#/components/headers/Sunset" }
             },
             "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Discovery" } } }
           },
           "406": { "$ref": "#/components/responses/NotAcceptable" },
+          "429": { "$ref": "#/components/responses/TooManyRequests" },
           "500": { "$ref": "#/components/responses/InternalError" }
         }
       }
@@ -30,6 +33,14 @@
   },
   "components": {
     "headers": {
+      "RateLimitPolicy": {
+        "description": "RFC 9728 rate-limit policy. The default quota is 60 requests per 60-second window.",
+        "schema": { "type": "string", "example": "\"default\";q=60;w=60" }
+      },
+      "RateLimit": {
+        "description": "RFC 9728 remaining quota and seconds until reset.",
+        "schema": { "type": "string", "example": "\"default\";r=59;t=42" }
+      },
       "Deprecation": {
         "description": "Present only after this version is formally deprecated; value is an RFC 9745 date.",
         "schema": { "type": "string", "example": "@1798761600" }
@@ -43,7 +54,7 @@
       "Discovery": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["name", "description", "version", "website", "agentIndex", "openapi", "source", "products"],
+        "required": ["name", "description", "version", "website", "agentIndex", "openapi", "developerDocs", "about", "contact", "source", "products"],
         "properties": {
           "name": { "type": "string" },
           "description": { "type": "string" },
@@ -51,6 +62,9 @@
           "website": { "type": "string", "format": "uri" },
           "agentIndex": { "type": "string", "format": "uri" },
           "openapi": { "type": "string", "format": "uri" },
+          "developerDocs": { "type": "string", "format": "uri" },
+          "about": { "type": "string", "format": "uri" },
+          "contact": { "type": "string", "format": "uri" },
           "source": { "type": "string", "format": "uri" },
           "products": {
             "type": "object",
@@ -81,6 +95,15 @@
     "responses": {
       "NotAcceptable": {
         "description": "The requested representation is not available.",
+        "content": { "application/problem+json": { "schema": { "$ref": "#/components/schemas/Problem" } } }
+      },
+      "TooManyRequests": {
+        "description": "The per-client request quota has been exhausted.",
+        "headers": {
+          "RateLimit-Policy": { "$ref": "#/components/headers/RateLimitPolicy" },
+          "RateLimit": { "$ref": "#/components/headers/RateLimit" },
+          "Retry-After": { "description": "Seconds until the client should retry.", "schema": { "type": "integer", "minimum": 1 } }
+        },
         "content": { "application/problem+json": { "schema": { "$ref": "#/components/schemas/Problem" } } }
       },
       "InternalError": {

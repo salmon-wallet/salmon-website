@@ -13,6 +13,9 @@ const product = {
   agentIndex: `${BASE_URL}/llms.txt`,
   openapi: `${BASE_URL}/openapi.json`,
   discoveryApi: `${BASE_URL}/api/v1/discovery`,
+  developerDocs: `${BASE_URL}/developers`,
+  about: `${BASE_URL}/about`,
+  contact: `${BASE_URL}/contact`,
 };
 
 function printHelp() {

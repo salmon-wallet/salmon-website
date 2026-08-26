@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import CookieConsent from '@/components/CookieConsent';
 import { routing } from '@/lib/i18n/routing';
 import { dmSans, dmMono } from '../layout';
+import { structuredData } from '@/lib/structured-data.mjs';
 
 type Props = {
   children: React.ReactNode;
@@ -85,26 +86,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@graph': [
-                {
-                  '@type': 'Organization',
-                  name: 'Salmon Wallet',
-                  url: 'https://salmonwallet.io',
-                  logo: 'https://salmonwallet.io/images/app-icon.png',
-                  sameAs: [
-                    'https://x.com/salmonwallet',
-                    'https://github.com/Salmon-HQ',
-                  ],
-                },
-                {
-                  '@type': 'WebSite',
-                  name: 'Salmon Wallet',
-                  url: 'https://salmonwallet.io',
-                },
-              ],
-            }),
+            __html: JSON.stringify(structuredData(locale)),
           }}
         />
         <NextIntlClientProvider locale={locale} messages={messages}>

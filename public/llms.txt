@@ -19,6 +19,9 @@ For agent calls:
 - [Homepage](https://salmonwallet.io/): Product overview, integration process, Powerups, validator information, and downloads
 - [Privacy policy](https://salmonwallet.io/privacy): Privacy terms
 - [Terms and conditions](https://salmonwallet.io/terms): Product terms
+- [About Salmon Wallet](https://salmonwallet.io/about): Project identity, product scope, process, and accountability
+- [Contact Salmon Wallet](https://salmonwallet.io/contact): Official integration, product, privacy, and security contact guidance
+- [Salmon Wallet API Docs & Developer Resources](https://salmonwallet.io/developers): API, authentication, rate-limit, CLI, webhook, and MCP capability documentation
 - [Sitemap](https://salmonwallet.io/sitemap.xml): Localized public URLs
 
 ## Machine-readable resources
@@ -37,6 +40,10 @@ For agent calls:
 ## CLI
 
 The source repository includes the official read-only `@salmonwallet/cli` discovery client under `packages/salmon-cli`. It exposes stable links and the OpenAPI document but never handles wallet keys or transactions. Public npm installation will become available after an authorized owner publishes the package.
+
+## API conventions
+
+The Discovery API requires no authentication. Every response includes RFC `RateLimit-Policy` and `RateLimit` fields; HTTP 429 responses also include `Retry-After` and an RFC 9457 `application/problem+json` body. Salmon does not currently publish webhooks or an MCP server, and agents must not infer wallet-management or transaction-signing capabilities.
 
 ## Contact
 

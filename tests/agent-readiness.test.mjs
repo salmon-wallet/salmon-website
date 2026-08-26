@@ -11,6 +11,8 @@ import {
   routeDetails,
   withVary,
 } from '../lib/agent-content.mjs';
+import { clearRateLimits, consumeRateLimit, rateLimitHeaders } from '../lib/rate-limit.mjs';
+import { structuredData } from '../lib/structured-data.mjs';
 
 test('Accept negotiation selects markdown without overriding a preferred HTML type', () => {
   assert.equal(prefersMarkdown('text/markdown'), true);
@@ -31,6 +33,9 @@ test('localized public routes are recognized and unknown routes are rejected', (
   assert.deepEqual(routeDetails('/'), { locale: 'en', route: '/' });
   assert.deepEqual(routeDetails('/es/privacy'), { locale: 'es', route: '/privacy' });
   assert.deepEqual(routeDetails('/pt/terms'), { locale: 'pt', route: '/terms' });
+  assert.deepEqual(routeDetails('/about'), { locale: 'en', route: '/about' });
+  assert.deepEqual(routeDetails('/es/contact'), { locale: 'es', route: '/contact' });
+  assert.deepEqual(routeDetails('/developers'), { locale: 'en', route: '/developers' });
   assert.equal(routeDetails('/missing-page'), null);
 });
 
@@ -56,10 +61,50 @@ test('published OpenAPI document is OpenAPI 3.1 and describes its paths', () => 
   const operation = spec.paths['/api/v1/discovery'].get;
   assert.ok(operation.responses['200']);
   assert.equal(operation.responses['406'].$ref, '#/components/responses/NotAcceptable');
+  assert.equal(operation.responses['429'].$ref, '#/components/responses/TooManyRequests');
   assert.equal(operation.responses['500'].$ref, '#/components/responses/InternalError');
   assert.equal(spec.components.responses.NotAcceptable.content['application/problem+json'].schema.$ref, '#/components/schemas/Problem');
   assert.match(spec.info.description, /new URL major version/);
   assert.match(spec.info.description, /180 days/);
+  for (const [status, response] of Object.entries(operation.responses)) {
+    if (/^[45]/.test(status)) {
+      const typed = response.$ref
+        ? spec.components.responses[response.$ref.split('/').at(-1)].content['application/problem+json'].schema.$ref
+        : response.content?.['application/problem+json']?.schema?.$ref;
+      assert.equal(typed, '#/components/schemas/Problem');
+    }
+  }
+});
+
+test('rate limits expose RFC headers and reject requests beyond the quota', () => {
+  clearRateLimits();
+  let result;
+  for (let request = 0; request <= 60; request += 1) result = consumeRateLimit('test-client', 1_000);
+  assert.equal(result.allowed, false);
+  assert.equal(result.remaining, 0);
+  const headers = rateLimitHeaders(result);
+  assert.match(headers['RateLimit-Policy'], /q=60;w=60/);
+  assert.match(headers.RateLimit, /r=0;t=/);
+});
+
+test('JSON-LD identifies the product and complete public contact information', () => {
+  const graph = structuredData('en')['@graph'];
+  const organization = graph.find((item) => item['@type'] === 'Organization');
+  const application = graph.find((item) => item['@type'] === 'SoftwareApplication');
+  assert.equal(organization.name, 'Salmon Wallet');
+  assert.ok(organization.description);
+  assert.equal(organization.contactPoint.email, 'integrations@salmonwallet.io');
+  assert.equal(application.applicationCategory, 'FinanceApplication');
+  assert.ok(application.downloadUrl.length >= 3);
+});
+
+test('trust and developer pages contain substantial, structured public copy', () => {
+  const source = readFileSync(new URL('../lib/info-pages.ts', import.meta.url), 'utf8');
+  for (const page of ['about', 'contact', 'developers']) {
+    const start = source.indexOf(`${page}: {`);
+    const end = source.indexOf('\n  },', start);
+    assert.ok(end - start > 500, `${page} should contain at least 500 source characters`);
+  }
 });
 
 test('llms.txt gives agents specific when-to-use and calling guidance', () => {
@@ -76,5 +121,6 @@ test('CLI exposes stable machine-readable links', () => {
   assert.equal(links.openapi, 'https://salmonwallet.io/openapi.json');
   assert.equal(links.agentIndex, 'https://salmonwallet.io/llms.txt');
   assert.equal(links.discoveryApi, 'https://salmonwallet.io/api/v1/discovery');
+  assert.equal(links.developerDocs, 'https://salmonwallet.io/developers');
   assert.match(links.source, /^https:\/\/github\.com\/Salmon-HQ\//);
 });

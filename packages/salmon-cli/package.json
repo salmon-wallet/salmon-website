@@ -16,6 +16,8 @@
     "directory": "packages/salmon-cli"
   },
   "homepage": "https://salmonwallet.io/",
+  "bugs": { "url": "https://github.com/Salmon-HQ/salmon-website/issues" },
+  "scripts": { "test": "node ../../tests/cli.test.mjs" },
   "keywords": ["salmon-wallet", "solana", "wallet", "cli", "agent"],
   "engines": {
     "node": ">=20"
