@@ -299,7 +299,7 @@
           },
           {
             "question": "Can I stake with Salmon?",
-            "answer": "Salmon operates an active Solana validator. Native in-wallet staking is coming soon; the Stake link provides access to the current validator experience."
+            "answer": "Not yet. Native in-wallet staking is coming soon. In the meantime, Salmon operates its own Solana validator with public, verifiable performance data."
           }
         ]
       },

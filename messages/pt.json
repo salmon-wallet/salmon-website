@@ -77,12 +77,12 @@
     },
     "support": {
       "activation": {
-        "title": "Integrações que trazem usuários",
-        "description": "Mais que visibilidade. Ativação real. Comportamento de retorno real."
+        "title": "Focada por padrão",
+        "description": "A atividade essencial da carteira permanece clara, confiável e compreensível."
       },
       "channels": {
-        "title": "Protocolos como canais",
-        "description": "A Salmon ajuda parceiros selecionados a transformar integração em adoção e distribuição mensurável."
+        "title": "Modular por design",
+        "description": "Recursos futuros podem ser adicionados sem se tornar peso permanente para todos os usuários."
       },
       "live": {
         "title": "Produto ao vivo",
@@ -204,7 +204,7 @@
   },
   "distribution": {
     "eyebrow": "Da integração à distribuição",
-    "steps": ["Demanda do parceiro", "Integração selecionada", "Ativação de usuários", "Uso recorrente", "Prova de distribuição"],
+    "steps": ["Integração útil", "Ativação de usuários", "Ação útil", "Uso recorrente", "Prova de distribuição"],
     "heading": "Integrações não são o objetivo. Uso é.",
     "description": "A Salmon mede onboarding, ações concluídas, retorno, coortes retidas, desempenho da integração e feedback do parceiro. O que prova ativação repetível se expande; o que não prova é melhorado, perde prioridade ou é interrompido."
   },
@@ -279,7 +279,7 @@
         "items": [
           {
             "question": "O que é Salmon?",
-            "answer": "Uma carteira open-source e autocustodial construída como infraestrutura de carteira aberta para Solana."
+            "answer": "Uma carteira leve, open-source e autocustodial construída como infraestrutura de carteira aberta para Solana."
           },
           {
             "question": "Posso usar Salmon hoje?",
@@ -324,7 +324,7 @@
           },
           {
             "question": "Como a Salmon é diferente de outras carteiras?",
-            "answer": "A Salmon é construída para tornar o caminho até a integração menos limitado por prioridades fechadas. Ela não tenta ser uma carteira genérica para todos. Começa com um wedge claro: ajudar protocolos emergentes de Solana a transformar integrações em uso."
+            "answer": "A Salmon mantém o core da carteira focado e usa integrações modulares selecionadas como estratégia de adoção. Os parceiros ganham um caminho confiável até os usuários, enquanto a Salmon ganha adoção por meio de casos de uso reais e comunidades existentes."
           },
           {
             "question": "Para quem é o Salmon?",
@@ -362,11 +362,11 @@
         "items": [
           {
             "question": "O que significa \"built in public\"?",
-            "answer": "Significa código open-source, progresso visível e iteração com prestação de contas. A Salmon deve evoluir em aberto, não atrás de um roadmap fechado."
+            "answer": "Significa código open-source, progresso visível, métricas de integração e iteração com prestação de contas. A Salmon deve evoluir em aberto, não atrás de um roadmap fechado."
           },
           {
             "question": "O que significa propriedade comunitária no Salmon?",
-            "answer": "Significa construir rumo a estruturas de propriedade e governança que possam alinhar o futuro da camada de carteira com o ecossistema que ela serve, não apenas com a empresa que a começou."
+            "answer": "A Salmon é impulsionada pela comunidade hoje e avança rumo a estruturas de propriedade e governança que possam alinhar os ativos centrais e a supervisão estratégica com o ecossistema que atende. As revisões técnicas, de segurança e de produto continuam sendo responsabilidades operacionais delegadas."
           }
         ]
       }
