@@ -13,6 +13,7 @@ import {
 } from '../lib/agent-content.mjs';
 import { clearRateLimits, consumeRateLimit, rateLimitHeaders } from '../lib/rate-limit.mjs';
 import { structuredData } from '../lib/structured-data.mjs';
+import { getLegalDocument, legalDocumentToMarkdown } from '../lib/legal-content.mjs';
 
 test('Accept negotiation selects markdown without overriding a preferred HTML type', () => {
   assert.equal(prefersMarkdown('text/markdown'), true);
@@ -45,6 +46,38 @@ test('homepage markdown has a hierarchical outline and substantial raw content',
   assert.match(markdown, /^## Integrations/m);
   assert.ok(markdown.length > 500);
   assert.match(markdown, /llms\.txt/);
+});
+
+test('legal documents are complete and structurally aligned in every locale', () => {
+  for (const locale of ['en', 'es', 'pt']) {
+    const terms = getLegalDocument(locale, 'terms');
+    const privacy = getLegalDocument(locale, 'privacy');
+    assert.equal(terms.sections.length, 20);
+    assert.equal(privacy.sections.length, 14);
+
+    const termsMarkdown = legalDocumentToMarkdown(terms);
+    const privacyMarkdown = legalDocumentToMarkdown(privacy);
+    for (const required of ['GeekOcean Labs Ltd', 'Jupiter', 'StealthEX', 'USD 100']) {
+      assert.match(termsMarkdown, new RegExp(required));
+    }
+    assert.match(termsMarkdown, /0[.,]4/);
+    for (const required of ['GeekOcean Labs Ltd', 'Blockdaemon', 'CloudWatch', 'Google Analytics 4', '30']) {
+      assert.match(privacyMarkdown, new RegExp(required));
+    }
+  }
+});
+
+test('legal markdown routes expose the full localized documents', () => {
+  const english = markdownForRoute({ locale: 'en', route: '/privacy' });
+  const spanish = markdownForRoute({ locale: 'es', route: '/terms' });
+  const portuguese = markdownForRoute({ locale: 'pt', route: '/privacy' });
+  assert.match(english, /^# Privacy Policy/m);
+  assert.match(spanish, /^# Términos y Condiciones/m);
+  assert.match(portuguese, /^# Política de Privacidade/m);
+  assert.ok(english.length > 8_000);
+  assert.ok(spanish.length > 8_000);
+  assert.ok(portuguese.length > 8_000);
+  assert.doesNotMatch(english, /available in the HTML representation/);
 });
 
 test('markdown 404 gives agents recovery links', () => {
