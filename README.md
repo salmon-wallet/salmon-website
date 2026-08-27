@@ -69,6 +69,7 @@ app/
   robots.ts
   sitemap.ts
 components/
+  LegalDocument.tsx
   Hero.tsx
   Navbar.tsx
   Why.tsx
@@ -79,6 +80,7 @@ components/
   ui/
 lib/
   constants.ts        Public links and validator constants
+  legal-content.mjs   Localized terms and privacy content
   validator.ts        Stakewiz validator stats fetcher
   i18n/               next-intl routing and request config
 messages/
@@ -98,7 +100,7 @@ The site uses `next-intl` with these locales:
 - `es` - served under `/es`
 - `pt` - served under `/pt`
 
-Content lives in `messages/{locale}.json`. When adding or changing copy, update all three locale files and keep the same key structure across locales.
+Interface and marketing copy lives in `messages/{locale}.json`. Legal copy lives in `lib/legal-content.mjs` so the HTML pages and negotiated Markdown use one source. When changing either kind of copy, update all three locales and keep their meaning and structure aligned.
 
 ## Public content guidelines
 
