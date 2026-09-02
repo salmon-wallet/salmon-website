@@ -58,7 +58,7 @@ export async function generateMetadata({
       description: t('ogDescription'),
       images: [{
         url: '/images/sharing-og.png',
-        alt: 'Salmon makes crypto easy & safe—store, buy, send, receive, and swap tokens, and manage NFTs.'
+        alt: 'Salmon makes crypto easy & safe—store, send, receive tokens, and manage NFTs.'
       }],
     },
     icons: {

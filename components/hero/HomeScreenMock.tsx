@@ -12,7 +12,6 @@ import {
   ScalesPattern,
   SettingsIcon,
   SolanaIcon,
-  SwapIcon,
 } from './wallet-icons';
 
 /**
@@ -104,7 +103,6 @@ const changeColor = (direction: MockToken['direction']) =>
 const TABS = [
   { label: 'Home', icon: HomeIcon, active: true },
   { label: 'Collectibles', icon: GridViewIcon, active: false },
-  { label: 'Swap', icon: SwapIcon, active: false },
 ] as const;
 
 export default function HomeScreenMock() {
