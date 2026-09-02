@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { LegalBody, legalLastUpdated, termsBlocks, type Locale } from '@/lib/legal-content';
+import LegalDocument from '@/components/LegalDocument';
+import { getLegalDocument } from '@/lib/legal-content.mjs';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t('description'),
     alternates: {
       canonical: locale === 'en' ? '/terms' : `/${locale}/terms`,
-      languages: { 'en': '/terms', 'es': '/es/terms', 'pt': '/pt/terms' },
+      languages: { en: '/terms', es: '/es/terms', pt: '/pt/terms' },
     },
   };
 }
@@ -24,24 +25,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function TermsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: 'metadata.terms' });
-  const loc = (locale as Locale) in termsBlocks ? (locale as Locale) : 'en';
+  const document = getLegalDocument(locale, 'terms');
 
   return (
     <>
       <Navbar />
-      <main className="pt-28 pb-20">
-        <div className="mx-auto max-w-3xl px-6">
-          <h1 className="text-4xl font-bold mb-8">{t('title').split(' — ')[0]}</h1>
-
-          <div className="prose prose-invert prose-sm max-w-none space-y-6 text-text-secondary leading-relaxed">
-            <p>
-              <strong className="text-text-primary">Last updated:</strong> {legalLastUpdated[loc]}
-            </p>
-            <LegalBody blocks={termsBlocks[loc]} locale={loc} />
-          </div>
-        </div>
-      </main>
+      <LegalDocument document={document} />
       <Footer />
     </>
   );

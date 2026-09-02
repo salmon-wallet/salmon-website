@@ -28,6 +28,7 @@ export default function Footer() {
       label: t('columns.developers'),
       links: [
         { label: t('github'), href: LINKS.github, external: true },
+        { label: t('developers'), href: '/developers', external: false },
         { label: t('apply'), href: LINKS.contact, external: true },
         { label: t('mediaKit'), href: LINKS.mediaKit, external: true },
       ],
@@ -45,6 +46,8 @@ export default function Footer() {
       links: [
         { label: t('terms'), href: '/terms', external: false },
         { label: t('privacy'), href: '/privacy', external: false },
+        { label: t('about'), href: '/about', external: false },
+        { label: t('contact'), href: '/contact', external: false },
       ],
     },
   ];

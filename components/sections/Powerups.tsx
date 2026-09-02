@@ -1,24 +1,26 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import { PowerupIcon } from '@/components/ui/powerup-icons';
 
 const POWERUPS = [
-  { key: 'swap', labels: ['comingSoon'] },
-  { key: 'bridge', labels: ['comingSoon'] },
-  { key: 'explore', labels: ['comingSoon'] },
-  { key: 'portfolio', labels: ['comingSoon'] },
-  { key: 'stake', labels: ['inDevelopment'] },
-  { key: 'onRamp', labels: ['comingSoon'] },
-  { key: 'news', labels: ['comingSoon'] },
-  { key: 'chat', labels: ['comingSoon'] },
-  { key: 'privateSend', labels: ['comingSoon'] },
+  { key: 'swap', labels: ['comingSoon'], enabled: false },
+  { key: 'bridge', labels: ['comingSoon'], enabled: false },
+  { key: 'explore', labels: ['comingSoon'], enabled: false },
+  { key: 'portfolio', labels: ['comingSoon'], enabled: false },
+  { key: 'stake', labels: ['comingSoon'], enabled: false },
+  { key: 'onRamp', labels: ['comingSoon'], enabled: false },
+  { key: 'news', labels: ['comingSoon'], enabled: false },
+  { key: 'chat', labels: ['comingSoon'], enabled: false },
+  { key: 'privateSend', labels: ['comingSoon'], enabled: false },
 ] as const;
 
 export default function Powerups() {
   const t = useTranslations('powerups');
+  const [active, setActive] = useState<string | null>(null);
 
   return (
     <section id="powerups" className="relative py-24 sm:py-32">
@@ -66,14 +68,24 @@ export default function Powerups() {
             </div>
 
             <div className="relative grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-              {POWERUPS.map(({ key, labels }) => (
+              {POWERUPS.map(({ key, labels, enabled: isEnabled }) => (
                 <button
                   key={key}
                   type="button"
-                  className="group relative z-10 flex min-h-36 cursor-default flex-col rounded-2xl border border-border-subtle bg-bg-secondary/20 p-5 text-left opacity-50 grayscale transition-all duration-300"
+                  onMouseEnter={() => setActive(key)}
+                  onMouseLeave={() => setActive(null)}
+                  onFocus={() => setActive(key)}
+                  onBlur={() => setActive(null)}
+                  className={`group relative z-10 flex min-h-36 cursor-default flex-col rounded-2xl border p-5 text-left transition-all duration-300 ${
+                    isEnabled && active === key
+                      ? 'border-accent/60 bg-accent/[0.09] shadow-[0_16px_44px_rgba(255,92,69,0.12)]'
+                      : isEnabled
+                        ? 'border-accent/35 bg-accent/[0.05] hover:border-accent/55 hover:bg-accent/[0.08]'
+                        : 'border-border-subtle bg-bg-secondary/20 opacity-50 grayscale'
+                  }`}
                 >
                   <div className="flex items-center gap-3">
-                    <span className="shrink-0 text-text-tertiary">
+                    <span className={`shrink-0 ${isEnabled ? 'text-accent' : 'text-text-tertiary'}`}>
                       <PowerupIcon type={key} className="h-6 w-6 transition-transform duration-300 group-hover:scale-110 group-focus-visible:scale-110" />
                     </span>
                     <h3 className="text-base font-semibold text-text-primary xl:text-lg">

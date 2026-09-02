@@ -30,14 +30,13 @@ export default async function Home({ params }: Props) {
       <main>
         <Hero />
         <Why />
-        <WhatMattersFirst />
-        {/* <Ecosystem /> */}
         <Powerups />
-        <HowIntegrationsWork />
+        <WhatMattersFirst />
         <DistributionPath />
+        <HowIntegrationsWork />
         {/* <WhoItsFor /> */}
-        <Manifesto />
         <ValidatorStats />
+        <Manifesto />
         <FAQ />
         <GetSalmon />
       </main>

@@ -17,6 +17,10 @@
     }
   },
   "nav": {
+    "product": "Producto",
+    "powerups": "Powerups",
+    "integrations": "Integraciones",
+    "validator": "Validator",
     "github": "GitHub",
     "x": "X / Twitter",
     "telegram": "Telegram",
@@ -28,8 +32,8 @@
   },
   "hero": {
     "heading": "Infraestructura de wallet abierta.",
-    "subheading": "Convirtiendo integraciones en distribución.",
-    "tagline": "Open-source. Autocustodial. Impulsada por la comunidad.",
+    "subheading": "Ligera por diseño. Preparada para crecer alrededor de lo que cada usuario realmente necesita.",
+    "tagline": "Open-source. Autocustodial. Ligera. Impulsada por la comunidad.",
     "proof": "Open-source. Autocustodial. Ligera. Impulsada por la comunidad.",
     "liveLabel": "Disponible ahora",
     "live": "Extensión de navegador, Web Wallet y Android.",
@@ -42,43 +46,43 @@
     "walletPreview": "Vista previa"
   },
   "why": {
-    "heading": "No es otra wallet.",
-    "headingAccent": "Es infraestructura de wallet abierta.",
+    "heading": "Las wallets deberían crecer",
+    "headingAccent": "sin volverse pesadas.",
     "statements": [
       {
-        "lead": "El problema no es la custodia.",
-        "support": "Es el control sobre la capa de wallet. Las wallets cerradas influyen en qué se integra, qué se muestra y qué se usa."
+        "lead": "Una wallet enfocada puede ser demasiado limitada.",
+        "support": "Puede funcionar bien al principio, pero no crecer junto con las necesidades que desarrollan sus usuarios."
       },
       {
-        "lead": "Salmon crea un camino más abierto.",
-        "support": "No es acceso automático. Es una ruta más abierta, estructurada, transparente y responsable desde la integración hasta el uso real."
+        "lead": "Una wallet cargada de funciones lleva demasiado peso.",
+        "support": "Cada capacidad permanente suma navegación, fricción, dependencias y superficie de seguridad para todos los usuarios."
       },
       {
-        "lead": "La prioridad es clara.",
-        "support": "Una experiencia confiable que la gente realmente use."
+        "lead": "Salmon adopta un enfoque modular.",
+        "support": "Mantiene el core claro y confiable, y suma capacidades opcionales solo cuando resuelven un problema real."
       }
     ]
   },
   "whatMatters": {
     "eyebrow": "Empezá acá",
-    "heading": "Un camino confiable.",
+    "heading": "La base tiene que funcionar antes que todo lo demás.",
     "live": "Live ahora",
-    "subheading": "Creá o importá una wallet, mové fondos de forma segura, entendé lo que estás firmando y usá la integración que te trajo hasta acá. Ese flujo tiene que funcionar antes que cualquier otra cosa.",
+    "subheading": "Creá o importá una wallet, mové fondos de forma segura, entendé lo que estás firmando y volvé porque el producto sigue siendo útil y confiable.",
     "checklist": ["Creá o importá una wallet", "Recibí fondos", "Enviá transacciones de forma segura", "Entendé y aprobá solicitudes de firma", "Usá la integración que te trajo a Salmon", "Volvé porque el producto sigue siendo útil y confiable"],
     "steps": {
       "create": "Creá o importá una wallet",
       "receive": "Recibí fondos",
       "send": "Enviá una transacción",
-      "use": "Usá la integración que te trajo hasta acá"
+      "use": "Volvé a una wallet útil y confiable"
     },
     "support": {
       "activation": {
-        "title": "Integraciones que traen usuarios",
-        "description": "Más que visibilidad. Activación real. Comportamiento de retorno real."
+        "title": "Enfocada por defecto",
+        "description": "La actividad esencial de la wallet se mantiene clara, confiable y comprensible."
       },
       "channels": {
-        "title": "Protocolos como canales",
-        "description": "Salmon ayuda a partners seleccionados a convertir la integración en adopción y distribución medible."
+        "title": "Modular por diseño",
+        "description": "Las capacidades futuras pueden agregarse sin convertirse en peso permanente para cada usuario."
       },
       "live": {
         "title": "Producto en vivo",
@@ -104,10 +108,10 @@
     }
   },
   "powerups": {
-    "eyebrow": "Introducing Powerups",
-    "heading": "Un core más pequeño. Una wallet que puede hacer más.",
+    "eyebrow": "Wallet core + Powerups",
+    "heading": "Un core enfocado. Powerups cuando se ganen su lugar.",
     "comingSoon": "Próximamente",
-    "subheading": "Salmon mantiene el core de la wallet ligero, confiable y comprensible. Los Powerups agregan capacidades seleccionadas cuando resuelven un problema real, sin convertir la wallet en una super-app pesada llena de funciones permanentes. Pueden probarse y mejorarse de forma independiente, perder prioridad si dejan de crear valor o promoverse cuando demuestran un uso claro.",
+    "subheading": "Los Powerups amplían Salmon sin sobrecargar el core de la wallet. Cada capacidad opcional debe resolver un problema claro y operar con permisos definidos antes de lanzarse.",
     "labels": {
       "official": "Oficial",
       "salmon": "Salmon",
@@ -129,12 +133,12 @@
     },
     "items": {
       "swap": {
-        "type": "Oficial",
+        "type": "Próximamente",
         "title": "Swap",
         "description": "Intercambio de tokens como capacidad modular mantenida por Salmon."
       },
       "bridge": {
-        "type": "Oficial",
+        "type": "Próximamente",
         "title": "Bridge",
         "description": "Movimiento entre redes sin expandir el core de la wallet."
       },
@@ -200,7 +204,7 @@
   },
   "distribution": {
     "eyebrow": "De la integración a la distribución",
-    "steps": ["Demanda del partner", "Integración seleccionada", "Activación de usuarios", "Uso recurrente", "Prueba de distribución"],
+    "steps": ["Integración útil", "Activación de usuarios", "Acción útil", "Uso recurrente", "Prueba de distribución"],
     "heading": "Las integraciones no son el objetivo. El uso sí.",
     "description": "Salmon mide onboarding, acciones completadas, retorno, cohortes retenidas, rendimiento de la integración y feedback del partner. Lo que demuestra activación repetible se amplía; lo que no, se mejora, pierde prioridad o se detiene."
   },
@@ -275,7 +279,7 @@
         "items": [
           {
             "question": "¿Qué es Salmon?",
-            "answer": "Una wallet open-source y autocustodial construida como infraestructura de wallet abierta para Solana."
+            "answer": "Una wallet liviana, open-source y autocustodial construida como infraestructura de wallet abierta para Solana."
           },
           {
             "question": "¿Puedo usar Salmon hoy?",
@@ -320,7 +324,7 @@
           },
           {
             "question": "¿En qué se diferencia Salmon de otras wallets?",
-            "answer": "Salmon está construida para que el camino a la integración esté menos condicionado por prioridades cerradas. No intenta ser una wallet genérica para todos. Empieza con un wedge claro: ayudar a protocolos emergentes de Solana a convertir integraciones en uso."
+            "answer": "Salmon mantiene enfocado el core de la wallet y usa integraciones modulares seleccionadas como estrategia de adopción. Los partners obtienen un camino creíble hacia los usuarios, mientras Salmon gana adopción mediante casos de uso reales y comunidades existentes."
           },
           {
             "question": "¿Para quién es Salmon?",
@@ -358,11 +362,11 @@
         "items": [
           {
             "question": "¿Qué significa \"built in public\"?",
-            "answer": "Significa código open-source, progreso visible e iteración con rendición de cuentas. Salmon está pensada para evolucionar en abierto, no detrás de un roadmap cerrado."
+            "answer": "Significa código open-source, progreso visible, métricas de integración e iteración con rendición de cuentas. Salmon está pensada para evolucionar en abierto, no detrás de un roadmap cerrado."
           },
           {
             "question": "¿Qué significa propiedad comunitaria en Salmon?",
-            "answer": "Significa construir hacia estructuras de propiedad y gobernanza que puedan alinear el futuro de la capa de wallet con el ecosistema al que sirve, no solo con la empresa que lo empezó."
+            "answer": "Salmon está impulsada por la comunidad hoy y avanza hacia estructuras de propiedad y gobernanza que puedan alinear los activos centrales y la supervisión estratégica con el ecosistema al que sirve. Las revisiones técnicas, de seguridad y de producto siguen siendo responsabilidades operativas delegadas."
           }
         ]
       }
@@ -417,6 +421,8 @@
     "xTwitter": "X / Twitter",
     "telegram": "Comunidad de Telegram",
     "github": "GitHub",
+    "developers": "API Docs y Developers",
+    "about": "Acerca de",
     "medium": "Medium",
     "terms": "Términos y Condiciones",
     "privacy": "Política de Privacidad",

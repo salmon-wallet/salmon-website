@@ -17,6 +17,10 @@
     }
   },
   "nav": {
+    "product": "Produto",
+    "powerups": "Powerups",
+    "integrations": "Integrações",
+    "validator": "Validador",
     "github": "GitHub",
     "x": "X / Twitter",
     "telegram": "Telegram",
@@ -28,8 +32,8 @@
   },
   "hero": {
     "heading": "Infraestrutura de carteira aberta.",
-    "subheading": "Transformando integrações em distribuição.",
-    "tagline": "Open-source. Autocustodial. Movida pela comunidade.",
+    "subheading": "Leve por design. Preparada para crescer em torno do que cada usuário realmente precisa.",
+    "tagline": "Open-source. Autocustodial. Leve. Movida pela comunidade.",
     "proof": "Open-source. Autocustodial. Leve. Movida pela comunidade.",
     "liveLabel": "Disponível agora",
     "live": "Extensão de navegador, Web Wallet e Android.",
@@ -42,43 +46,43 @@
     "walletPreview": "Prévia da carteira"
   },
   "why": {
-    "heading": "Não é mais uma carteira.",
-    "headingAccent": "É infraestrutura de carteira aberta.",
+    "heading": "Carteiras deveriam crescer",
+    "headingAccent": "sem ficar pesadas.",
     "statements": [
       {
-        "lead": "O problema não é a custódia.",
-        "support": "É o controle sobre a camada de carteira. Carteiras fechadas influenciam o que é integrado, exibido e usado."
+        "lead": "Uma carteira focada pode ser limitada demais.",
+        "support": "Pode funcionar bem no início, mas não crescer com as necessidades que os usuários desenvolvem."
       },
       {
-        "lead": "A Salmon cria um caminho mais aberto.",
-        "support": "Não é acesso automático. É uma rota mais aberta, estruturada, transparente e responsável da integração ao uso real."
+        "lead": "Uma carteira cheia de recursos carrega peso demais.",
+        "support": "Cada capacidade permanente adiciona navegação, atrito, dependências e superfície de segurança para todos."
       },
       {
-        "lead": "A prioridade é clara.",
-        "support": "Uma experiência confiável que as pessoas realmente usem."
+        "lead": "A Salmon adota uma abordagem modular.",
+        "support": "Mantém o core claro e confiável, adicionando capacidades opcionais apenas quando resolvem um problema real."
       }
     ]
   },
   "whatMatters": {
     "eyebrow": "Comece aqui",
-    "heading": "Um caminho confiável.",
+    "heading": "A base precisa funcionar antes de todo o resto.",
     "live": "Live agora",
-    "subheading": "Crie ou importe uma carteira, mova fundos com segurança, entenda o que está assinando e use a integração que trouxe você até aqui. Esse fluxo precisa funcionar antes de qualquer outra coisa.",
+    "subheading": "Crie ou importe uma carteira, mova fundos com segurança, entenda o que está assinando e volte porque o produto continua útil e confiável.",
     "checklist": ["Crie ou importe uma carteira", "Receba fundos", "Envie transações com segurança", "Entenda e aprove solicitações de assinatura", "Use a integração que trouxe você à Salmon", "Volte porque o produto continua útil e confiável"],
     "steps": {
       "create": "Crie ou importe uma carteira",
       "receive": "Receba fundos",
       "send": "Envie uma transação",
-      "use": "Use a integração que trouxe você até aqui"
+      "use": "Volte a uma carteira útil e confiável"
     },
     "support": {
       "activation": {
-        "title": "Integrações que trazem usuários",
-        "description": "Mais que visibilidade. Ativação real. Comportamento de retorno real."
+        "title": "Focada por padrão",
+        "description": "A atividade essencial da carteira permanece clara, confiável e compreensível."
       },
       "channels": {
-        "title": "Protocolos como canais",
-        "description": "A Salmon ajuda parceiros selecionados a transformar integração em adoção e distribuição mensurável."
+        "title": "Modular por design",
+        "description": "Recursos futuros podem ser adicionados sem se tornar peso permanente para todos os usuários."
       },
       "live": {
         "title": "Produto ao vivo",
@@ -104,10 +108,10 @@
     }
   },
   "powerups": {
-    "eyebrow": "Introducing Powerups",
-    "heading": "Um core menor. Uma carteira que pode fazer mais.",
+    "eyebrow": "Wallet core + Powerups",
+    "heading": "Um core focado. Powerups quando conquistarem seu lugar.",
     "comingSoon": "Em breve",
-    "subheading": "A Salmon mantém o core da carteira leve, confiável e compreensível. Powerups adicionam capacidades selecionadas quando resolvem um problema real, sem transformar a carteira em um super-app pesado cheio de funções permanentes. Eles podem ser testados e melhorados de forma independente, perder prioridade quando deixam de criar valor ou ser promovidos quando demonstram uso claro.",
+    "subheading": "Os Powerups ampliam a Salmon sem sobrecarregar o core da carteira. Cada capacidade opcional deve resolver um problema claro e operar com permissões definidas antes de ser lançada.",
     "labels": {
       "official": "Oficial",
       "salmon": "Salmon",
@@ -129,12 +133,12 @@
     },
     "items": {
       "swap": {
-        "type": "Oficial",
+        "type": "Em breve",
         "title": "Swap",
         "description": "Troca de tokens como capacidade modular mantida pela Salmon."
       },
       "bridge": {
-        "type": "Oficial",
+        "type": "Em breve",
         "title": "Bridge",
         "description": "Movimentação entre redes sem expandir o core da carteira."
       },
@@ -200,7 +204,7 @@
   },
   "distribution": {
     "eyebrow": "Da integração à distribuição",
-    "steps": ["Demanda do parceiro", "Integração selecionada", "Ativação de usuários", "Uso recorrente", "Prova de distribuição"],
+    "steps": ["Integração útil", "Ativação de usuários", "Ação útil", "Uso recorrente", "Prova de distribuição"],
     "heading": "Integrações não são o objetivo. Uso é.",
     "description": "A Salmon mede onboarding, ações concluídas, retorno, coortes retidas, desempenho da integração e feedback do parceiro. O que prova ativação repetível se expande; o que não prova é melhorado, perde prioridade ou é interrompido."
   },
@@ -275,7 +279,7 @@
         "items": [
           {
             "question": "O que é Salmon?",
-            "answer": "Uma carteira open-source e autocustodial construída como infraestrutura de carteira aberta para Solana."
+            "answer": "Uma carteira leve, open-source e autocustodial construída como infraestrutura de carteira aberta para Solana."
           },
           {
             "question": "Posso usar Salmon hoje?",
@@ -320,7 +324,7 @@
           },
           {
             "question": "Como a Salmon é diferente de outras carteiras?",
-            "answer": "A Salmon é construída para tornar o caminho até a integração menos limitado por prioridades fechadas. Ela não tenta ser uma carteira genérica para todos. Começa com um wedge claro: ajudar protocolos emergentes de Solana a transformar integrações em uso."
+            "answer": "A Salmon mantém o core da carteira focado e usa integrações modulares selecionadas como estratégia de adoção. Os parceiros ganham um caminho confiável até os usuários, enquanto a Salmon ganha adoção por meio de casos de uso reais e comunidades existentes."
           },
           {
             "question": "Para quem é o Salmon?",
@@ -358,11 +362,11 @@
         "items": [
           {
             "question": "O que significa \"built in public\"?",
-            "answer": "Significa código open-source, progresso visível e iteração com prestação de contas. A Salmon deve evoluir em aberto, não atrás de um roadmap fechado."
+            "answer": "Significa código open-source, progresso visível, métricas de integração e iteração com prestação de contas. A Salmon deve evoluir em aberto, não atrás de um roadmap fechado."
           },
           {
             "question": "O que significa propriedade comunitária no Salmon?",
-            "answer": "Significa construir rumo a estruturas de propriedade e governança que possam alinhar o futuro da camada de carteira com o ecossistema que ela serve, não apenas com a empresa que a começou."
+            "answer": "A Salmon é impulsionada pela comunidade hoje e avança rumo a estruturas de propriedade e governança que possam alinhar os ativos centrais e a supervisão estratégica com o ecossistema que atende. As revisões técnicas, de segurança e de produto continuam sendo responsabilidades operacionais delegadas."
           }
         ]
       }
@@ -417,6 +421,8 @@
     "xTwitter": "X / Twitter",
     "telegram": "Comunidade no Telegram",
     "github": "GitHub",
+    "developers": "API Docs e Developers",
+    "about": "Sobre",
     "medium": "Medium",
     "terms": "Termos e Condições",
     "privacy": "Política de Privacidade",

@@ -6,7 +6,7 @@ export const LINKS = {
   appStore: '#',
   playStore: 'https://play.google.com/store/apps/details?id=io.salmonwallet.app',
   github: 'https://github.com/Salmon-HQ',
-  repo: 'https://github.com/Salmon-HQ/salmon-wallet',
+  repo: 'https://github.com/Salmon-HQ/salmon-wallet-frontend',
   twitter: 'https://x.com/salmonwallet',
   telegram: 'https://t.me/salmon_wallet',
   medium: 'https://medium.com/@salmonwallet',
