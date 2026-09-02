@@ -111,7 +111,7 @@
     "eyebrow": "Wallet core + Powerups",
     "heading": "A focused wallet core. Powerups when they earn their place.",
     "comingSoon": "Coming soon",
-    "subheading": "Powerups extend Salmon without weighing down the wallet core. Swap and Bridge are available today; future optional capabilities must solve a clear user problem and operate within defined permissions.",
+    "subheading": "Powerups extend Salmon without weighing down the wallet core. Each optional capability must solve a clear user problem and operate within defined permissions before it ships.",
     "labels": {
       "official": "Official",
       "salmon": "Salmon",
@@ -133,12 +133,12 @@
     },
     "items": {
       "swap": {
-        "type": "Official",
+        "type": "Coming soon",
         "title": "Swap",
         "description": "Token exchange as a modular capability maintained by Salmon."
       },
       "bridge": {
-        "type": "Official",
+        "type": "Coming soon",
         "title": "Bridge",
         "description": "Cross-network movement without expanding the wallet core."
       },

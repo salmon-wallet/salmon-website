@@ -1,12 +1,15 @@
-type LegalSubsection = {
-  heading: string;
-  paragraphs?: string[];
-};
-
-type LegalSection = {
-  heading: string;
+type LegalBlockContent = {
   paragraphs?: string[];
   bullets?: string[];
+  paragraphsAfterBullets?: string[];
+};
+
+type LegalSubsection = LegalBlockContent & {
+  heading: string;
+};
+
+type LegalSection = LegalBlockContent & {
+  heading: string;
   subsections?: LegalSubsection[];
 };
 
@@ -17,6 +20,30 @@ type LegalDocumentData = {
   updated: string;
   sections: LegalSection[];
 };
+
+function LegalBlock({ paragraphs, bullets, paragraphsAfterBullets }: LegalBlockContent) {
+  return (
+    <>
+      {paragraphs?.map((paragraph) => (
+        <p key={paragraph} className="mb-4">
+          {paragraph}
+        </p>
+      ))}
+      {bullets?.length ? (
+        <ul className="list-disc pl-6 space-y-2 mb-4">
+          {bullets.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      ) : null}
+      {paragraphsAfterBullets?.map((paragraph) => (
+        <p key={paragraph} className="mb-4">
+          {paragraph}
+        </p>
+      ))}
+    </>
+  );
+}
 
 export default function LegalDocument({ document }: { document: LegalDocumentData }) {
   return (
@@ -36,30 +63,22 @@ export default function LegalDocument({ document }: { document: LegalDocumentDat
                 {section.heading}
               </h2>
 
-              {section.paragraphs?.map((paragraph) => (
-                <p key={paragraph} className="mb-4">
-                  {paragraph}
-                </p>
-              ))}
-
-              {section.bullets?.length ? (
-                <ul className="list-disc pl-6 space-y-2 mb-4">
-                  {section.bullets.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              ) : null}
+              <LegalBlock
+                paragraphs={section.paragraphs}
+                bullets={section.bullets}
+                paragraphsAfterBullets={section.paragraphsAfterBullets}
+              />
 
               {section.subsections?.map((subsection) => (
                 <div key={subsection.heading} className="mt-6">
                   <h3 className="text-lg font-semibold text-text-primary mb-3">
                     {subsection.heading}
                   </h3>
-                  {subsection.paragraphs?.map((paragraph) => (
-                    <p key={paragraph} className="mb-4">
-                      {paragraph}
-                    </p>
-                  ))}
+                  <LegalBlock
+                    paragraphs={subsection.paragraphs}
+                    bullets={subsection.bullets}
+                    paragraphsAfterBullets={subsection.paragraphsAfterBullets}
+                  />
                 </div>
               ))}
             </section>

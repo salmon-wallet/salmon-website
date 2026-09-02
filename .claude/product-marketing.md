@@ -4,7 +4,7 @@
 
 ## Product Overview
 **One-liner:** Open-source, self-custodial Solana wallet — and an open distribution layer for emerging Solana protocols.
-**What it does:** Salmon lets users hold, send, swap and stake assets on Solana (expanding to Bitcoin) without giving up custody. All core code is public. The team also operates a Solana validator with live, on-chain-verifiable stats.
+**What it does:** Salmon lets users hold, send, and receive assets on Solana without giving up custody — create/import a wallet, view balances and activity, sign and broadcast transfers, and hold digital collectibles. Swap, cross-chain bridging, and staking are planned Powerups, not available in the current version. All core code is public. The team also operates a Solana validator with live, on-chain-verifiable stats.
 **Positioning (Luca's copy drafts, 2026-07-08):** the distribution thesis — closed wallets control what gets integrated/surfaced; Salmon opens that layer so emerging protocols can ship integrations and reach users directly. Two-sided: protocols (need distribution) + their communities (arrive to use what the protocol shipped).
 **Product category:** Crypto wallet (Solana ecosystem). Self-positioning: "open wallet infrastructure" / "the open wallet layer".
 **Product type:** Consumer app (extension + web + Android) with open-source infrastructure angle.

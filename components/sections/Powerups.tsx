@@ -7,8 +7,8 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 import { PowerupIcon } from '@/components/ui/powerup-icons';
 
 const POWERUPS = [
-  { key: 'swap', labels: ['available'], enabled: true },
-  { key: 'bridge', labels: ['available'], enabled: true },
+  { key: 'swap', labels: ['comingSoon'], enabled: false },
+  { key: 'bridge', labels: ['comingSoon'], enabled: false },
   { key: 'explore', labels: ['comingSoon'], enabled: false },
   { key: 'portfolio', labels: ['comingSoon'], enabled: false },
   { key: 'stake', labels: ['comingSoon'], enabled: false },
@@ -68,8 +68,7 @@ export default function Powerups() {
             </div>
 
             <div className="relative grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-              {POWERUPS.map(({ key, labels, enabled: isEnabled }) => {
-                return (
+              {POWERUPS.map(({ key, labels, enabled: isEnabled }) => (
                 <button
                   key={key}
                   type="button"
@@ -104,8 +103,7 @@ export default function Powerups() {
                     ))}
                   </div>
                 </button>
-                );
-              })}
+              ))}
             </div>
           </div>
         </ScrollReveal>

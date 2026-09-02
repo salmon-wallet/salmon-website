@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Salmon Wallet',
     short_name: 'Salmon',
-    description: 'The open-source, multi-chain crypto wallet.',
+    description: 'The open-source, self-custodial Solana wallet.',
     start_url: '/',
     display: 'standalone',
     background_color: '#10131c',

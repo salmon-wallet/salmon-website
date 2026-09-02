@@ -52,15 +52,14 @@ test('legal documents are complete and structurally aligned in every locale', ()
   for (const locale of ['en', 'es', 'pt']) {
     const terms = getLegalDocument(locale, 'terms');
     const privacy = getLegalDocument(locale, 'privacy');
-    assert.equal(terms.sections.length, 20);
+    assert.equal(terms.sections.length, 22);
     assert.equal(privacy.sections.length, 14);
 
     const termsMarkdown = legalDocumentToMarkdown(terms);
     const privacyMarkdown = legalDocumentToMarkdown(privacy);
-    for (const required of ['GeekOcean Labs Ltd', 'Jupiter', 'StealthEX', 'USD 100']) {
+    for (const required of ['GeekOcean Labs Ltd', 'Apple App Store', 'USD 100']) {
       assert.match(termsMarkdown, new RegExp(required));
     }
-    assert.match(termsMarkdown, /0[.,]4/);
     for (const required of ['GeekOcean Labs Ltd', 'Blockdaemon', 'CloudWatch', 'Google Analytics 4', '30']) {
       assert.match(privacyMarkdown, new RegExp(required));
     }
