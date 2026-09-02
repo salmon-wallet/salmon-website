@@ -110,7 +110,7 @@
   "powerups": {
     "eyebrow": "Wallet core + Powerups",
     "heading": "Un core enfocado. Powerups cuando se ganen su lugar.",
-    "comingSoon": "Próximamente",
+    "comingSoon": "Explorando",
     "subheading": "Los Powerups amplían Salmon sin sobrecargar el core de la wallet. Cada capacidad opcional debe resolver un problema claro y operar con permisos definidos antes de lanzarse.",
     "labels": {
       "official": "Oficial",
@@ -119,7 +119,7 @@
       "communitySalmon": "Community / Salmon",
       "available": "Disponible",
       "inDevelopment": "En desarrollo",
-      "comingSoon": "Próximamente"
+      "comingSoon": "Explorando"
     },
     "core": {
       "eyebrow": "Siempre disponible",
@@ -133,47 +133,47 @@
     },
     "items": {
       "swap": {
-        "type": "Próximamente",
+        "type": "Explorando",
         "title": "Swap",
         "description": "Intercambio de tokens como capacidad modular mantenida por Salmon."
       },
       "bridge": {
-        "type": "Próximamente",
+        "type": "Explorando",
         "title": "Bridge",
         "description": "Movimiento entre redes sin expandir el core de la wallet."
       },
       "explore": {
-        "type": "Próximamente",
+        "type": "Explorando",
         "title": "Explore",
         "description": "Descubrí apps, protocolos y oportunidades dentro del ecosistema."
       },
       "portfolio": {
-        "type": "Community · Próximamente",
+        "type": "Community · Explorando",
         "title": "Portfolio",
         "description": "Una vista más completa de activos y actividad como capacidad modular."
       },
       "stake": {
-        "type": "Próximamente",
+        "type": "Explorando",
         "title": "Stake",
         "description": "Staking nativo como capacidad opcional dentro de la wallet."
       },
       "onRamp": {
-        "type": "Community · Próximamente",
+        "type": "Community · Explorando",
         "title": "On/Off Ramp",
         "description": "Mové fondos entre fiat y crypto mediante un módulo opcional de la comunidad."
       },
       "news": {
-        "type": "Community · Próximamente",
+        "type": "Community · Explorando",
         "title": "News",
         "description": "Seguí novedades del ecosistema sin convertirlas en una función del core."
       },
       "chat": {
-        "type": "Community · Próximamente",
+        "type": "Community · Explorando",
         "title": "Chat",
         "description": "Comunicación dentro de la wallet mediante un Powerup opcional."
       },
       "privateSend": {
-        "type": "Community · Próximamente",
+        "type": "Community · Explorando",
         "title": "Private Send",
         "description": "Privacidad adicional para transacciones mediante un módulo comunitario."
       }
@@ -378,7 +378,7 @@
     "extension": "Extensión",
     "android": "Android",
     "ios": "iOS",
-    "comingSoon": "Próximamente",
+    "comingSoon": "Explorando",
     "webWallet": "Web Wallet",
     "use": {"eyebrow": "Obtener Salmon", "title": "Usá la wallet"},
     "build": {

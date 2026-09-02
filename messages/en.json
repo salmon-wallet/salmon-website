@@ -110,7 +110,7 @@
   "powerups": {
     "eyebrow": "Wallet core + Powerups",
     "heading": "A focused wallet core. Powerups when they earn their place.",
-    "comingSoon": "Coming soon",
+    "comingSoon": "Exploring",
     "subheading": "Powerups extend Salmon without weighing down the wallet core. Each optional capability must solve a clear user problem and operate within defined permissions before it ships.",
     "labels": {
       "official": "Official",
@@ -119,7 +119,7 @@
       "communitySalmon": "Community / Salmon",
       "available": "Available",
       "inDevelopment": "In development",
-      "comingSoon": "Coming soon"
+      "comingSoon": "Exploring"
     },
     "core": {
       "eyebrow": "Always available",
@@ -133,47 +133,47 @@
     },
     "items": {
       "swap": {
-        "type": "Coming soon",
+        "type": "Exploring",
         "title": "Swap",
         "description": "Token exchange as a modular capability maintained by Salmon."
       },
       "bridge": {
-        "type": "Coming soon",
+        "type": "Exploring",
         "title": "Bridge",
         "description": "Cross-network movement without expanding the wallet core."
       },
       "explore": {
-        "type": "Coming soon",
+        "type": "Exploring",
         "title": "Explore",
         "description": "Discover apps, protocols, and opportunities across the ecosystem."
       },
       "portfolio": {
-        "type": "Community · Coming soon",
+        "type": "Community · Exploring",
         "title": "Portfolio",
         "description": "A richer view of assets and activity as a modular wallet capability."
       },
       "stake": {
-        "type": "Coming soon",
+        "type": "Exploring",
         "title": "Stake",
         "description": "Native staking as an optional capability inside the wallet."
       },
       "onRamp": {
-        "type": "Community · Coming soon",
+        "type": "Community · Exploring",
         "title": "On/Off Ramp",
         "description": "Move between fiat and crypto through an optional community module."
       },
       "news": {
-        "type": "Community · Coming soon",
+        "type": "Community · Exploring",
         "title": "News",
         "description": "Follow ecosystem updates without turning them into a core wallet feature."
       },
       "chat": {
-        "type": "Community · Coming soon",
+        "type": "Community · Exploring",
         "title": "Chat",
         "description": "Wallet-native communication delivered as an optional Powerup."
       },
       "privateSend": {
-        "type": "Community · Coming soon",
+        "type": "Community · Exploring",
         "title": "Private Send",
         "description": "Additional transaction privacy through an optional community module."
       }
@@ -378,7 +378,7 @@
     "extension": "Extension",
     "android": "Android",
     "ios": "iOS",
-    "comingSoon": "Coming soon",
+    "comingSoon": "Exploring",
     "webWallet": "Web Wallet",
     "use": {"eyebrow": "Get Salmon", "title": "Use the wallet"},
     "build": {

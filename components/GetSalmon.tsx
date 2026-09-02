@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { LINKS } from '@/lib/constants';
 import ScrollReveal from './ui/ScrollReveal';
-import { WebIcon, ChromeIcon, AndroidIcon, IosIcon } from './ui/platform-icons';
+import { ChromeIcon, AndroidIcon, IosIcon } from './ui/platform-icons';
 
 function PlatformCard({
   title,
@@ -46,7 +46,7 @@ function PlatformCard({
   );
 }
 
-const cardDirections = ['right', 'left', 'right', 'left'] as const;
+const cardDirections = ['right', 'left', 'right'] as const;
 
 const GITHUB_ICON = (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -66,17 +66,14 @@ export default function GetSalmon() {
           </h2>
         </ScrollReveal>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <ScrollReveal direction={cardDirections[0]} delay={0} duration={1.1} className="h-full">
-            <PlatformCard title={t('web')} href={LINKS.webWallet} tint="#4FC3F7" icon={<WebIcon size={48} />} />
-          </ScrollReveal>
-          <ScrollReveal direction={cardDirections[1]} delay={0.12} duration={1.1} className="h-full">
             <PlatformCard title={t('extensionChrome')} href={LINKS.chrome} tint="#4285F4" icon={<ChromeIcon size={48} />} />
           </ScrollReveal>
-          <ScrollReveal direction={cardDirections[2]} delay={0.24} duration={1.1} className="h-full">
+          <ScrollReveal direction={cardDirections[1]} delay={0.12} duration={1.1} className="h-full">
             <PlatformCard title={t('android')} href={LINKS.playStore} tint="#3DDC84" icon={<AndroidIcon size={48} />} />
           </ScrollReveal>
-          <ScrollReveal direction={cardDirections[3]} delay={0.36} duration={1.1} className="h-full">
+          <ScrollReveal direction={cardDirections[2]} delay={0.24} duration={1.1} className="h-full">
             <PlatformCard title={t('ios')} href={LINKS.appStore} tint="#A2AAAD" comingSoon comingSoonLabel={t('comingSoon')} icon={<IosIcon size={48} />} />
           </ScrollReveal>
         </div>

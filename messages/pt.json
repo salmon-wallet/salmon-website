@@ -110,7 +110,7 @@
   "powerups": {
     "eyebrow": "Wallet core + Powerups",
     "heading": "Um core focado. Powerups quando conquistarem seu lugar.",
-    "comingSoon": "Em breve",
+    "comingSoon": "Explorando",
     "subheading": "Os Powerups ampliam a Salmon sem sobrecarregar o core da carteira. Cada capacidade opcional deve resolver um problema claro e operar com permissões definidas antes de ser lançada.",
     "labels": {
       "official": "Oficial",
@@ -119,7 +119,7 @@
       "communitySalmon": "Community / Salmon",
       "available": "Disponível",
       "inDevelopment": "Em desenvolvimento",
-      "comingSoon": "Em breve"
+      "comingSoon": "Explorando"
     },
     "core": {
       "eyebrow": "Sempre disponível",
@@ -133,47 +133,47 @@
     },
     "items": {
       "swap": {
-        "type": "Em breve",
+        "type": "Explorando",
         "title": "Swap",
         "description": "Troca de tokens como capacidade modular mantida pela Salmon."
       },
       "bridge": {
-        "type": "Em breve",
+        "type": "Explorando",
         "title": "Bridge",
         "description": "Movimentação entre redes sem expandir o core da carteira."
       },
       "explore": {
-        "type": "Em breve",
+        "type": "Explorando",
         "title": "Explore",
         "description": "Descubra apps, protocolos e oportunidades dentro do ecossistema."
       },
       "portfolio": {
-        "type": "Community · Em breve",
+        "type": "Community · Explorando",
         "title": "Portfolio",
         "description": "Uma visão mais completa de ativos e atividade como capacidade modular."
       },
       "stake": {
-        "type": "Em breve",
+        "type": "Explorando",
         "title": "Stake",
         "description": "Staking nativo como capacidade opcional dentro da carteira."
       },
       "onRamp": {
-        "type": "Community · Em breve",
+        "type": "Community · Explorando",
         "title": "On/Off Ramp",
         "description": "Movimente entre fiat e cripto por meio de um módulo opcional da comunidade."
       },
       "news": {
-        "type": "Community · Em breve",
+        "type": "Community · Explorando",
         "title": "News",
         "description": "Acompanhe novidades do ecossistema sem transformá-las em uma função do core."
       },
       "chat": {
-        "type": "Community · Em breve",
+        "type": "Community · Explorando",
         "title": "Chat",
         "description": "Comunicação dentro da carteira por meio de um Powerup opcional."
       },
       "privateSend": {
-        "type": "Community · Em breve",
+        "type": "Community · Explorando",
         "title": "Private Send",
         "description": "Privacidade adicional para transações por meio de um módulo comunitário."
       }
@@ -378,7 +378,7 @@
     "extension": "Extensão",
     "android": "Android",
     "ios": "iOS",
-    "comingSoon": "Em breve",
+    "comingSoon": "Explorando",
     "webWallet": "Web Wallet",
     "use": {"eyebrow": "Baixar Salmon", "title": "Use a carteira"},
     "build": {

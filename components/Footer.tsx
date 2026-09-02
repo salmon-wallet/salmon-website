@@ -19,7 +19,6 @@ export default function Footer() {
     {
       label: t('columns.product'),
       links: [
-        { label: tPlatform('web'), href: LINKS.webWallet, external: true },
         { label: tPlatform('extension'), href: LINKS.chrome, external: true },
         { label: tPlatform('android'), href: LINKS.playStore, external: true },
       ],

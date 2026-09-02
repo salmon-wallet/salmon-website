@@ -8,7 +8,6 @@ import { PowerupIcon } from '@/components/ui/powerup-icons';
 
 const POWERUPS = [
   { key: 'swap', labels: ['comingSoon'], enabled: false },
-  { key: 'bridge', labels: ['comingSoon'], enabled: false },
   { key: 'explore', labels: ['comingSoon'], enabled: false },
   { key: 'portfolio', labels: ['comingSoon'], enabled: false },
   { key: 'stake', labels: ['comingSoon'], enabled: false },
