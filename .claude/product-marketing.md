@@ -59,7 +59,7 @@
 **Personality:** verifiable, principled, adversarial-minded, understated.
 
 ## Proof Points — VERIFIED ONLY
-- Public GitHub org: `github.com/salmon-wallet` (repo, commits, contributors — pull live counts).
+- Public GitHub org: `github.com/Salmon-HQ` (repo, commits, contributors — pull live counts).
 - Live validator stats via Stakewiz API (APY, commission, stake, uptime, skip rate, Wiz Score) + on-chain verify link (JPool).
 - Live since 2023; shipping on Chrome Web Store, Play Store, web wallet v2.
 - **NEVER render (unverified — see memory `unverified-proof-claims`):** Halborn audit, "$200M+ protected", "50k+ users", "4.8★".

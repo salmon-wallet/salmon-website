@@ -24,7 +24,7 @@ This repository contains the landing page, localized public pages, app download 
 
 ## Getting started
 
-Use Node.js 20.19 or newer. The project currently includes both `package-lock.json` and `pnpm-lock.yaml`; until the package manager is standardized, use the lockfile expected by your team or deployment environment. The commands below use npm because `package-lock.json` is present and `npm run build` is verified.
+Use Node.js 20.19 or newer and npm. `package-lock.json` is the canonical lockfile and must be kept in sync with dependency changes.
 
 ```bash
 npm install
