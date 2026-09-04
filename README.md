@@ -175,4 +175,4 @@ Before opening a pull request:
 
 ## License
 
-No repository license file is present in this checkout. Do not assume reuse rights from this README alone.
+Licensed under the [Apache License 2.0](LICENSE).
